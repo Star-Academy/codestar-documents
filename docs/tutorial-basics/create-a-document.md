@@ -6,9 +6,9 @@ sidebar_position: 2
 
 Documents are **groups of pages** connected through:
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+-   a **sidebar**
+-   **previous/next navigation**
+-   **versioning**
 
 ## Create your first Doc
 
@@ -43,13 +43,13 @@ It is also possible to create your sidebar explicitly in `sidebars.js`:
 
 ```js title="sidebars.js"
 module.exports = {
-  tutorialSidebar: [
-    {
-      type: 'category',
-      label: 'Tutorial',
-      // highlight-next-line
-      items: ['hello'],
-    },
-  ],
+    tutorialSidebar: [
+        {
+            type: 'category',
+            label: 'Tutorial',
+            // highlight-next-line
+            items: ['hello'],
+        },
+    ],
 };
 ```
