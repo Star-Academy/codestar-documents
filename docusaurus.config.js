@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'CodeStar',
-    tagline: 'Dinosaurs are cool',
-    url: 'https://your-docusaurus-test-site.com',
+    title: 'آکادمی ستاره',
+    tagline: 'بزن بریم!',
+    url: 'https://docs.code-star.ir/',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -40,17 +40,9 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 blog: {
                     showReadingTime: true,
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
@@ -63,21 +55,32 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             navbar: {
-                title: 'My Site',
+                title: 'آکادمی ستاره',
                 logo: {
-                    alt: 'My Site Logo',
+                    alt: 'لوگو آکادمی ستاره',
                     src: 'img/logo.svg',
                 },
                 items: [
                     {
                         type: 'doc',
-                        docId: 'intro',
+                        docId: 'intro/index',
                         position: 'left',
-                        label: 'Tutorial',
+                        label: 'مقدمات',
                     },
-                    {to: '/blog', label: 'Blog', position: 'left'},
                     {
-                        href: 'https://github.com/facebook/docusaurus',
+                        type: 'doc',
+                        docId: 'frontend/index',
+                        position: 'left',
+                        label: 'فرانت‌اند',
+                    },
+                    {
+                        type: 'doc',
+                        docId: 'software-engineering/index',
+                        position: 'left',
+                        label: 'مهندسی نرم‌افزار',
+                    },
+                    {
+                        href: 'https://github.com/Star-Academy/',
                         label: 'GitHub',
                         position: 'right',
                     },
@@ -87,46 +90,25 @@ const config = {
                 style: 'dark',
                 links: [
                     {
-                        title: 'Docs',
+                        title: 'مستندات',
                         items: [
                             {
-                                label: 'Tutorial',
+                                label: 'آموزش‌ها',
                                 to: '/docs/intro',
                             },
                         ],
                     },
                     {
-                        title: 'Community',
+                        title: 'بیشتر',
                         items: [
-                            {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                            },
-                            {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
-                            },
-                            {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
-                            },
-                        ],
-                    },
-                    {
-                        title: 'More',
-                        items: [
-                            {
-                                label: 'Blog',
-                                to: '/blog',
-                            },
                             {
                                 label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
+                                href: 'https://github.com/Star-Academy/',
                             },
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+                copyright: 'تمامی حقوق مادی و معنوی این سایت متعلق به آکادمی ستاره می‌باشد.',
             },
             prism: {
                 theme: lightCodeTheme,
