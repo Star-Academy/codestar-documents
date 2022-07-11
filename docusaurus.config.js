@@ -12,7 +12,7 @@ const config = {
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
-    favicon: 'img/favicon.ico',
+    favicon: 'images/favicon.ico',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
@@ -58,12 +58,12 @@ const config = {
                 title: 'آکادمی ستاره',
                 logo: {
                     alt: 'لوگو آکادمی ستاره',
-                    src: 'img/logo.svg',
+                    src: 'images/logo.svg',
                 },
                 items: [
                     {
                         type: 'doc',
-                        docId: 'intro/index',
+                        docId: 'intro',
                         position: 'left',
                         label: 'مقدمات',
                     },
@@ -75,7 +75,7 @@ const config = {
                     },
                     {
                         type: 'doc',
-                        docId: 'software-engineering/index',
+                        docId: 'software-engineering',
                         position: 'left',
                         label: 'مهندسی نرم‌افزار',
                     },
