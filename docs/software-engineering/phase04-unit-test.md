@@ -74,10 +74,9 @@ Visual Studio
 - [What is a mock and when should you use it](https://stackoverflow.com/questions/214092/what-is-a-mock-and-when-should-you-use-it)
 - [Getting started with moq](https://riptutorial.com/moq)
 
-## نوشتن تست برای الگوریتم جستجو
+## نوشتن تست برای ماشین حساب ساده
 
-در این مرحله، با استفاده از دانشی که در این فاز به دست آورده‌اید، برای بخش‌های مختلف کد خود تست بنویسید. سعی کنید Code Coverage
-تست را به بالای ۹۵٪ برسانید.
-
-برای این کار یک برنچ با نام `feature/unit-test`
-بسازید و نوشتن تست را روی آن انجام دهید.
+در این مرحله، با استفاده از دانشی که در این فاز به دست آورده‌اید، برای قسمت business
+پروژه [ماشین حساب ساده](https://github.com/Star-Academy/SimpleCalculator)
+تست بنویسید.
+سعی کنید code coverage تست های خود را به 100% نزدیک کنید.
