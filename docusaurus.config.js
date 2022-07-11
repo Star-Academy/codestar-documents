@@ -69,7 +69,7 @@ const config = {
                     },
                     {
                         type: 'doc',
-                        docId: 'frontend/index',
+                        docId: 'frontend',
                         position: 'left',
                         label: 'فرانت‌اند',
                     },
