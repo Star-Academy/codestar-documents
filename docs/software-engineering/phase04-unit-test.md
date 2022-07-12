@@ -7,7 +7,7 @@ description: ''
 
 در این فاز با Unit Test
 و مفهوم Code Coverage
-آشنا خواهید شد. همچنین برای کدی که در فازهای قبلی نوشته‌اید، تست می‌نویسید و کیفیت کد خود را بیش از پیش افزایش می‌دهید.
+آشنا می‌شوید. همچنین برای کدی که در فازهای قبلی نوشته‌اید، تست می‌نویسید و کیفیت کد خود را بیش از پیش افزایش می‌دهید.
 
 ## مفهوم Unit Test و اهمیت آن
 
@@ -64,19 +64,25 @@ Visual Studio
 در این صورت، باید `SmsSender`
 را Mock
 کرد که دیگر SMS
-ارسال نکند، ولی همواره مثلا `true`
-برگرداند، به این معنی که ارسال با موفقیت انجام شده‌است. در نتیجه می‌توانیم عملکرد همان متد را تست کنیم، به جای این که بخواهیم درگیر وابستگی‌های آن نیز شویم.
+ارسال نکند، ولی خروجی مشخصی بدهد. در نتیجه می‌توانیم عملکرد همان متد را تست کنیم، به جای این که بخواهیم درگیر وابستگی‌های آن نیز شویم.
 
 برای آشنایی بهتر با Mock
 و نحوۀ استفاده این تکنیک در زبان #C
 از لینک‌های زیر کمک بگیرید:
 
 - [What is a mock and when should you use it](https://stackoverflow.com/questions/214092/what-is-a-mock-and-when-should-you-use-it)
-- [Getting started with moq](https://riptutorial.com/moq)
+- [Getting started with NSubstitute](https://nsubstitute.github.io/help/getting-started/)
+
+:::tip ‌
+پیشنهاد می‌کنیم برای مطالعه بیشتر درباره تست‌نویسی در #C
+مقالۀ [Writing Unit Tests with xUnit, NSubstitute and FluentAssertions](https://www.daniildoronkin.net/writing-unit-tests-with-xunit-nsubstitute-and-fluentassertions)
+را مطالعه کنید.
+:::
 
 ## نوشتن تست برای ماشین حساب ساده
 
 در این مرحله، با استفاده از دانشی که در این فاز به دست آورده‌اید، برای قسمت business
 پروژه [ماشین حساب ساده](https://github.com/Star-Academy/SimpleCalculator)
 تست بنویسید.
-سعی کنید code coverage تست های خود را به 100% نزدیک کنید.
+سعی کنید code coverage
+تست های خود را به 100% نزدیک کنید.

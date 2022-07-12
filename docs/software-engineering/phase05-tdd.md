@@ -59,6 +59,10 @@ dotnet new classlib -o .\SampleLibrary
 dotnet sln add .\SampleLibrary\
 ```
 
+:::note توجه
+کد شما، در این پروژه قرار می‌گیرد.
+:::
+
 ### ساختن پروژه تست
 
 در این مرحله یک پروژه تست با فریم‌ورک XUnit
@@ -79,8 +83,3 @@ dotnet add .\SampleLibrary.Test\ reference .\SampleLibrary\
 ```Bash
 dotnet test
 ```
-
-:::caution توجه
-کد پروژهٔ شما، در پروژهٔ Class Libraryای
-که ساختید قرار می‌گیرد.
-:::

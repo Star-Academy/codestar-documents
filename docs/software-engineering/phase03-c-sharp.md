@@ -5,7 +5,8 @@ description: ''
 
 ## مقدمه
 
-در این فاز با زبان #C آشنا خواهید شد. همچنین چند برنامۀ ساده با این زبان خواهید نوشت.
+در این فاز با زبان #C
+آشنا ‌می‌شوید. همچنین چند برنامۀ ساده با این زبان می‌نویسید.
 
 ## نصب پیش‌نیازها
 
@@ -24,7 +25,7 @@ description: ''
 را در ترمینال اجرا کنید تا نسخه‌های Net.
 نصب شده را مشاهده کنید.
 
-:::tip پیشنهاد
+:::tip ‌
 برای کار با ترمینال نسخه جدید [ترمینال ویندوز](https://github.com/microsoft/terminal/releases)
 را نیز نصب کنید.
 :::
@@ -70,7 +71,7 @@ dotnet run
 
 ## NuGet
 
-توسعه‌دهندگان برای اشتراک و دریافت کدهای به اشتراک گذاشته شده از ابزارهایی تحت عنوان Package Manager
+توسعه‌دهندگان برای اشتراک گذاشتن و دریافت کدهای به اشتراک گذاشته شده از ابزارهایی تحت عنوان Package Manager
 استفاده می‌‌کنند. در پلتفرم Net.
 از NuGet
 استفاده ‌می‌شود. NuGet
@@ -79,14 +80,15 @@ dotnet run
 نگه‌داری می‌کند. این فایل یک فایل zip
 حاوی کدهای کامپایل شده (dll)،
 فایل‌های مورد نیاز برای استفاده از Package
-و نیز اطلاعات خود آن می‌باشد.  این ابزار، مکانیزم‌هایی برای ایجاد، نگهداری و استفاده از کدها ارائه می‌دهد که برای هرکدام از این مکانیزم‌ها ابزارهایی نیز فراهم کرده‌است. هنگام استفاده از NuGet
-توسعه دهنده نگران دریافت و اشتراک کدها نمی‌باشد چرا که خود NuGet
+و اطلاعات Package
+می‌باشد.  این ابزار، مکانیزم‌هایی برای ایجاد، نگهداری و استفاده از کدها ارائه می‌دهد که برای هرکدام از این مکانیزم‌ها ابزارهایی نیز فراهم کرده است. هنگام استفاده از NuGet
+توسعه‌دهنده نگران دریافت و اشتراک کدها نمی‌باشد چرا که خود NuGet
 این عملیات‌ها را مدیریت می‌کند.
 
-دستور زیر پکیج `System.Text.Json`
-را به برنامه اضافه می‌کند. این پکیج امکان تبدیل اشیاء زبان #C
+پکیج `System.Text.Json`
+امکان تبدیل اشیاء زبان #C
 به Json
-و برعکس را فراهم می‌کند.
+و برعکس را فراهم می‌کند. دستور زیر این پکیج را به برنامه اضافه می‌کند:
 
 ```shell
 dotnet add package System.Text.Json
@@ -94,9 +96,9 @@ dotnet add package System.Text.Json
 
 کد زیر یک شیء #C
 را به Json
-تبدیل کرده و در خروجی چاپ می‌کند.
+تبدیل کرده و در خروجی چاپ می‌کند:
 
-```C#
+```csharp
 using System;
 using System.Text.Json;
 
@@ -130,7 +132,7 @@ namespace HelloWorld
 همچنین برای تعریف متغیر می‌توانید از کلیدواژۀ var
 استفاده کنید. در این صورت کامپایلر از روی مقدار اولیه، نوع متغیر را مشخص می‌کند.
 
-```C#
+```csharp
 var i = 0;
 // i is int
 var s = "hi";
@@ -150,13 +152,13 @@ f = "hello";
 ابتدا سری به این [آموزش](https://softchris.github.io/pages/dotnet-core.html#creating-a-solution)
 بزنید و سعی کنید تمام کارهای گفته شده را انجام دهید. سپس می‌توانید برحسب نیاز از آموزش‌های زیر نیز استفاده کنید:
 
-- [Console.ReadLine() Method in C#](<https://www.geeksforgeeks.org/console-readline-method-in-c-sharp/#:~:text=Console.-,ReadLine()%20Method%20in%20C%23,user%20presses%20the%20Enter%20key.>)
-- [Console Class in C#](https://www.geeksforgeeks.org/console-class-in-c-sharp/#:~:text=Weekday%20in%20C%23-,Console%20Class%20in%20C%23,output%20from%20the%20computer%20end.)
+- [Console.ReadLine() Method](<https://www.geeksforgeeks.org/console-readline-method-in-c-sharp/#:~:text=Console.-,ReadLine()%20Method%20in%20C%23,user%20presses%20the%20Enter%20key.>)
+- [Console Class](https://www.geeksforgeeks.org/console-class-in-c-sharp/#:~:text=Weekday%20in%20C%23-,Console%20Class%20in%20C%23,output%20from%20the%20computer%20end.)
 - [10 commands you don't want to be without in .Net Core](https://softchris.github.io/pages/dotnet-10-commands.html#_4-dotnet-run)
 
 ### نام‌گذاری‌ها در #C
 
-یکی از گام‌های مهم یادگیری هر زبان برنامه‌نویسی یادگیری اصول نام‌گذاری زبان می‌باشد. شاید نام‌گذاری در وهله اول مورد مهمی به نظر نرسد اما این موضوع از جهتی اهمیت دارد که نباید کد شما نسبت به کدهای جامعه برنامه نویسان آن زبان تافته جدا بافته باشد. برای آشنایی با این قواعد صفحات زیر را مطالعه کنید:
+یکی از گام‌های مهم یادگیری هر زبان برنامه‌نویسی یادگیری اصول نام‌گذاری آن می‌باشد. شاید نام‌گذاری در وهله اول مورد مهمی به نظر نرسد اما این موضوع از جهتی اهمیت دارد که نباید کد شما نسبت به کدهای جامعه برنامه نویسان آن زبان تافته جدا بافته باشد. برای آشنایی با این قواعد صفحات زیر را مطالعه کنید:
 
 - [C# Coding Standards and Naming Conventions](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
 - [Naming Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
@@ -166,11 +168,11 @@ f = "hello";
 گاهی نیاز داریم در محیطی تعاملی مانند زبان‌های مفسری (مثل javascript ،python یا ...) دستوراتی را اجرا کنیم. #C نیز این امکان را با نام Net Interactive. در اختیار ما قرار داده است. برای استفاده از این ابزار اکستنشن [Net Interactive.](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) را برای VS Code نصب کنید.
 پس از نصب اکستنشن در محیط Net Interactive. این دستورات را اجرا کنید.
 
-```C#
+```csharp
 2 + 2
 ```
 
-```C#
+```csharp
 System.IO.Directory.GetCurrentDirectory()
 ```
 
@@ -184,6 +186,11 @@ System.IO.Directory.GetCurrentDirectory()
 - [Lambda Expressions in C# (GeeksforGeeks)](https://www.geeksforgeeks.org/lambda-expressions-in-c-sharp/)
 - [Lambda Expressions in C# (C# Corner)](https://www.c-sharpcorner.com/UploadFile/bd6c67/lambda-expressions-in-C-Sharp/)
 
+:::info ‌
+این امکان یک [Syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)
+می‌باشد.
+:::
+
 ### Extension Method
 
 برای اضافه کردن متد به کلاس‌های موجود بدون تغییر کلاس اصلی، تعریف کلاس فرزند یا کامپایل مجدد کتابخانه، از Extension Method
@@ -194,7 +201,7 @@ static
 (به دلیل [sealed](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed)
 بودن قابل ارث‌بری نیست) پیاده‌سازی کنیم به صورتی که تعداد کلمات یک  متن را برای ما شمارش کند:
 
-```C#
+```csharp
 namespace ExtensionMethods
 {
     public static class MyExtensions
@@ -209,7 +216,7 @@ namespace ExtensionMethods
 
 استفاده از کد بالا به صورت زیر می‌باشد.
 
-```C#
+```csharp
 var s = “Hello Extension Methods”;
 var i = MyExtensions.WordCount(s);
 ```
@@ -219,7 +226,7 @@ var i = MyExtensions.WordCount(s);
 تغییر دهیم. می‌توانیم به این صورت از extension method
 استفاده کنیم:
 
-```C#
+```csharp
 var s = "Hello Extension Methods";
 var i = s.WordCount();
 ```
@@ -245,7 +252,7 @@ var i = s.WordCount();
 برای کار با زبان #C
 می‌توانید IDEهای
 [Visual Studio](https://visualstudio.microsoft.com/downloads/)
-یا [Rider](https://soft98.ir/software/programming/1016-%D8%AF%D8%A7%D9%86%D9%84%D9%80%D9%88%D8%AF-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%B1%D8%A7%DB%8C%D9%80%D9%80%D8%AF%D8%B1.html)
+یا Rider
 را نصب کنید و از امکاناتشان بهره‌مند شوید.
 
 **برای کار روی پروژه‌ها از IDE استفاده ‌‌‌‌کنید.**

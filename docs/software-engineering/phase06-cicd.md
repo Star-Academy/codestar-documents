@@ -4,7 +4,7 @@ description: ''
 ---
 
 در این فاز با مفهوم CI/CD
-و اهمیت استفاده از آن آشنا خواهید شد. همچنین پروژهٔ خود را به CI/CD
+و اهمیت استفاده از آن آشنا می‌شوید و سپس پروژهٔ خود را به CI/CD
 مجهز می‌کنید.
 
 ## CI/CD چیست و چرا اهمیت دارد
@@ -12,12 +12,12 @@ description: ''
 برای درک مفهوم CI/CD
 و اهمیت آن لینک‌های زیر را مطالعه کنید.
 
-- [What is CI/CD?(redhat) video](https://www.redhat.com/en/topics/devops/what-is-ci-cd)
+- [What is CI/CD?(redhat)](https://www.redhat.com/en/topics/devops/what-is-ci-cd)
 - [What is CI/CD?](https://medium.com/tilicholabs/what-is-ci-cd-c7c047b80e6b)
 - [What’s the Point of CI Anyway?](https://medium.com/swlh/whats-the-point-of-ci-anyway-ac3f9eaa244c)
 - [The Journey to CI/CD](https://medium.com/driven-by-code/the-journey-to-ci-cd-b1872927c36b)
 
-## آشنایی با GitHub Actions و اضافه کردن CI/CD Pipeline به ریپازیتوری
+## آشنایی با GitHub Actions و اضافه کردن CI/CD Pipeline به Repository
 
 یکی از ابزار CI/CD
 معروف، GitHub Actions
@@ -26,11 +26,12 @@ description: ''
 اجرای unit testها
 و همچنین انتشار package
 و دیگر عملیاتی که در دستهٔ CI/CD
-می‌گنجد را به ریپازیتوری GitHub
+می‌گنجد را به Repository
 خود اضافه کنیم. این بخش شامل مراحل زیر است:
 
 1. فایل `.github/workflows/buildPipeline.yml`
-  را در ریپازیتوری خود می‌سازیم.
+  را در Repository
+  خود می‌سازیم.
 
 1. برای pipeline
   خود یک نام تعریف می‌کنیم:
@@ -133,7 +134,8 @@ description: ''
   کرده و روی master
   پوش کنید.
 
-  در ریپازیتوری خود وارد منوی Actions
+  در Repository
+  خود وارد منوی Actions
   شوید؛ همانطور که مشاهده می‌کنید، Pipeline
   شما در حال اجرا است:
 
@@ -150,7 +152,8 @@ description: ''
 
   از این قسمت دکمهٔ Copy status badge Markdown
   را انتخاب کرده و متن کپی‌شده را به README
-  ریپازیتوری خود اضافه کنید.
+  در Repository
+  خود اضافه کنید.
 
   ![get build badge](./images/phase06-get-build-badge.png)
 
@@ -183,8 +186,9 @@ description: ''
   وارد بخش Setting
   شده و از سمت چپ، گزینه‌ی Badge
   را انتخاب کنید. در صفحه‌ای که باز می‌شود، Markdown
-  را کپی کرده و در README
-  ریپازیتوری خود قرار دهید. اکنون مشاهده خواهید کرد که در هر لحظه، وضعیت code coverage
+  را کپی کرده و به README
+  در Repository
+  خود اضافه کنید. اکنون مشاهده خواهید کرد که در هر لحظه، وضعیت code coverage
   شما نیز نمایش داده می‌شود:
 
   ![code cov badge](./images/phase06-codcov-badge.png)
@@ -237,7 +241,8 @@ description: ''
 
 در این مرحله، می‌خواهیم یک Pipeline
 جدید بسازیم که هنگام release
-یک ورژن در ریپازیتوری، پکیج را در [NuGet.org](https://nuget.org)
+یک ورژن در Repository،
+پکیج را در [NuGet.org](https://nuget.org)
 منتشر کند.
 
 ابتدا باید مشخصات package
@@ -323,7 +328,8 @@ description: ''
   :::
   :::note توجه
   به جای `<repository name>`
-  نام ریپازیتوری خود را قرار دهید.
+  نام Repository
+  خود را قرار دهید.
   :::
 
 1. build و ساخت پکیج NuGet:
@@ -348,7 +354,8 @@ description: ''
         run: dotnet nuget push ./**/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
   ```
 
-از این پس، هر گاه در ریپازیتوری خود تگ بزنید، Pipeline
+از این پس، هر گاه در Repository
+خود تگ بزنید، Pipeline
 فوق trigger
 می‌شود و در نتیجه پکیج شما push
 می‌شود. همچنین در منوی Actions
@@ -361,8 +368,8 @@ description: ''
 همچنین نمونه فایل‌های pipelineها
 و یک پروژه class library
 و xunit
-نمونه، در
-[این ریپازیتوری](https://github.com/Star-Academy/PackageTest)
+نمونه، در این
+[Repository](https://github.com/Star-Academy/PackageTest)
 موجود می‌باشد.
 
 ## ساخت یک Console App برای پروژه سرچ
