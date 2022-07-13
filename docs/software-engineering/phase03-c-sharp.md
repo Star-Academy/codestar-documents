@@ -52,7 +52,7 @@ description: ''
 dotnet new console
 ```
 
-:::tip پیشنهاد
+:::tip ‌
 برای باز کردن ترمینال در محیط VS Code
 می‌توانید از میانبر ```ctrl + ` (tilde)```
 استفاده کنید.
@@ -66,8 +66,11 @@ dotnet new console
 dotnet run
 ```
 
-با اجرای دستور بالا باید عبارت `Hello World`
-در ترمینال چاپ شود.
+با اجرای دستور بالا باید عبارت زیر در ترمینال چاپ شود:
+
+```shell
+Hello World
+```
 
 ## NuGet
 
@@ -248,7 +251,7 @@ var i = s.WordCount();
 و [نمرات](/static/datasets/sores.json)
 را بخواند و سپس نام، نام خانوادگی و معدل سه دانشجوی اول را چاپ کند.
 
-:::tip پیشنهاد
+:::tip ‌
 برای کار با زبان #C
 می‌توانید IDEهای
 [Visual Studio](https://visualstudio.microsoft.com/downloads/)
