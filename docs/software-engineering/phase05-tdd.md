@@ -6,8 +6,7 @@ description: ''
 ## مقدمه
 
 در این فاز با مفاهیم Test-driven development
-آشنا خواهید شد و در اصول SOLID
-نیز عمیق‌تر می‌شوید.
+آشنا می‌شوید و پروژه جستجو را با این الگو بازنویسی می‌کنید.
 
 ## آشنایی با مبانی TDD
 
@@ -59,19 +58,19 @@ dotnet new classlib -o .\SampleLibrary
 dotnet sln add .\SampleLibrary\
 ```
 
-:::note توجه
+:::note ‌
 کد شما، در این پروژه قرار می‌گیرد.
 :::
 
 ### ساختن پروژه تست
 
-در این مرحله یک پروژه تست با فریم‌ورک XUnit
+در این مرحله یک پروژه تست با فریم‌ورک xUnit
 بسازید، آن را به solution
 اضافه کنید و همچنین یک رفرنس به پروژهٔ Class Libraryای
 که قبلاً ساخته‌اید بدهید:
 
 ```Bash
-dotnet new XUnit -o .\SampleLibrary.Test
+dotnet new xunit -o .\SampleLibrary.Test
 dotnet sln add .\SampleLibrary.Test\
 dotnet add .\SampleLibrary.Test\ reference .\SampleLibrary\
 ```

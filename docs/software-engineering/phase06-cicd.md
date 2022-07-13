@@ -19,12 +19,12 @@ description: ''
 
 ## آشنایی با GitHub Actions و اضافه کردن CI/CD Pipeline به Repository
 
-یکی از ابزار CI/CD
+یکی از ابزارهای CI/CD
 معروف، GitHub Actions
 است که به کمک آن، می‌توانیم یک Pipeline
 شامل عملیات build،
-اجرای unit testها
-و همچنین انتشار package
+اجرای unit testها،
+انتشار package
 و دیگر عملیاتی که در دستهٔ CI/CD
 می‌گنجد را به Repository
 خود اضافه کنیم. این بخش شامل مراحل زیر است:
@@ -33,23 +33,23 @@ description: ''
   را در Repository
   خود می‌سازیم.
 
-1. برای pipeline
+1. برای Pipeline
   خود یک نام تعریف می‌کنیم:
 
   ```yml
   name: build
   ```
 
-  :::note توجه
+  :::note ‌
   به فایل `buildPipeline.yml`
   اضافه کنید.
   :::
 
-1. مشخص می‌کنیم که pipeline
+1. مشخص می‌کنیم که Pipeline
   در هنگام push
   و pull request
   روی master
-  اجرا شود.
+  اجرا شود:
 
   ```yml
   on:
@@ -60,76 +60,82 @@ description: ''
   ```
 
 1. مراحل Pipeline
-  را به ترتیب تعریف می‌کنیم. در ابتدا مشخص می‌کنیم که pipeline
-  روی آخرین ورژن ubuntu
-  (می‌توان آن را تغییر داد) اجرا شود:
+  را به ترتیب تعریف می‌کنیم:
+  
+    1. در ابتدا مشخص می‌کنیم که Pipeline
+      روی آخرین ورژن ubuntu
+      (می‌توان آن را تغییر داد) اجرا شود:
 
-  ```yml
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-  ```
+      ```yml
+      jobs:
+        build:
+          runs-on: ubuntu-latest
+      ```
 
-1. در این مرحله مشخص می‌کنیم که CI
-  از agentای
-  به نام `actions/checkout@v3`
-  استفاده کند: (برای مطالعه بیشتر [این](https://www.edwardthomson.com/blog/)
-  لینک را بخوانید.)
+    1. سپس مشخص می‌کنیم که CI
+      از agentای
+      به نام `actions/checkout@v3`
+      استفاده کند:
 
-  ```yml
-      steps:
-      - uses: actions/checkout@v3
-  ```
+      ```yml
+          steps:
+          - uses: actions/checkout@v3
+      ```
 
-1. در این مرحله مشخص می‌کنیم که .Net 6.0
-  نصب شود.
+      :::tip ‌
+      برای مطالعه بیشتر [Packaging an Action](https://www.edwardthomson.com/blog/building_an_action.html)
+      را بخوانید سپس سری به [Repository](https://github.com/actions/checkout)
+      آن بزنید.
+      :::
+    1. در قدم بعد مشخص می‌کنیم که .Net 6.0
+      نصب شود:
 
-  ```yml
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: 6.0.x
-  ```
+      ```yml
+          - name: Setup .NET
+            uses: actions/setup-dotnet@v2
+            with:
+              dotnet-version: 6.0.x
+      ```
 
-1. سپس dependencyهای
-  پروژه restore
-  شوند:
-  ‌
+    1. سپس dependencyهای
+      پروژه restore
+      شوند:
+      ‌
 
-  ```yml
-      - name: Install dependencies
-        run: dotnet restore
-        working-directory: <path to solution>
-  ```
+      ```yml
+          - name: Install dependencies
+            run: dotnet restore
+            working-directory: <path to solution>
+      ```
 
-  :::note توجه
-  دقت کنید که به جای `<path to solution>`
-  آدرس فولدر solution
-  خود را مشخص کنید.
-  :::
+      :::note ‌
+      دقت کنید که به جای `<path to solution>`
+      آدرس فولدر solution
+      خود را مشخص کنید.
+      :::
 
-1. solution
-  را build
-  می‌کنیم.
+    1. حال solution
+      را build
+      می‌کنیم:
 
-  ```yml
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
-        working-directory: <path to solution>
-  ```
+      ```yml
+          - name: Build
+            run: dotnet build --configuration Release --no-restore
+            working-directory: <path to solution>
+      ```
 
-1. تست‌ها را run
-  می‌کنیم.
+    1. در نهایت تست‌ها را run
+      می‌کنیم:
 
-  ```yml
-      - name: Test
-        run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage"
-        working-directory: <path to solution>
-  ```
+      ```yml
+          - name: Test
+            run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage"
+            working-directory: <path to solution>
+    ```
 
   تبریک! CI
   شما آماده‌است.
-  
+
   فایل را commit
   کرده و روی master
   پوش کنید.
@@ -262,7 +268,7 @@ description: ''
 </Project>
 ```
 
-:::note توجه
+:::note ‌
 در این فایل، به جای `[Year]`
 سال شمسی، به جای `[TeamNumber]`
 شمارهٔ تیم خود و به جای `[LibraryName]`
@@ -279,7 +285,7 @@ description: ''
 
 1. نام، trigger
   و OS
-  مربوط به pipeline
+  مربوط به Pipeline
   را مشخص می‌کنیم.
 
   ```yml
@@ -319,14 +325,14 @@ description: ''
           repository: Star-Academy/<repository name>
   ```
 
-  :::note توجه
+  :::note ‌
   تگ release
   بعنوان ورژن به NuGet
   داده می‌شود. در نتیجه، الگوهای قابل قبول ورژن را از
   [اینجا](https://docs.microsoft.com/en-us/nuget/concepts/package-versioning)
   بخوانید و تگ را مطابق این الگو بزنید.
   :::
-  :::note توجه
+  :::note ‌
   به جای `<repository name>`
   نام Repository
   خود را قرار دهید.
@@ -340,11 +346,11 @@ description: ''
         working-directory: <path to classlib project>
   ```
 
-  :::note توجه
+  :::note ‌
   به جای `<path to classlib project>`
-  آدرس فولدری را که فایل `csproj.`
+  آدرس فولدری که فایل `csproj.`
   مربوط به پروژه class library
-  در آن قرار دارد بنویسید.
+  در آن قرار دارد را بنویسید.
   :::
 
 1. انتشار پکیج NuGet:
@@ -362,20 +368,18 @@ description: ''
 می‌توانید وضعیت publish
 را مشاهده کنید.
 
-پکیج منتشر شدهٔ خود را نیز می‌توانید در آدرس `nuget.org/packages/[PackageId]`
+پکیج منتشر شدهٔ خود را می‌توانید در آدرس `nuget.org/packages/[PackageId]`
 مشاهده کنید.
 
-همچنین نمونه فایل‌های pipelineها
-و یک پروژه class library
-و xunit
-نمونه، در این
-[Repository](https://github.com/Star-Academy/PackageTest)
-موجود می‌باشد.
+:::tip ‌ ‌
+برای مطالعه بیشتر [Intro to GitHub Actions for .NET](https://devblogs.microsoft.com/dotnet/dotnet-loves-github-actions/)
+را مطالعه کنید.
+:::
 
 ## ساخت یک Console App برای پروژه سرچ
 
 در این بخش، یک solution
-دیگر بسازید، و در آن با dotnet cli
+دیگر بسازید، و در آن با Net Cli.
 یک console app
 بسازید. در پوشه پروژه کنسول، command
 زیر را اجرا کنید تا پکیج سرچ شما به پروژه کنسول اضافه شود:
