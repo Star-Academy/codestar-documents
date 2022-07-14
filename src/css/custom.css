@@ -42,3 +42,8 @@
     right: unset;
     left: calc(var(--ifm-pre-padding) / 2);
 }
+
+.theme-doc-markdown.markdown img {
+    display: block;
+    margin: auto;
+}
