@@ -33,6 +33,10 @@
     min-height: 100vh !important;
 }
 
+article > a.card[href^='/docs/frontend/'] {
+    direction: rtl;
+}
+
 .theme-code-block {
     direction: rtl;
 }
