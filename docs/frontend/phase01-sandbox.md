@@ -372,7 +372,7 @@ npm i package-name
 می‌توانید از پارامتر `D` هنگام نصب استفاده کنید:
 
 ```shell
-npm i package-name -D
+npm i -D package-name
 ```
 
 با این کار، زمانی که بخواهید پروژه را بر روی Production ببرید،
