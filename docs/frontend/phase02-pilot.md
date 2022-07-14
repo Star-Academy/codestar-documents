@@ -382,6 +382,28 @@ ng lint --fix
 
 ---
 
+### flexbox & grid
+
+می‌توان گفت flexbox و grid جزء بهترین قابلیت‌هایی هستند که در طی چند سال گذشته به CSS اضافه شده‌اند؛
+اما متاسفانه خیلی از افراد در استفاده از آن‌ها دچار مشکل می‌شوند و نحوۀ کارکرد آن‌ها را به خوبی درک نمی‌کنند.
+بنابراین در این قسمت به معرفی چند منبع برای رفع ابهامات احتمالی می‌پردازیم.
+
+برای آشنایی بیشتر با flexbox می‌توانید از لینک زیر استفاده کنید:
+
+-   [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+-   [Game - Flexbox Froggy](https://flexboxfroggy.com/)
+-   [Kevin Powell - Do you understand how Flexbox does what it does?](https://www.youtube.com/watch?v=9e-lWQdO-DA)
+-   [Kevin Powell - Flexbox is more complicated than you thought](https://www.youtube.com/watch?v=fm3dSg4cxRI)
+
+برای آشنایی بیشتر با grid می‌توانید از لینک زیر استفاده کنید:
+
+-   [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+-   [Game - Grid Garden](https://codepip.com/games/grid-garden/)
+-   [Grid by Example](https://gridbyexample.com/)
+-   [Kevin Powell - The EASIEST way to get started with CSS GRID](https://www.youtube.com/watch?v=_lEkD8IGkwo)
+
+---
+
 ## پروژه
 
 در این دوره قصد داریم یک فروشگاه آنلاین مانند Steam برای خرید بازی بسازیم.
