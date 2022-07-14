@@ -33,6 +33,10 @@
     min-height: 100vh !important;
 }
 
+.theme-code-block {
+    direction: rtl;
+}
+
 .theme-code-block pre code .token-line {
     float: inherit;
     clear: both;
@@ -41,4 +45,9 @@
 .theme-code-block pre + div {
     right: unset;
     left: calc(var(--ifm-pre-padding) / 2);
+}
+
+.theme-doc-markdown.markdown img {
+    display: block;
+    margin: auto;
 }

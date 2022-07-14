@@ -114,6 +114,17 @@ const config = {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme,
             },
+            docs: {
+                sidebar: {
+                    autoCollapseCategories: true,
+                    hideable: true,
+                },
+            },
+            tableOfContents: {
+                minHeadingLevel: 2,
+                maxHeadingLevel: 6,
+            },
+            image: 'center',
         }),
 };
 
