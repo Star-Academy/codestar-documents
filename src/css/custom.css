@@ -33,6 +33,10 @@
     min-height: 100vh !important;
 }
 
+.theme-code-block {
+    direction: rtl;
+}
+
 .theme-code-block pre code .token-line {
     float: inherit;
     clear: both;
