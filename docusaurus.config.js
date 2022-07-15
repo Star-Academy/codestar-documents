@@ -40,6 +40,7 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
+                    editUrl: 'https://github.com/Star-Academy/codestar-documents/tree/master/',
                 },
                 blog: {
                     showReadingTime: true,
@@ -114,6 +115,17 @@ const config = {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme,
             },
+            docs: {
+                sidebar: {
+                    autoCollapseCategories: true,
+                    hideable: true,
+                },
+            },
+            tableOfContents: {
+                minHeadingLevel: 2,
+                maxHeadingLevel: 6,
+            },
+            image: 'center',
         }),
 };
 
