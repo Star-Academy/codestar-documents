@@ -240,29 +240,64 @@ ng lint --fix
 در HTML تگ‌هایی وجود دارند که صرفاً برای یک کار خاص طراحی شده‌اند و با دیدن نام آن‌ها می‌توان کاربردشان را متوجه شد. به
 این تگ‌ها، **تگ‌های معنایی** گفته می‌شود که لیستی از آن‌ها را به همراه توضیحات مختصری در اینجا مشاهده می‌کنید:
 
--   [header](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#header)
-    -   معمولاً در بالاترین بخش صفحه یا المان مورد نظر قرار می‌گیرد و در اکثر مواقع شامل لوگو، `nav` و دکمه‌های
-        Call-to-Action می‌باشد.
--   [nav](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#nav)
-    -   شامل لینک‌هایی به قسمت‌های مختلف صفحۀ اصلی یا سایت می‌باشد.
--   [main](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#main)
-    -   شامل محتوای اصلی سایت می‌باشد و در اکثر مواقع بیشترین حجم از صفحه را اشغال می‌کند.
--   [aside](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#aside)
-    -   شامل محتوایی غیر از محتوای اصلی می‌باشد به طوری که نمی‌توان آن را در `main` قرار داد. به‌عنوان مثال تبلیغات یا لینک
-        به قسمت‌های مختلف مقاله.
--   [footer](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#footer)
-    -   معمولاً در پایین‌ترین بخش صفحه یا المان مورد نظر قرار می‌گیرد و در اکثر مواقع شامل Copyright، توضیحات مختصری در
-        مورد سایت و شخص یا گروه سازنده می‌باشد.
--   [article](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#article)
-    -   بخشی از محتواست که کاملاً از بخش‌های دیگر مستقل می‌باشد به گونه‌ای که می‌توان آن را به طور جداگانه استفاده یا
-        منتشر کرد. به‌عنوان مثال می‌توان به مقاله‌ای از یک مجله یا پستی از یک وبلاگ اشاره کرد.
--   [section](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#results)
-    -   بخشی از محتوای اصلی سایت را مشخص می‌کند. معمولاً از این تگ برای ایجاد تمایز بینِ قسمت‌های مختلف استفاده می‌شود.
-        معمولاً در ابتدای هر بخش از `heading` یعنی تگ‌های `h1` تا `h6` استفاده می‌شود.
--   [details](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#details)
-    -   شامل بخشی از محتواست که کاربر می‌تواند در صورت نیاز آن را نمایان یا پنهان کند.
--   [summary](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#summary)
-    -   همیشه داخل المان `details` استفاده می‌شود و باید شامل توضیحاتی دربارۀ آن باشد.
+##### header
+
+معمولاً در بالاترین بخش صفحه یا المان مورد نظر قرار می‌گیرد و در اکثر مواقع شامل لوگو، `nav` و دکمه‌های
+Call-to-Action می‌باشد.
+
+[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#header)
+
+##### nav
+
+شامل لینک‌هایی به قسمت‌های مختلف صفحۀ اصلی یا سایت می‌باشد.
+
+[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#nav)
+
+##### main
+
+شامل محتوای اصلی سایت می‌باشد و در اکثر مواقع بیشترین حجم از صفحه را اشغال می‌کند.
+
+[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#main)
+
+##### aside
+
+شامل محتوایی غیر از محتوای اصلی می‌باشد به طوری که نمی‌توان آن را در `main` قرار داد. به‌عنوان مثال تبلیغات یا لینک
+به قسمت‌های مختلف مقاله.
+
+[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#aside)
+
+##### footer
+
+معمولاً در پایین‌ترین بخش صفحه یا المان مورد نظر قرار می‌گیرد و در اکثر مواقع شامل Copyright، توضیحات مختصری در
+مورد سایت و شخص یا گروه سازنده می‌باشد.
+
+[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#footer)
+
+##### article
+
+بخشی از محتواست که کاملاً از بخش‌های دیگر مستقل می‌باشد به گونه‌ای که می‌توان آن را به طور جداگانه استفاده یا
+منتشر کرد. به‌عنوان مثال می‌توان به مقاله‌ای از یک مجله یا پستی از یک وبلاگ اشاره کرد.
+
+[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#article)
+
+##### section
+
+بخشی از محتوای اصلی سایت را مشخص می‌کند. معمولاً از این تگ برای ایجاد تمایز بینِ قسمت‌های مختلف استفاده می‌شود.
+معمولاً در ابتدای هر بخش از `heading` یعنی تگ‌های `h1` تا `h6` استفاده می‌شود.
+
+[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#results)
+
+##### details
+
+شامل بخشی از محتواست که کاربر می‌تواند در صورت نیاز آن را نمایان یا پنهان کند.
+
+[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#details)
+
+##### summary
+
+همیشه داخل المان `details` استفاده می‌شود و باید شامل توضیحاتی دربارۀ آن باشد.
+
+[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#summary)
 
 البته موارد بالا تنها بخشی از تگ‌های معنایی HTML می‌باشند. برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر
 استفاده کنید:
@@ -279,22 +314,37 @@ ng lint --fix
 
 بعضی از تگ‌ها مانند `b` و `i` برای تغییر ظاهر بخشی از متن استفاده می‌شوند که لیست آن‌ها را در اینجا ذکر می‌کنیم:
 
--   b & strong
-    -   عبارت مورد نظر را به صورت Bold یا پُررنگ نمایش می‌دهند.
--   i & em
-    -   عبارت مورد نظر را به صورت Italic یا کج نمایش می‌دهند.
--   mark
-    -   برای Highlight کردن بخشی از نوشته، استفاده می‌شود.
--   small
-    -   عبارت مورد نظر را با اندازۀ کوچکتری نسبت به اندازۀ اصلی نمایش می‌دهد.
--   del
-    -   برای نوشته‌های حذف‌شده استفاده می‌شود به طوری که معمولاً آن‌ها را به صورت خط‌خورده نمایش می‌دهد.
--   ins
-    -   برای نوشته‌های اضافه‌شده استفاده می‌شود به طوری که معمولاً آن‌ها را با Underline نمایش می‌دهد.
--   sub
-    -   معمولاً برای نمایش اندیس‌ها در پایینِ عبارت، استفاده می‌شود.
--   sup
-    -   معمولاً برای نمایش شماره‌های پاورقی در بالای عبارت، استفاده می‌شود.
+##### b & strong
+
+عبارت مورد نظر را به صورت Bold یا پُررنگ نمایش می‌دهند.
+
+##### i & em
+
+عبارت مورد نظر را به صورت Italic یا کج نمایش می‌دهند.
+
+##### mark
+
+برای Highlight کردن بخشی از نوشته، استفاده می‌شود.
+
+##### small
+
+عبارت مورد نظر را با اندازۀ کوچکتری نسبت به اندازۀ اصلی نمایش می‌دهد.
+
+##### del
+
+برای نوشته‌های حذف‌شده استفاده می‌شود به طوری که معمولاً آن‌ها را به صورت خط‌خورده نمایش می‌دهد.
+
+##### ins
+
+برای نوشته‌های اضافه‌شده استفاده می‌شود به طوری که معمولاً آن‌ها را با Underline نمایش می‌دهد.
+
+##### sub
+
+معمولاً برای نمایش اندیس‌ها در پایینِ عبارت، استفاده می‌شود.
+
+##### sup
+
+معمولاً برای نمایش شماره‌های پاورقی در بالای عبارت، استفاده می‌شود.
 
 اما تمامِ این styleها را با استفاده از CSS نیز می‌توانیم داشته باشیم؛ پس علت وجود این تگ‌ها چیست؟ چرا برای بعضی از
 استایل‌ها مانند Bold، دو تگ متفاوت داریم؟
@@ -406,7 +456,7 @@ ng lint --fix
 
 ## پروژه
 
-در این دوره قصد داریم یک فروشگاه آنلاین مانند Steam برای خرید بازی بسازیم.
+در این دوره قصد داریم یک فروشگاه آنلاین مانند Steam یا Epic برای خرید بازی بسازیم.
 در این فاز شما باید با توجه به موارد آموزش داده شده، یک Landing Page برای سایت خود بسازید.
 می‌توانید از نرم‌افزارهای مشابه ایده بگیرید اما اینکه چه قابلیت‌هایی در سایت شما وجود داشته باشد، کاملاً بستگی به خودتان دارد.
-در صورتی که قابلیتی برای آموزش‌ها لازم باشد، در مستندات به آن اشاره خواهیم کرد.
+در صورتی که پیاده‌سازی قابلیتی ضروری باشد، در مستندات به آن اشاره خواهیم کرد.
