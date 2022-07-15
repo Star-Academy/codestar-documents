@@ -35,7 +35,7 @@ document.cookies = 'username=codestar; password=1234; expires=Wed, 25 Aug 2021 2
 
 برای اطلاعات بیشتر درباره کوکی‌ها به لینک زیر مراجعه کنید:
 
--   [Web APIs, Document.cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/)
+-   [MDN - Web APIs, Document.cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/)
 
 مشکلی که با کوکی‌ها وجود داشت، مقدار حافظه‌ی کم آن‌ها (حداکثر 4 کیلوبایت) بود. در نتیجه `session storage` و `local storage` معرفی شدند. بر‌خلاف کوکی‌ها، در این دو نوع از حافظه از ذخیره‌سازی `key, value` استفاده می‌شود. (مانند دیکشنری).
 
@@ -65,7 +65,7 @@ function setSession() {
 
 برای اطلاعات بیشتر به لینک زیر رجوع کنید:
 
--   [Web APIs, Window.sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
+-   [MDN - Web APIs, Window.sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
 
 #### Local storage
 
@@ -86,8 +86,8 @@ localstorage.remove('counry');
 
 همچنین برای یادگیری مفصل‌تر این دو مبحث می‌توانید این لینک‌ها را بخوانید:
 
--   [Web APIs, Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
--   [Using the Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+-   [MDN - Web APIs, Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+-   [MDN - Using the Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 
 ### JSON
 
@@ -112,8 +112,8 @@ localstorage.remove('counry');
 ارتباط بین سیستم‌های سرویس‌گیرنده و سرورها از طریق ارسال درخواست‌های `HTTP` و دریافت پاسخ‌های `HTTP` انجام می‌شود. به زبان ساده‌تر، `HTTP` یک نوع قانون است که ارسال و دریافت اطلاعات بین `client` و `server` بر اساس آن انجام می‌شود.
 برای آشنایی بهتر با `HTTP` لینک‌های زیر می‌تواند به شما کمک کند.
 
+-   [MDN - An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 -   [An introduction to HTTP: everything you need to know](https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/)
--   [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 
 ### RESTful Api
 
@@ -178,12 +178,12 @@ function setDisplayTimeOut() {
 
 مبحث `Promise` بسیار گسترده‌ست. برای اطلاعات بیشتر می‌توانید از لینک زیر استفاده کنید:
 
--   [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+-   [MDN - Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 -   [JavaScript Promises](https://www.w3schools.com/js/js_promise.asp)
 
 #### async, await
 
-در صورتی که پشت نام یک تابع `async` به کار رود، آن تابع یک `Promise` به عنوان خروجی برمی‌گرداند. `async`و `await` یک راه تمیز‌تر و ساده‌تر برای استفاده از `Promise` ها هستند.
+در صورتی که پشت نام یک تابع `async` به کار رود، آن تابع یک `Promise` به‌عنوان خروجی برمی‌گرداند. `async`و `await` یک راه تمیز‌تر و ساده‌تر برای استفاده از `Promise` ها هستند.
 
 مسئله بالا را با استفاده از `async` و `await` حل می‌کنیم:
 
@@ -262,7 +262,7 @@ history.back()
 
 برای دیدن جزئیات `history`، به لینک زیر رجوع کنید:
 
--   [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
+-   [MDN - History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
 
 ### npm
 
