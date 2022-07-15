@@ -60,7 +60,7 @@ outer scope -> name: Bijan
 برخلاف var، زمانی که از let برای تعریف یک متغیر استفاده کنیم،
 آن متغیر در Scope فعلی محدود می‌شود.
 
-به عنوان مثال خروجی کد زیر:
+به‌عنوان مثال خروجی کد زیر:
 
 ```javascript
 function defineAndPrintName() {
@@ -138,7 +138,7 @@ afWrapper.whatIsThis();
 
 #### Constructor
 
-قبل از اینکه کلاس‌ها به JavaScript بیایند، از RF به عنوان Constructor استفاده می‌شد.
+قبل از اینکه کلاس‌ها به JavaScript بیایند، از RF به‌عنوان Constructor استفاده می‌شد.
 منتهی از آنجایی که در AF مقدار this همواره ثابت است، نمی‌توانیم این قابلیت را برایش داشته باشیم.
 
 ```javascript

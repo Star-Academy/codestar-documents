@@ -248,14 +248,14 @@ ng lint --fix
 -   [main](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#main)
     -   شامل محتوای اصلی سایت می‌باشد و در اکثر مواقع بیشترین حجم از صفحه را اشغال می‌کند.
 -   [aside](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#aside)
-    -   شامل محتوایی غیر از محتوای اصلی می‌باشد به طوری که نمی‌توان آن را در `main` قرار داد. به عنوان مثال تبلیغات یا لینک
+    -   شامل محتوایی غیر از محتوای اصلی می‌باشد به طوری که نمی‌توان آن را در `main` قرار داد. به‌عنوان مثال تبلیغات یا لینک
         به قسمت‌های مختلف مقاله.
 -   [footer](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#footer)
     -   معمولاً در پایین‌ترین بخش صفحه یا المان مورد نظر قرار می‌گیرد و در اکثر مواقع شامل Copyright، توضیحات مختصری در
         مورد سایت و شخص یا گروه سازنده می‌باشد.
 -   [article](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#article)
     -   بخشی از محتواست که کاملاً از بخش‌های دیگر مستقل می‌باشد به گونه‌ای که می‌توان آن را به طور جداگانه استفاده یا
-        منتشر کرد. به عنوان مثال می‌توان به مقاله‌ای از یک مجله یا پستی از یک وبلاگ اشاره کرد.
+        منتشر کرد. به‌عنوان مثال می‌توان به مقاله‌ای از یک مجله یا پستی از یک وبلاگ اشاره کرد.
 -   [section](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#results)
     -   بخشی از محتوای اصلی سایت را مشخص می‌کند. معمولاً از این تگ برای ایجاد تمایز بینِ قسمت‌های مختلف استفاده می‌شود.
         معمولاً در ابتدای هر بخش از `heading` یعنی تگ‌های `h1` تا `h6` استفاده می‌شود.
@@ -267,7 +267,7 @@ ng lint --fix
 البته موارد بالا تنها بخشی از تگ‌های معنایی HTML می‌باشند. برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر
 استفاده کنید:
 
--   [HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+-   [MDN - HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 -   [HTML Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
 -   [What On Earth Is Semantic Markup?](https://html.com/semantic-markup/)
 -   [A Friendly Tutorial For Developing Meaningful Web Pages](https://internetingishard.netlify.app/html-and-css/semantic-html/index.html)
@@ -299,7 +299,7 @@ ng lint --fix
 اما تمامِ این styleها را با استفاده از CSS نیز می‌توانیم داشته باشیم؛ پس علت وجود این تگ‌ها چیست؟ چرا برای بعضی از
 استایل‌ها مانند Bold، دو تگ متفاوت داریم؟
 
-کاربرد اصلی این تگ‌ها برای استفادۀ سریع هنگام نوشتن محتوای سایت است. به عنوان مثال هر وقت خواستیم یک کلمه را Bold کنیم
+کاربرد اصلی این تگ‌ها برای استفادۀ سریع هنگام نوشتن محتوای سایت است. به‌عنوان مثال هر وقت خواستیم یک کلمه را Bold کنیم
 به جای اینکه از `span` در HTML و یک کلاس در CSS، می‌توانیم از `b` یا `strong` استفاده کنیم، بدونِ آنکه نیاز باشد
 تغییری در کد CSS دهیم.
 
@@ -342,13 +342,13 @@ ng lint --fix
 -   عکس مورد نظر صرفاً برای زیبایی ظاهری و دکوری باشد، به طوری که مفهوم خاصی به محتوا اضافه نکند.
 -   عکس مورد نظر Caption داشته باشد.
 
-دقت کنید که در موارد بالا حتماً باید تگ `alt` را استفاده کنید، اما متنی داخل آن ننویسید؛ به عنوان مثال:
+دقت کنید که در موارد بالا حتماً باید تگ `alt` را استفاده کنید، اما متنی داخل آن ننویسید؛ به‌عنوان مثال:
 
 ```html
 <img src="https://totally-real-website.com/some-picture.png" alt="" />
 ```
 
-علت این موضوع این است که اگر `alt` وجود نداشته باشد، Screen Reader نام فایل عکس را به عنوان توضیحات آن می‌خواند؛
+علت این موضوع این است که اگر `alt` وجود نداشته باشد، Screen Reader نام فایل عکس را به‌عنوان توضیحات آن می‌خواند؛
 اما اگر متن خالی داخل `alt` باشد، عکس به کلی در نظر گرفته نمی‌شود.
 
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:

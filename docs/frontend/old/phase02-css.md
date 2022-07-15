@@ -33,7 +33,7 @@ description: ''
 
 در صورتی که یک المان به شکل border-box تعریف شود، اگر یک width برای آن در نظر بگیرید،
 آن width شامل border و padding نیز می‌باشد.
-به عنوان مثال اگر width برابر با 200 پیکسل،
+به‌عنوان مثال اگر width برابر با 200 پیکسل،
 padding برابر با 20 پیکسل در هر طرف
 و border برابر با 5 پیکسل در هر طرف باشد،
 عرضی که برای content باقی می‌مانند برابر با 150 پیکسل است.
@@ -45,7 +45,7 @@ padding برابر با 20 پیکسل در هر طرف
 
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
--   [The box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+-   [MDN - The box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 -   [CSS Box Model](https://www.w3schools.com/css/css_boxmodel.asp)
 
 ---
@@ -105,7 +105,7 @@ html {
 #### Attribute Selectors
 
 گاهی اوقات نیاز داریم با توجه به مقدار یک attribute، المان مورد نظر را انتخاب کنیم.
-به عنوان مثال ممکن است بخواهیم تمامِ inputهایی که از نوع text هستند را انتخاب کنیم:
+به‌عنوان مثال ممکن است بخواهیم تمامِ inputهایی که از نوع text هستند را انتخاب کنیم:
 
 ```css
 input[type='text'] {
@@ -155,7 +155,7 @@ ul > li:nth-child(2n + 1) {
 زمانی که کاربر ماوس را بر روی المان مورد نظر ببرد با استفاده از hover می‌توانیم style آن را تغییر دهیم.
 اما امکانات ما به همینجا ختم نمی‌شود.
 
-به عنوان مثال اگر یک checkbox داشته باشیم،
+به‌عنوان مثال اگر یک checkbox داشته باشیم،
 ممکن است با انتخاب شدنش بخواهیم style دیگری به آن اضافه کنیم.
 برای این کار می‌توانیم از checked استفاده کنیم:
 
@@ -183,7 +183,7 @@ input:checked + label {
 به طوری که ما نمی‌توانیم تمام آن‌ها را در اینجا ذکر کنیم،
 اما برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
--   [CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
+-   [MDN - CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 -   [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
 -   [Beginner Concepts: How CSS Selectors Work](https://css-tricks.com/how-css-selectors-work/)
 -   [The 30 CSS Selectors You Must Memorize](https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
