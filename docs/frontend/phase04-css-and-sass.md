@@ -213,7 +213,7 @@ input:checked + label {
 
 -   [MDN - CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 -   [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
--   [Beginner Concepts: How CSS Selectors Work](https://css-tricks.com/how-css-selectors-work/)
+-   [CSS Tricks - Beginner Concepts: How CSS Selectors Work](https://css-tricks.com/how-css-selectors-work/)
 -   [The 30 CSS Selectors You Must Memorize](https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
 
 ---
