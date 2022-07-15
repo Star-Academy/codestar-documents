@@ -1,5 +1,5 @@
 ---
-title: "آشنایی با #C"
+title: 'آشنایی با #C'
 description: ''
 ---
 
@@ -12,7 +12,7 @@ description: ''
 
 در قدم اول برای کار با زبان #C
 پیشنهاد می‌کنیم از [VS Code](https://code.visualstudio.com/)
-استفاده کنید تا با  [Net CLI.](https://docs.microsoft.com/en-us/dotnet/core/tools/)
+استفاده کنید تا با [Net CLI.](https://docs.microsoft.com/en-us/dotnet/core/tools/)
 بهتر آشنا شوید.
 برای نوشتن کد به زبان #C
 در VS Code
@@ -45,7 +45,7 @@ description: ''
 ## اولین برنامه
 
 ابتدا VS Code
-را باز کنید و یک پوشه انتخاب کنید.  سپس در ترمینال، برای ایجاد یک Console App
+را باز کنید و یک پوشه انتخاب کنید. سپس در ترمینال، برای ایجاد یک Console App
 دستور زیر را اجرا کنید:
 
 ```shell
@@ -54,7 +54,7 @@ dotnet new console
 
 :::tip ‌
 برای باز کردن ترمینال در محیط VS Code
-می‌توانید از میانبر ```ctrl + ` (tilde)```
+می‌توانید از میانبر `` ctrl + ` (tilde) ``
 استفاده کنید.
 :::
 
@@ -84,7 +84,7 @@ Hello World
 حاوی کدهای کامپایل شده (dll)،
 فایل‌های مورد نیاز برای استفاده از Package
 و اطلاعات Package
-می‌باشد.  این ابزار، مکانیزم‌هایی برای ایجاد، نگهداری و استفاده از کدها ارائه می‌دهد که برای هرکدام از این مکانیزم‌ها ابزارهایی نیز فراهم کرده است. هنگام استفاده از NuGet
+می‌باشد. این ابزار، مکانیزم‌هایی برای ایجاد، نگهداری و استفاده از کدها ارائه می‌دهد که برای هرکدام از این مکانیزم‌ها ابزارهایی نیز فراهم کرده است. هنگام استفاده از NuGet
 توسعه‌دهنده نگران دریافت و اشتراک کدها نمی‌باشد چرا که خود NuGet
 این عملیات‌ها را مدیریت می‌کند.
 
@@ -155,16 +155,16 @@ f = "hello";
 ابتدا سری به این [آموزش](https://softchris.github.io/pages/dotnet-core.html#creating-a-solution)
 بزنید و سعی کنید تمام کارهای گفته شده را انجام دهید. سپس می‌توانید برحسب نیاز از آموزش‌های زیر نیز استفاده کنید:
 
-- [Console.ReadLine() Method](<https://www.geeksforgeeks.org/console-readline-method-in-c-sharp/#:~:text=Console.-,ReadLine()%20Method%20in%20C%23,user%20presses%20the%20Enter%20key.>)
-- [Console Class](https://www.geeksforgeeks.org/console-class-in-c-sharp/#:~:text=Weekday%20in%20C%23-,Console%20Class%20in%20C%23,output%20from%20the%20computer%20end.)
-- [10 commands you don't want to be without in .Net Core](https://softchris.github.io/pages/dotnet-10-commands.html#_4-dotnet-run)
+-   [Console.ReadLine() Method](<https://www.geeksforgeeks.org/console-readline-method-in-c-sharp/#:~:text=Console.-,ReadLine()%20Method%20in%20C%23,user%20presses%20the%20Enter%20key.>)
+-   [Console Class](https://www.geeksforgeeks.org/console-class-in-c-sharp/#:~:text=Weekday%20in%20C%23-,Console%20Class%20in%20C%23,output%20from%20the%20computer%20end.)
+-   [10 commands you don't want to be without in .Net Core](https://softchris.github.io/pages/dotnet-10-commands.html#_4-dotnet-run)
 
 ### نام‌گذاری‌ها در #C
 
 یکی از گام‌های مهم یادگیری هر زبان برنامه‌نویسی یادگیری اصول نام‌گذاری آن می‌باشد. شاید نام‌گذاری در وهله اول مورد مهمی به نظر نرسد اما این موضوع از جهتی اهمیت دارد که نباید کد شما نسبت به کدهای جامعه برنامه نویسان آن زبان تافته جدا بافته باشد. برای آشنایی با این قواعد صفحات زیر را مطالعه کنید:
 
-- [C# Coding Standards and Naming Conventions](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
-- [Naming Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
+-   [C# Coding Standards and Naming Conventions](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
+-   [Naming Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
 
 ### C# Interactive
 
@@ -186,8 +186,8 @@ System.IO.Directory.GetCurrentDirectory()
 هستند.
 برای اینکه با این مفهوم بیشتر آشنا شوید می‌توانید لینک‌های زیر را مطالعه کنید.
 
-- [Lambda Expressions in C# (GeeksforGeeks)](https://www.geeksforgeeks.org/lambda-expressions-in-c-sharp/)
-- [Lambda Expressions in C# (C# Corner)](https://www.c-sharpcorner.com/UploadFile/bd6c67/lambda-expressions-in-C-Sharp/)
+-   [Lambda Expressions in C# (GeeksforGeeks)](https://www.geeksforgeeks.org/lambda-expressions-in-c-sharp/)
+-   [Lambda Expressions in C# (C# Corner)](https://www.c-sharpcorner.com/UploadFile/bd6c67/lambda-expressions-in-C-Sharp/)
 
 :::info ‌
 این امکان یک [Syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)
@@ -202,7 +202,7 @@ static
 هستند و خارج از کلاس مورد نظر پیاده سازی می‌شوند اما به نحوی صدا زده می‌شوند که گویا عضوی از آن کلاس می‌باشند.
 مثلا می‌خواهیم یک عملکرد برای کلاس string
 (به دلیل [sealed](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed)
-بودن قابل ارث‌بری نیست) پیاده‌سازی کنیم به صورتی که تعداد کلمات یک  متن را برای ما شمارش کند:
+بودن قابل ارث‌بری نیست) پیاده‌سازی کنیم به صورتی که تعداد کلمات یک متن را برای ما شمارش کند:
 
 ```csharp
 namespace ExtensionMethods
@@ -214,7 +214,7 @@ namespace ExtensionMethods
             return str.Split(new char[] { ' ', '.', '?' }, StringSplitOptions.RemoveEmptyEntries).Length;
         }
     }
-} 
+}
 ```
 
 استفاده از کد بالا به صورت زیر می‌باشد.
@@ -242,8 +242,8 @@ var i = s.WordCount();
 واژه LINQ (توجه داشته باشید که آن را Link تلفظ کنید) مخفف عبارت Language-Integrated Query است. LINQ یک راه یکسان را برای اتصال برقرار کردن به هر داده‌ساختار استاندارد فراهم می‌کند.
 برای درک بهتر و تمرین بیشتر لینک‌های زیر را مطالعه کنید:
 
-- [LINQ Operators and Lambda Expressions](https://www.c-sharpcorner.com/UploadFile/babu_2082/linq-operators-and-lambda-expression-syntax-examples/)
-- [LINQ Lambda Expressions](https://www.tutlane.com/tutorial/linq/linq-lambda-expressions)
+-   [LINQ Operators and Lambda Expressions](https://www.c-sharpcorner.com/UploadFile/babu_2082/linq-operators-and-lambda-expression-syntax-examples/)
+-   [LINQ Lambda Expressions](https://www.tutlane.com/tutorial/linq/linq-lambda-expressions)
 
 ## پروژه
 

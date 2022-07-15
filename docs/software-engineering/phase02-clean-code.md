@@ -33,12 +33,12 @@ description: ''
 می‌گوییم. در این مرحله در مورد Code Smellهای
 زیر مطالعه کنید و مشخص کنید کدام یک از موارد زیر در کدی که برای پروژه جستجو به وجود آمده است؟
 
-- [Long Method](https://refactoring.guru/smells/long-method)
-- [Primitive Obsession](https://refactoring.guru/smells/primitive-obsession)
-- [Large Class](https://refactoring.guru/smells/large-class)
-- [Long Parameter List](https://refactoring.guru/smells/long-parameter-list)
-- [Temporary Field](https://refactoring.guru/smells/temporary-field)
-- [Duplicate Code](https://refactoring.guru/smells/duplicate-code)
+-   [Long Method](https://refactoring.guru/smells/long-method)
+-   [Primitive Obsession](https://refactoring.guru/smells/primitive-obsession)
+-   [Large Class](https://refactoring.guru/smells/large-class)
+-   [Long Parameter List](https://refactoring.guru/smells/long-parameter-list)
+-   [Temporary Field](https://refactoring.guru/smells/temporary-field)
+-   [Duplicate Code](https://refactoring.guru/smells/duplicate-code)
 
 ## اصول S.O.L.I.D
 
@@ -53,8 +53,8 @@ description: ''
 
 برای آشنایی با اصول SOLID لینک‌های زیر را مطالعه کنید:
 
-- [SOLID Principles in Java Application Development](https://www.jrebel.com/blog/solid-principles-in-java)
-- [S.O.L.I.D principles in Java](https://medium.com/@karthikcsridhar/s-o-l-i-d-principles-in-java-1aaff453d7ea)
+-   [SOLID Principles in Java Application Development](https://www.jrebel.com/blog/solid-principles-in-java)
+-   [S.O.L.I.D principles in Java](https://medium.com/@karthikcsridhar/s-o-l-i-d-principles-in-java-1aaff453d7ea)
 
 ## Refactoring Techniques
 
@@ -79,9 +79,9 @@ description: ''
 کد دیگران، راهنماهای زیر را مطالعه کنید و Review
 خود را بر اساس این راهنماها انجام دهید:
 
-- [What to look for in a code review](https://google.github.io/eng-practices/review/reviewer/looking-for.html)
-- [Effective Code Reviews: Code Review Checklist](https://github.com/nyu-cds/effective-code-reviews/blob/master/_episodes/03-checklist.md)
+-   [What to look for in a code review](https://google.github.io/eng-practices/review/reviewer/looking-for.html)
+-   [Effective Code Reviews: Code Review Checklist](https://github.com/nyu-cds/effective-code-reviews/blob/master/_episodes/03-checklist.md)
 
 :::note ‌
- با توجه به این که در این فاز صحبتی در مورد انواع تست به خصوص Unit Test نکردیم قسمت‌هایی از لینک‌های بالا که در مورد تست است را نادیده بگیرید.
+با توجه به این که در این فاز صحبتی در مورد انواع تست به خصوص Unit Test نکردیم قسمت‌هایی از لینک‌های بالا که در مورد تست است را نادیده بگیرید.
 :::

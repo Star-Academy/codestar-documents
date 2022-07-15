@@ -13,9 +13,9 @@ description: ''
 برای درک مفهوم TDD
 و مراحل آن لینک‌های زیر را مطالعه کنید:
 
-- [Testing Software: What is TDD?](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
-- [Test Driven Development (TDD): The Advantages and Disadvantages](https://medium.com/@stevenpcurtis.sc/test-driven-development-tdd-the-advantages-and-disadvantages-5347899ead90)
-- [Introduction to Test Driven Development (TDD)](https://medium.com/hackernoon/introduction-to-test-driven-development-tdd-61a13bc92d92)
+-   [Testing Software: What is TDD?](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
+-   [Test Driven Development (TDD): The Advantages and Disadvantages](https://medium.com/@stevenpcurtis.sc/test-driven-development-tdd-the-advantages-and-disadvantages-5347899ead90)
+-   [Introduction to Test Driven Development (TDD)](https://medium.com/hackernoon/introduction-to-test-driven-development-tdd-61a13bc92d92)
 
 ## آشنایی بیشتر با اصول SOLID و تاثیر آن بر TDD
 
@@ -25,8 +25,8 @@ description: ''
 
 در ادامه برای درک این موضوع لینک‌های زیر را مطالعه کنید:
 
-- [SOLID design principles make test-driven development (TDD) faster and easier](https://medium.com/ibm-garage/solid-design-principles-makes-test-driven-development-faster-and-easier-35c9eec22ff1)
-- [Does test-driven development force me to follow SOLID?](https://softwareengineering.stackexchange.com/a/111868)
+-   [SOLID design principles make test-driven development (TDD) faster and easier](https://medium.com/ibm-garage/solid-design-principles-makes-test-driven-development-faster-and-easier-35c9eec22ff1)
+-   [Does test-driven development force me to follow SOLID?](https://softwareengineering.stackexchange.com/a/111868)
 
 ## بازنویسی پروژهٔ سرچ با زبان #C و با رویکرد TDD
 
