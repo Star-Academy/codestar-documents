@@ -88,14 +88,22 @@ const config = {
                 ],
             },
             footer: {
-                style: 'dark',
+                style: 'light',
                 links: [
                     {
                         title: 'مستندات',
                         items: [
                             {
-                                label: 'آموزش‌ها',
+                                label: 'مقدمات',
                                 to: '/docs/intro',
+                            },
+                            {
+                                label: 'فرانت‌اند',
+                                to: '/docs/frontend',
+                            },
+                            {
+                                label: 'مهندسی نرم‌افزار',
+                                to: '/docs/software-engineering',
                             },
                         ],
                     },
@@ -125,7 +133,6 @@ const config = {
                 minHeadingLevel: 2,
                 maxHeadingLevel: 6,
             },
-            image: 'center',
         }),
 };
 
