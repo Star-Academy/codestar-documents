@@ -10,7 +10,7 @@ const config = {
   	staticDirectories: ['public', 'static'],
     tagline: 'بزن بریم!',
     url: 'https://code-star.ir/',
-    baseUrl: '/docs',
+    baseUrl: '/docs/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'images/favicon.ico',
