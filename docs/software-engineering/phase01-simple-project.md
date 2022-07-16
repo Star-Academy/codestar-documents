@@ -26,7 +26,7 @@ description: ''
 ### Pair Programming
 
 از آنجایی که باید تمرینات و پروژه‌های تمام فازهای آموزشی را به صورت Pair Programming
-انجام دهید، ابتدا جهت آشنایی با این سبک برنامه‌نویسی [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
+انجام دهید، ابتدا جهت آشنایی با این سبک برنامه‌نویسی، [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
 را مطالعه کنید.
 
 :::tip ‌
