@@ -1,5 +1,5 @@
 ---
-title: آشنایی با Git
+title: Git
 description: ''
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: آشنایی با Full-Text Search
+title: Full-Text Search
 description: ''
 ---
 

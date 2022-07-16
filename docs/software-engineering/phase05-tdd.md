@@ -1,5 +1,5 @@
 ---
-title: آشنایی با TDD
+title: TDD
 description: ''
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 'آشنایی با #C'
+title: '#C'
 description: ''
 ---
 
