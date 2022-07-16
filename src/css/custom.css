@@ -33,7 +33,7 @@
     min-height: 100vh !important;
 }
 
-article > a.card[href^='/docs/frontend/'] {
+section[class='row list_node_modules-@docusaurus-theme-classic-lib-theme-DocCategoryGeneratedIndexPage-styles-module'] {
     direction: rtl;
 }
 
