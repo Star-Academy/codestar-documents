@@ -369,9 +369,9 @@ Call-to-Action می‌باشد.
 
 ---
 
-#### عکس‌ها
+### عکس‌ها
 
-##### alt
+#### alt
 
 حتما با `alt` در تگ `img` آشنا هستید. حتی شاید زمانی که از آن استفاده نکردید، متوجه هشدار IDE شده باشید.
 اما کاربرد این Attribute چیست؟
@@ -405,7 +405,7 @@ Call-to-Action می‌باشد.
 
 -   [Accessibility: Image Alt text best practices](https://support.siteimprove.com/hc/en-gb/articles/115000013031-Accessibility-Image-Alt-text-best-practices)
 
-##### Performance
+#### Performance
 
 ما تقریباً در تمام سایت‌ها از عکس استفاده می‌کنیم؛ بنابراین همیشه باید به مبحث Performance توجه داشته باشیم، چرا که در
 غیر این صورت تجربۀ بدی در انتظار کاربران ما خواهد بود.
@@ -432,20 +432,20 @@ Call-to-Action می‌باشد.
 
 ---
 
-### flexbox & grid
+### Flexbox & Grid
 
-می‌توان گفت flexbox و grid جزء بهترین قابلیت‌هایی هستند که در طی چند سال گذشته به CSS اضافه شده‌اند؛
+می‌توان گفت Flexbox و Grid جزء بهترین قابلیت‌هایی هستند که در طی چند سال گذشته به CSS اضافه شده‌اند؛
 اما متاسفانه خیلی از افراد در استفاده از آن‌ها دچار مشکل می‌شوند و نحوۀ کارکرد آن‌ها را به خوبی درک نمی‌کنند.
 بنابراین در این قسمت به معرفی چند منبع برای رفع ابهامات احتمالی می‌پردازیم.
 
-برای آشنایی بیشتر با flexbox می‌توانید از لینک زیر استفاده کنید:
+برای آشنایی بیشتر با Flexbox می‌توانید از لینک زیر استفاده کنید:
 
 -   [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 -   [Game - Flexbox Froggy](https://flexboxfroggy.com/)
 -   [Kevin Powell - Do you understand how Flexbox does what it does?](https://www.youtube.com/watch?v=9e-lWQdO-DA)
 -   [Kevin Powell - Flexbox is more complicated than you thought](https://www.youtube.com/watch?v=fm3dSg4cxRI)
 
-برای آشنایی بیشتر با grid می‌توانید از لینک زیر استفاده کنید:
+برای آشنایی بیشتر با Grid می‌توانید از لینک زیر استفاده کنید:
 
 -   [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 -   [Game - Grid Garden](https://codepip.com/games/grid-garden/)
