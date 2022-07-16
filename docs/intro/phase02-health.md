@@ -16,7 +16,7 @@ description: ''
 
 ![Ergonomic Workstation](./images/ergo.png)
 
-[پوستر با کیفیت‌تر عکس بالا با فرمت PDF](/static/pdfs/ergo.pdf)
+[پوستر با کیفیت‌تر عکس بالا با فرمت PDF](/pdfs/ergo.pdf)
 
 ### ارگونومی در استفاده از لپتاپ
 
