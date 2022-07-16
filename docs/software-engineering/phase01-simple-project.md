@@ -23,6 +23,19 @@ description: ''
 
 ## تمرین
 
+### Pair Programming
+
+از آنجایی که باید تمرینات و پروژه‌های تمام فازهای آموزشی را به صورت Pair Programming
+انجام دهید، ابتدا جهت آشنایی با این سبک برنامه‌نویسی [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
+را مطالعه کنید.
+
+:::tip ‌
+ابزار [Live Share](https://visualstudio.microsoft.com/services/live-share/)
+نرم‌افزار VS Code
+یک ابزار جذاب جهت برنامه‌نویسی به سبک Pair Programming
+است که می‌توانید از آن استفاده کنید.
+:::
+
 ### تمرین اول
 
 برنامه‌ای به زبان Java
@@ -39,7 +52,8 @@ description: ''
     برای تست برنامه استفاده کنید.
 -   پیشنهاد می‌کنیم برای بالا بردن دقت جستجو تمام Documentهای ورودی را [Uppercase](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1308#rule-description)
     کنید.
-    :::
+
+:::
 
 ### تمرین دوم
 
