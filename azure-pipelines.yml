@@ -11,12 +11,6 @@ pool:
 
 steps:
 
-- task: RestoreAndSaveCache@1
-  inputs:
-    keyfile: '**/package-lock.json, !**/node_modules/**/package-lock.json'
-    targetfolder: '**/node_modules, !**/node_modules/**/node_modules'
-    vstsFeed: 'e8e4ec96-6001-41da-86cb-0ab6d463d3f4'
-
 - task: Npm@1
   inputs:
     command: 'install'
@@ -29,7 +23,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'dist/code-star'
+    SourceFolder: 'build'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 

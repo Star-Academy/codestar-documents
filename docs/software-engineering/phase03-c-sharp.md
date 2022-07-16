@@ -247,8 +247,8 @@ var i = s.WordCount();
 
 ## پروژه
 
-برنامه‌ای بنویسید که دو فایل [دانشجویان](/static/datasets/scores.json)
-و [نمرات](/static/datasets/sores.json)
+برنامه‌ای بنویسید که دو فایل [دانشجویان](/datasets/scores.json)
+و [نمرات](/datasets/students.json)
 را بخواند و سپس نام، نام خانوادگی و معدل سه دانشجوی اول را چاپ کند.
 
 :::tip ‌

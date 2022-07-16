@@ -35,7 +35,7 @@ description: ''
 
 :::tip ‌
 
--   پیشنهاد می‌کنیم از [The 20 Newsgroups Dataset](\static\datasets\the-20-newsgroups.zip)
+-   پیشنهاد می‌کنیم از [The 20 Newsgroups Dataset](/datasets/the-20-newsgroups.zip)
     برای تست برنامه استفاده کنید.
 -   پیشنهاد می‌کنیم برای بالا بردن دقت جستجو تمام Documentهای ورودی را [Uppercase](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1308#rule-description)
     کنید.
