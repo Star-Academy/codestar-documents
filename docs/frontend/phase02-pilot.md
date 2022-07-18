@@ -147,7 +147,7 @@ npm i -D prettier eslint-config-prettier eslint-plugin-prettier
                     "error",
                     {
                         "type": "element",
-                        "prefix": ["app", "slide", "icon", "illustration"],
+                        "prefix": ["app", "icon", "illustration"],
                         "style": "kebab-case"
                     }
                 ],
@@ -166,7 +166,7 @@ npm i -D prettier eslint-config-prettier eslint-plugin-prettier
 }
 ```
 
-```json ".prettierrc"
+```json title=".prettierrc"
 {
     "printWidth": 120,
     "tabWidth": 4,
@@ -187,6 +187,12 @@ npm i -D prettier eslint-config-prettier eslint-plugin-prettier
             "files": ["*.component.html"],
             "options": {
                 "parser": "angular"
+            }
+        },
+        {
+            "files": ["*.css", "*.scss"],
+            "options": {
+                "singleQuote": false
             }
         }
     ]

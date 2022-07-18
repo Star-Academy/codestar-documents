@@ -403,7 +403,15 @@ Prettier
     "trailingComma": "es5",
     "bracketSpacing": false,
     "arrowParens": "always",
-    "endOfLine": "auto"
+    "endOfLine": "auto",
+    "overrides": [
+        {
+            "files": ["*.css", "*.scss"],
+            "options": {
+                "singleQuote": false
+            }
+        }
+    ]
 }
 ```
 
