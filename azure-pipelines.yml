@@ -4,30 +4,28 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+    - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+    vmImage: 'ubuntu-latest'
 
 steps:
+    - task: Npm@1
+      inputs:
+          command: 'install'
 
-- task: Npm@1
-  inputs:
-    command: 'install'
-    
-    
-- task: Npm@1
-  inputs:
-    command: 'custom'
-    customCommand: 'run build'
+    - task: Npm@1
+      inputs:
+          command: 'custom'
+          customCommand: 'run build'
 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: 'build'
-    Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    - task: CopyFiles@2
+      inputs:
+          SourceFolder: 'build'
+          Contents: '**'
+          TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)'
-    publishLocation: 'pipeline'
+    - task: PublishPipelineArtifact@1
+      inputs:
+          targetPath: '$(Build.ArtifactStagingDirectory)'
+          publishLocation: 'pipeline'
