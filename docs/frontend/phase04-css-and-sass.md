@@ -49,7 +49,7 @@ tags: [Sandbox]
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
 -   [MDN - The box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
--   [CSS Box Model](https://www.w3schools.com/css/css_boxmodel.asp)
+-   [W3Schools - CSS Box Model](https://www.w3schools.com/css/css_boxmodel.asp)
 
 ---
 
@@ -212,7 +212,7 @@ input:checked + label {
 اما برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
 -   [MDN - CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
--   [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
+-   [W3Schools - CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
 -   [CSS Tricks - Beginner Concepts: How CSS Selectors Work](https://css-tricks.com/how-css-selectors-work/)
 -   [The 30 CSS Selectors You Must Memorize](https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
 
