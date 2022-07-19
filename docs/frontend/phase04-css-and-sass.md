@@ -1,10 +1,10 @@
 ---
 title: CSS & Sass
 description: No! Half of the taste is in the smell! You're sucking up all the taste units!
-tags: [Sandbox]
+tags: [Readonly]
 ---
 
-:::info این فاز، یکی از فازهای `Sandbox` است.
+:::info این فاز، یکی از فازهای `Readonly` است.
 :::
 
 ## مقدمه

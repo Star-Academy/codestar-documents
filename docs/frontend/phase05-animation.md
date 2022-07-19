@@ -1,10 +1,10 @@
 ---
 title: Animation
 description: Sure, it looks stupid now. There's no music playing.
-tags: [Sandbox]
+tags: [Readonly]
 ---
 
-:::info این فاز، یکی از فازهای `Sandbox` است.
+:::info این فاز، یکی از فازهای `Readonly` است.
 :::
 
 ## مقدمه
