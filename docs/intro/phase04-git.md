@@ -330,3 +330,13 @@ git merge first-branch
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:
 
 -   [Git Branching - Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+
+---
+
+### تمرین بیشتر
+
+برای تمرین بیشتر و درک بهتر 
+**Git**،
+می‌توانید از لینک زیر استفاده کنید.
+
+-   [learngitbranching.js.org](https://learngitbranching.js.org/)
