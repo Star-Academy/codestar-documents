@@ -309,7 +309,7 @@ Call-to-Action می‌باشد.
 استفاده کنید:
 
 -   [MDN - HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
--   [HTML Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
+-   [W3Schools - HTML Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
 -   [What On Earth Is Semantic Markup?](https://html.com/semantic-markup/)
 -   [A Friendly Tutorial For Developing Meaningful Web Pages](https://internetingishard.netlify.app/html-and-css/semantic-html/index.html)
 -   [Semantic HTML5 Elements Explained](https://www.freecodecamp.org/news/semantic-html5-elements/)
@@ -371,7 +371,7 @@ Call-to-Action می‌باشد.
 
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:
 
--   [HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp)
+-   [W3Schools - HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp)
 
 ---
 
@@ -457,6 +457,8 @@ Call-to-Action می‌باشد.
 -   [Game - Grid Garden](https://codepip.com/games/grid-garden/)
 -   [Grid by Example](https://gridbyexample.com/)
 -   [Kevin Powell - The EASIEST way to get started with CSS GRID](https://www.youtube.com/watch?v=_lEkD8IGkwo)
+-   [Traversy Media - CSS Grid Layout Crash Course](https://www.youtube.com/watch?v=jV8B24rSN5o)
+-   [W3Schools - CSS Grid Layout Module](https://www.w3schools.com/css/css_grid.asp)
 
 ---
 
