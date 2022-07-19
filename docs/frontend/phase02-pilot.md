@@ -237,73 +237,73 @@ ng lint --fix
 
 ### HTML
 
-توصیه می‌کنیم همزمان با خواندن این مطلب،
-[صفحۀ دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html)
-را نیز مشاهده کنید تا به صورت دیداری و کاربردی با مفاهیم آشنا شوید.
-
 #### تگ‌های معنایی
 
 در HTML تگ‌هایی وجود دارند که صرفاً برای یک کار خاص طراحی شده‌اند و با دیدن نام آن‌ها می‌توان کاربردشان را متوجه شد. به
-این تگ‌ها، **تگ‌های معنایی** گفته می‌شود که لیستی از آن‌ها را به همراه توضیحات مختصری در اینجا مشاهده می‌کنید:
+این تگ‌ها، **تگ‌های معنایی** گفته می‌شود که لیستی از آن‌ها را به همراه توضیحات مختصری در اینجا مشاهده می‌کنید.
+
+توصیه می‌کنیم همزمان با خواندن این مطلب،
+[صفحۀ دمو](https://star-academy.github.io/frontend-demos/pages/semantic-tags/index.html)
+را نیز مشاهده کنید تا به صورت دیداری و کاربردی با مفاهیم آشنا شوید.
 
 ##### header
 
 معمولاً در بالاترین بخش صفحه یا المان مورد نظر قرار می‌گیرد و در اکثر مواقع شامل لوگو، `nav` و دکمه‌های
 Call-to-Action می‌باشد.
 
-[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#header)
+[مشاهده در صفحه دمو](https://star-academy.github.io/frontend-demos/pages/semantic-tags/index.html#header)
 
 ##### nav
 
 شامل لینک‌هایی به قسمت‌های مختلف صفحۀ اصلی یا سایت می‌باشد.
 
-[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#nav)
+[مشاهده در صفحه دمو](https://star-academy.github.io/frontend-demos/pages/semantic-tags/index.html#nav)
 
 ##### main
 
 شامل محتوای اصلی سایت می‌باشد و در اکثر مواقع بیشترین حجم از صفحه را اشغال می‌کند.
 
-[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#main)
+[مشاهده در صفحه دمو](https://star-academy.github.io/frontend-demos/pages/semantic-tags/index.html#main)
 
 ##### aside
 
 شامل محتوایی غیر از محتوای اصلی می‌باشد به طوری که نمی‌توان آن را در `main` قرار داد. به‌عنوان مثال تبلیغات یا لینک
 به قسمت‌های مختلف مقاله.
 
-[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#aside)
+[مشاهده در صفحه دمو](https://star-academy.github.io/frontend-demos/pages/semantic-tags/index.html#aside)
 
 ##### footer
 
 معمولاً در پایین‌ترین بخش صفحه یا المان مورد نظر قرار می‌گیرد و در اکثر مواقع شامل Copyright، توضیحات مختصری در
 مورد سایت و شخص یا گروه سازنده می‌باشد.
 
-[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#footer)
+[مشاهده در صفحه دمو](https://star-academy.github.io/frontend-demos/pages/semantic-tags/index.html#footer)
 
 ##### article
 
 بخشی از محتواست که کاملاً از بخش‌های دیگر مستقل می‌باشد به گونه‌ای که می‌توان آن را به طور جداگانه استفاده یا
 منتشر کرد. به‌عنوان مثال می‌توان به مقاله‌ای از یک مجله یا پستی از یک وبلاگ اشاره کرد.
 
-[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#article)
+[مشاهده در صفحه دمو](https://star-academy.github.io/frontend-demos/pages/semantic-tags/index.html#article)
 
 ##### section
 
 بخشی از محتوای اصلی سایت را مشخص می‌کند. معمولاً از این تگ برای ایجاد تمایز بینِ قسمت‌های مختلف استفاده می‌شود.
 معمولاً در ابتدای هر بخش از `heading` یعنی تگ‌های `h1` تا `h6` استفاده می‌شود.
 
-[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#results)
+[مشاهده در صفحه دمو](https://star-academy.github.io/frontend-demos/pages/semantic-tags/index.html#results)
 
 ##### details
 
 شامل بخشی از محتواست که کاربر می‌تواند در صورت نیاز آن را نمایان یا پنهان کند.
 
-[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#details)
+[مشاهده در صفحه دمو](https://star-academy.github.io/frontend-demos/pages/semantic-tags/index.html#details)
 
 ##### summary
 
 همیشه داخل المان `details` استفاده می‌شود و باید شامل توضیحاتی دربارۀ آن باشد.
 
-[مشاهده در صفحه دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF01-HTML/index.html#summary)
+[مشاهده در صفحه دمو](https://star-academy.github.io/frontend-demos/pages/semantic-tags/index.html#summary)
 
 البته موارد بالا تنها بخشی از تگ‌های معنایی HTML می‌باشند. برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر
 استفاده کنید:

@@ -21,7 +21,7 @@ tags: [Readonly]
 -   چه فونت‌هایی برای استفاده در سایت پیشنهاد می‌شوند؟
 
 توصیه می‌کنیم همزمان با خواندن این مطلب،
-[صفحۀ دمو](https://star-academy.github.io/codestar-internship/Demos/Frontend/pages/PhaseF05-Best-Practices/index.html)
+[صفحۀ دمو](https://star-academy.github.io/frontend-demos/pages/ui-ux/)
 را نیز مشاهده کنید تا به صورت دیداری و کاربردی با مفاهیم آشنا شوید.
 
 ---
