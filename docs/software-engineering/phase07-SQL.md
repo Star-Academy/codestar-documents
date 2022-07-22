@@ -7,172 +7,166 @@ description: ''
 query
 های آن آشنا می‌شوید.
 
-1. مقدمه
+## مقدمه
 
-    پایگاه داده یا 
-    Database 
-    مجموعه‌ای از داده‌ها است که به صورت ساختارمند درون کامپیوتر نگهداری می‌شوند. 
-    سامانه مدیریت پایگاه داده یا 
-    DBMS(Database Management System)
-    نرم‌افزاری است که با کاربر نهایی، برنامه‌ها کاربردی و خود پایگاه داده برای ذخیره و بازیابی داده تعامل میکند.
-    DBMS
-    های مختلفی برای کابردهای متفاوت وجود دارند که پرکاربردترین
-    DBMS
-    ها، 
-    DBMS
-    های رابطه‌ای یا همان
-    RDBMS(Relaional Database Management System)
-    ها هستند. در این 
-    DBMS
-    ها داده‌ها به صورت سازمانمند در جداول ذخیره می‌شوند و مقادیر موجود در هر جدول با یکدیگر ارتباط دارند. به همین خاطر به آن رابطه‌ای با 
-    relational 
-    گفته می‌شود.
-    
-    از آنجایی که اکثر 
-    RDBMS
-    ها از زبان پرسمان سازمان‌یافته یا 
-    SQL(Structured Query Language)
-    استفاده می‌کنند، با آشنایی با یکی از این 
-    RDBMS
-    ها می‌توانید با صرف زمان کم نحوه استفاده از یک 
-    RDBMS 
-    جدید را فرابگیرید. همچنین 
-    SQL 
-    جزو استاندارد 
-    ANSI 
-    و 
-    ISO 
-    می‌باشد.
-    
-    RDBMS
-    های فراوانی وجود دارند که بسته به نیاز از آن‌ها استفاده می‌شود.
-    MySQL, SQL Server, PostgreSQL, SQLite, ...
-    نمونه‌های از 
-    RDBMS
-    های معروف هستند. در این فاز با 
-    SQL Server
-     که محصول شرکت 
-     Microsoft 
-     است، کار می‌کنید.
+پایگاه داده یا 
+Database 
+مجموعه‌ای از داده‌ها است که به صورت ساختارمند درون کامپیوترنگهداری می‌شوند. 
+سامانه مدیریت پایگاه داده یا 
+DBMS(Database Management System)
+نرم‌افزاری است که با کاربر نهایی، برنامه‌ها کاربردی و خودپایگاه داده برای ذخیره و بازیابی داده تعامل میکند.
+DBMS
+های مختلفی برای کابردهای متفاوت وجود دارند که پرکاربردترین
+DBMS
+ها، 
+DBMS
+های رابطه‌ای یا همان
+RDBMS(Relaional Database Management System)
+ها هستند. در این 
+DBMS
+ها داده‌ها به صورت سازمانمند در جداول ذخیره می‌شوند و مقادیرموجود در هر جدول با یکدیگر ارتباط دارند. به همین خاطر به آنرابطه‌ای با 
+relational 
+گفته می‌شود.
 
-1. آشنایی با مفاهیم اولیه
+از آنجایی که اکثر 
+RDBMS
+ها از زبان پرسمان سازمان‌یافته یا 
+SQL(Structured Query Language)
+استفاده می‌کنند، با آشنایی با یکی از این 
+RDBMS
+ها می‌توانید با صرف زمان کم نحوه استفاده از یک 
+RDBMS 
+جدید را فرابگیرید. همچنین 
+SQL 
+جزو استاندارد 
+ANSI 
+و 
+ISO 
+می‌باشد.
 
-    - SSMS و ADS
+RDBMS
+های فراوانی وجود دارند که بسته به نیاز از آن‌ها استفادهمی‌شود.
+MySQL, SQL Server, PostgreSQL, SQLite, ...
+نمونه‌های از 
+RDBMS
+های معروف هستند. در این فاز با 
+SQL Server
+ که محصول شرکت 
+ Microsoft 
+ است، کار می‌کنید.
 
-        هر دو نرم‌افزارهایی برای مدیریت دیتابیس هستند. 
-        SSMS (SQL Server Management Studio) 
-        اولین بار سال 2005 توسط مایکروسافت منتشر شد. 
-        SSMS 
-        امکانات مدیریت زیادی در اختیار ما قرار می‌دهد و در اکثر محیط‌های عملیاتی از آن استفاده می‌شود. 
-        ADS (Azure Data Studio)
-        نیز توسط مایکروسافت در سال 2018 به صورت 
-        Open Source 
-        برای سیستم‌عامل‌های متفاوت عرضه شد. امکانات مدیریتی 
-        ADS 
-        کمتر است اما در مقابل محیط بهتری برای نوشتن و اجرای 
-        Query 
-        ارائه می‌دهد. در اینجا ما از 
-        ADS 
-        استفاده می‌کنیم.
-        
+## آشنایی با مفاهیم اولیه
 
-    - Database در SQL Server
-    
-        یک 
-        Database 
-        در 
-        SQL Server 
-        مجموعه‌ای از چند شئ از نوع جدول
-        (Table)
-        ، رویه ذخیره شده
-        (Stored Procedure)
-        ، تابع
-        (Function)
-        ، نما
-        (View)
-        و ... است. اگر این عبارات برایتان ناآشنا است نگران نباشید! در ادامه با آن‌ها آشنا می‌شوید. فعلا در این حد بدانید که داده‌ها در 
-        SQL Server 
-        باید در یک 
-        Database 
-        وجود داشته باشند.
+### SSMS و ADS
+
+هر دو نرم‌افزارهایی برای مدیریت دیتابیس هستند. 
+SSMS (SQL Server Management Studio) 
+اولین بار سال 2005 توسط مایکروسافت منتشر شد. 
+SSMS 
+امکانات مدیریت زیادی در اختیار ما قرار می‌دهد و در اکثرمحیط‌های عملیاتی از آن استفاده می‌شود. 
+ADS (Azure Data Studio)
+نیز توسط مایکروسافت در سال 2018 به صورت 
+Open Source 
+برای سیستم‌عامل‌های متفاوت عرضه شد. امکانات مدیریتی 
+ADS 
+کمتر است اما در مقابل محیط بهتری برای نوشتن و اجرای 
+Query 
+ارائه می‌دهد. در اینجا ما از 
+ADS 
+استفاده می‌کنیم.
+
+### Database در SQL Server
+
+یک 
+Database 
+در 
+SQL Server 
+مجموعه‌ای از چند شئ از نوع جدول
+(Table)
+، رویه ذخیره شده
+(Stored Procedure)
+، تابع
+(Function)
+، نما
+(View)
+و ... است. اگر این عبارات برایتان ناآشنا است نگران نباشید! درادامه با آن‌ها آشنا می‌شوید. فعلا در این حد بدانید که داده‌هادر 
+SQL Server 
+باید در یک 
+Database 
+وجود داشته باشند.
 
 
-1. نصب و راه‌اندازی SQL Server و SSMS
+## نصب و راه‌اندازی SQL Server و SSMS
 
-    1. ابتدا یک نسخه از 
-    SQL Server
-    را با توجه به سیستم عامل خود دانلود کنید. پیشنهاد می‌شود نسخه 
-    SQL Server 2019 Developer
-    را از 
-    [سایت مایکروسافت](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-    دانلود و نصب کنید. این نسخه تمامی ویژگی‌های نسخه 
-    Enterprise 
-    را به صورت رایگان در اختیارمان قرار میدهد ولی فقط مجوز استفاده در محیط توسعه و تست را دارد.
+1. ابتدا یک نسخه از 
+SQL Server
+را با توجه به سیستم عامل خود دانلود کنید. پیشنهاد می‌شودنسخه 
+SQL Server 2019 Developer
+را از 
+[سایت مایکروسافت](https://www.microsoft.com/en-ussql-server/sql-server-downloads)
+دانلود و نصب کنید. این نسخه تمامی ویژگی‌های نسخه 
+Enterprise 
+را به صورت رایگان در اختیارمان قرار میدهد ولی فقط مجوزاستفاده در محیط توسعه و تست را دارد.
 
-    1. با توجه به نسخه دانلود شده به نصب بپردازید. تمام تنظیمات خواسته شده را در حالت پیشفرض قرار دهید. همچنین در قسمت 
-    Feature Selection 
-    انتخاب 
-    Database Engine Service 
-    برای کار ما کافی است. به تنظیمات زیر هم توجه کنید.
+1. با توجه به نسخه دانلود شده به نصب بپردازید. تمام تنظیماتخواسته شده را در حالت پیشفرض قرار دهید. همچنین در قسمت 
+Feature Selection 
+انتخاب 
+Database Engine Service 
+برای کار ما کافی است. به تنظیمات زیر هم توجه کنید.
+    <div dir="ltr"><img src="./Resource/FeatureSelection.png" alt="Feature Selection" width="60%"></div>
+    <div dir="ltr"><img src="./Resource/Admin.png" alt="Administrator" width="60%"></div>
+1. حال نوبت به نصب ابزار مدیریت 
+SQL Server 
+است. 
+SSMS (SQL Server Management Studio) 
+یکی از ابزارهای قدیمی برای این کار است که تنها برای ویندوزموجود است و در محیط‌های محصول اکثرا از آن استفاده می‌شود. 
 
-        <div dir="ltr"><img src="./Resource/FeatureSelection.png" alt="Feature Selection" width="60%"></div>
-        <div dir="ltr"><img src="./Resource/Admin.png" alt="Administrator" width="60%"></div>
+1. حال 
+ADS (Azure Data Studio)
+که ابزاری رایگان برای پیکربندی، مدیریت و اداره کردن تمامیاجزا 
+SQL Server 
+است را از 
+[سایت مایکروسافت](https://docs.microsoft.com/en-us/sqlazure-data-studio/download-azure-data-studio)
+دانلود و نصب کنید.
 
-    1. حال نوبت به نصب ابزار مدیریت 
-    SQL Server 
-    است. 
-    SSMS (SQL Server Management Studio) 
-    یکی از ابزارهای قدیمی برای این کار است که تنها برای ویندوز موجود است و در محیط‌های محصول اکثرا از آن استفاده می‌شود. 
+1. پس از نصب و اجرای 
+ADS 
+برای وصل شدن به 
+SQL Server 
+باید یک 
+Conncection 
+بسازید. همانند شکل زیر می‌توانید در صفحه شروع این کار راانجام دهید.
+        <div dir="ltr"><img src="./Resource/ADSNewConnection.png" alt="ADS New Connection" width="80%"></div>
+برای متصل شدن به 
+SQL Server 
+باید آدرس کامپیوتری را که 
+SQL Server 
+بر روی آن در حال اجرا هست را در بخش 
+Server 
+وارد کنیم. در اینجا اگر 
+SQL Server 
+را بر روی کامپیوتر خودتان نصب کرده‌اید،  
+`localhost`
+را به عنوان 
+Server 
+وارد کنید.
+    <div dir="ltr"><img src="./Resource/ADSLocalhost.png" alt="ADS Localhost" width="80%"></div>
+1. پس از آنکه به 
+SQL Server 
+متصل شدید، صفحه‌ی مربوط به 
+Connection 
+نمایان می‌شود که وضعیت سرور را نشان می‌دهد. در این صفحه باانتخاب گزینه 
+Query 
+می‌توانید دستوراتی را به زبان 
+SQL 
+به سرور بفرستید و پاسخ خود را دریافت کنید.
+        <div dir="ltr"><img src="./Resource/ADSStatus.png" alt="ADS Status" width="80%"></div>
+در این صفحه جدید دستورات خود را بنویسید و با کلید 
+F5 
+یا کلیک بر روی دکمه اجرا، آن‌ها را اجرا کنید. سعی کنید ازاینجا به بعد هر دستوری که در داک مشاهده می‌کنید را برایخودتان اجرا کنید. 
+    <div dir="ltr"><img src="./Resource/ADSQuery.png" alt="ADS Query" width="80%"></div>
 
-    1. حال 
-    ADS (Azure Data Studio)
-    که ابزاری رایگان برای پیکربندی، مدیریت و اداره کردن تمامی اجزا 
-    SQL Server 
-    است را از 
-    [سایت مایکروسافت](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio)
-    دانلود و نصب کنید.
-
-    1. پس از نصب و اجرای 
-    ADS 
-    برای وصل شدن به 
-    SQL Server 
-    باید یک 
-    Conncection 
-    بسازید. همانند شکل زیر می‌توانید در صفحه شروع این کار را انجام دهید.
-            <div dir="ltr"><img src="./Resource/ADSNewConnection.png" alt="ADS New Connection" width="80%"></div>
-    برای متصل شدن به 
-    SQL Server 
-    باید آدرس کامپیوتری را که 
-    SQL Server 
-    بر روی آن در حال اجرا هست را در بخش 
-    Server 
-    وارد کنیم. در اینجا اگر 
-    SQL Server 
-    را بر روی کامپیوتر خودتان نصب کرده‌اید،  
-    `localhost`
-    را به عنوان 
-    Server 
-    وارد کنید.
-
-        <div dir="ltr"><img src="./Resource/ADSLocalhost.png" alt="ADS Localhost" width="80%"></div>
-
-    1. پس از آنکه به 
-    SQL Server 
-    متصل شدید، صفحه‌ی مربوط به 
-    Connection 
-    نمایان می‌شود که وضعیت سرور را نشان می‌دهد. در این صفحه با انتخاب گزینه 
-    Query 
-    می‌توانید دستوراتی را به زبان 
-    SQL 
-    به سرور بفرستید و پاسخ خود را دریافت کنید.
-            <div dir="ltr"><img src="./Resource/ADSStatus.png" alt="ADS Status" width="80%"></div>
-    در این صفحه جدید دستورات خود را بنویسید و با کلید 
-    F5 
-    یا کلیک بر روی دکمه اجرا، آن‌ها را اجرا کنید. سعی کنید از اینجا به بعد هر دستوری که در داک مشاهده می‌کنید را برای خودتان اجرا کنید. 
-
-        <div dir="ltr"><img src="./Resource/ADSQuery.png" alt="ADS Query" width="80%"></div>
-
-1. ایجاد و حذف Database
+## ایجاد و حذف Database
 
     همانظور که در تعاریف دیدم برای کار با داده باید حداقل یک 
     Database 
@@ -219,7 +213,7 @@ query
     ```
     </div>
 
-1. Data Type
+## Data Type
 
     Data Type 
     نوع داده‌ای است که هر ستون در جدول یا متغییر می‌تواند ذخیره کند. 
@@ -255,7 +249,7 @@ query
     | bit | It can take 0, 1, or NULL values. | 0 to 1 | 1 byte/8bit column |
     </div>
 
-1. جدول 
+## جدول 
 
     جدول یا 
     Table 
@@ -469,7 +463,7 @@ query
     ```
     </div>
 
-1. کلیدها
+## کلیدها
 
     - Primary Key
 
@@ -607,7 +601,7 @@ query
         Student 
         موجود نبود با خطا مواجه شده است.
 
-1. آشنایی با T-SQL
+## آشنایی با T-SQL
 
     **T-SQL(Transact-SQL)** 
     زبان توسعه داده شده توسط مایکروسافت است که قابلیت‌هایی مثل متغییر، مدیریت استثنا 
@@ -629,7 +623,7 @@ query
     - [SQL Variables: Basics and usage](https://www.sqlshack.com/sql-variables-basics-and-usage/)
     - [SQL Server IF ELSE](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-if-else/)
 
-1. Joins
+## Joins
 
     Join
     ها از مهم‌ترین دستورات 
@@ -668,7 +662,7 @@ query
     <img src="./Resource/FullOuterJoin.png" alt="Full Outer Join" width="80%">
     </div>
 
-1. تابع‌ها
+## تابع‌ها
 
     SQL 
     توابع زیادی برای انجام محاسبات بر روی داده‌ها دارد که به صورت کلی در دو دسته قرار می‌گیرند.
