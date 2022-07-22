@@ -172,12 +172,14 @@ F5
 Database 
 ایجاد کنیم. 
 <div dir="ltr">
+
 ```
 CREATE DATABASE database_name;
 ```
 </div>
 برای مثال:
 <div dir="ltr">
+
 ```
 CREATE DATABASE StarAcademy;
 ```
@@ -198,6 +200,7 @@ Query
 <div dir="ltr"><img src="./Resource/ADSMessage.png"alt="ADS Message" width="80%"></div>
 برای حذف یک دیتابیس نیز از دستور زیر استفاده می‌شود.
 <div dir="ltr">
+
 ```
 DROP DATABASE database_name;
 ```
@@ -247,6 +250,7 @@ Table
 ذخیره می‌کند.
 برای ساختن جدول از دستور زیر استفاده می‌کنیم.
 <div dir="ltr">
+
 ```
 CREATE TABLE tableName
 ( 
@@ -261,6 +265,7 @@ NOT NULL
  بعد از تعریف هر ستون، دادن مقدار به آن ستون در هنگامافزودن داده الزامی می‌شود. (در واقع مقدار آن ستوننمی‌تواند NULL باشد)
 
 <div dir="ltr">
+
 ```
 CREATE TABLE Student
 (
@@ -276,6 +281,7 @@ CREATE TABLE Student
 </div>
 پس از ساختن جدول می‌توانیم با دستور زیر داده‌ی مورد نظر رادر جدول قرار دهیم.
 <div dir="ltr">
+
 ```
 INSERT INTO tableName
 (column_1, column_2, ... )
@@ -287,6 +293,7 @@ VALUES
 </div>
 برای مثال با دستور زیر داده متناظر به جدول اضافه می‌شود.
  <div dir="ltr">
+
 ```
 INSERT INTO Student(FirstName, LastName, DateOfBirth,IsMale, LeftUnitsCount, StudentNumber)
 VALUES('Ava', 'Ahmadi', 'Feb 15, 2002', 0, 140, '99100200');
@@ -294,6 +301,7 @@ VALUES('Ava', 'Ahmadi', 'Feb 15, 2002', 0, 140, '99100200');
 </div>
 همچنین با حفظ ترتیب ستون‌ها، می‌توان بدون نیاز به مشخص کردننام هر ستون داده را اضافه کرد. مانند دستور زیر.
 <div dir="ltr">
+
 ```
 INSERT into Student values
 (
@@ -314,6 +322,7 @@ N
 استفاده می‌شود.
 پس قرار دادن داده‌ها در جدول، با کوئری زیر می‌توانیم دادهذخیره شده در جدول را دریافت کنیم.
 <div dir="ltr">
+
 ```
 SELECT column1, column2, ...
 FROM tableName
@@ -322,6 +331,7 @@ FROM tableName
 </div>
 برای مثال برای دریافت داده تمام دانشجویانی که اضافهکرده‌ایم، دستور زیر را اجرا می‌کنیم.
 <div dir="ltr">
+
 ```
 SELECT *
 FROM Student;
@@ -329,6 +339,7 @@ FROM Student;
 </div>
 هانطور که مشاهده می‌کنید، به جای نام ستون‌ها از "*" استفادهشده است. که به معنی همه ستون‌ها می‌باشد. در واقع این دستوربا دستور زیر معادل است. 
 <div dir="ltr">
+
 ```
 SELECT StudentNumber, Grade, FirstName, LastName, IsMale,DateOfBirth, LeftUnitsCount
 FROM Student;
@@ -345,6 +356,7 @@ Operator
 Where 
 شروع می‌شود، می‌توانیم شروط و محدودیت‌هایی بر روی دادهدریافت شده قرار دهیم. برای مثال دستور زیر افرادی که جنسیتآن‌ها مرد و معدلشان بین 10 تا 15 است را نمایش می‌دهد.
 <div dir="ltr">
+
 ```
 SELECT *
 FROM Student
@@ -355,6 +367,7 @@ WHERE IsMale = 1 AND 10 < Grade AND Grade < 15;
 Query 
 بالا را به صورت زیر هم می‌توان نوشت.
 <div dir="ltr">
+
 ```
 SELECT *
 FROM Student
@@ -385,6 +398,7 @@ Cluase
 </div>
 پس از ساختن جدول، با دستورات زیر می‌توانیم ستون‌های آن راویرایش کنیم. 
 <div dir="ltr">
+
 ```
 ALTER TABLE tableName ADD column1 datatype, column2datatype, ...;
 ALTER TABLE tableName DROP COLUMN column1, column2, ...;
@@ -394,6 +408,7 @@ ALTER TABLE tableName ALTER COLUMN column1 datatype,column2 datatype, ...;
 با دستور زیر می‌توانیم یک جدول را حذف کنیم.
 
 <div dir="ltr">
+
 ```
 DROP TABLE tableName;
 ```
@@ -401,6 +416,7 @@ DROP TABLE tableName;
 همچنین برای حذف داده‌های درون یک جدول و حفظ ساختار جدول ازدستور زیر استفاده می‌کنیم.
 
 <div dir="ltr">
+
 ```
 DELETE TABLE tableName;
 ```
@@ -419,6 +435,7 @@ Primary Key
 1. Primary Key نمی‌تواند NULL باشد.
 برای ساختن Primary Key می‌توانیم جدولی که از قبل موجود را با دستور زیر تغییر دهیم.
 <div dir="ltr">
+
 ```
 ALTER TABLE tableName
 ADD CONSTRAINT constraintName PRIMARY KEY (columncolumn_2, ..., column_n);
@@ -426,6 +443,7 @@ ADD CONSTRAINT constraintName PRIMARY KEY (columncolumn_2, ..., column_n);
 </div>
 برای مثال جدول Student موجود را به این صورت تغییر می‌دهیم : 
 <div dir="ltr">
+
 ``` 
 ALTER TABLE Student
 ADD CONSTRAINT studentPK PRIMARY KEY (StudentNumber);
@@ -446,6 +464,7 @@ Constraint
 است.
 همچنین می‌توان جدول Student را از نوع و به شکل زیر ایکرد : 
 <div dir="ltr">
+
 ``` 
 CREATE TABLE Student2
 (
@@ -480,6 +499,7 @@ Constraint
 Foreign Key 
 نگه می‌داریم. برای ساختن این جدول از دستور زیر استفادهمی‌کنیم.
 <div dir="ltr">
+
 ``` 
 CREATE TABLE Enrollment
 (
@@ -494,6 +514,7 @@ CREATE TABLE Enrollment
 Foreign Key 
 را با افزودن 3 داده جدید بررسی می‌کنیم.
 <div dir="ltr">
+
 ``` 
 INSERT INTO Enrollment VALUES
 ('Data Structures', '98100200');
@@ -520,7 +541,7 @@ Student
 
 ## آشنایی با T-SQL
 
-**T-SQL(Transact-SQL)** 
+**T-SQL(Transact-SQL)**
 زبان توسعه داده شده توسط مایکروسافت است که قابلیت‌هایی مثلمتغییر، مدیریت استثنا 
 (Exception)
 ، رویه‌ی ذخیره شده 
@@ -584,6 +605,7 @@ SQL
     - [SUBSTRING](https://www.guru99.com/sql-server-substring.html)
 **GROUP BY**
 <div dir="ltr">
+
 ``` 
 SELECT column_name, aggregate_function(column_name)
 FROM table_name
@@ -597,12 +619,14 @@ GROUP BY
 Aggregate Funcitons 
 به کار می‌رود. برای مثال دستور زیر تعداد آقایان و خانم‌هارا خروجی می‌دهد.
 <div dir="ltr">
+
 ``` 
 SELECT IsMale, COUNT(IsMale) FROM Student GROUP BY IsMale;
 ```
 </div>
 دستور زیر تعداد دروس ثبت‌نام شده هز دانشجو را نشان می‌دهد.
 <div dir="ltr">
+
 ``` 
 SELECT ParticipantStudentNumber, COUN(ParticipantStudentNumber)
 FROM Enrollment 
