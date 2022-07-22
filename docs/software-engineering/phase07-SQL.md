@@ -168,545 +168,444 @@ F5
 
 ## ایجاد و حذف Database
 
-    همانظور که در تعاریف دیدم برای کار با داده باید حداقل یک 
-    Database 
-    ایجاد کنیم. 
+همانظور که در تعاریف دیدم برای کار با داده باید حداقل یک 
+Database 
+ایجاد کنیم. 
+<div dir="ltr">
+```
+CREATE DATABASE database_name;
+```
+</div>
+برای مثال:
+<div dir="ltr">
+```
+CREATE DATABASE StarAcademy;
+```
+</div>
+با اجرای این دستور، دیتابیس ساخته می‌شود و با 
+Refresh 
+کردن 
+Connections
+دیتابیس 
+StarAcademy
+مشاهده می‌شود.
 
-    <div dir="ltr">
-
-    ```
-    CREATE DATABASE database_name;
-    ```
-    </div>
-
-    برای مثال:
-
-    <div dir="ltr">
-
-    ```
-    CREATE DATABASE StarAcademy;
-    ```
-    </div>
-
-    با اجرای این دستور، دیتابیس ساخته می‌شود و با 
-    Refresh 
-    کردن 
-    Connections
-    دیتابیس 
-    StarAcademy
-    مشاهده می‌شود.
-    
-    پس از اجرا کردن هر دستور 
-    ADS 
-    پیغامی متناسب با موفقیت و یا عدم موفقیت 
-    Query 
-    اجرا شده چاپ می‌کند. در صورت مواجه شدن با خطا، پیغام مربوط به خطا نیز چاپ می‌شود که به رفع خطا کمک می‌کند.
-
-    <div dir="ltr"><img src="./Resource/ADSMessage.png" alt="ADS Message" width="80%"></div>
-
-    برای حذف یک دیتابیس نیز از دستور زیر استفاده می‌شود.
-
-    <div dir="ltr">
-
-    ```
-    DROP DATABASE database_name;
-    ```
-    </div>
+پس از اجرا کردن هر دستور 
+ADS 
+پیغامی متناسب با موفقیت و یا عدم موفقیت 
+Query 
+اجرا شده چاپ می‌کند. در صورت مواجه شدن با خطا، پیغام مربوطبه خطا نیز چاپ می‌شود که به رفع خطا کمک می‌کند.
+<div dir="ltr"><img src="./Resource/ADSMessage.png"alt="ADS Message" width="80%"></div>
+برای حذف یک دیتابیس نیز از دستور زیر استفاده می‌شود.
+<div dir="ltr">
+```
+DROP DATABASE database_name;
+```
+</div>
 
 ## Data Type
 
-    Data Type 
-    نوع داده‌ای است که هر ستون در جدول یا متغییر می‌تواند ذخیره کند. 
-    Data Type
-    های 
-    SQL Server 
-    در هفت دسته کلی قرار میگیرند که عبارتند از:
-    
-    - Exact numeric
-    - Approximate numberic
-    - Date and time
-    - Character strings
-    - Unicode character strings
-    - Binary strings
-    - Other data types
+Data Type 
+نوع داده‌ای است که هر ستون در جدول یا متغییر می‌تواند ذخیرهکند. 
+Data Type
+های 
+SQL Server 
+در هفت دسته کلی قرار میگیرند که عبارتند از:
 
-    اعضای هر یک از این دسته‌ها را با جزئیات می‌توانید در 
-    [سایت مایکروسافت](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)
-    ببینید. پرکاربردترین 
-    Data Type
-    ها نیز در جدول زیر قابل مشاهده هستند.
-
-    <div dir="ltr">
-
-    | Data Type | توضیحات | Range/Limit | Storage Size |
-    | :---: | :---: | :---: | :---: |
-    | int | It stores whole numbers in the range given | -2^31 to −2^31-1 | 8 bytes |
-    | varchar(n) | This is a character string with variable width | 8000 chars | n + 2 bytes |
-    | nvarchar(n) | It is a unicode string of variable width | 4000 chars | 2*n + 2 bytes |
-    | datetime | Used for specifying a date and time. It has an accuracy of 3.33 milliseconds. | 1753/1/1 to 9999/12/31 | 8 bytes |
-    | decimal | Used for scale and fixed precision numbers | −10^38+1 to 10^38−1 | 5 to 17 bytes |
-    | float(n) | Used for a floating precision number | −1.79E+308 to 1.79E+308 | Depends on the value of n |
-    | bit | It can take 0, 1, or NULL values. | 0 to 1 | 1 byte/8bit column |
-    </div>
+- Exact numeric
+- Approximate numberic
+- Date and time
+- Character strings
+- Unicode character strings
+- Binary strings
+- Other data types
+اعضای هر یک از این دسته‌ها را با جزئیات می‌توانید در 
+[سایت مایکروسافت](https://docs.microsoft.com/en-us/sqlt-sql/data-types/data-types-transact-sql)
+ببینید. پرکاربردترین 
+Data Type
+ها نیز در جدول زیر قابل مشاهده هستند.
+<div dir="ltr">
+| Data Type | توضیحات | Range/Limit | Storage Size |
+| :---: | :---: | :---: | :---: |
+| int | It stores whole numbers in the range given | -2^31to −2^31-1 | 8 bytes |
+| varchar(n) | This is a character string with variablewidth | 8000 chars | n + 2 bytes |
+| nvarchar(n) | It is a unicode string of variable width |4000 chars | 2*n + 2 bytes |
+| datetime | Used for specifying a date and time. It has anaccuracy of 3.33 milliseconds. | 1753/1/1 to 9999/12/31 | 8bytes |
+| decimal | Used for scale and fixed precision numbers |−10^38+1 to 10^38−1 | 5 to 17 bytes |
+| float(n) | Used for a floating precision number | −1.79+308 to 1.79E+308 | Depends on the value of n |
+| bit | It can take 0, 1, or NULL values. | 0 to 1 | 1 byte8bit column |
+</div>
 
 ## جدول 
 
-    جدول یا 
-    Table 
-    شئ‌ای است که داده‌ها را به صورت سطر 
-    (Row) 
-    و ستون 
-    (Column)
-    ذخیره می‌کند.
+جدول یا 
+Table 
+شئ‌ای است که داده‌ها را به صورت سطر 
+(Row) 
+و ستون 
+(Column)
+ذخیره می‌کند.
+برای ساختن جدول از دستور زیر استفاده می‌کنیم.
+<div dir="ltr">
+```
+CREATE TABLE tableName
+( 
+    column_1 datatype [ NULL | NOT NULL ],
+    column_2 datatype [ NULL | NOT NULL ],
+    ...
+);
+```
+</div>
+برای مثال جدول دانشجو را به صورت زیر می‌سازیم. با نوشتن 
+NOT NULL 
+ بعد از تعریف هر ستون، دادن مقدار به آن ستون در هنگامافزودن داده الزامی می‌شود. (در واقع مقدار آن ستوننمی‌تواند NULL باشد)
 
-    برای ساختن جدول از دستور زیر استفاده می‌کنیم.
+<div dir="ltr">
+```
+CREATE TABLE Student
+(
+    StudentNumber VARCHAR(8) NOT NULL,
+    Grade FLOAT(2),
+    FirstName NVARCHAR(20) NOT NULL,
+    LastName NVARCHAR(20) NOT NULL,
+    IsMale BIT NOT NULL,
+    DateOfBirth DATETIME NOT NULL,
+    LeftUnitsCount INT NOT NULL
+);
+```
+</div>
+پس از ساختن جدول می‌توانیم با دستور زیر داده‌ی مورد نظر رادر جدول قرار دهیم.
+<div dir="ltr">
+```
+INSERT INTO tableName
+(column_1, column_2, ... )
+VALUES
+(expression_1, expression_2, ... ),
+(expression_1, expression_2, ... ),
+...;
+```
+</div>
+برای مثال با دستور زیر داده متناظر به جدول اضافه می‌شود.
+ <div dir="ltr">
+```
+INSERT INTO Student(FirstName, LastName, DateOfBirth,IsMale, LeftUnitsCount, StudentNumber)
+VALUES('Ava', 'Ahmadi', 'Feb 15, 2002', 0, 140, '99100200');
+```
+</div>
+همچنین با حفظ ترتیب ستون‌ها، می‌توان بدون نیاز به مشخص کردننام هر ستون داده را اضافه کرد. مانند دستور زیر.
+<div dir="ltr">
+```
+INSERT into Student values
+(
+    '98100200',
+    13.234,
+    N'علی',
+    N'احمدی',
+    1,
+    '1/22/2001',
+    92
+);
+```
+</div>
+همانطور که میبینید، برای مشخص کردن یک رشته به عنوان رشته 
+Unicode
+(در اینجا نام و نام خانوادگی که فارسی نوشته شده است) ازپیشوند
+N
+استفاده می‌شود.
+پس قرار دادن داده‌ها در جدول، با کوئری زیر می‌توانیم دادهذخیره شده در جدول را دریافت کنیم.
+<div dir="ltr">
+```
+SELECT column1, column2, ...
+FROM tableName
+[WHERE condition];
+```
+</div>
+برای مثال برای دریافت داده تمام دانشجویانی که اضافهکرده‌ایم، دستور زیر را اجرا می‌کنیم.
+<div dir="ltr">
+```
+SELECT *
+FROM Student;
+```
+</div>
+هانطور که مشاهده می‌کنید، به جای نام ستون‌ها از "*" استفادهشده است. که به معنی همه ستون‌ها می‌باشد. در واقع این دستوربا دستور زیر معادل است. 
+<div dir="ltr">
+```
+SELECT StudentNumber, Grade, FirstName, LastName, IsMale,DateOfBirth, LeftUnitsCount
+FROM Student;
+```
+</div>
+با اجرای دستور بالا، 
+ADS 
+داده‌ها را مانند شکل زیر به صورت جدول در 
+Results Tab
+ نمایش می‌دهد.
+با استفاده از 
+Operator
+ها در عبارتی که با 
+Where 
+شروع می‌شود، می‌توانیم شروط و محدودیت‌هایی بر روی دادهدریافت شده قرار دهیم. برای مثال دستور زیر افرادی که جنسیتآن‌ها مرد و معدلشان بین 10 تا 15 است را نمایش می‌دهد.
+<div dir="ltr">
+```
+SELECT *
+FROM Student
+WHERE IsMale = 1 AND 10 < Grade AND Grade < 15;
+```
+</div>
+همان 
+Query 
+بالا را به صورت زیر هم می‌توان نوشت.
+<div dir="ltr">
+```
+SELECT *
+FROM Student
+WHERE IsMale = 1 AND Grade BETWEEN 10 AND 15;
+```
+</div>
+در هر دو صورت خروجی به شکل زیر خواهد بود.
+<div dir="ltr"><img src="./Resource/ADSSelect.png" alt="ADSSelect" width="80%"></div>
+در جدول زیر 
+Operator
+های موجود را مشاهده می‌کنید. همچنین مانند مثال بالامی‌تواند تعداد از 
+Cluase
+ها را با یکدیگر 
+`AND`
+یا 
+`OR`
+کنید.
+<div dir="ltr">
+| Operator | توضیحات | Example |
+| :---: | :---: | :---: |
+| = | Equal | StudentNumber = '98100200'|
+| >, >= | Greater than, Greater than equal | Grade > 15,Grade >= 15 |
+| <, <= | Less than, Less than equal | Grade < 12, Grade <=12 |
+| <> or != | Not equal | IsMale <> 1 or IsMale != 1 |
+| BETWEEN | Between a certain range | Grade BETWEEN 14 AND17 |
+| LIKE | Search for a pattern | StudentNumber LIKE '98%' |
+| IN | To specify multiple possible values for a column |LastName IN ('Ahmadi', N'احمدی') |
+</div>
+پس از ساختن جدول، با دستورات زیر می‌توانیم ستون‌های آن راویرایش کنیم. 
+<div dir="ltr">
+```
+ALTER TABLE tableName ADD column1 datatype, column2datatype, ...;
+ALTER TABLE tableName DROP COLUMN column1, column2, ...;
+ALTER TABLE tableName ALTER COLUMN column1 datatype,column2 datatype, ...;
+```
+</div>
+با دستور زیر می‌توانیم یک جدول را حذف کنیم.
 
-    <div dir="ltr">
+<div dir="ltr">
+```
+DROP TABLE tableName;
+```
+</div>
+همچنین برای حذف داده‌های درون یک جدول و حفظ ساختار جدول ازدستور زیر استفاده می‌کنیم.
 
-    ```
-    CREATE TABLE tableName
-    ( 
-        column_1 datatype [ NULL | NOT NULL ],
-        column_2 datatype [ NULL | NOT NULL ],
-        ...
-    );
-    ```
-    </div>
-
-    برای مثال جدول دانشجو را به صورت زیر می‌سازیم. با نوشتن 
-    NOT NULL 
-     بعد از تعریف هر ستون، دادن مقدار به آن ستون در هنگام افزودن داده الزامی می‌شود. (در واقع مقدار آن ستون نمی‌تواند NULL باشد)
-    
-    <div dir="ltr">
-
-    ```
-    CREATE TABLE Student
-    (
-        StudentNumber VARCHAR(8) NOT NULL,
-        Grade FLOAT(2),
-        FirstName NVARCHAR(20) NOT NULL,
-        LastName NVARCHAR(20) NOT NULL,
-        IsMale BIT NOT NULL,
-        DateOfBirth DATETIME NOT NULL,
-        LeftUnitsCount INT NOT NULL
-    );
-    ```
-    </div>
-
-    پس از ساختن جدول می‌توانیم با دستور زیر داده‌ی مورد نظر را در جدول قرار دهیم.
-
-    <div dir="ltr">
-
-    ```
-    INSERT INTO tableName
-    (column_1, column_2, ... )
-    VALUES
-    (expression_1, expression_2, ... ),
-    (expression_1, expression_2, ... ),
-    ...;
-    ```
-    </div>
-
-    برای مثال با دستور زیر داده متناظر به جدول اضافه می‌شود.
-
-     <div dir="ltr">
-
-    ```
-    INSERT INTO Student(FirstName, LastName, DateOfBirth, IsMale, LeftUnitsCount, StudentNumber)
-    VALUES('Ava', 'Ahmadi', 'Feb 15, 2002', 0, 140, '99100200');
-    ```
-    </div>
-
-    همچنین با حفظ ترتیب ستون‌ها، می‌توان بدون نیاز به مشخص کردن نام هر ستون داده را اضافه کرد. مانند دستور زیر.
-
-    <div dir="ltr">
-
-    ```
-    INSERT into Student values
-    (
-        '98100200',
-        13.234,
-        N'علی',
-        N'احمدی',
-        1,
-        '1/22/2001',
-        92
-    );
-    ```
-    </div>
-
-    همانطور که میبینید، برای مشخص کردن یک رشته به عنوان رشته 
-    Unicode
-    (در اینجا نام و نام خانوادگی که فارسی نوشته شده است) از پیشوند
-    N
-    استفاده می‌شود.
-
-    پس قرار دادن داده‌ها در جدول، با کوئری زیر می‌توانیم داده ذخیره شده در جدول را دریافت کنیم.
-
-    <div dir="ltr">
-
-    ```
-    SELECT column1, column2, ...
-    FROM tableName
-    [WHERE condition];
-    ```
-    </div>
-
-    برای مثال برای دریافت داده تمام دانشجویانی که اضافه کرده‌ایم، دستور زیر را اجرا می‌کنیم.
-
-    <div dir="ltr">
-
-    ```
-    SELECT *
-    FROM Student;
-    ```
-    </div>
-
-    هانطور که مشاهده می‌کنید، به جای نام ستون‌ها از "*" استفاده شده است. که به معنی همه ستون‌ها می‌باشد. در واقع این دستور با دستور زیر معادل است. 
-
-    <div dir="ltr">
-
-    ```
-    SELECT StudentNumber, Grade, FirstName, LastName, IsMale, DateOfBirth, LeftUnitsCount
-    FROM Student;
-    ```
-    </div>
-
-    با اجرای دستور بالا، 
-    ADS 
-    داده‌ها را مانند شکل زیر به صورت جدول در 
-    Results Tab
-     نمایش می‌دهد.
-
-    با استفاده از 
-    Operator
-    ها در عبارتی که با 
-    Where 
-    شروع می‌شود، می‌توانیم شروط و محدودیت‌هایی بر روی داده دریافت شده قرار دهیم. برای مثال دستور زیر افرادی که جنسیت آن‌ها مرد و معدلشان بین 10 تا 15 است را نمایش می‌دهد.
-
-    <div dir="ltr">
-
-    ```
-    SELECT *
-    FROM Student
-    WHERE IsMale = 1 AND 10 < Grade AND Grade < 15;
-    ```
-    </div>
-
-    همان 
-    Query 
-    بالا را به صورت زیر هم می‌توان نوشت.
-
-    <div dir="ltr">
-
-    ```
-    SELECT *
-    FROM Student
-    WHERE IsMale = 1 AND Grade BETWEEN 10 AND 15;
-    ```
-    </div>
-
-    در هر دو صورت خروجی به شکل زیر خواهد بود.
-
-    <div dir="ltr"><img src="./Resource/ADSSelect.png" alt="ADS Select" width="80%"></div>
-
-    در جدول زیر 
-    Operator
-    های موجود را مشاهده می‌کنید. همچنین مانند مثال بالا می‌تواند تعداد از 
-    Cluase
-    ها را با یکدیگر 
-    `AND`
-    یا 
-    `OR`
-    کنید.
-
-    <div dir="ltr">
-
-    | Operator | توضیحات | Example |
-    | :---: | :---: | :---: |
-    | = | Equal | StudentNumber = '98100200'|
-    | >, >= | Greater than, Greater than equal | Grade > 15, Grade >= 15 |
-    | <, <= | Less than, Less than equal | Grade < 12, Grade <= 12 |
-    | <> or != | Not equal | IsMale <> 1 or IsMale != 1 |
-    | BETWEEN | Between a certain range | Grade BETWEEN 14 AND 17 |
-    | LIKE | Search for a pattern | StudentNumber LIKE '98%' |
-    | IN | To specify multiple possible values for a column | LastName IN ('Ahmadi', N'احمدی') |
-
-    </div>
-
-    پس از ساختن جدول، با دستورات زیر می‌توانیم ستون‌های آن را ویرایش کنیم. 
-
-    <div dir="ltr">
-
-    ```
-    ALTER TABLE tableName ADD column1 datatype, column2 datatype, ...;
-    ALTER TABLE tableName DROP COLUMN column1, column2, ...;
-    ALTER TABLE tableName ALTER COLUMN column1 datatype, column2 datatype, ...;
-    ```
-    </div>
-
-    با دستور زیر می‌توانیم یک جدول را حذف کنیم.
-    
-    <div dir="ltr">
-
-    ```
-    DROP TABLE tableName;
-    ```
-    </div>
-
-    همچنین برای حذف داده‌های درون یک جدول و حفظ ساختار جدول از دستور زیر استفاده می‌کنیم.
-    
-    <div dir="ltr">
-
-    ```
-    DELETE TABLE tableName;
-    ```
-    </div>
+<div dir="ltr">
+```
+DELETE TABLE tableName;
+```
+</div>
 
 ## کلیدها
 
-    - Primary Key
+### Primary Key
+Primary Key 
+یک ستون یا ترکیبی از ستون‌ها است که یک داده را به صمنحصر بفرد مشخص می‌کند. قوانین زیر بر 
+Primary Key
+حاکم هستند : 
+1. هر جدول فقط می‌تواند یک Primary Key داشته باشد.
+1. تمامی مقادیر موجود برای Primary Key منحصر بفرد هستند.
+1. DBMS اجازه‌ی اضافه کردن داده‌ای که Primary Key آن از موجود است را نمی‌دهد.
+1. Primary Key نمی‌تواند NULL باشد.
+برای ساختن Primary Key می‌توانیم جدولی که از قبل موجود را با دستور زیر تغییر دهیم.
+<div dir="ltr">
+```
+ALTER TABLE tableName
+ADD CONSTRAINT constraintName PRIMARY KEY (columncolumn_2, ..., column_n);
+```
+</div>
+برای مثال جدول Student موجود را به این صورت تغییر می‌دهیم : 
+<div dir="ltr">
+``` 
+ALTER TABLE Student
+ADD CONSTRAINT studentPK PRIMARY KEY (StudentNumber);
+```
+</div>
+اضافه شدن کلید جدید را می‌توان در پنل سمت چپ هم مشاهده کرد.
+<div dir="ltr"><img src="./Resource/ADSPrimaryKey.palt="ADS Primary Key" width="80%"></div>
+در واقع 
+Constraint 
+برای مشخص کردن قانون برای داده‌های جدول استفاده می‌شعبارت 
+NOT NULL 
+که قبلا با آن در ساختن جدول آشنا شدید نیز یک 
+Constraint 
+است. حال در اینجا دریافتید که 
+Primary Key 
+هم  
+Constraint 
+است.
+همچنین می‌توان جدول Student را از نوع و به شکل زیر ایکرد : 
+<div dir="ltr">
+``` 
+CREATE TABLE Student2
+(
+    StudentNumber VARCHAR(8) NOT NULL PRIMARY KEY,
+    Grade FLOAT(2),
+    FirstName NVARCHAR(20) NOT NULL,
+    LastName NVARCHAR(20) NOT NULL,
+    IsMale BIT NOT NULL,
+    DateOfBirth DATETIME NOT NULL,
+    LeftUnitsCount INT NOT NULL
+);
+```
+</div>
 
-        Primary Key 
-        یک ستون یا ترکیبی از ستون‌ها است که یک داده را به صورت منحصر بفرد مشخص می‌کند. قوانین زیر بر 
-        Primary Key
-        حاکم هستند : 
-
-        1. هر جدول فقط می‌تواند یک Primary Key داشته باشد.
-        1. تمامی مقادیر موجود برای Primary Key منحصر بفرد هستند.
-        1. DBMS اجازه‌ی اضافه کردن داده‌ای که Primary Key آن از قبل موجود است را نمی‌دهد.
-        1. Primary Key نمی‌تواند NULL باشد.
-
-        برای ساختن Primary Key می‌توانیم جدولی که از قبل موجود است را با دستور زیر تغییر دهیم.
-
-        <div dir="ltr">
-
-        ```
-        ALTER TABLE tableName
-        ADD CONSTRAINT constraintName PRIMARY KEY (column_1, column_2, ..., column_n);
-        ```
-        </div>
-
-        برای مثال جدول Student موجود را به این صورت تغییر می‌دهیم : 
-
-        <div dir="ltr">
-
-        ``` 
-        ALTER TABLE Student
-        ADD CONSTRAINT studentPK PRIMARY KEY (StudentNumber);
-        ```
-        </div>
-
-        اضافه شدن کلید جدید را می‌توان در پنل سمت چپ هم مشاهده کرد.
-
-        <div dir="ltr"><img src="./Resource/ADSPrimaryKey.png" alt="ADS Primary Key" width="80%"></div>
-
-        در واقع 
-        Constraint 
-        برای مشخص کردن قانون برای داده‌های جدول استفاده می‌شود. عبارت 
-        NOT NULL 
-        که قبلا با آن در ساختن جدول آشنا شدید نیز یک 
-        Constraint 
-        است. حال در اینجا دریافتید که 
-        Primary Key 
-        هم  
-        Constraint 
-        است.
-
-        همچنین می‌توان جدول Student را از نوع و به شکل زیر ایجاد کرد : 
-
-        <div dir="ltr">
-
-        ``` 
-        CREATE TABLE Student2
-        (
-            StudentNumber VARCHAR(8) NOT NULL PRIMARY KEY,
-            Grade FLOAT(2),
-            FirstName NVARCHAR(20) NOT NULL,
-            LastName NVARCHAR(20) NOT NULL,
-            IsMale BIT NOT NULL,
-            DateOfBirth DATETIME NOT NULL,
-            LeftUnitsCount INT NOT NULL
-        );
-        ```
-        </div>
-
-    - Foreign Key
-        Foreign Key 
-        کلیدی برای ارتباط جداول است. در واقع 
-        Foreign Key 
-        ستونی است که به 
-        Primary Key 
-        سایر جداول همان پایگاه داده ارجاع می‌دهد. قوانین 
-        Foreign Key 
-        عبارتند از : 
-
-        1. Foreign Key می‌تواند NULL باشد.
-        1. جدولی که Foreign Key دارد را فرزند(Child)، و جدولی که به آن ارجاع داده می‌شود را والد(Parent) می‌نامیم.
-
-        برای ایجاد یک 
-        Foreign Key
-        در هنگام ایجاد جدول یا پس از ایجاد آن، یک 
-        Constraint 
-        اضافه می‌کنیم. 
-
-        برای مثال جدولی جدید برای ثبت‌نام در هر درس می‌سازیم. در این جدول نام درس و شماره دانشجویی فرد ثبت‌نام شده را به صورت 
-        Foreign Key 
-        نگه می‌داریم. برای ساختن این جدول از دستور زیر استفاده می‌کنیم.
-
-        <div dir="ltr">
-
-        ``` 
-        CREATE TABLE Enrollment
-        (
-            CourseName NVARCHAR(20),
-            ParticipantStudentNumber VARCHAR(8),
-            CONSTRAINT studentNumberFK FOREIGN KEY (ParticipantStudentNumber)
-            REFERENCES Student(StudentNumber)
-        );
-        ```
-        </div>
-
-        حال رفتار 
-        Foreign Key 
-        را با افزودن 3 داده جدید بررسی می‌کنیم.
-
-        <div dir="ltr">
-
-        ``` 
-        INSERT INTO Enrollment VALUES
-        ('Data Structures', '98100200');
-
-        INSERT INTO Enrollment VALUES
-        ('Advance Programming', NULL);
-
-        INSERT INTO Enrollment VALUES
-        ('Advance Programming', '97100200');
-        ```
-        </div>
-
-        <div dir="ltr"><img src="./Resource/ADSForeignKeyError.png" alt="ADS Foreign Key Error" width="80%"></div>
-
-        همانطور که در تصویر مشاهده می‌کنید، دستور اول که مقدار 
-        Foreign Key
-        آن در جدول 
-        Student 
-        موجود بود و دستور دوم که 
-        Foreign Key 
-        در آن 
-        NULL 
-        بود با موفقیت اجرا شده‌اند. اما دستور سوم که 
-        Foreign Key 
-        آن در جدول 
-        Student 
-        موجود نبود با خطا مواجه شده است.
+### Foreign Key
+Foreign Key 
+کلیدی برای ارتباط جداول است. در واقع 
+Foreign Key 
+ستونی است که به 
+Primary Key 
+سایر جداول همان پایگاه داده ارجاع می‌دهد. قوانین 
+Foreign Key 
+عبارتند از : 
+1. Foreign Key می‌تواند NULL باشد.
+1. جدولی که Foreign Key دارد را فرزند(Child)، و جدولی که بهآن ارجاع داده می‌شود را والد(Parent) می‌نامیم.
+برای ایجاد یک 
+Foreign Key
+در هنگام ایجاد جدول یا پس از ایجاد آن، یک 
+Constraint 
+اضافه می‌کنیم. 
+برای مثال جدولی جدید برای ثبت‌نام در هر درس می‌سازیم. دراین جدول نام درس و شماره دانشجویی فرد ثبت‌نام شده را بهصورت 
+Foreign Key 
+نگه می‌داریم. برای ساختن این جدول از دستور زیر استفادهمی‌کنیم.
+<div dir="ltr">
+``` 
+CREATE TABLE Enrollment
+(
+    CourseName NVARCHAR(20),
+    ParticipantStudentNumber VARCHAR(8),
+    CONSTRAINT studentNumberFK FOREIGN KEY (ParticipantStudentNumber)
+    REFERENCES Student(StudentNumber)
+);
+```
+</div>
+حال رفتار 
+Foreign Key 
+را با افزودن 3 داده جدید بررسی می‌کنیم.
+<div dir="ltr">
+``` 
+INSERT INTO Enrollment VALUES
+('Data Structures', '98100200');
+INSERT INTO Enrollment VALUES
+('Advance Programming', NULL);
+INSERT INTO Enrollment VALUES
+('Advance Programming', '97100200');
+```
+</div>
+<div dir="ltr"><img src="./Resource/ADSForeignKeyError.png"alt="ADS Foreign Key Error" width="80%"></div>
+همانطور که در تصویر مشاهده می‌کنید، دستور اول که مقدار 
+Foreign Key
+آن در جدول 
+Student 
+موجود بود و دستور دوم که 
+Foreign Key 
+در آن 
+NULL 
+بود با موفقیت اجرا شده‌اند. اما دستور سوم که 
+Foreign Key 
+آن در جدول 
+Student 
+موجود نبود با خطا مواجه شده است.
 
 ## آشنایی با T-SQL
 
-    **T-SQL(Transact-SQL)** 
-    زبان توسعه داده شده توسط مایکروسافت است که قابلیت‌هایی مثل متغییر، مدیریت استثنا 
-    (Exception)
-    ، رویه‌ی ذخیره شده 
-    (Stored Procedure) 
-    و ... را به 
-    SQL Server 
-    اضافه می‌کند. دقت کنید که 
-    T-SQL 
-    در کنار 
-    SQL 
-    قرار دارد و 
-    SQL Server
-    از 
-    SQL 
-    استاندارد پشتیبانی می‌کند. برای مثال به کمک لینک‌های زیر، می‌توانید با متغییرها و عبارات شرطی آشنا شوید. نیاز نیست این مبحث را عمیق بخوانید.
-
-    - [SQL Variables: Basics and usage](https://www.sqlshack.com/sql-variables-basics-and-usage/)
-    - [SQL Server IF ELSE](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-if-else/)
+**T-SQL(Transact-SQL)** 
+زبان توسعه داده شده توسط مایکروسافت است که قابلیت‌هایی مثلمتغییر، مدیریت استثنا 
+(Exception)
+، رویه‌ی ذخیره شده 
+(Stored Procedure) 
+و ... را به 
+SQL Server 
+اضافه می‌کند. دقت کنید که 
+T-SQL 
+در کنار 
+SQL 
+قرار دارد و 
+SQL Server
+از 
+SQL 
+استاندارد پشتیبانی می‌کند. برای مثال به کمک لینک‌های زیر،می‌توانید با متغییرها و عبارات شرطی آشنا شوید. نیاز نیستاین مبحث را عمیق بخوانید.
+- [SQL Variables: Basics and usage](https://www.sqlshackcom/sql-variables-basics-and-usage/)
+- [SQL Server IF ELSE](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-if-else/)
 
 ## Joins
 
-    Join
-    ها از مهم‌ترین دستورات 
-    SQL 
-    تلقی می‌شوند. با استفاده از 
-    Join
-    ها می‌توانیم داده را از چند جدول به کمک 
-    Key 
-    و با یک دستور دریافت کنیم. در 
-    SQL 
-    چهار نوع 
-    Join 
-    وجود دارد که مشاهده عملکرد هر یک از آن‌ها در نمودار 
-    Venn 
-    راحت‌تر است. پس شکل زیر را به دقت بررسی کنید.
-
-    <div dir="ltr"><img src="./Resource/SQLJoins.png" alt="SQL Joins" width="80%"></div>
-
-    حال نمونه‌ی هر 
-    Join 
-    را در دستورات زیر مشاهده می‌کنید. مقادیر اولیه جدول 
-    Enrollment (Child)
-    و 
-    Student (Parent)
-    نیر در ابتدا نشان داده شده است.
-
-    <div dir="ltr">
-    <img src="./Resource/JoinExamplePrimaryTables.png" alt="SQL Join Primary Tables" width="80%">
-
-    <img src="./Resource/InnerJoin.png" alt="Inner Join" width="80%">
-
-    <img src="./Resource/LeftJoin.png" alt="Left Join" width="80%">
-
-    <img src="./Resource/RightJoin.png" alt="Right Join" width="80%">
-
-    <img src="./Resource/FullOuterJoin.png" alt="Full Outer Join" width="80%">
+Join
+ها از مهم‌ترین دستورات 
+SQL 
+تلقی می‌شوند. با استفاده از 
+Join
+ها می‌توانیم داده را از چند جدول به کمک 
+Key 
+و با یک دستور دریافت کنیم. در 
+SQL 
+چهار نوع 
+Join 
+وجود دارد که مشاهده عملکرد هر یک از آن‌ها در نمودار 
+Venn 
+راحت‌تر است. پس شکل زیر را به دقت بررسی کنید.
+<div dir="ltr"><img src="./Resource/SQLJoins.png" alt="SQLJoins" width="80%"></div>
+حال نمونه‌ی هر 
+Join 
+را در دستورات زیر مشاهده می‌کنید. مقادیر اولیه جدول 
+Enrollment (Child)
+و 
+Student (Parent)
+نیر در ابتدا نشان داده شده است.
+<div dir="ltr">
+<img src="./Resource/JoinExamplePrimaryTables.png" alt="SQLJoin Primary Tables" width="80%">
+<img src="./Resource/InnerJoin.png" alt="Inner Join"width="80%">
+<img src="./Resource/LeftJoin.png" alt="Left Join"width="80%">
+<img src="./Resource/RightJoin.png" alt="Right Join"width="80%">
+<img src="./Resource/FullOuterJoin.png" alt="Full OuterJoin" width="80%">
     </div>
 
 ## تابع‌ها
 
-    SQL 
-    توابع زیادی برای انجام محاسبات بر روی داده‌ها دارد که به صورت کلی در دو دسته قرار می‌گیرند.
-    1. Aggregate Functions : ورودی تابع مقادیر موجود در جدول می‌باشد. چند نمونه از این توابع رو در زیر مشاهده می‌کنید.
-        - [AVG](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_avg.asp.html)
-        - [COUNT](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_count.asp.html)
-        - [MIN](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_min.asp.html)
-
-    1. Scalar Functions : ورودی تابع در زمان صدا زدن به آن داده می‌شود. چند نمونه از این توابع نیز در ادامه آمده است.
-        - [ROUND](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_round.asp.html)
-        - [SUBSTRING](https://www.guru99.com/sql-server-substring.html)
-
-    **GROUP BY**
-
-    <div dir="ltr">
-
-    ``` 
-    SELECT column_name, aggregate_function(column_name)
-    FROM table_name
-    WHERE column_name operator value
-    GROUP BY column_name; 
-    ```
-    </div>
-
-    با استفاده از دستور 
-    GROUP BY
-    می‌توان ستون‌ها را دسته بندی کرد. این دستور با 
-    Aggregate Funcitons 
-    به کار می‌رود. برای مثال دستور زیر تعداد آقایان و خانم‌ها را خروجی می‌دهد.
-
-    <div dir="ltr">
-
-    ``` 
-    SELECT IsMale, COUNT(IsMale) FROM Student GROUP BY IsMale;
-    ```
-    </div>
-
-    دستور زیر تعداد دروس ثبت‌نام شده هز دانشجو را نشان می‌دهد.
-
-    <div dir="ltr">
-
-    ``` 
-    SELECT ParticipantStudentNumber, COUNT(ParticipantStudentNumber)
-    FROM Enrollment 
-    GROUP BY ParticipantStudentNumber;
-    ```
-    </div>
+SQL 
+توابع زیادی برای انجام محاسبات بر روی داده‌ها دارد که بهصورت کلی در دو دسته قرار می‌گیرند.
+1. Aggregate Functions : ورودی تابع مقادیر موجود در جدولمی‌باشد. چند نمونه از این توابع رو در زیر مشاهده می‌کنید.
+    - [AVG](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_avg.asp.html)
+    - [COUNT](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_count.asp.html)
+    - [MIN](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_min.asp.html)
+1. Scalar Functions : ورودی تابع در زمان صدا زدن به آن دادهمی‌شود. چند نمونه از این توابع نیز در ادامه آمده است.
+    - [ROUND](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_round.asp.html)
+    - [SUBSTRING](https://www.guru99.com/sql-server-substring.html)
+**GROUP BY**
+<div dir="ltr">
+``` 
+SELECT column_name, aggregate_function(column_name)
+FROM table_name
+WHERE column_name operator value
+GROUP BY column_name; 
+```
+</div>
+با استفاده از دستور 
+GROUP BY
+می‌توان ستون‌ها را دسته بندی کرد. این دستور با 
+Aggregate Funcitons 
+به کار می‌رود. برای مثال دستور زیر تعداد آقایان و خانم‌هارا خروجی می‌دهد.
+<div dir="ltr">
+``` 
+SELECT IsMale, COUNT(IsMale) FROM Student GROUP BY IsMale;
+```
+</div>
+دستور زیر تعداد دروس ثبت‌نام شده هز دانشجو را نشان می‌دهد.
+<div dir="ltr">
+``` 
+SELECT ParticipantStudentNumber, COUN(ParticipantStudentNumber)
+FROM Enrollment 
+GROUP BY ParticipantStudentNumber;
+```
+</div>
