@@ -228,6 +228,7 @@ SQL Server
 Data Type
 ها نیز در جدول زیر قابل مشاهده هستند.
 <div dir="ltr">
+
 | Data Type | توضیحات | Range/Limit | Storage Size |
 | :---: | :---: | :---: | :---: |
 | int | It stores whole numbers in the range given | -2^31to −2^31-1 | 8 bytes |
@@ -386,6 +387,7 @@ Cluase
 `OR`
 کنید.
 <div dir="ltr">
+
 | Operator | توضیحات | Example |
 | :---: | :---: | :---: |
 | = | Equal | StudentNumber = '98100200'|
