@@ -327,6 +327,7 @@ git checkout second-branch
 git merge first-branch
 ```
 
-برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
 -   [Git Branching - Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+-   [Learn Git Branching](https://learngitbranching.js.org/)
