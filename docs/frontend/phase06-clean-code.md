@@ -33,6 +33,8 @@ description: Did you clean up in here? Of course.
 -   [The Importance of Clean Code](https://www.arcanys.com/blog/the-importance-of-clean-code/)
 -   [Why software maintainability is crucial](https://techhq.com/2019/06/why-software-maintainability-is-crucial/)
 
+---
+
 ### Code Smells
 
 یکی از راه‌های افزایش کیفیت کد، پیدا کردن نشانه‌های کد کثیف و بازنویسی آن‌هاست.
@@ -43,6 +45,8 @@ description: Did you clean up in here? Of course.
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:
 
 -   [Refactoring Guru - Code Smells](https://refactoring.guru/smells/)
+
+---
 
 ### S.O.L.I.D
 
@@ -61,6 +65,8 @@ description: Did you clean up in here? Of course.
 -   [Medium - SOLID Principles in TypeScript](https://blog.bitsrc.io/solid-principles-in-typescript-153e6923ffdb)
 -   [Medium - Brutally SOLID Typescript](https://itnext.io/brutally-solid-typescript-ba745585f440)
 
+---
+
 ### Refactoring Techniques
 
 با گذشت زمان و کسب تجربه توسط توسعه‌دهندگان،
@@ -71,6 +77,8 @@ description: Did you clean up in here? Of course.
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:
 
 -   [Refactoring Guru - Refactoring Techniques](https://refactoring.guru/refactoring/techniques/)
+
+---
 
 ### Open-Source
 
@@ -117,6 +125,8 @@ description: Did you clean up in here? Of course.
 -   نحوۀ Cloneکردن و راه‌اندازی پروژه به صورت خط به خط با بیشترین جزئیات ممکن
 -   قوانین کدنویسی که در پروژه رعایت می‌کنید
 -   قواعد نوشتن Commit Message
+
+---
 
 ### IDE
 
@@ -597,6 +607,8 @@ npx stylelint "**/*.scss" --fix
 -   [Stylelint](https://stylelint.io/)
 -   [stylelint-order](https://www.npmjs.com/package/stylelint-order/)
 
+---
+
 ### General
 
 #### Download Size
@@ -626,6 +638,8 @@ npx stylelint "**/*.scss" --fix
 بعضاً مشاهده می‌شود که توسعه‌دهندگان برای نمایش اعداد فارسی از کاراکترهای `۰۱۲۳۴۵۶۷۸۹` استفاده می‌کنند؛
 ما پیشنهاد می‌کنیم به‌هیچ‌وجه چنین کاری نکنید؛
 در عوض از فونتی استفاده کنید که کاراکترهای `0123456789` را به شکل درست نمایش دهد.
+
+---
 
 ### CSS
 
@@ -967,6 +981,8 @@ optgroup {
 
 -   [MDN - CSS Logical Properties and Values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties)
 
+---
+
 ### Angular
 
 #### Global Styles
@@ -978,6 +994,8 @@ Angular
 در این فایل می‌توانید هر المانی را استایل‌دهی کنید اما توصیه می‌کنیم صرفاً استایل‌های Global را در این فایل بگذارید
 و برای استایل‌دهی به یک کامپوننت خاص، از فایل SCSS مربوط به همان کامپوننت استفاده کنید.
 همچنین از این فایل برای تعریف کلاس‌های کمکی یا متغیرهای CSS نیز می‌توانید استفاده کنید.
+
+---
 
 ### Comment Dictionary
 
@@ -995,6 +1013,8 @@ Angular
 |   unit   |                                                                                     در CSS، از Unit مناسبی استفاده نشده. در اکثر مواقع باید از `rem` استفاده کنید |
 |    غ     |                                                                                                                                                      غیرقابل‌قبول |
 | 😐 یا :/ |                                                                                                                                                      تَهِ اعتراض! |
+
+---
 
 ## پروژه
 
