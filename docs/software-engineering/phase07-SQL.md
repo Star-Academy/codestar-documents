@@ -444,35 +444,13 @@ Foreign Key
 Student 
 موجود نبود با خطا مواجه شده است.
 
-## آشنایی با T-SQL
-
-**T-SQL(Transact-SQL)**
-زبان توسعه داده شده توسط مایکروسافت است که قابلیت‌هایی مثلمتغییر، مدیریت استثنا 
-(Exception)
-، رویه‌ی ذخیره شده 
-(Stored Procedure) 
-و ... را به 
-SQL Server 
-اضافه می‌کند. دقت کنید که 
-T-SQL 
-در کنار 
-SQL 
-قرار دارد و 
-SQL Server
-از 
-SQL 
-استاندارد پشتیبانی می‌کند. برای مثال به کمک لینک‌های زیر،می‌توانید با متغییرها و عبارات شرطی آشنا شوید. نیاز نیستاین مبحث را عمیق بخوانید.
-- [SQL Variables: Basics and usage](https://www.sqlshackcom/sql-variables-basics-and-usage/)
-- [SQL Server IF ELSE](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-if-else/)
 
 ## Joins
 
-Join
-ها از مهم‌ترین دستورات 
+Joinها از مهم‌ترین دستورات 
 SQL 
 تلقی می‌شوند. با استفاده از 
-Join
-ها می‌توانیم داده را از چند جدول به کمک 
+Joinها می‌توانیم داده را از چند جدول به کمک 
 Key 
 و با یک دستور دریافت کنیم. در 
 SQL 
@@ -482,20 +460,21 @@ Join
 Venn 
 راحت‌تر است. پس شکل زیر را به دقت بررسی کنید.
 <div dir="ltr"><img src="./images/phase07-SQL-joins.png" alt="SQLJoins" width="80%"></div>
+
 حال نمونه‌ی هر 
 Join 
 را در دستورات زیر مشاهده می‌کنید. مقادیر اولیه جدول 
 Enrollment (Child)
 و 
 Student (Parent)
-نیر در ابتدا نشان داده شده است.
+نیز در ابتدا نشان داده شده است.
 <div dir="ltr">
 <img src="./images/phase07-join-example-primary-tables.png" alt="SQLJoin Primary Tables" width="80%">
 <img src="./images/phase07-inner-join.png" alt="Inner Join"width="80%">
 <img src="./images/phase07-left-join.png" alt="Left Join"width="80%">
 <img src="./images/phase07-right-join.png" alt="Right Join"width="80%">
 <img src="./images/phase07-full-outer-join.png" alt="Full OuterJoin" width="80%">
-    </div>
+</div>
 
 ## تابع‌ها
 
