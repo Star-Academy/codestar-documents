@@ -69,12 +69,14 @@ New Query
 می‌توانید دستوراتی را به زبان 
 SQL 
 به سرور بفرستید و پاسخ خود را دریافت کنید.
-        <div dir="ltr"><img src="./images/phase07-ADS-status.png" alt="ADS Status" width="80%"></div>
+
+![ADS Status](./images/phase07-ADS-status.png)
 
 پس از نوشتن query  با فشردن کلید 
 F5 
 یا کلیک بر روی دکمه Run، آن را اجرا کنید. سعی کنید از اینجا به بعد هر دستوری که در داک مشاهده می‌کنید را برای خودتان اجرا نمایید. 
-    <div dir="ltr"><img src="./images/phase07-ADS-query.png" alt="ADS Query" width="80%"></div>
+
+![ADS Query](./images/phase07-ADS-query.png)
 
 ## Database در PostgreSQL
 
@@ -102,19 +104,15 @@ Database
 همانظور که در تعاریف دیدیم برای کار با داده باید حداقل یک 
 Database 
 ایجاد کنیم. 
-<div dir="ltr">
 
-```
+```sql
 CREATE DATABASE database_name;
 ```
-</div>
 برای مثال:
-<div dir="ltr">
 
-```
+```sql
 CREATE DATABASE StarAcademy;
 ```
-</div>
 با اجرای این دستور، دیتابیس ساخته می‌شود و با 
 Refresh 
 کردن 
@@ -128,15 +126,14 @@ ADS
 پیغامی متناسب با موفقیت و یا عدم موفقیت 
 Query 
 اجرا شده چاپ می‌کند. در صورت مواجه شدن با خطا، پیغام مربوط به خطا نیز چاپ می‌شود که به رفع خطا کمک می‌کند.
-<div dir="ltr"><img src="./images/phase07-ADS-message.png"alt="ADS Message" width="80%"></div>
+
+![ADS Message](./images/phase07-ADS-message.png)
 
 برای حذف یک دیتابیس نیز از دستور زیر استفاده می‌شود.
-<div dir="ltr">
 
-```
+```sql
 DROP DATABASE database_name;
 ```
-</div>
 
 ## Data Type
 
@@ -154,9 +151,8 @@ Table
 (Column)
 ذخیره می‌کند.
 برای ساختن جدول از دستور زیر استفاده می‌کنیم.
-<div dir="ltr">
 
-```
+```sql
 CREATE TABLE tableName
 ( 
     column_1 datatype [ NULL | NOT NULL ],
@@ -164,14 +160,13 @@ CREATE TABLE tableName
     ...
 );
 ```
-</div>
+
 برای مثال جدول دانشجو را به صورت زیر می‌سازیم. با نوشتن 
 NOT NULL 
  بعد از تعریف هر ستون، دادن مقدار به آن ستون در هنگام افزودن داده الزامی می‌شود. (در واقع مقدار آن ستون نمی‌تواند NULL باشد)
 
-<div dir="ltr">
 
-```
+```sql
 CREATE TABLE Student
 (
     StudentNumber VARCHAR(8) NOT NULL,
@@ -183,11 +178,11 @@ CREATE TABLE Student
     LeftUnitsCount INT NOT NULL
 );
 ```
-</div>
-پس از ساختن جدول می‌توانیم با دستور زیر داده‌ی مورد نظر را در جدول قرار دهیم.
-<div dir="ltr">
 
-```
+پس از ساختن جدول می‌توانیم با دستور زیر داده‌ی مورد نظر را در جدول قرار دهیم.
+
+
+```sql
 INSERT INTO tableName
 (column_1, column_2, ... )
 VALUES
@@ -195,19 +190,15 @@ VALUES
 (expression_1, expression_2, ... ),
 ...;
 ```
-</div>
 برای مثال با دستور زیر داده متناظر به جدول اضافه می‌شود.
- <div dir="ltr">
 
-```
+```sql
 INSERT INTO Student(FirstName, LastName, DateOfBirth, IsMale, LeftUnitsCount, StudentNumber)
 VALUES('Ava', 'Ahmadi', 'Feb 15, 2002', false, 140, '99100200');
 ```
-</div>
 همچنین با حفظ ترتیب ستون‌ها، می‌توان بدون نیاز به مشخص کردن نام هر ستون، داده را اضافه کرد. مانند دستور زیر:
-<div dir="ltr">
 
-```
+```sql
 INSERT into Student values
 (
     '98100200',
@@ -219,32 +210,26 @@ INSERT into Student values
     92
 );
 ```
-</div>
 پس از قرار دادن داده‌ها در جدول، با کوئری زیر می‌توانیم داده ذخیره شده در جدول را دریافت کنیم.
-<div dir="ltr">
 
-```
+```sql
 SELECT column1, column2, ...
 FROM tableName
 [WHERE condition];
 ```
-</div>
 برای مثال برای دریافت داده تمام دانشجویانی که اضافه کرده‌ایم، دستور زیر را اجرا می‌کنیم.
-<div dir="ltr">
 
-```
+```sql
 SELECT *
 FROM Student;
 ```
-</div>
 هانطور که مشاهده می‌کنید، به جای نام ستون‌ها از "*" استفاده شده است. که به معنی همه ستون‌ها می‌باشد. در واقع این دستور با دستور زیر معادل است. 
-<div dir="ltr">
 
-```
+```sql
 SELECT StudentNumber, Grade, FirstName, LastName, IsMale,DateOfBirth, LeftUnitsCount
 FROM Student;
 ```
-</div>
+
 با اجرای دستور بالا، 
 ADS 
 داده‌ها را مانند شکل زیر به صورت جدول در 
@@ -254,27 +239,24 @@ Results Tab
 Operatorها در عبارتی که با 
 Where 
 شروع می‌شود، می‌توانیم شروط و محدودیت‌هایی بر روی داده دریافت شده قرار دهیم. برای مثال دستور زیر افرادی که جنسیت آن‌ها مرد و معدلشان بین 10 تا 15 است را نمایش می‌دهد.
-<div dir="ltr">
 
-```
+```sql
 SELECT *
 FROM Student
 WHERE IsMale = true AND 10 < Grade AND Grade < 15;
 ```
-</div>
 همان 
 Query 
 بالا را به صورت زیر هم می‌توان نوشت.
-<div dir="ltr">
 
-```
+```sql
 SELECT *
 FROM Student
 WHERE IsMale = true AND Grade BETWEEN 10 AND 15;
 ```
-</div>
 در هر دو صورت خروجی به شکل زیر خواهد بود:
-<div dir="ltr"><img src="./images/phase07-ADS-select.png" alt="ADSSelect" width="80%"></div>
+![ADSSelect](./images/phase07-ADS-select.png)
+
 در جدول زیر 
 Operatorهای موجود را مشاهده می‌کنید. همچنین مانند مثال بالا می‌توانید تعدادی از 
 Cluaseها را با یکدیگر 
@@ -282,7 +264,6 @@ AND
 یا 
 OR
 کنید.
-<div dir="ltr">
 
 | Operator | توضیحات | Example |
 | :---: | :---: | :---: |
@@ -293,32 +274,26 @@ OR
 | BETWEEN | Between a certain range | Grade BETWEEN 14 AND 17 |
 | LIKE | Search for a pattern | StudentNumber LIKE '98%' |
 | IN | To specify multiple possible values for a column |LastName IN ('Ahmadi', 'احمدی') |
-</div>
-پس از ساختن جدول، با دستورات زیر می‌توانیم ستون‌های آن را ویرایش کنیم. 
-<div dir="ltr">
 
-```
+پس از ساختن جدول، با دستورات زیر می‌توانیم ستون‌های آن را ویرایش کنیم. 
+
+```sql
 ALTER TABLE tableName ADD column1 datatype, column2datatype, ...;
 ALTER TABLE tableName DROP COLUMN column1, column2, ...;
 ALTER TABLE tableName ALTER COLUMN column1 datatype,column2 datatype, ...;
 ```
-</div>
 با دستور زیر می‌توانیم یک جدول را حذف کنیم.
 
-<div dir="ltr">
 
-```
+```sql
 DROP TABLE tableName;
 ```
-</div>
 همچنین برای حذف داده‌های درون یک جدول و حفظ ساختار جدول از دستور زیر استفاده می‌کنیم.
 
-<div dir="ltr">
 
-```
+```sql
 DELETE FROM tableName;
 ```
-</div>
 
 ## کلیدها
 
@@ -334,17 +309,14 @@ Primary Key
 
 
 برای ساختن Primary Key می‌توانیم جدولی که از قبل موجود است را با دستور زیر تغییر دهیم.
-<div dir="ltr">
 
-```
+```sql
 ALTER TABLE tableName
 ADD CONSTRAINT constraintName PRIMARY KEY (columncolumn_2, ..., column_n);
 ```
-</div>
 برای مثال جدول Student موجود را به این صورت تغییر می‌دهیم : 
-<div dir="ltr">
 
-``` 
+```sql
 ALTER TABLE Student
 ADD CONSTRAINT studentPK PRIMARY KEY (StudentNumber);
 ```
@@ -362,9 +334,9 @@ Constraint
 است.
 
 همچنین می‌توان PRIMARY KEY را در زمان ساخت جدول مشخص نمود:
-<div dir="ltr">
 
-``` 
+
+```sql
 CREATE TABLE Student2
 (
     StudentNumber VARCHAR(8) NOT NULL PRIMARY KEY,
@@ -376,7 +348,7 @@ CREATE TABLE Student2
     LeftUnitsCount INT NOT NULL
 );
 ```
-</div>
+
 
 ### Foreign Key
 سForeign Key 
@@ -397,9 +369,9 @@ Constraint
 برای مثال جدولی جدید برای ثبت‌نام در هر درس می‌سازیم. در این جدول نام درس و شماره دانشجویی فرد ثبت‌نام شده را به صورت 
 Foreign Key 
 نگه می‌داریم. برای ساختن این جدول از دستور زیر استفاده می‌کنیم.
-<div dir="ltr">
 
-``` 
+
+```sql
 CREATE TABLE Enrollment
 (
     CourseName VARCHAR(20),
@@ -408,28 +380,29 @@ CREATE TABLE Enrollment
     REFERENCES Student(StudentNumber)
 );
 ```
-</div>
+
 حال رفتار 
 Foreign Key 
 را با افزودن 3 داده جدید بررسی می‌کنیم.
-<div dir="ltr">
 
-``` 
+
+```sql
 INSERT INTO Enrollment VALUES
 ('Data Structures', '98100200');
 ```
 
-```
+```sql
 INSERT INTO Enrollment VALUES
 ('Advance Programming', NULL);
 ```
 
-```
+```sql
 INSERT INTO Enrollment VALUES
 ('Advance Programming', '97100200');
 ```
-</div>
-<div dir="ltr"><img src="./images/phase07-ADS-foreign-key-error.png"alt="ADS Foreign Key Error" width="80%"></div>
+
+
+![ADS Foreign Key Error](./images/phase07-ADS-foreign-key-error.png)
 همانطور که در تصویر مشاهده می‌کنید، دستور اول که مقدار 
 Foreign Key
 آن در جدول 
@@ -459,7 +432,7 @@ Join
 وجود دارد که مشاهده عملکرد هر یک از آن‌ها در نمودار 
 Venn 
 راحت‌تر است. پس شکل زیر را به دقت بررسی کنید.
-<div dir="ltr"><img src="./images/phase07-SQL-joins.png" alt="SQLJoins" width="80%"></div>
+![SQLJoins](./images/phase07-SQL-joins.png)
 
 حال نمونه‌ی هر 
 Join 
@@ -468,13 +441,12 @@ Enrollment (Child)
 و 
 Student (Parent)
 نیز در ابتدا نشان داده شده است.
-<div dir="ltr">
-<img src="./images/phase07-join-example-primary-tables.png" alt="SQLJoin Primary Tables" width="80%">
-<img src="./images/phase07-inner-join.png" alt="Inner Join"width="80%">
-<img src="./images/phase07-left-join.png" alt="Left Join"width="80%">
-<img src="./images/phase07-right-join.png" alt="Right Join"width="80%">
-<img src="./images/phase07-full-outer-join.png" alt="Full OuterJoin" width="80%">
-</div>
+
+![SQLJoin Primary Tables](./images/phase07-join-example-primary-tables.png)
+![Inner Join](./images/phase07-inner-join.png)
+![Left Join](./images/phase07-left-join.png)
+![Right Join](./images/phase07-right-join.png)
+![Full OuterJoin](./images/phase07-full-outer-join.png)
 
 ## تابع‌ها
 
@@ -496,34 +468,33 @@ SQL
 
 
 ## **GROUP BY**
-<div dir="ltr">
 
-``` 
+
+```sql
 SELECT column_name, aggregate_function(column_name)
 FROM table_name
 WHERE column_name operator value
 GROUP BY column_name; 
 ```
-</div>
+
 
 با استفاده از دستور 
 GROUP BY
 می‌توان ستون‌ها را دسته‌بندی کرد. این دستور با 
 Aggregate Funcitons 
 به کار می‌رود. برای مثال دستور زیر تعداد آقایان و خانم‌ها را خروجی می‌دهد.
-<div dir="ltr">
 
-``` 
+
+```sql
 SELECT IsMale, COUNT(IsMale) FROM Student GROUP BY IsMale;
 ```
-</div>
+
 
 دستور زیر تعداد دروس ثبت‌نامی هر دانشجو را نشان می‌دهد.
-<div dir="ltr">
 
-``` 
+
+```sql
 SELECT ParticipantStudentNumber, COUNT(ParticipantStudentNumber)
 FROM Enrollment 
 GROUP BY ParticipantStudentNumber;
 ```
-</div>
