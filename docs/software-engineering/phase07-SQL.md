@@ -278,9 +278,9 @@ WHERE IsMale = true AND Grade BETWEEN 10 AND 15;
 در جدول زیر 
 Operatorهای موجود را مشاهده می‌کنید. همچنین مانند مثال بالا می‌توانید تعدادی از 
 Cluaseها را با یکدیگر 
-`AND`
+AND
 یا 
-`OR`
+OR
 کنید.
 <div dir="ltr">
 
@@ -289,12 +289,12 @@ Cluaseها را با یکدیگر
 | = | Equal | StudentNumber = '98100200'|
 | >, >= | Greater than, Greater than equal | Grade > 15,Grade >= 15 |
 | <, <= | Less than, Less than equal | Grade < 12, Grade <=12 |
-| <> or != | Not equal | IsMale <> 1 or IsMale != 1 |
-| BETWEEN | Between a certain range | Grade BETWEEN 14 AND17 |
+| <> or != | Not equal | IsMale <> true or IsMale != true |
+| BETWEEN | Between a certain range | Grade BETWEEN 14 AND 17 |
 | LIKE | Search for a pattern | StudentNumber LIKE '98%' |
-| IN | To specify multiple possible values for a column |LastName IN ('Ahmadi', N'احمدی') |
+| IN | To specify multiple possible values for a column |LastName IN ('Ahmadi', 'احمدی') |
 </div>
-پس از ساختن جدول، با دستورات زیر می‌توانیم ستون‌های آن راویرایش کنیم. 
+پس از ساختن جدول، با دستورات زیر می‌توانیم ستون‌های آن را ویرایش کنیم. 
 <div dir="ltr">
 
 ```
@@ -311,12 +311,12 @@ ALTER TABLE tableName ALTER COLUMN column1 datatype,column2 datatype, ...;
 DROP TABLE tableName;
 ```
 </div>
-همچنین برای حذف داده‌های درون یک جدول و حفظ ساختار جدول ازدستور زیر استفاده می‌کنیم.
+همچنین برای حذف داده‌های درون یک جدول و حفظ ساختار جدول از دستور زیر استفاده می‌کنیم.
 
 <div dir="ltr">
 
 ```
-DELETE TABLE tableName;
+DELETE FROM tableName;
 ```
 </div>
 
@@ -324,14 +324,16 @@ DELETE TABLE tableName;
 
 ### Primary Key
 Primary Key 
-یک ستون یا ترکیبی از ستون‌ها است که یک داده را به صمنحصر بفرد مشخص می‌کند. قوانین زیر بر 
+یک ستون یا ترکیبی از ستون‌ها است که یک داده را به صورت منحصر به‌فرد مشخص می‌کند. قوانین زیر بر 
 Primary Key
 حاکم هستند : 
 1. هر جدول فقط می‌تواند یک Primary Key داشته باشد.
-1. تمامی مقادیر موجود برای Primary Key منحصر بفرد هستند.
-1. DBMS اجازه‌ی اضافه کردن داده‌ای که Primary Key آن از موجود است را نمی‌دهد.
+1. تمامی مقادیر موجود برای Primary Key منحصر به‌فرد هستند.
+1. DBMS اجازه‌ی اضافه کردن داده‌ای که Primary Key آن از قبل موجود است، را نمی‌دهد.
 1. Primary Key نمی‌تواند NULL باشد.
-برای ساختن Primary Key می‌توانیم جدولی که از قبل موجود را با دستور زیر تغییر دهیم.
+
+
+برای ساختن Primary Key می‌توانیم جدولی که از قبل موجود است را با دستور زیر تغییر دهیم.
 <div dir="ltr">
 
 ```
@@ -346,21 +348,20 @@ ADD CONSTRAINT constraintName PRIMARY KEY (columncolumn_2, ..., column_n);
 ALTER TABLE Student
 ADD CONSTRAINT studentPK PRIMARY KEY (StudentNumber);
 ```
-</div>
-اضافه شدن کلید جدید را می‌توان در پنل سمت چپ هم مشاهده کرد.
-<div dir="ltr"><img src="./images/phase07-ADS-primary-key.palt="ADS Primary Key" width="80%"></div>
+
 در واقع 
 Constraint 
-برای مشخص کردن قانون برای داده‌های جدول استفاده می‌شعبارت 
+برای مشخص کردن قانون برای داده‌های جدول استفاده می‌شود. عبارت 
 NOT NULL 
 که قبلا با آن در ساختن جدول آشنا شدید نیز یک 
 Constraint 
 است. حال در اینجا دریافتید که 
 Primary Key 
-هم  
+هم 
 Constraint 
 است.
-همچنین می‌توان جدول Student را از نوع و به شکل زیر ایکرد : 
+
+همچنین می‌توان PRIMARY KEY را در زمان ساخت جدول مشخص نمود:
 <div dir="ltr">
 
 ``` 
