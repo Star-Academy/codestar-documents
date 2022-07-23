@@ -93,8 +93,8 @@ Feature Selection
 انتخاب 
 Database Engine Service 
 برای کار ما کافی است. به تنظیمات زیر هم توجه کنید.
-    <div dir="ltr"><img src="./Resource/FeatureSelection.png" alt="Feature Selection" width="60%"></div>
-    <div dir="ltr"><img src="./Resource/Admin.png" alt="Administrator" width="60%"></div>
+    <div dir="ltr"><img src="./images/phase07-feature-selection.png" alt="Feature Selection" width="60%"></div>
+    <div dir="ltr"><img src="./images/phase07-admin.png" alt="Administrator" width="60%"></div>
 1. حال نوبت به نصب ابزار مدیریت 
 SQL Server 
 است. 
@@ -116,7 +116,7 @@ SQL Server
 باید یک 
 Conncection 
 بسازید. همانند شکل زیر می‌توانید در صفحه شروع این کار راانجام دهید.
-        <div dir="ltr"><img src="./Resource/ADSNewConnection.png" alt="ADS New Connection" width="80%"></div>
+        <div dir="ltr"><img src="./images/phase07-ADS-new-connection.png" alt="ADS New Connection" width="80%"></div>
 برای متصل شدن به 
 SQL Server 
 باید آدرس کامپیوتری را که 
@@ -130,7 +130,7 @@ SQL Server
 را به عنوان 
 Server 
 وارد کنید.
-    <div dir="ltr"><img src="./Resource/ADSLocalhost.png" alt="ADS Localhost" width="80%"></div>
+    <div dir="ltr"><img src="./images/phase07-ADS-localhost.png" alt="ADS Localhost" width="80%"></div>
 1. پس از آنکه به 
 SQL Server 
 متصل شدید، صفحه‌ی مربوط به 
@@ -140,11 +140,11 @@ Query
 می‌توانید دستوراتی را به زبان 
 SQL 
 به سرور بفرستید و پاسخ خود را دریافت کنید.
-        <div dir="ltr"><img src="./Resource/ADSStatus.png" alt="ADS Status" width="80%"></div>
+        <div dir="ltr"><img src="./images/phase07-ADS-status.png" alt="ADS Status" width="80%"></div>
 در این صفحه جدید دستورات خود را بنویسید و با کلید 
 F5 
 یا کلیک بر روی دکمه اجرا، آن‌ها را اجرا کنید. سعی کنید ازاینجا به بعد هر دستوری که در داک مشاهده می‌کنید را برایخودتان اجرا کنید. 
-    <div dir="ltr"><img src="./Resource/ADSQuery.png" alt="ADS Query" width="80%"></div>
+    <div dir="ltr"><img src="./images/phase07-ADS-query.png" alt="ADS Query" width="80%"></div>
 
 ## ایجاد و حذف Database
 
@@ -177,7 +177,7 @@ ADS
 پیغامی متناسب با موفقیت و یا عدم موفقیت 
 Query 
 اجرا شده چاپ می‌کند. در صورت مواجه شدن با خطا، پیغام مربوطبه خطا نیز چاپ می‌شود که به رفع خطا کمک می‌کند.
-<div dir="ltr"><img src="./Resource/ADSMessage.png"alt="ADS Message" width="80%"></div>
+<div dir="ltr"><img src="./images/phase07-ADS-message.png"alt="ADS Message" width="80%"></div>
 برای حذف یک دیتابیس نیز از دستور زیر استفاده می‌شود.
 <div dir="ltr">
 
@@ -356,7 +356,7 @@ WHERE IsMale = 1 AND Grade BETWEEN 10 AND 15;
 ```
 </div>
 در هر دو صورت خروجی به شکل زیر خواهد بود.
-<div dir="ltr"><img src="./Resource/ADSSelect.png" alt="ADSSelect" width="80%"></div>
+<div dir="ltr"><img src="./images/phase07-ADS-select.png" alt="ADSSelect" width="80%"></div>
 در جدول زیر 
 Operator
 های موجود را مشاهده می‌کنید. همچنین مانند مثال بالامی‌تواند تعداد از 
@@ -432,7 +432,7 @@ ADD CONSTRAINT studentPK PRIMARY KEY (StudentNumber);
 ```
 </div>
 اضافه شدن کلید جدید را می‌توان در پنل سمت چپ هم مشاهده کرد.
-<div dir="ltr"><img src="./Resource/ADSPrimaryKey.palt="ADS Primary Key" width="80%"></div>
+<div dir="ltr"><img src="./images/phase07-ADS-primary-key.palt="ADS Primary Key" width="80%"></div>
 در واقع 
 Constraint 
 برای مشخص کردن قانون برای داده‌های جدول استفاده می‌شعبارت 
@@ -506,7 +506,7 @@ INSERT INTO Enrollment VALUES
 ('Advance Programming', '97100200');
 ```
 </div>
-<div dir="ltr"><img src="./Resource/ADSForeignKeyError.png"alt="ADS Foreign Key Error" width="80%"></div>
+<div dir="ltr"><img src="./images/phase07-ADS-foreign-key-error.png"alt="ADS Foreign Key Error" width="80%"></div>
 همانطور که در تصویر مشاهده می‌کنید، دستور اول که مقدار 
 Foreign Key
 آن در جدول 
@@ -558,7 +558,7 @@ Join
 وجود دارد که مشاهده عملکرد هر یک از آن‌ها در نمودار 
 Venn 
 راحت‌تر است. پس شکل زیر را به دقت بررسی کنید.
-<div dir="ltr"><img src="./Resource/SQLJoins.png" alt="SQLJoins" width="80%"></div>
+<div dir="ltr"><img src="./images/phase07-SQL-joins.png" alt="SQLJoins" width="80%"></div>
 حال نمونه‌ی هر 
 Join 
 را در دستورات زیر مشاهده می‌کنید. مقادیر اولیه جدول 
@@ -567,11 +567,11 @@ Enrollment (Child)
 Student (Parent)
 نیر در ابتدا نشان داده شده است.
 <div dir="ltr">
-<img src="./Resource/JoinExamplePrimaryTables.png" alt="SQLJoin Primary Tables" width="80%">
-<img src="./Resource/InnerJoin.png" alt="Inner Join"width="80%">
-<img src="./Resource/LeftJoin.png" alt="Left Join"width="80%">
-<img src="./Resource/RightJoin.png" alt="Right Join"width="80%">
-<img src="./Resource/FullOuterJoin.png" alt="Full OuterJoin" width="80%">
+<img src="./images/phase07-join-example-primary-tables.png" alt="SQLJoin Primary Tables" width="80%">
+<img src="./images/phase07-inner-join.png" alt="Inner Join"width="80%">
+<img src="./images/phase07-left-join.png" alt="Left Join"width="80%">
+<img src="./images/phase07-right-join.png" alt="Right Join"width="80%">
+<img src="./images/phase07-full-outer-join.png" alt="Full OuterJoin" width="80%">
     </div>
 
 ## تابع‌ها
