@@ -129,22 +129,22 @@ description: Did you clean up in here? Of course.
 برای فعال‌کردن تنظیمات ESLint مراحل زیر را طی کنید:
 
 1. از بالا-چپ بر روی `File` و سپس `Settings` کلیک کنید تا پنجرۀ تنظیمات باز شود
-1. عبارت `ESLint` را در باکس بالا-چپ جست‌وجو کنید
-1. از قسمت سمت چپ بر روی گزینۀ `Languages & Frameworks > JavaScript > Code Quality Tools > ESLint` کلیک کنید
-1. از قسمت سمت راست تیک گزینۀ `Automatic ESLint configuration` را فعال کنید
+2. عبارت `ESLint` را در باکس بالا-چپ جست‌وجو کنید
+3. از قسمت سمت چپ بر روی گزینۀ `Languages & Frameworks > JavaScript > Code Quality Tools > ESLint` کلیک کنید
+4. از قسمت سمت راست تیک گزینۀ `Automatic ESLint configuration` را فعال کنید
 
 #### Prettier
 
 برای فعال‌کردن تنظیمات Prettier مراحل زیر را طی کنید:
 
 1. از بالا-چپ بر روی `File` و سپس `Settings` کلیک کنید تا پنجرۀ تنظیمات باز شود
-1. عبارت `Prettier` را در باکس بالا-چپ جست‌وجو کنید
-1. از قسمت سمت چپ بر روی گزینۀ `Languages & Frameworks > JavaScript > Prettier` کلیک کنید
-1. از قسمت سمت راست عبارت مقابل `Run for files` را به عبارت زیر تغییر دهید
+2. عبارت `Prettier` را در باکس بالا-چپ جست‌وجو کنید
+3. از قسمت سمت چپ بر روی گزینۀ `Languages & Frameworks > JavaScript > Prettier` کلیک کنید
+4. از قسمت سمت راست عبارت مقابل `Run for files` را به عبارت زیر تغییر دهید
     ```
     {**/*,*}.{*}
     ```
-1. تیک گزینۀ `On save` را فعال کنید
+5. تیک گزینۀ `On save` را فعال کنید
 
 #### Stylelint
 
@@ -155,6 +155,8 @@ description: Did you clean up in here? Of course.
 تا کدی که در نهایت نوشته می‌شود برای همه قابل‌فهم و در یک چارچوب باشد.
 Stylelint
 ابزاری است که به ما امکان تعریف چنین قواعدی را می‌دهد.
+
+##### Setup
 
 برای افزودن Stylelint به پروژۀ انگولاری خود، از دستور زیر استفاده کنید:
 
@@ -559,7 +561,7 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
 سعی کرده‌ایم لیست کاملی از Propertyها را در این فایل فراهم کنیم؛
 اما به مرور زمان، نقص‌های احتمالی این فایل را ویرایش می‌کنیم.
 
-همچنین فراموش نکنید مانند فایل‌های
+فراموش نکنید مانند فایل‌های
 `gitignore.`
 و
 `prettierignore.`
@@ -568,7 +570,22 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
 `stylelintignore.`
 را نیز بروز کنید.
 
-در نهایت برای چک‌کردن خطاهای احتمالی یا برطرف کردن آن‌ها به‌صورت خودکار، می‌توانید از دستورات زیر استفاده کنید:
+##### IDE Configurations
+
+برای فعال‌کردن تنظیمات Stylelint مراحل زیر را طی کنید:
+
+1. از بالا-چپ بر روی `File` و سپس `Settings` کلیک کنید تا پنجرۀ تنظیمات باز شود
+2. عبارت `Stylelint` را در باکس بالا-چپ جست‌وجو کنید
+3. از قسمت سمت چپ بر روی گزینۀ `Languages & Frameworks > Style Sheets > Stylelint` کلیک کنید
+4. تیک گزینۀ `Enable` را فعال کنید
+5. از قسمت سمت راست عبارت مقابل `Run for files` را به عبارت زیر تغییر دهید
+    ```
+    {**/*,*}.{scss}
+    ```
+
+##### Scripts
+
+برای چک‌کردن خطاهای احتمالی یا برطرف کردن آن‌ها به‌صورت خودکار، می‌توانید از دستورات زیر استفاده کنید:
 
 ```shell
 npx stylelint "**/*.scss"
