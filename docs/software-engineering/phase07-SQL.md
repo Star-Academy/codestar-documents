@@ -369,17 +369,17 @@ CREATE TABLE Student2
 (
     StudentNumber VARCHAR(8) NOT NULL PRIMARY KEY,
     Grade FLOAT(2),
-    FirstName NVARCHAR(20) NOT NULL,
-    LastName NVARCHAR(20) NOT NULL,
-    IsMale BIT NOT NULL,
-    DateOfBirth DATETIME NOT NULL,
+    FirstName VARCHAR(20) NOT NULL,
+    LastName VARCHAR(20) NOT NULL,
+    IsMale BOOLEAN NOT NULL,
+    DateOfBirth TIMESTAMP NOT NULL,
     LeftUnitsCount INT NOT NULL
 );
 ```
 </div>
 
 ### Foreign Key
-Foreign Key 
+سForeign Key 
 کلیدی برای ارتباط جداول است. در واقع 
 Foreign Key 
 ستونی است که به 
@@ -388,21 +388,21 @@ Primary Key
 Foreign Key 
 عبارتند از : 
 1. Foreign Key می‌تواند NULL باشد.
-1. جدولی که Foreign Key دارد را فرزند(Child)، و جدولی که بهآن ارجاع داده می‌شود را والد(Parent) می‌نامیم.
+1. جدولی که Foreign Key دارد را فرزند (Child)، و جدولی که به آن ارجاع داده می‌شود را والد (Parent) می‌نامیم.
 برای ایجاد یک 
 Foreign Key
 در هنگام ایجاد جدول یا پس از ایجاد آن، یک 
 Constraint 
 اضافه می‌کنیم. 
-برای مثال جدولی جدید برای ثبت‌نام در هر درس می‌سازیم. دراین جدول نام درس و شماره دانشجویی فرد ثبت‌نام شده را بهصورت 
+برای مثال جدولی جدید برای ثبت‌نام در هر درس می‌سازیم. در این جدول نام درس و شماره دانشجویی فرد ثبت‌نام شده را به صورت 
 Foreign Key 
-نگه می‌داریم. برای ساختن این جدول از دستور زیر استفادهمی‌کنیم.
+نگه می‌داریم. برای ساختن این جدول از دستور زیر استفاده می‌کنیم.
 <div dir="ltr">
 
 ``` 
 CREATE TABLE Enrollment
 (
-    CourseName NVARCHAR(20),
+    CourseName VARCHAR(20),
     ParticipantStudentNumber VARCHAR(8),
     CONSTRAINT studentNumberFK FOREIGN KEY (ParticipantStudentNumber)
     REFERENCES Student(StudentNumber)
@@ -417,8 +417,14 @@ Foreign Key
 ``` 
 INSERT INTO Enrollment VALUES
 ('Data Structures', '98100200');
+```
+
+```
 INSERT INTO Enrollment VALUES
 ('Advance Programming', NULL);
+```
+
+```
 INSERT INTO Enrollment VALUES
 ('Advance Programming', '97100200');
 ```
