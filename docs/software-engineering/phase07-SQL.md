@@ -140,37 +140,9 @@ DROP DATABASE database_name;
 
 ## Data Type
 
-Data Type 
-نوع داده‌ای است که هر ستون در جدول یا متغییر می‌تواند ذخیرهکند. 
-Data Type
-های 
-SQL Server 
-در هفت دسته کلی قرار میگیرند که عبارتند از:
-
-- Exact numeric
-- Approximate numberic
-- Date and time
-- Character strings
-- Unicode character strings
-- Binary strings
-- Other data types
-اعضای هر یک از این دسته‌ها را با جزئیات می‌توانید در 
-[سایت مایکروسافت](https://docs.microsoft.com/en-us/sqlt-sql/data-types/data-types-transact-sql)
-ببینید. پرکاربردترین 
-Data Type
-ها نیز در جدول زیر قابل مشاهده هستند.
-<div dir="ltr">
-
-| Data Type | توضیحات | Range/Limit | Storage Size |
-| :---: | :---: | :---: | :---: |
-| int | It stores whole numbers in the range given | -2^31to −2^31-1 | 8 bytes |
-| varchar(n) | This is a character string with variablewidth | 8000 chars | n + 2 bytes |
-| nvarchar(n) | It is a unicode string of variable width |4000 chars | 2*n + 2 bytes |
-| datetime | Used for specifying a date and time. It has anaccuracy of 3.33 milliseconds. | 1753/1/1 to 9999/12/31 | 8bytes |
-| decimal | Used for scale and fixed precision numbers |−10^38+1 to 10^38−1 | 5 to 17 bytes |
-| float(n) | Used for a floating precision number | −1.79+308 to 1.79E+308 | Depends on the value of n |
-| bit | It can take 0, 1, or NULL values. | 0 to 1 | 1 byte8bit column |
-</div>
+Data Type، 
+نوع داده‌ای است که هر ستون در جدول یا متغیر می‌تواند ذخیره کند. 
+برای آشنایی با Data Typeهای پرکاربرد PostgreSQL از [این لینک](https://www.geeksforgeeks.org/postgresql-data-types/) استفاده کنید.  همچنین در صورت نیاز می‌توانید از [مستندات postgresql.org](https://www.postgresql.org/docs/current/datatype.html) هم بهره ببرید.
 
 ## جدول 
 
