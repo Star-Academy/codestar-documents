@@ -142,7 +142,7 @@ DROP DATABASE database_name;
 
 Data Type، 
 نوع داده‌ای است که هر ستون در جدول یا متغیر می‌تواند ذخیره کند. 
-برای آشنایی با Data Typeهای پرکاربرد PostgreSQL از [این لینک](https://www.geeksforgeeks.org/postgresql-data-types/) استفاده کنید.  همچنین در صورت نیاز می‌توانید از [مستندات postgresql.org](https://www.postgresql.org/docs/current/datatype.html) هم بهره ببرید.
+برای آشنایی با Data Typeهای پرکاربرد PostgreSQL از [این لینک](https://www.geeksforgeeks.org/postgresql-data-types/) استفاده کنید.  همچنین در صورت نیاز می‌توانید از [مستندات Postgresql.org](https://www.postgresql.org/docs/current/datatype.html) هم بهره ببرید.
 
 ## جدول 
 
@@ -167,7 +167,7 @@ CREATE TABLE tableName
 </div>
 برای مثال جدول دانشجو را به صورت زیر می‌سازیم. با نوشتن 
 NOT NULL 
- بعد از تعریف هر ستون، دادن مقدار به آن ستون در هنگامافزودن داده الزامی می‌شود. (در واقع مقدار آن ستوننمی‌تواند NULL باشد)
+ بعد از تعریف هر ستون، دادن مقدار به آن ستون در هنگام افزودن داده الزامی می‌شود. (در واقع مقدار آن ستون نمی‌تواند NULL باشد)
 
 <div dir="ltr">
 
@@ -176,15 +176,15 @@ CREATE TABLE Student
 (
     StudentNumber VARCHAR(8) NOT NULL,
     Grade FLOAT(2),
-    FirstName NVARCHAR(20) NOT NULL,
-    LastName NVARCHAR(20) NOT NULL,
-    IsMale BIT NOT NULL,
-    DateOfBirth DATETIME NOT NULL,
+    FirstName VARCHAR(20) NOT NULL,
+    LastName VARCHAR(20) NOT NULL,
+    IsMale BOOLEAN NOT NULL,
+    DateOfBirth TIMESTAMP NOT NULL,
     LeftUnitsCount INT NOT NULL
 );
 ```
 </div>
-پس از ساختن جدول می‌توانیم با دستور زیر داده‌ی مورد نظر رادر جدول قرار دهیم.
+پس از ساختن جدول می‌توانیم با دستور زیر داده‌ی مورد نظر را در جدول قرار دهیم.
 <div dir="ltr">
 
 ```
@@ -200,11 +200,11 @@ VALUES
  <div dir="ltr">
 
 ```
-INSERT INTO Student(FirstName, LastName, DateOfBirth,IsMale, LeftUnitsCount, StudentNumber)
-VALUES('Ava', 'Ahmadi', 'Feb 15, 2002', 0, 140, '99100200');
+INSERT INTO Student(FirstName, LastName, DateOfBirth, IsMale, LeftUnitsCount, StudentNumber)
+VALUES('Ava', 'Ahmadi', 'Feb 15, 2002', false, 140, '99100200');
 ```
 </div>
-همچنین با حفظ ترتیب ستون‌ها، می‌توان بدون نیاز به مشخص کردننام هر ستون داده را اضافه کرد. مانند دستور زیر.
+همچنین با حفظ ترتیب ستون‌ها، می‌توان بدون نیاز به مشخص کردن نام هر ستون داده را اضافه کرد. مانند دستور زیر.
 <div dir="ltr">
 
 ```
@@ -225,7 +225,7 @@ Unicode
 (در اینجا نام و نام خانوادگی که فارسی نوشته شده است) ازپیشوند
 N
 استفاده می‌شود.
-پس قرار دادن داده‌ها در جدول، با کوئری زیر می‌توانیم دادهذخیره شده در جدول را دریافت کنیم.
+پس قرار دادن داده‌ها در جدول، با کوئری زیر می‌توانیم داده ذخیره شده در جدول را دریافت کنیم.
 <div dir="ltr">
 
 ```
