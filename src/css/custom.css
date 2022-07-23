@@ -41,6 +41,10 @@ section[class^="row list_"] {
     direction: rtl;
 }
 
+.theme-code-block pre code {
+    max-height: 40rem;
+}
+
 .theme-code-block pre code .token-line {
     float: inherit;
     clear: both;

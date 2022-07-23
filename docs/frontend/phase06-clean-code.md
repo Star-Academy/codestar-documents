@@ -146,6 +146,440 @@ description: Did you clean up in here? Of course.
     ```
 1. تیک گزینۀ `On save` را فعال کنید
 
+#### Stylelint
+
+معمولاً هر شخص زمانی که کد CSS می‌نویسد، برای آن قواعدی در نظر می‌گیرد؛
+به‌عنوان مثال ترتیب و اولویت Propertyهای مختلف یا استفاده از یک فرمت رنگ خاص.
+اما زمانی که به صورت تیمی بر روی پروژه‌ای کار می‌کنید،
+بهتر است این قواعد به صورت عمومی اعمال شوند
+تا کدی که در نهایت نوشته می‌شود برای همه قابل‌فهم و در یک چارچوب باشد.
+Stylelint
+ابزاری است که به ما امکان تعریف چنین قواعدی را می‌دهد.
+
+برای افزودن Stylelint به پروژۀ انگولاری خود، از دستور زیر استفاده کنید:
+
+```shell
+npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettier-scss stylelint-order postcss
+```
+
+با اجرای دستور بالا علاوه بر پکیج stylelint چند پکیج دیگر نیز به پروژه اضافه می‌شوند
+که به ترتیب مربوط به پشتیبانی از SCSS، جلوگیری از تداخل با Prettier، ترتیب Propertyها و PostCSS می‌باشند.
+
+برای تنظیم قواعد، یک فایل با نام
+`stylelintrc.json.`
+بسازید.
+ما پیشنهاد می‌کنیم از قواعد زیر استفاده کنید:
+
+```json
+{
+    "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier-scss"],
+    "plugins": ["stylelint-order"],
+    "rules": {
+        "color-named": "never",
+        "color-no-hex": true,
+        "custom-property-empty-line-before": null,
+        "declaration-block-no-redundant-longhand-properties": null,
+        "declaration-empty-line-before": null,
+        "no-descending-specificity": null,
+        "no-empty-source": null,
+        "order/order": ["custom-properties", "declarations", "rules"],
+        "order/properties-order": [
+            {
+                "groupName": "reset",
+                "emptyLineBefore": "always",
+                "properties": ["all"]
+            },
+            {
+                "groupName": "content",
+                "emptyLineBefore": "always",
+                "properties": ["content"]
+            },
+            {
+                "groupName": "parent-related",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "order",
+                    "flex",
+                    "flex-grow",
+                    "flex-shrink",
+                    "grid-area",
+                    "align-self",
+                    "justify-self",
+                    "counter-increment",
+                    "counter-reset"
+                ]
+            },
+            {
+                "groupName": "color",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "background",
+                    "background-attachment",
+                    "background-blend-mode",
+                    "background-clip",
+                    "background-color",
+                    "background-image",
+                    "background-origin",
+                    "background-position",
+                    "background-repeat",
+                    "background-size",
+                    "color",
+                    "accent-color",
+                    "box-shadow",
+                    "mix-blend-mode",
+                    "opacity",
+                    "visibility"
+                ]
+            },
+            {
+                "groupName": "filter",
+                "emptyLineBefore": "always",
+                "properties": ["filter", "backdrop-filter"]
+            },
+            {
+                "groupName": "mask",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "mask",
+                    "mask-clip",
+                    "mask-composite",
+                    "mask-image",
+                    "mask-mode",
+                    "mask-origin",
+                    "mask-position",
+                    "mask-repeat",
+                    "mask-size",
+                    "mask-type"
+                ]
+            },
+            {
+                "groupName": "box",
+                "emptyLineBefore": "always",
+                "properties": ["direction", "box-sizing"]
+            },
+            {
+                "groupName": "position",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "position",
+                    "isolation",
+                    "inset",
+                    "inset-block",
+                    "inset-block-start",
+                    "inset-block-end",
+                    "inset-inline",
+                    "inset-inline-start",
+                    "inset-inline-end",
+                    "top",
+                    "right",
+                    "bottom",
+                    "left",
+                    "overflow",
+                    "overflow-block",
+                    "overflow-inline",
+                    "overflow-x",
+                    "overflow-y",
+                    "overflow-wrap",
+                    "z-index"
+                ]
+            },
+            {
+                "groupName": "display",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "display",
+                    "flex-basis",
+                    "flex-direction",
+                    "flex-flow",
+                    "flex-wrap",
+                    "grid",
+                    "grid-auto-columns",
+                    "grid-auto-flow",
+                    "grid-auto-rows",
+                    "grid-column",
+                    "grid-column-end",
+                    "grid-column-gap",
+                    "grid-column-start",
+                    "grid-row",
+                    "grid-row-end",
+                    "grid-row-gap",
+                    "grid-row-start",
+                    "grid-template",
+                    "grid-template-areas",
+                    "grid-template-columns",
+                    "grid-template-rows",
+                    "columns",
+                    "place-content",
+                    "place-items",
+                    "align-content",
+                    "align-items",
+                    "justify-content",
+                    "justify-items",
+                    "gap",
+                    "grid-gap",
+                    "column-gap",
+                    "row-gap"
+                ]
+            },
+            {
+                "groupName": "list",
+                "emptyLineBefore": "always",
+                "properties": ["list-style", "list-style-image", "list-style-position", "list-style-type"]
+            },
+            {
+                "groupName": "size",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "min-block-size",
+                    "block-size",
+                    "max-block-size",
+                    "min-inline-size",
+                    "inline-size",
+                    "max-inline-size",
+                    "min-width",
+                    "width",
+                    "max-width",
+                    "min-height",
+                    "height",
+                    "max-height",
+                    "aspect-ratio",
+                    "resize",
+                    "object-fit",
+                    "object-position",
+                    "scroll-behavior"
+                ]
+            },
+            {
+                "groupName": "scroll",
+                "emptyLineBefore": "always",
+                "properties": ["scroll-behavior"]
+            },
+            {
+                "groupName": "box-model",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "margin",
+                    "margin-block",
+                    "margin-block-start",
+                    "margin-block-end",
+                    "margin-inline",
+                    "margin-inline-start",
+                    "margin-inline-end",
+                    "margin-top",
+                    "margin-right",
+                    "margin-bottom",
+                    "margin-left",
+                    "padding-block",
+                    "padding-block-start",
+                    "padding-block-end",
+                    "padding-inline",
+                    "padding-inline-start",
+                    "padding-inline-end",
+                    "padding",
+                    "padding-top",
+                    "padding-right",
+                    "padding-bottom",
+                    "padding-left"
+                ]
+            },
+            {
+                "groupName": "border",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "border",
+                    "border-block",
+                    "border-block-color",
+                    "border-block-style",
+                    "border-block-width",
+                    "border-block-start",
+                    "border-block-start-color",
+                    "border-block-start-style",
+                    "border-block-start-width",
+                    "border-inline",
+                    "border-inline-color",
+                    "border-inline-style",
+                    "border-inline-width",
+                    "border-inline-start",
+                    "border-inline-start-color",
+                    "border-inline-start-style",
+                    "border-inline-start-width",
+                    "border-top",
+                    "border-top-color",
+                    "border-top-style",
+                    "border-top-width",
+                    "border-right",
+                    "border-right-color",
+                    "border-right-style",
+                    "border-right-width",
+                    "border-bottom",
+                    "border-bottom-color",
+                    "border-bottom-style",
+                    "border-bottom-width",
+                    "border-left",
+                    "border-left-color",
+                    "border-left-style",
+                    "border-left-width",
+                    "border-collapse",
+                    "border-color",
+                    "border-image",
+                    "border-image-outset",
+                    "border-image-repeat",
+                    "border-image-slice",
+                    "border-image-source",
+                    "border-image-width",
+                    "border-radius",
+                    "border-start-start-radius",
+                    "border-start-end-radius",
+                    "border-end-end-radius",
+                    "border-end-start-radius",
+                    "border-top-right-radius",
+                    "border-bottom-right-radius",
+                    "border-bottom-left-radius",
+                    "border-top-left-radius",
+                    "border-spacing",
+                    "border-style",
+                    "border-width"
+                ]
+            },
+            {
+                "groupName": "outline",
+                "emptyLineBefore": "always",
+                "properties": ["outline", "outline-color", "outline-offset", "outline-style", "outline-width"]
+            },
+            {
+                "groupName": "transform",
+                "emptyLineBefore": "always",
+                "properties": ["transform", "transform-origin", "transform-style"]
+            },
+            {
+                "groupName": "clip-path",
+                "emptyLineBefore": "always",
+                "properties": ["clip-path"]
+            },
+            {
+                "groupName": "font",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "font",
+                    "font-family",
+                    "font-kerning",
+                    "font-language-override",
+                    "font-size",
+                    "font-size-adjust",
+                    "font-stretch",
+                    "font-style",
+                    "font-synthesis",
+                    "font-variant",
+                    "font-variant-alternates",
+                    "font-variant-caps",
+                    "font-variant-east-asian",
+                    "font-variant-ligatures",
+                    "font-variant-numeric",
+                    "font-variant-position",
+                    "font-weight"
+                ]
+            },
+            {
+                "groupName": "text",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "text-align",
+                    "text-align-last",
+                    "text-combine-upright",
+                    "text-decoration",
+                    "text-decoration-color",
+                    "text-decoration-line",
+                    "text-decoration-style",
+                    "text-decoration-thickness",
+                    "text-emphasis",
+                    "text-indent",
+                    "text-justify",
+                    "text-orientation",
+                    "text-overflow",
+                    "text-shadow",
+                    "text-transform",
+                    "text-underline-position",
+                    "letter-spacing",
+                    "line-break",
+                    "line-height",
+                    "vertical-align",
+                    "white-space",
+                    "word-break",
+                    "word-spacing",
+                    "word-wrap",
+                    "writing-mode"
+                ]
+            },
+            {
+                "groupName": "print",
+                "emptyLineBefore": "always",
+                "properties": ["page-break-after", "page-break-before", "page-break-inside"]
+            },
+            {
+                "groupName": "3d",
+                "emptyLineBefore": "always",
+                "properties": ["perspective", "perspective-origin", "backface-visibility"]
+            },
+            {
+                "groupName": "transition",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "transition",
+                    "transition-delay",
+                    "transition-duration",
+                    "transition-property",
+                    "transition-timing-function"
+                ]
+            },
+            {
+                "groupName": "animation",
+                "emptyLineBefore": "always",
+                "properties": [
+                    "animation",
+                    "animation-delay",
+                    "animation-direction",
+                    "animation-duration",
+                    "animation-fill-mode",
+                    "animation-iteration-count",
+                    "animation-name",
+                    "animation-play-state",
+                    "animation-timing-function"
+                ]
+            },
+            {
+                "groupName": "cursor & pointer",
+                "emptyLineBefore": "always",
+                "properties": ["cursor", "pointer-events", "user-select"]
+            }
+        ]
+    }
+}
+```
+
+سعی کرده‌ایم لیست کاملی از Propertyها را در این فایل فراهم کنیم؛
+اما به مرور زمان، نقص‌های احتمالی این فایل را ویرایش می‌کنیم.
+
+همچنین فراموش نکنید مانند فایل‌های
+`gitignore.`
+و
+`prettierignore.`
+،
+محتویات فایل
+`stylelintignore.`
+را نیز بروز کنید.
+
+در نهایت برای چک‌کردن خطاهای احتمالی یا برطرف کردن آن‌ها به‌صورت خودکار، می‌توانید از دستورات زیر استفاده کنید:
+
+```shell
+npx stylelint "**/*.scss"
+npx stylelint "**/*.scss" --fix
+```
+
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
+
+-   [Stylelint](https://stylelint.io/)
+-   [stylelint-order](https://www.npmjs.com/package/stylelint-order/)
+
 ### General
 
 #### Download Size
