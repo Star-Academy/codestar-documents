@@ -237,6 +237,7 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
                     "background-size",
                     "color",
                     "accent-color",
+                    "fill",
                     "box-shadow",
                     "mix-blend-mode",
                     "opacity",
