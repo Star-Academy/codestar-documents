@@ -53,8 +53,12 @@ description: ''
 
 برای آشنایی با اصول SOLID لینک‌های زیر را مطالعه کنید:
 
--   [SOLID Principles in Java Application Development](https://www.jrebel.com/blog/solid-principles-in-java)
--   [S.O.L.I.D principles in Java](https://medium.com/@karthikcsridhar/s-o-l-i-d-principles-in-java-1aaff453d7ea)
+-   [a General Look to SOLID principles](https://www.baeldung.com/solid-principles)
+-   [**S**: Single Responsibility](https://www.baeldung.com/java-single-responsibility-principle)
+-   [**O**: Open/Closed](https://www.baeldung.com/java-open-closed-principle)
+-   [**L**: Liskov Substitution](https://www.baeldung.com/java-liskov-substitution-principle)
+-   [**I**: Interface Segregation](https://www.baeldung.com/java-interface-segregation)
+-   [**D**: Dependency Inversion]( https://www.baeldung.com/java-dependency-inversion-principle)
 
 ## Refactoring Techniques
 
