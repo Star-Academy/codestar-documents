@@ -97,7 +97,7 @@ function setSession() {
 
 ```javascript
   localstorage.setItem("country", "Iran");
-  localstorage.remove(“counry”);
+  localstorage.remove('counry');
 ```
 
   </div>
@@ -160,7 +160,7 @@ function setSession() {
 </span>
 
 ### HTTP vs HTTPS
-مهم ترین تفاوت HTTP و HTTPS در گواهی نامه SSL است. در واقع HTTPS یک پورتکل HTTP است با موارد امنیتی بیشتر که در اکثر مواقع این امنیت بیشتر بسیار حیاتی است. از تاثیر‌های مثبت دیگر استفاده از این پروتکل می‌توان به افزایش امتیاز سایت شما در الگوریتم‌های رتبه‌بندی موتور‌‌های جست و جو و جلب اعتماد بازدیدکنندکان اشاره کرد.
+مهم ترین تفاوت `HTTP` و `HTTPS` در گواهی نامه `SSL` است. در واقع `HTTPS` یک پورتکل `HTTP` است با موارد امنیتی بیشتر که در اکثر مواقع این امنیت بیشتر بسیار حیاتی است. از تاثیر‌های مثبت دیگر استفاده از این پروتکل می‌توان به افزایش امتیاز سایت شما در الگوریتم‌های رتبه‌بندی موتور‌‌های جست و جو و جلب اعتماد بازدیدکنندکان اشاره کرد.
 
 <span dir="ltr">
 
@@ -318,8 +318,8 @@ async function getData() {
 
 <span dir="ltr">
 
--   [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-
+- [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+- 
 <span>
 
 </div>
@@ -349,7 +349,7 @@ async function getData() {
 
 <span>
 
-  </div>
+    </div>
 
 <div dir="rtl">
 
