@@ -310,9 +310,9 @@ Call-to-Action می‌باشد.
 
 -   [MDN - HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 -   [W3Schools - HTML Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
--   [What On Earth Is Semantic Markup?](https://html.com/semantic-markup/)
+-   [HTML.com - What On Earth Is Semantic Markup?](https://html.com/semantic-markup/)
 -   [A Friendly Tutorial For Developing Meaningful Web Pages](https://internetingishard.netlify.app/html-and-css/semantic-html/index.html)
--   [Semantic HTML5 Elements Explained](https://www.freecodecamp.org/news/semantic-html5-elements/)
+-   [freeCodeCamp - Semantic HTML5 Elements Explained](https://www.freecodecamp.org/news/semantic-html5-elements/)
 
 ---
 
