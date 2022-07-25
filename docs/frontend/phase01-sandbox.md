@@ -107,8 +107,8 @@ ReferenceError: name is not defined
 برای آشنایی بیشتر با این مفاهیم می‌توانید از لینک‌های زیر استفاده کنید:
 
 -   [var vs let vs const in JavaScript](https://ui.dev/var-let-const/)
--   [Difference Between Var, Let and Const in ES6](https://medium.com/infancyit/difference-between-var-let-and-const-in-es6-16a08d74b8b2)
--   [Var, Let, and Const – What's the Difference?](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)
+-   [Medium - Difference Between Var, Let and Const in ES6](https://medium.com/infancyit/difference-between-var-let-and-const-in-es6-16a08d74b8b2)
+-   [freeCodeCamp - Var, Let, and Const – What's the Difference?](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)
 
 ---
 
@@ -216,7 +216,7 @@ console.log(rand(4, 42));
 برای آشنایی بیشتر با این مفاهیم می‌توانید از لینک‌های زیر استفاده کنید:
 
 -   [5 Differences Between Arrow and Regular Functions](https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/)
--   [When (and why) you should use ES6 arrow functions — and when you shouldn’t](https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/)
+-   [freeCodeCamp - When (and why) you should use ES6 arrow functions — and when you shouldn’t](https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/)
 
 ---
 
