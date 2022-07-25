@@ -248,11 +248,20 @@ jobs:
               with:
                   name: deploy_dist
 
-            - name: Deploy to GitHub Pages
+            - name: Deploy to "Release" GitHub Pages
+              if: ${{ github.ref == 'refs/heads/main' }}
               uses: JamesIves/github-pages-deploy-action@releases/v3
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   BRANCH: gh-pages
+                  FOLDER: deploy_dist/my-project-name
+
+            - name: Deploy to "Dev" GitHub Pages
+              if: ${{ github.ref != 'refs/heads/main' }}
+              uses: JamesIves/github-pages-deploy-action@releases/v3
+              with:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  BRANCH: gh-pages-dev
                   FOLDER: deploy_dist/my-project-name
 ```
 
@@ -262,13 +271,19 @@ jobs:
 
 :::
 
+:::caution
+
+درصورتی که برنچ اصلی پروژه شما `main` نیست، نام برنچ موجود در شرط دو step آخر را بصورت `<refs/heads/<default-branch-name` تصحیح کنید
+
+:::
+
 ##### Download Build
 
 پوشه‌ای که در مرحلۀ قبل ذخیره کرده بودیم را در اینجا دانلود می‌کنیم.
 
-##### Deploy to GitHub Pages
+##### Deploy to "Release" GitHub Pages - Deploy to "Dev" GitHub Pages
 
-محتویات پوشه را داخل برنچ `gh-pages` قرار می‌دهیم که GitHub بتواند از آن استفاده کند.
+درصورتی که عملیات push به برنچ `main` است، محتویات پوشه را داخل برنچ `gh-pages` و درغیراینصورت داخل برنچ `gh-pages-dev`، قرار می‌دهیم که GitHub بتواند از آن استفاده کند.
 
 #### Monitor
 
