@@ -37,12 +37,12 @@ description: Did you clean up in here? Of course.
 
 یکی از راه‌های افزایش کیفیت کد، پیدا کردن نشانه‌های کد کثیف و بازنویسی آن‌هاست.
 به این نشانه‌ها
-[Code Smell](https://refactoring.guru/refactoring/smells)
+[Code Smell](https:/en.wikipedia.org/wiki/Code_smell)
 می‌گوییم.
 
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:
 
--   [Refactoring Guru - Code Smells](https://refactoring.guru/smells/)
+-   [Refactoring Guru - Code Smells](https://refactoring.guru/refactoring/smells)
 
 ### S.O.L.I.D
 
