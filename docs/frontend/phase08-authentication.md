@@ -17,7 +17,7 @@ description: Well, we haven't exactly met, we just stayed up all night talking o
 
 ## یادگیری
 
-### Storage
+### Storages
 
 #### Document.cookie
 
@@ -136,7 +136,7 @@ API
 -   [What Is a REST API?](https://www.sitepoint.com/rest-api/)
 -   [RESTful API به زبان ساده چیست؟](https://roocket.ir/articles/a-beginners-tutorial-for-understanding-restful-API)
 
-#### Fetch API
+### Fetch API
 
 برای ارسال درخواست به سرور می‌توانید از Fetch API استفاده کنید:
 
