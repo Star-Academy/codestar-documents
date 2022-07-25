@@ -1,402 +1,216 @@
 ---
-title:Authentication
-description:  Well, we haven't exactly met, we just stayed up all night talking on the internet.
+title: Authentication
+description: Well, we haven't exactly met, we just stayed up all night talking on the internet.
 ---
 
 ## مقدمه
 
-داده‌ها یکی از مهم‌ترین بخش‌های هر اپلیکیشن هستند که باعث می‌شوند برنامه‌ما از حالت استاتیک خود خارج شوند و بتوان آن‌هارا برای هر کاربر شخصی‌سازی کرد.
-پس باید بتوانیم این داده‌ها را در جایی ذخیره‌سازی کنید و بعدا در صورت نیاز دوباره بازیابی کنید.
+داده‌ها یکی از مهم‌ترین بخش‌های برنامه هستند
+که باعث می‌شوند از حالت یکنواخت خارج شود و بتوان آن را برای هر کاربر شخصی‌سازی کرد؛
+بنابراین باید بتوانیم این داده‌ها را در جایی ذخیره‌سازی کنید و بعدا در صورت نیاز دوباره بازیابی کنید.
 
 -   چگونه می‌توان داده‌های کاربر را ذخیره کرد؟
--   چگونه می‌تواند داده‌ها را سمت سرور فرستاد یا آن‌ها را دریافت کرد؟
--   چگونه می‌توان درخواست‌های هر کاربر به سمت سرور را احراز هویت کرد؟
+-   چگونه می‌توان داده‌ها را به سرور فرستاد یا از آن دریافت کرد؟
+-   چگونه می‌توان کاربر را احراز هویت کرد؟
 
 ---
 
 ## یادگیری
 
-### حافظه و Storage
+### Storage
 
-در این بخش می‌خواهیم به انواع حافظه در صفحه‌های وب بپردازیم.
-به پروژه‌ی خود فکر کنید! حتما برایتان سوال پیش آمده که اطلاعات کاربرانی که وارد سامانه می‌شوند چطور در سرتاسر برنامه ذخیره شود؟ چطور اطلاعات کاربران را در طول زمانی که در برنامه هستند نگه داریم و از آن‌ها استفاده کنیم؟ چگونه سلیقه کاربران را به خاطر بسپاریم تا بازی‌های مناسب را به آن ها پیشنهاد دهیم؟
-برای این کار‌ها، از مفاهیمی به نام حافظه در وب استفاده می‌کنیم. حافظه‌ها می‌توانند انواع مختلفی داشته باشند. از معروف‌ترین آن‌ها یعنی `cookie` ها شروع می‌کنیم!
+به پروژۀ خود فکر کنید!
+شاید برای شما این سوال پیش آمده باشد که اطلاعات کاربرانی که وارد سامانه می‌شوند چطور در سرتاسر برنامه ذخیره شود؟
+چطور اطلاعات کاربران را در طول زمانی که در سایت هستند نگهداری و از آن‌ها استفاده کنیم؟
+چگونه سلیقه کاربران را به خاطر بسپاریم تا پیشنهادهای مناسب را به آن ها پیشنهاد دهیم؟
+برای پاسخ به این سوالات، از مفهومی به نام حافظه استفاده می‌کنیم. در ادامه به معرفی انواع حافظه می‌پردازیم.
 
-#### Cookie
+#### Document.cookie
 
-کوکی‌ها می‌توانند به دو صورت استفاده شوند:
+کوکی‌ها می‌توانند در سمت سرور یا در سمت کلاینت ذخیره‌سازی شوند؛
+برای تغییر مقداری که در کوکی ذخیره شده، کافی است `document.cookie` را مقدار‌دهی کنیم.
+مقادیر `document.cookie` تنها مختص به همان صفحه هستند و در صورتی که به صفحه‌ی دیگری از وب برویم،
+دیگر نمی‌توانند مورد استفاده قرار بگیرند.
 
--   سمت سرور (HTTP Cookie): با این کاری نداریم!
--   با جاوا اسکریپت و استفاده از `document.cookie`
-
-برای ذخیره‌ی مقدار جدید کوکی، تنها کافی است `document.cookie` را مقدار‌دهی کنیم. توجه داشته باشید که مقادیر `document.cookie` تنها مختص به همان صفحه هستند و در صورتی که به صفحه‌ی دیگری از وب برویم، دیگر نمی‌توانند مورد استفاده قرار بگیرند. یعنی مقدار کوکی‌های `http://example.com` قابل استفاده در `http://example.com/foo` نیست.
-
-<div dir="ltr">
+در کوکی‌ها تنها می‌توانیم مقادیر را به شکل `string` ذخیره کنیم؛
+همچنین آن‌ها را به شکل
+`key=value`
+می‌نویسیم و بینِ هر زوج از کاراکتر
+`;`
+استفاده می‌کنیم.
 
 ```javascript
 document.cookies = 'username=codestar; password=1234; expires=Wed, 25 Aug 2021 21:08:53 GMT; path=/link.html';
 ```
 
-  </div>
+مقدار `expires` مشخص می‌کند که کوکی‌ها چه زمانی منقضی شوند.
+در صورتی که بخواهیم مقدار کوکی‌های یک صفحه دیگر را عوض کنیم، از `path` استفاده می‌کنیم.
 
-مقدار `expires` مشخص می‌کند که کوکی‌ها چه زمانی منقضی شوند. در صورتی که بخواهیم مقدار کوکی‌های یک صفحه دیگر را عوض کنیم، از `path` استفاده می‌کنیم. در مثال بالا، در صورت خواندن مقدار `document.cookie` در `example.com/link.html`، مقدار <span dir="ltr"> `username=codestar;password=1234;` </span> را دریافت می‌کنیم. برای ست کردن کوکی‌ها در همین صفحه، مقدار `/=path` بگذارید.
-توجه داشته باشید که در کوکی‌ها تنها می‌توانیم مقادیر `string` بخوانیم و بنویسیم.
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:
 
-برای اطلاعات بیشتر درباره کوکی‌ها به لینک زیر مراجعه کنید:
+-   [MDN - Document.cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/)
 
-  <div dir="ltr">
+#### Window.sessionStorage
 
--   [Web APIs, Document.cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/)
+مشکلی که در کوکی‌ها وجود داشت، مقدار حافظه‌ی کم آن‌ها (حداکثر 4 کیلوبایت) بود؛
+در نتیجه `sessionStorage` و `localStorage` معرفی شدند.
+بر‌خلاف کوکی‌ها، در این دو نوع از حافظه از ذخیره‌سازی Map استفاده می‌شود.
 
-    </div>
-
-مشکلی که با کوکی‌ها وجود داشت، مقدار حافظه‌ی کم آن‌ها (حداکثر 4 کیلوبایت) بود. در نتیجه `session storage` و `local storage` معرفی شدند. بر‌خلاف کوکی‌ها، در این دو نوع از حافظه از ذخیره‌سازی `key, value` استفاده می‌شود. (مانند دیکشنری).
-
-#### Session storage
-
-Session storage نوع دیگری از حافظه در وب است. زمانی که پنجره و تب بسته می شود، اطلاعاتی هم که توسط session storage ذخیره شده هم پاک می شود. همچنین توجه داشته باشید که اطلاعات تب‌های دیگر در session storage قابل استفاده نیست.
-
-به مثال زیر توجه کنید:
-
-  <div dir="ltr">
-
-```javascript
-function getSession() {
-    let x = document.getElementById('sessionShow');
-    x.innerText = sessionStorage.getItem('username');
-}
-function setSession() {
-    sessionStorage.setItem('username', 'codestar');
-}
-```
+sessionStorage
+نوع دیگری از حافظه در وب است.
+زمانی که پنجره/زبانه بسته شود، اطلاعاتی که توسط sessionStorage ذخیره شده‌اند هم پاک می شوند.
+همچنین توجه داشته باشید که اطلاعات زبانه‌های دیگر در sessionStorage قابل استفاده نیستند.
 
 ```html
-<div id="sessionShow"></div>
-<button onclick="getSession()">get</button>
-<button onclick="setSession()">set</button>
+<div id="data"></div>
+<button onclick="setSession()">Set Session</button>
+<button onclick="getSession()">Get Session</button>
 ```
-
-  <div>
-  <div dir="rtl">
-
-در این مثال دکمه‌ی `set`، مقدار `session storage` را ست می‌کند. در صورتی که صفحه را رفرش کنیم و `get` را بزنیم، مقدار ذخیره شده، نمایش داده می‌شود.
-
-برای اطلاعات بیشتر به لینک زیر رجوع کنید:
-
-   </div>
-
--   [Web APIs, Window.sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
-<div dir="rtl">
-
-#### Local storage
-
-حافظه لوکال از بسیاری از جهات شبیه `session storage` است. با این تفاوت که بر‌خلاف `session storage`، با بستن تب از بین نمی‌رود و هیچ تاریخ انقضایی ندارد.
-ست کردن و گرفتن دیتا در `local storage` دقیقا مشابه `session storage` می‌باشد.
-
-  <div dir="ltr">
 
 ```javascript
-  localstorage.setItem("country", "Iran");
-  localstorage.remove('counry');
+const setSession = () => {
+    sessionStorage.setItem('username', 'Admin');
+};
+
+const getSession = () => {
+    const data = document.getElementById('data');
+    data.innerText = sessionStorage.getItem('username');
+};
 ```
 
-  </div>
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:
 
-دستور `(key)remove` مقدار `key` , `value` مورد نظر را از حافظه لوکال پاک می‌کند.
-در صورتی که در http://example.com/foo مقدار `localstorage` را ست کردیم، در http://example.com/bar و یا هر جای دیگری می‌توانیم به آن اطلاعات دسترسی داشته باشیم.
+-   [MDN - Window.sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
 
-برای خواندن درباره تفاوت حافظه‌ی کوکی و لوکال می‌توانید به لینک زیر مراجعه کنید:
+#### Window.localStorage
 
-  <span dir='ltr'>
+این حافظه در بسیاری از جهات شبیه `sessionStorage` است با این تفاوت که بر‌خلاف `sessionStorage`، با بستن پنجره/زبانه، از بین نمی‌رود و تاریخ انقضایی ندارد.
 
--   [Cookies vs. LocalStorage: What’s the difference?](https://medium.com/swlh/cookies-vs-localstorage-whats-the-difference-d99f0eb09b44)
-    </span>
+```javascript
+localstorage.setItem('country', 'Iran');
+localstorage.remove('counry');
+```
 
-همچنین برای یادگیری مفصل‌تر این دو مبحث می‌توانید این لینک‌ها را بخوانید:
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
-  <span dir="ltr">
+-   [MDN - Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+-   [MDN - Using the Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+-   [Medium - Cookies vs. LocalStorage: What's the difference?](https://medium.com/swlh/cookies-vs-localstorage-whats-the-difference-d99f0eb09b44)
 
--   [Web APIs, Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
--   [Using the Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+### JSON
 
-    </span>
+JSON
+یک فرمت برای انتقال اطلاعات است.
+معمولاً از JSON برای تبادل اطلاعات بین سرور و کلاینت استفاده می‌شود.
 
-    ### JSON
+در JavaScript می‌توانید برای تبدیل یک شیء به فرمت JSON از تابع
+`JSON.stringify()`
+استفاده کنیم؛
+همچنین عکس این کار را می‌توانید با تابع
+`JSON.parse()`
+انجام دهیم.
 
-    جیسون یا جیسان، یک فرمت سبک برای انتقال اطلاعات است. معمولا از `JSON` برای رد و بدل کردن اطلاعات بین سرور و صفحه‌ی وب استفاده می‌شود.
-    برای یادگیری سینتکس و قواعد نوشتاری `JSON` به لینک‌های زیر مراجعه کنید:
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
-    <span dir="ltr">
+-   [W3Schools - JSON Syntax](https://www.w3schools.com/js/js_json_syntax.asp)
+-   [W3Schools - JSON.parse](https://www.w3schools.com/js/js_json_parse.asp)
+-   [W3Schools - JSON.stringify](https://www.w3schools.com/js/js_json_stringify.asp)
+-   [Web Dev Simplified - JSON in 10 Minutes](https://www.youtube.com/watch?v=iiADhChRriM)
 
-    -   [JSON Syntax](https://www.w3schools.com/js/js_json_syntax.asp)
-    -   [JSON in 10 Minutes](https://www.youtube.com/watch?v=iiADhChRriM)
+### HTTP
 
-    </span>
+پروتکل HTTP مخفف عبارت
+_Hyper Text Transfer Protocol_
+است و قوانینی برای ارتباط میان سرور و کلاینت تعیین می‌کند.
+این ارتباط از طریق ارسال درخواست‌های HTTP و دریافت پاسخ‌های HTTP انجام می‌شود.
+به زبان ساده‌تر، HTTP یک نوع قانون است که ارسال و دریافت اطلاعات بین سرور و کلاینت بر اساس آن انجام می‌شود.
 
-    دو متد مهم برای استفاده از فرمت `JSON` در جاوا اسکریپت، `()JSON.parse` برای تبدیل یک رشته‌ی `JSON` به یک شی جاوا اسکریپتی و `()JSON.stringify` برای تبدیل یک شی جاوا اسکریپتی به رشته‌ی `JSON` هستند.
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
-برای اطلاعات بیشتر درباره روش استفاده از این دو متد به لینک‌های زیر مراجعه کنید:
-
-<span dir="ltr">
-
--   [JSON.parse](https://www.w3schools.com/js/js_json_parse.asp)
--   [JSON.stringify](https://www.w3schools.com/js/js_json_stringify.asp)
-
-</span>
-
-قبل از این که سراغ بقیه‌ی مبحث برویم، مفاهیم `HTTP` و `Rest` را توضیح خواهیم داد.
-
-### HTTP چیست؟
-
-پروتکل `HTTP` مخفف عبارت `Hyper Text Transfer Protocol` است و به ارتباط میان سرویس‌دهنده (server) و سرویس‌گیرنده (client) در وب می‌پردازد.
-ارتباط بین سیستم‌های سرویس‌گیرنده و سرورها از طریق ارسال درخواست‌های `HTTP` و دریافت پاسخ‌های `HTTP` انجام می‌شود. به زبان ساده‌تر، `HTTP` یک نوع قانون است که ارسال و دریافت اطلاعات بین `client` و `server` بر اساس آن انجام می‌شود.
-برای آشنایی بهتر با `HTTP` لینک‌های زیر می‌تواند به شما کمک کند.
-
-<span dir="ltr">
-
--   [An introduction to HTTP: everything you need to know](https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/)
--   [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-
-</span>
+-   [MDN - An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+-   [freeCodeCamp - An introduction to HTTP: everything you need to know](https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/)
 
 ### HTTP vs HTTPS
-مهم ترین تفاوت `HTTP` و `HTTPS` در گواهی نامه `SSL` است. در واقع `HTTPS` یک پورتکل `HTTP` است با موارد امنیتی بیشتر که در اکثر مواقع این امنیت بیشتر بسیار حیاتی است. از تاثیر‌های مثبت دیگر استفاده از این پروتکل می‌توان به افزایش امتیاز سایت شما در الگوریتم‌های رتبه‌بندی موتور‌‌های جست و جو و جلب اعتماد بازدیدکنندکان اشاره کرد.
 
-<span dir="ltr">
+HTTPS
+نسخه‌ای از HTTP است که بسیاری از موارد امنیتی در آن رعایت شده است.
+مهم ترین تفاوت HTTP و HTTPS در گواهی‌نامه SSL است.
+از مزایای استفاده از این پروتکل می‌توان به افزایش امتیاز سایت شما در الگوریتم‌های رتبه‌بندی موتور‌‌های جست و جو و جلب اعتماد بازدیدکنندکان اشاره کرد.
 
--   [HTTP & HTTPS : What is the difference?](https://medium.com/@pallavimodi/http-https-what-is-the-difference-3a97fe2f7fd8#:~:text=As%20we%20learnt%20earlier%2C%20S,are%20encrypted%20or%20%E2%80%9CSecure%E2%80%9D.)
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
+
+-   [Medium - HTTP & HTTPS : What is the difference?](https://medium.com/@pallavimodi/http-https-what-is-the-difference-3a97fe2f7fd8#:~:text=As%20we%20learnt%20earlier%2C%20S,are%20encrypted%20or%20%E2%80%9CSecure%E2%80%9D.)
 -   [تفاوت HTTP و HTTPS چیست؟](https://www.irandnn.ir/mag/http-vs-https/)
 
+### RESTful API
 
-</span>
+Application Programming Interface
+مجموعه‌ای از قواعد و مکانیسم‌هاس که از طریق آن برنامه‌ها و یا کامپوننت‌های مختلف یک برنامه با همدیگر ارتباط برقرار می‌کنند.
+منظور از رابط چیزی‌ست که دو شیء یا دو موجودیت مختلف را به یکدگیر ربط می‌دهد.
 
-### RESTful Api
+API
+داده‌های برنامۀ شما را بک یک فرمت مناسب به مقصد بفرستد و یا آن‌‌ها را دریافت کند؛
+به‌عنوان مثال می‌توان به فرمت‌های JSON و XML اشاره کرد.
 
-`Application Programming Interface` که با رابط برنامه‌نویسی کاربردی ترجمه می‌شود یک مجموعه از قواعد و مکانیزم‌ها است که از طریق آن اپلیکیشن‌ها و یا کامپوننت‌های مختلف یک برنامه با همدیگر ارتباط برقرار می‌کنند. نام خود این مکانیزم بیانگر همه چیز است. منظور از رابط چیزی‌ست که دو شئ یا دو موجودیت مختلف را به همدیگر ربط می‌دهد. اما بیایید کمی با جزئیات بیشتر از این موضوع صحبت کنیم. API می‌تواند داده‌هایی که شما برای اپلیکیشن‌تان نیاز دارید را از طریق یک فرمت مناسب به خروجی بفرستد و یا آن‌ را برگشت دهد. فرمت `JSON` و `XML` از این دست فرمت‌ها هستند. در این مطلب ما قصد داریم روی `JSON` تمرکز بکنیم.
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
-برای آشنایی بیشتر با `RESTful api` مطالب زیر به شما کمک خواهد کرد.
-
- <span dir="ltr">
-
--   [RESTful API به زبان ساده چیست؟](https://roocket.ir/articles/a-beginners-tutorial-for-understanding-restful-api)
 -   [What Is a REST API?](https://www.sitepoint.com/rest-api/)
+-   [RESTful API به زبان ساده چیست؟](https://roocket.ir/articles/a-beginners-tutorial-for-understanding-restful-API)
 
-</span>
+#### Fetch API
 
-    </div>
-
-    <div dir="rtl">
-
-    ### غیر همزمانی‌ها در جاوا اسکریپت
-
-    ممکن است زمانی پیش بیاید که در برنامه‌تان بخواهید در بخشی با استفاده از تابع `setTimeout`، مقداری صبر کنید و بعد از آن برنامه را ادامه دهید یا در مثال پروژه‌ی خود، شما لازم دارید که در ابتدای لود صفحه، اطلاعات بازی‌ها را از `API` دریافت کنید و تا زمانی که این اطلاعات از `API` گرفته نشده‌اند، برنامه منتظر دریافت دیتا بماند.
-
-کد زیر را در نظر بگیرید:
-
-<span dir="ltr">
+برای ارسال درخواست به سرور می‌توانید از Fetch API استفاده کنید:
 
 ```javascript
-let text = 'text one;';
-let setDisplayTimeOut = () => {
-    setTimeout(() => {
-        text = 'text two';
-    }, 1000);
-    let output = document.getElementById('output');
-    output.innerText = text;
+const getData = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    if (response.ok) return await response.json();
+
+    console.log('Request Failed!', response);
+    return;
 };
 ```
 
- </span>
+تابع `fetch` دو ورودی دریافت می‌کند که به ترتیب `url` و `init` هستند
+و یک Promise به عنوان خروجی برمی‌گرداند.
+پارامتر `init` اختیاری است و می‌توانی از آن برای تنظیم داده‌های خاصی استفاده کنیم.
+به‌عنوان مثال می‌توان به `header` و `method` اشاره کرد.
 
-طبق این کد، می‌خواهیم بعد از 1 ثانیه مقدار متغیر `text` عوض شود و `text two` در صفحه نمایش داده شود. اما در حالت عادی، جاوا اسکریپت مقدار نمایش داده شده را همان `text one` نشان می‌دهد.
-فرض کنید می‌خواهیم از سرور اطلاعات کاربران را دریافت کنیم و بعد از دریافت، تغییراتی را روی آن‌ها انجام بدهیم. اگر مانند مثال بالا، اطلاعات را دریافت کرده و تغییرات را انجام بدهیم، دچار خطا می‌شویم. زیرا روند دریافت اطلاعات کاربران کامل نشده. برنامه باید صبر کند تا دریافت اطلاعات کامل شود و بعد تغییرات را ایجاد کند.
+با استفاده از `response` می‌توان نتیجه‌ی دریافت اطلاعات را مشاهده کرد.
+اگر `response.ok` مقدار `true` داشته باشد یعنی دریافت اطلاعات به درستی انجام شده؛
+همچنین می‌توانید از response.status برای فهمیدن جزئیات بیشتر استفاده کنید.
 
-در این شرایط است که `Promise` ها به کار ما می‌آیند!
+برای دسترسی به داده‌ها، توابعی بر روی شیء `response` وجود دارد؛
+به‌عنوان مثال در کد بالا، `()response.json` برای دریافت داده‌های JSON استفاده می‌شود.
 
-#### Promise
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
-`Promise` ها برای عملکرد‌های `asynchronous` مانند مثال‌های بالا به کار ما می‌آیند. با `promise` ما منتظر نتیجه می‌مانیم و با `()then` مشخص می‌کنیم که بعد از آن چه اتفاقی رخ بدهد.
-مثال بالا را با `Promise` بازنویسی می‌کنیم:
-
-<span dir="ltr">
-
-```javascript
-let text = 'text one;';
-const timePromise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        text = 'text two';
-        if (text === 'text two') resolve();
-        else reject('wrong data!');
-    }, 5000);
-});
-
-const setText = () => {
-    let output = document.getElementById('output');
-    output.innerText = text;
-};
-
-function setDisplayTimeOut() {
-    timePromise.then(setText).catch((error) => {
-        console.log(error);
-    });
-}
-```
-
-</span>
-
-در `Promise`، می‌توانید `()resolve`و `()reject`را بسته به موفقیت‌آمیز بودن و یا نبودن `Promise` صدا بزنید. در این تابع، در صورتی که مقدار `text`، برابر با `text two` باشد، Promise موفقیت‌آمیز بوده است و باید `()resolve` صدا شود و در غیر این صورت، موفقیت‌آمیز نبوده و `()reject` با پیغام مناسب باید صدا زده شود.
-تابع `()then`، دو تابع ورودی می‌گیرد اولی هندل‌کننده‌ی موفقیت‌آمیز بودن `Promise` و دومی هندل‌کننده‌ی موفقیت‌آمیز نبودن `Promise` است. به جای تابع دوم از `()catch.` هم می‌توان استفاده کرد.
-
-مبحث `Promise` بسیار گسترده‌ست. برای اطلاعات بیشتر می‌توانید از لینک زیر استفاده کنید:
-
-<span dir="ltr">
-
--   [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
--   [JavaScript Promises](https://www.w3schools.com/js/js_promise.asp)
-
-</span>
-
-#### async, await
-
-در صورتی که پشت نام یک تابع `async` به کار رود، آن تابع یک `Promise` به عنوان خروجی برمی‌گرداند. `async`و `await` یک راه تمیز‌تر و ساده‌تر برای استفاده از `Promise` ها هستند.
-
-مسئله بالا را با استفاده از `async` و `await` حل می‌کنیم:
-
- <span dir="ltr">
-
-```javascript
-let text = 'text one;';
-async function getTimePromise() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            text = 'text two';
-            resolve();
-        }, 5000);
-    });
-}
-
-async function setText() {
-    let output = document.getElementById('output');
-    await getTimePromise();
-    output.innerText = text;
-}
-```
-
- </span>
-
-ساختار بالا بسیار ساده است. با فراخوانی تابع `()setText`، منتظر می‌شویم تا نتیجه‌ی `()getTimePromise` برگردانده شود. بعد از آن که نتیجه موفقیت‌آمیز بود، مقدار خروجی را ست می‌کنیم. توجه داشته باشید در صورتی که در تابعی از `await` استفاده می‌شود، باید خود آن تابع هم `async` تعریف شود. مانند تابع `setText` که خودش `async` تعریف شده است.
-
-در ادامه با `fetch`، کاربردهای بیشتری را می بینیم.
-
-#### fetch
-
-`fetch Api` در جاوا اسکریپت برای ارسال درخواست به سمت سرور و لود کردن اطلاعات و جواب‌های سرور به کار می‌آید.
-
-به کد زیر که برای گرفتن اطلاعات کاربران نوشته شده توجه کنید:
-
-<span dir="ltr">
-
-```javascript
-async function getData() {
-    let response = await fetch('https://jsonplaceholder.typicode.com/users');
-    if (response.ok) {
-        let json = await response.json();
-        let users = JSON.stringify(json);
-        let output = document.getElementById('output');
-        output.innerText = users;
-    } else if (response.status == 500) {
-        console.log('server error');
-    }
-}
-```
-
-</span>
-
-در حالت کلی، ورودی‌های تابع `url` ،`fetch` و `option` هستند و خروجی آن یک `Promise` است. `option` پارامترهای دلخواهی است که در ارسال درخواست به سرور می‌توانیم در نظر بگیریم. به طور مثال تغییر متد ارسال، `header` و غیره. در صورتی که `option` به تابع پاس داده نشود، متد GET ساده در نظر گرفته می‌شود.
-در خط دوم برنامه‌ی بالا، با صدا زدن تابع `fetch`، منتظر نتیجه آن می‌مانیم و بعد از دریافت کامل اطلاعات، نتیجه در `response` ریخته می‌شود.
-با استفاده از `response` می‌توان نتیجه‌ی دریافت اطلاعات را مشاهده کرد. اگر `response.ok = true` باشد، یعنی دریافت اطلاعات به درستی انجام شده. `response.status` همان `Status code` این عملیات است. در صورتی که `Status code` برابر با 500 باشد، یعنی خطایی سمت سرور رخ داده. برای مشاهده لیست کامل `Status code` ها به لینک زیر مراجعه کنید:
-
-<span dir="ltr">
-
-- [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-- 
-<span>
-
-</div>
-
-<div dir="rtl">
-
-برای دسترسی به `body` پاسخ این درخواست، یکسری توابع `async` دیگر با خروجی `Promise` وجود دارند.
-به طور مثال در کد بالا، `()response.json` یک تابع `async` برای برگرداندن یک `promise` با مقدار جیسونی اطلاعات است.
-
-حتما توصیه می‌شود برای آشنایی کامل با توابع و کارایی `fetch`، به لینک زیر مراجعه کنید:
-
-<span dir="ltr">
-
--   [Fetch](https://javascript.info/fetch)
-
-<span>
-
-<span dir="rtl">
-
-برای جمع‌بندی مطالب `async` و `promise` ، `fetch` می‌توانید به لینک زیر مراجعه کنید:
-
-  </span>
-
-<span dir="ltr">
-
--   [Async JS](https://www.youtube.com/watch?v=PoRJizFvM7s)
-
-<span>
-
-    </div>
-
-<div dir="rtl">
-
-### history
-
-شی `window.history`، نگهدارنده‌ی `history` مرورگر شما است. دو متد اصلی آن:
-
-<span dir="ltr">
-
-```
-history.forward()
-history.back()
-```
-
-  </span>
-
-هستند. `()history.back` دقیقا مشابه کلیک کردن روی دکمه‌ی `back` در مرورگر و `()history.forward` مشابه کلیک کردن روی دکمه‌ی `forward` در مرورگر است.
-از دیگر توابع آن، `(n)history.go` است. در صورتی که `n < 0` باشد، مرورگر `n` بار به عقب بر می‌گردد. بنابراین `()history.back` معادل `(-1)history.go` است. در صورتی که `n > 0` باشد، مرورگر n بار به جلو می‌رود و `()history.forward` معادل `(1)history.go` است.
-
-برای دیدن جزئیات `history`، به لینک زیر رجوع کنید:
-
-<span dir="ltr">
-
--   [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
-
-<span>
-
-</div>
-
+-   [JavaScript.info - Fetch](https://javascript.info/fetch)
+-   [Traversy Media - Async JS Crash Course - Callbacks, Promises, Async Await](https://www.youtube.com/watch?v=PoRJizFvM7s)
+-   [HTTP Status Codes Glossary](https://www.webfx.com/web-development/glossary/http-status-codes/)
 
 ## JWT
 
-در مجموعه `Api` هایی که در یک اپلیکیشن مورد استفاده قرار می‌گیرد تعدای از آن‌ها عمومی هستند یعنی هر کاربری اجازه‌ی فرستادن دراخواست برای آن‌ها را دارد، و تعدادی نیز خصوصی یا محافطت شده هستند یعنی فقط کاربر‌های مشخص که احراز هویت آن‌ها انجام شده باید توانایی استفاده از آن‌ها را داشته باشند.`JWT` یا `JSON WEB TOKEN` یکی از تکنولوژی‌های معروف احراز هویت است. در این روش وقتی کاربر درخواست ورود یا ثبت‌نام را می‌فرستد، در صورت معتبر بودن اطلاعات، در جوابش یک توکن `JWT` تولید و برگردانده می‌شود. این توکن باید در سمت کلاینت و در حافظه‌ی محلی ذخیره شود. سپس هر زمانی که کاربر قصد داشت به یک صفحه یا محتوای خصوصی دسترسی پیدا کند،‌ باید توکن خود را به‌همراه آن درخواست به سمت سرور ارسال کند. معمولا این کار توسط یک `header` سفارشی `Authorization` به همراه `Bearer schema` صورت می‌گیرد.
+معمولاً APIهایی که در پروژه مورد استفاده قرار می‌گیرند، تعدای از آن‌ها عمومی است و هر کاربری اجازۀ فرستادن درخواست برای آن‌ها را دارد
+و تعدادی نیز خصوصی یا محافطت‌شده هستند، یعنی فقط کاربر‌های مشخص که احراز هویت آن‌ها انجام شده توانایی استفاده از آن‌ها را دارند.
 
-```javascript
-headers:{
-    'Authorization':`Bearer ${token}`
-}
-```
+JWT
+یا
+JSON Web Token
+یکی از تکنولوژی‌های معروف احراز هویت است.
+در این روش وقتی کاربر درخواست ورود یا ثبت‌نام را می‌فرستد، در صورت معتبر بودن اطلاعات، در پاسخ یک JWT تولید و برگردانده می‌شود.
+این توکن باید در سمت کلاینت و در حافظه‌ی محلی ذخیره شود و زمانی که کاربر قصد داشت به یک صفحه یا محتوای خصوصی دسترسی پیدا کند،
+باید توکن خود را به‌همراه آن درخواست به سمت سرور ارسال کند.
 
-<span dir="ltr">
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
 -   [What is JWT](https://jwt.io/introduction)
 -   [احراز هویت (JWT, JWS, JWE)](https://virgool.io/@erfun/%D9%87%D9%88%DB%8C%D8%AA-%D8%B3%D9%86%D8%AC%DB%8C-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86-jwt-jws-jwe-pedif3sejkol)
 
-<span>
-
 ## پروژه
 
-در این فاز شما باید یک Auth Page برای عملیات ورود و ثبت‌نام به پروژه خود اضافه کنید. اگر هر یک از این عملیات با موفقیت انجام شود کاربر باید به صفحه اصلی سایت (فعلا خالی) منتقل شود.
+در این فاز شما باید صفحات ورود و ثبت‌نام را به پروژه خود اضافه کنید.
+اگر هر یک از این عملیات با موفقیت انجام شود، کاربر باید به صفحۀ اصلی سایت منتقل شود.
+همچنین از Guard برای محافظت از صفحات خصوصی استفاده کنید.
+برای این کار احتیاج به یک صفحه مانند Profile دارید که در حال حاضر صرفاً کافی است حاوی یک متن ساده باشد.
