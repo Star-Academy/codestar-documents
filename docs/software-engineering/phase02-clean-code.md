@@ -56,6 +56,11 @@ description: ''
 -   [SOLID Principles in Java Application Development](https://www.jrebel.com/blog/solid-principles-in-java)
 -   [S.O.L.I.D principles in Java](https://medium.com/@karthikcsridhar/s-o-l-i-d-principles-in-java-1aaff453d7ea)
 
+:::tip‌
+برای مطالعه بیشتر می‌توانید[A Solid Guide to SOLID Principles](https://www.baeldung.com/solid-principles)
+را مطالعه کنید.
+:::
+
 ## Refactoring Techniques
 
 برای Refactor
