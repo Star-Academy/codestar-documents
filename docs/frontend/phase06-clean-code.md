@@ -44,7 +44,7 @@ description: Did you clean up in here? Of course.
 
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:
 
--   [Refactoring Guru - Code Smells](https://refactoring.guru/smells/)
+-   [Refactoring Guru - Code Smells](https://refactoring.guru/refactoring/smells)
 
 ---
 
