@@ -57,7 +57,7 @@ Azure Data Studio نرم‌افزاری cross-platform برای مدیریت د�
 Open Source
 عرضه شد.
 
- جهت نصب  ADS و آماده‌سازی آن برای کار با PostgreSQL از [این لینک](https://docs.microsoft.com/en-us/sql/azure-data-studio/quickstart-postgres) استفاده نمایید و سپس مراحل ذکر شده در لینک برای اتصال به Postgres را طی کنید.
+جهت نصب ADS و آماده‌سازی آن برای کار با PostgreSQL از [این لینک](https://docs.microsoft.com/en-us/sql/azure-data-studio/quickstart-postgres) استفاده نمایید و سپس مراحل ذکر شده در لینک برای اتصال به Postgres را طی کنید.
 
 پس از آنکه به
 Postgres
@@ -71,7 +71,7 @@ SQL
 
 ![ADS Status](./images/phase07-ADS-status.png)
 
-پس از نوشتن query  با فشردن کلید
+پس از نوشتن query با فشردن کلید
 F5
 یا کلیک بر روی دکمه Run، آن را اجرا کنید. سعی کنید از اینجا به بعد هر دستوری که در داک مشاهده می‌کنید را برای خودتان اجرا نمایید.
 
@@ -139,7 +139,7 @@ DROP DATABASE database_name;
 
 Data Type،
 نوع داده‌ای است که هر ستون در جدول یا متغیر می‌تواند ذخیره کند.
-برای آشنایی با Data Typeهای پرکاربرد PostgreSQL از [این لینک](https://www.geeksforgeeks.org/postgresql-data-types/) استفاده کنید.  همچنین در صورت نیاز می‌توانید از [مستندات Postgresql.org](https://www.postgresql.org/docs/current/datatype.html) هم بهره ببرید.
+برای آشنایی با Data Typeهای پرکاربرد PostgreSQL از [این لینک](https://www.geeksforgeeks.org/postgresql-data-types/) استفاده کنید. همچنین در صورت نیاز می‌توانید از [مستندات Postgresql.org](https://www.postgresql.org/docs/current/datatype.html) هم بهره ببرید.
 
 ## جدول
 
@@ -154,7 +154,7 @@ Table
 
 ```sql
 CREATE TABLE tableName
-( 
+(
     column_1 datatype [ NULL | NOT NULL ],
     column_2 datatype [ NULL | NOT NULL ],
     ...
@@ -163,7 +163,7 @@ CREATE TABLE tableName
 
 برای مثال جدول دانشجو را به صورت زیر می‌سازیم. با نوشتن
 NOT NULL
- بعد از تعریف هر ستون، دادن مقدار به آن ستون در هنگام افزودن داده الزامی می‌شود. (در واقع مقدار آن ستون نمی‌تواند NULL باشد)
+بعد از تعریف هر ستون، دادن مقدار به آن ستون در هنگام افزودن داده الزامی می‌شود. (در واقع مقدار آن ستون نمی‌تواند NULL باشد)
 
 ```sql
 CREATE TABLE Student
@@ -226,7 +226,7 @@ SELECT *
 FROM Student;
 ```
 
-همانطور که مشاهده می‌کنید، به جای نام ستون‌ها از "*" استفاده شده است. که به معنی همه ستون‌ها می‌باشد. در واقع این دستور با دستور زیر معادل است.
+همانطور که مشاهده می‌کنید، به جای نام ستون‌ها از "\*" استفاده شده است. که به معنی همه ستون‌ها می‌باشد. در واقع این دستور با دستور زیر معادل است.
 
 ```sql
 SELECT StudentNumber, Grade, FirstName, LastName, IsMale,DateOfBirth, LeftUnitsCount
@@ -237,7 +237,7 @@ FROM Student;
 ADS
 داده‌ها را مانند شکل زیر به صورت جدول در
 Results Tab
- نمایش می‌دهد.
+نمایش می‌دهد.
 با استفاده از
 Operatorها در عبارتی که با
 Where
@@ -270,15 +270,15 @@ AND
 OR
 کنید.
 
-| Operator | توضیحات | Example |
-| :---: | :---: | :---: |
-| = | Equal | StudentNumber = '98100200' |
-| &gt, &gt= | Greater than, Greater than equal | Grade &gt 15,Grade &gt= 15 |
-| &lt, &lt= | Less than, Less than equal | Grade &lt 12, Grade &lt=12 |
-| &lt&gt or != | Not equal | IsMale &lt&gt true or IsMale != true |
-| BETWEEN | Between a certain range | Grade BETWEEN 14 AND 17 |
-| LIKE | Search for a pattern | StudentNumber LIKE '98%' |
-| IN | To specify multiple possible values for a column | LastName IN ('Ahmadi', 'احمدی') |
+|   Operator   |                     توضیحات                      |               Example                |
+| :----------: | :----------------------------------------------: | :----------------------------------: |
+|      =       |                      Equal                       |      StudentNumber = '98100200'      |
+|  &gt, &gt=   |         Greater than, Greater than equal         |      Grade &gt 15,Grade &gt= 15      |
+|  &lt, &lt=   |            Less than, Less than equal            |      Grade &lt 12, Grade &lt=12      |
+| &lt&gt or != |                    Not equal                     | IsMale &lt&gt true or IsMale != true |
+|   BETWEEN    |             Between a certain range              |       Grade BETWEEN 14 AND 17        |
+|     LIKE     |               Search for a pattern               |       StudentNumber LIKE '98%'       |
+|      IN      | To specify multiple possible values for a column |   LastName IN ('Ahmadi', 'احمدی')    |
 
 پس از ساختن جدول، با دستورات زیر می‌توانیم ستون‌های آن را ویرایش کنیم.
 
@@ -368,14 +368,14 @@ Foreign Key
 
 1. Foreign Key می‌تواند NULL باشد.
 2. جدولی که Foreign Key دارد را فرزند (Child)، و جدولی که به آن ارجاع داده می‌شود را والد (Parent) می‌نامیم.
-برای ایجاد یک
-Foreign Key
-در هنگام ایجاد جدول یا پس از ایجاد آن، یک
-Constraint
-اضافه می‌کنیم.
-برای مثال جدولی جدید برای ثبت‌نام در هر درس می‌سازیم. در این جدول نام درس و شماره دانشجویی فرد ثبت‌نام شده را به صورت
-Foreign Key
-نگه می‌داریم. برای ساختن این جدول از دستور زیر استفاده می‌کنیم.
+   برای ایجاد یک
+   Foreign Key
+   در هنگام ایجاد جدول یا پس از ایجاد آن، یک
+   Constraint
+   اضافه می‌کنیم.
+   برای مثال جدولی جدید برای ثبت‌نام در هر درس می‌سازیم. در این جدول نام درس و شماره دانشجویی فرد ثبت‌نام شده را به صورت
+   Foreign Key
+   نگه می‌داریم. برای ساختن این جدول از دستور زیر استفاده می‌کنیم.
 
 ```sql
 CREATE TABLE Enrollment
@@ -460,16 +460,16 @@ SQL
 
 ورودی تابع، مقادیر موجود در جدول می‌باشد. چند نمونه از این توابع را در زیر مشاهده می‌کنید.
 
-- [AVG](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_avg.asp.html)
-- [COUNT](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_count.asp.html)
-- [MIN](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_min.asp.html)
+-   [AVG](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_avg.asp.html)
+-   [COUNT](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_count.asp.html)
+-   [MIN](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_min.asp.html)
 
 ### Scalar Functions
 
 ورودی تابع، در زمان صدا زدن به آن داده می‌شود. چند نمونه از این توابع نیز در ادامه آمده است.
 
-- [ROUND](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_round.asp.html)
-- [SUBSTRING](https://www.guru99.com/sql-server-substring.html)
+-   [ROUND](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_round.asp.html)
+-   [SUBSTRING](https://www.guru99.com/sql-server-substring.html)
 
 ## **GROUP BY**
 
@@ -477,7 +477,7 @@ SQL
 SELECT column_name, aggregate_function(column_name)
 FROM table_name
 WHERE column_name operator value
-GROUP BY column_name; 
+GROUP BY column_name;
 ```
 
 با استفاده از دستور
@@ -494,6 +494,6 @@ SELECT IsMale, COUNT(IsMale) FROM Student GROUP BY IsMale;
 
 ```sql
 SELECT ParticipantStudentNumber, COUNT(ParticipantStudentNumber)
-FROM Enrollment 
+FROM Enrollment
 GROUP BY ParticipantStudentNumber;
 ```
