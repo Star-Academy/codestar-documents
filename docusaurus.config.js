@@ -82,6 +82,12 @@ const config = {
                         label: 'مهندسی نرم‌افزار',
                     },
                     {
+                        type: 'doc',
+                        docId: 'general',
+                        position: 'left',
+                        label: 'عمومی',
+                    },
+                    {
                         href: 'https://github.com/Star-Academy/',
                         label: 'GitHub',
                         position: 'right',
@@ -105,6 +111,10 @@ const config = {
                             {
                                 label: 'مهندسی نرم‌افزار',
                                 to: '/docs/software-engineering',
+                            },
+                            {
+                                label: 'عمومی',
+                                to: '/docs/general',
                             },
                         ],
                     },
