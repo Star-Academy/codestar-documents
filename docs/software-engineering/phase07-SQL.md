@@ -3,10 +3,12 @@ title: SQL
 description: ''
 ---
 
+## مقدمه
+
 در این فاز با یک پایگاه داده رابطه‌ای، نحوه‌ی کار کردن با آن و
 queryهای آن آشنا می‌شوید.
 
-## مقدمه
+## پایگاه داده چیست؟
 
 پایگاه داده یا
 Database
@@ -460,16 +462,16 @@ SQL
 
 ورودی تابع، مقادیر موجود در جدول می‌باشد. چند نمونه از این توابع را در زیر مشاهده می‌کنید.
 
--   [AVG](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_avg.asp.html)
--   [COUNT](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_count.asp.html)
--   [MIN](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_min.asp.html)
+- [AVG](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_avg.asp.html)
+- [COUNT](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_count.asp.html)
+- [MIN](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_min.asp.html)
 
 ### Scalar Functions
 
 ورودی تابع، در زمان صدا زدن به آن داده می‌شود. چند نمونه از این توابع نیز در ادامه آمده است.
 
--   [ROUND](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_round.asp.html)
--   [SUBSTRING](https://www.guru99.com/sql-server-substring.html)
+- [ROUND](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/sql/sql_func_round.asp.html)
+- [SUBSTRING](https://www.guru99.com/sql-server-substring.html)
 
 ## **GROUP BY**
 
