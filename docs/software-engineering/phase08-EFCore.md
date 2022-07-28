@@ -5,6 +5,14 @@ description: ''
 
 ## مقدمه
 
+در این فاز با مفهوم ORM
+و EFCore
+به عنوان یک ORM
+محبوب در زیان #C
+آشنا می‌شوید.
+
+## EFCore چیست؟
+
 EntityFrameworkwork Core
 یک ORM
 چند سکویی است که به ما این فرصت را می‌دهد با یک بار نوشتن یک کد آن را بر روی پایگاه‌داده‌های مختلف اجرا کنیم. EFCore
@@ -35,9 +43,8 @@ ORM
 در این روش بر خلاف روش قبلی ابتدا مدل‌ها که همان کلاس‌های اشیاء ما هستند ایجاد می‌شوند. خوبی این روش این است که اگر نیاز به تغییر دیتابیس باشد تنها با تغییری جزئی کانفیگ می‌توان پایگاه‌داده را تغییر داد.
 
 برای درک بهتر Code first
-بهتر است در ابتدا یک پروژه ساده را پیاده‌سازی کنید. از این رو سعی کنید پروژه لینک زیر را اجرا کنید.
-
-* [First EF Core Console Application](https://www.entityframeworktutorial.net/efcore/entity-framework-core-console-application.aspx)
+بهتر است در ابتدا یک پروژه ساده را پیاده‌سازی کنید. از این رو سعی کنید پروژه [First EF Core Console Application](https://www.entityframeworktutorial.net/efcore/entity-framework-core-console-application.aspx)
+را اجرا کنید.
 
 ### Linq
 
