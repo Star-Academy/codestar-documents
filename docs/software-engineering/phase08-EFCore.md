@@ -35,7 +35,7 @@ ORM
 
 ### Database first
 
-در این روش ابتدا به ساکن پایگاه‌داده طراحی و پیاده‌سازی می‌شود و سپس بر اساس آن کدهایی به زبان‌برنامه‌نویسی ایجاد می‌شود. این روش بیشتر برای پروژه‌هایی که قبلا از طریقی دیگر و در گذشته پایگاه‌داده را ایجاد کرده‌اند کاربرد دارد. برای آشنایی بیشتر با این موضوع [Entity Framework Core Database-First Tutorial for .NET Core](https://www.devart.com/dotconnect/sqlite/docs/EFCore-Database-First-NET-Core.html)
+در این روش ابتدا پایگاه‌داده طراحی و پیاده‌سازی می‌شود و سپس بر اساس آن کدهایی به زبان‌ برنامه‌نویسی ایجاد می‌شود. این روش بیشتر برای پروژه‌هایی که قبلا از طریقی دیگر و در گذشته پایگاه‌داده را ایجاد کرده‌اند کاربرد دارد. برای آشنایی بیشتر با این موضوع [Entity Framework Core Database-First Tutorial for .NET Core](https://www.devart.com/dotconnect/sqlite/docs/EFCore-Database-First-NET-Core.html)
 را مطالعه کنید.
 
 ### Code first
@@ -58,7 +58,7 @@ ORM
 ### Insert
 
 برای افزودن داده‌ها در جدول به راحتی می‌توانید به وسیله EFCore
-داده‌ها را بیافزاید. برای آشنایی بیشتر با این مورد [Insert Records in Entity Framework Core](https://www.yogihosting.com/insert-records-entity-framework-core/)
+داده‌ها را بیفزاید. برای آشنایی بیشتر با این مورد [Insert Records in Entity Framework Core](https://www.yogihosting.com/insert-records-entity-framework-core/)
 را مطالعه نمائید.
 
 ### Update
