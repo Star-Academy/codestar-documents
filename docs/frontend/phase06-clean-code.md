@@ -199,16 +199,19 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "reset",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["all"]
             },
             {
                 "groupName": "content",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["content"]
             },
             {
                 "groupName": "parent-related",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "order",
                     "flex",
@@ -224,6 +227,7 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "color",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "background",
                     "background-attachment",
@@ -247,11 +251,13 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "filter",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["filter", "backdrop-filter"]
             },
             {
                 "groupName": "mask",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "mask",
                     "mask-clip",
@@ -268,11 +274,13 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "box",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["direction", "box-sizing"]
             },
             {
                 "groupName": "position",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "position",
                     "isolation",
@@ -299,6 +307,7 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "display",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "display",
                     "flex-basis",
@@ -337,11 +346,13 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "list",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["list-style", "list-style-image", "list-style-position", "list-style-type"]
             },
             {
                 "groupName": "size",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "min-block-size",
                     "block-size",
@@ -365,11 +376,13 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "scroll",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["scroll-behavior"]
             },
             {
                 "groupName": "box-model",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "margin",
                     "margin-block",
@@ -398,6 +411,7 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "border",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "border",
                     "border-block",
@@ -457,21 +471,25 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "outline",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["outline", "outline-color", "outline-offset", "outline-style", "outline-width"]
             },
             {
                 "groupName": "transform",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["transform", "transform-origin", "transform-style"]
             },
             {
                 "groupName": "clip-path",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["clip-path"]
             },
             {
                 "groupName": "font",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "font",
                     "font-family",
@@ -495,6 +513,7 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "text",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "text-align",
                     "text-align-last",
@@ -526,16 +545,19 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "print",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["page-break-after", "page-break-before", "page-break-inside"]
             },
             {
                 "groupName": "3d",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["perspective", "perspective-origin", "backface-visibility"]
             },
             {
                 "groupName": "transition",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "transition",
                     "transition-delay",
@@ -547,6 +569,7 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "animation",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": [
                     "animation",
                     "animation-delay",
@@ -562,6 +585,7 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
             {
                 "groupName": "cursor & pointer",
                 "emptyLineBefore": "always",
+                "noEmptyLineBetween": true,
                 "properties": ["cursor", "pointer-events", "user-select"]
             }
         ]
