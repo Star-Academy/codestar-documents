@@ -73,7 +73,7 @@ Visual Studio
 -   [What is a mock and when should you use it](https://stackoverflow.com/questions/214092/what-is-a-mock-and-when-should-you-use-it)
 -   [Getting started with NSubstitute](https://nsubstitute.github.io/help/getting-started/)
 
-:::tip ‌
+:::tip ‌ 
 پیشنهاد می‌کنیم برای مطالعه بیشتر درباره تست‌نویسی در #C
 مقالۀ [Writing Unit Tests with xUnit, NSubstitute and FluentAssertions](https://www.daniildoronkin.net/writing-unit-tests-with-xunit-nsubstitute-and-fluentassertions)
 را مطالعه کنید.
