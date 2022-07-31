@@ -194,7 +194,7 @@ jobs:
 
             - name: 404.html Hack
               if: success()
-              run: cp dist/digikala/index.html dist/digikala/404.html
+              run: cp dist/my-project-name/index.html dist/my-project-name/404.html
 
             - name: Upload Build
               if: success()
