@@ -192,6 +192,10 @@ jobs:
             - name: Build
               run: npm run build:prod
 
+            - name: 404.html Hack
+              if: success()
+              run: cp dist/digikala/index.html dist/digikala/404.html
+
             - name: Upload Build
               if: success()
               uses: actions/upload-artifact@v1
@@ -219,6 +223,13 @@ jobs:
 به جای `my-project-name` باید نام پروژۀ خود را قرار دهید.
 
 :::
+
+##### 404.html Hack
+
+زمانی که از GitHub Pages برای استقرار سایت استفاده می‌کنیم،
+اگر به‌صورت دستی آدرس یکی از صفحات را در مرورگر وارد کنیم،
+صفحۀ 404 نمایش داده می‌شود و از Routing خودِ Angular استفاده نمی‌کند.
+برای حل این مشکل یک کپی از `index.html` می‌گیریم و نام آن را `404` می‌گذاریم.
 
 ##### Upload Build
 
