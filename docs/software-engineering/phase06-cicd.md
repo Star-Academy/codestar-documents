@@ -371,10 +371,8 @@ jobs:
 مشاهده کنید.
 
 :::tip ‌
-
 برای مطالعه بیشتر [Intro to GitHub Actions for .NET](https://devblogs.microsoft.com/dotnet/dotnet-loves-github-actions/)
 را مطالعه کنید.
-
 :::
 
 ## ساخت یک Console App برای پروژه سرچ
