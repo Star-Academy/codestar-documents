@@ -15,7 +15,6 @@ description: ''
 و اهمیت آن لینک‌های زیر را مطالعه کنید.
 
 -   [What is CI/CD?(redhat)](https://www.redhat.com/en/topics/devops/what-is-ci-cd)
--   [What is CI/CD?](https://medium.com/tilicholabs/what-is-ci-cd-c7c047b80e6b)
 -   [What’s the Point of CI Anyway?](https://medium.com/swlh/whats-the-point-of-ci-anyway-ac3f9eaa244c)
 -   [The Journey to CI/CD](https://medium.com/driven-by-code/the-journey-to-ci-cd-b1872927c36b)
 
