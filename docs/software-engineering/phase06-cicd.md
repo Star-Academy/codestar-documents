@@ -31,7 +31,7 @@ description: ''
 می‌گنجد را به Repository
 خود اضافه کنیم. این بخش شامل مراحل زیر است:
 
-1. فایل `.github/workflows/buildPipeline.yml`
+1. فایل `github/workflows/buildPipeline.yml.`
    را در Repository
    خود می‌سازیم.
 
