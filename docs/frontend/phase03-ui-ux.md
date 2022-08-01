@@ -78,6 +78,15 @@ UX یا User Experience به معنای تجربۀ کاربری، مربوط ب�
 سپس با استفاده از Color Wheel در وسط صفحه، رنگ اصلی را انتخاب کنید.
 مشاهده خواهید کرد که ادوبی، باقی رنگ‌ها را به طور خودکار در اختیار شما قرار می‌دهد.
 
+همچنین از ابزارهای زیر برای ساخت قالب رنگی می‌توانید استفاده کنید:
+
+-   [Coolors](https://coolors.co/)
+-   [Canva - Colors](https://www.canva.com/colors/)
+-   [Flat UI Colors 2](https://flatuicolors.com/)
+-   [Colorsinspo](https://colorsinspo.com/)
+-   [uiGradients](https://uigradients.com/)
+-   [Flatuicolorpicker](https://www.flatuicolorpicker.com/)
+
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
 -   [The Know It All Guide To Color Psychology In Marketing + The Best Hex Chart](https://coschedule.com/blog/color-psychology-marketing)
