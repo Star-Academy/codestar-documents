@@ -1,6 +1,6 @@
 ---
 title: CSS & Sass
-description: No! Half of the taste is in the smell! You're sucking up all the taste units!
+description: He paints quite a picture, doesn't he?
 tags: [Readonly]
 ---
 
