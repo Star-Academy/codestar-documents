@@ -661,20 +661,22 @@ POST people-simple2/_analyze
     هشدار لوث‌سازی
     (Spoiler Alert)
     </summary>
-`اگر بخواهیم زیررشته‌ی عبارات را جستجو کنیم می‌توانیم از این Analyzer
-استفاده کنیم مثلاً اگر عبارت «محمد» را جستجو کنیم و بخواهیم سندی که عبارت «محمدی» دارد نیز در نتایج ظاهر شود.`
+اگر بخواهیم زیررشته‌ی عبارات را جستجو کنیم می‌توانیم از این Analyzer
+استفاده کنیم مثلاً اگر عبارت «محمد» را جستجو کنیم و بخواهیم سندی که عبارت «محمدی» دارد نیز در نتایج ظاهر شود.
 </details>
 
+:::tip ‌
 برای آشنایی با انواع مختلف Tokenizerها
 و Token Filterها
-می‌توانید از لینک زیر استفاده کنید:
+می‌توانید از
+[این لینک](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis.html)
+استفاده کنید.
+:::
 
-[https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis.html)
-
-## انجام جستجوی زیررشته
+### انجام جستجوی زیررشته
 
 1. حالا از Analyzer
-ساخته‌شده در قسمت قبل استفاده می‌کنیم:
+    ساخته‌شده در قسمت قبل استفاده می‌کنیم:
 
     ```json
     PUT people-simple2/_mapping
@@ -694,7 +696,7 @@ POST people-simple2/_analyze
     خودمان تعریف کردیم.
 
 1. Query
-زیر را اجرا کنید و نتیجه را ببینید:
+    زیر را اجرا کنید و نتیجه را ببینید:
 
     ```json
     GET people-simple2/_search
@@ -752,7 +754,7 @@ PUT people-simple3
 }
 ```
 
-## Typeهای دیگر
+### Typeهای دیگر
 
 علاوه بر جنس text
 می‌توان Fieldها
@@ -769,19 +771,20 @@ PUT people-simple3
 می‌توانید انواع مختلف داده در Elasticsearch
 را مشاهده کنید و درباره‌ی آن‌ها اطلاعات بیش‌تری کسب کنید.
 
-راهنمایی:
+:::tip ‌
 مشخصه‌های latitude
 و longitude
 در داده‌های نمونه به طور جداگانه آورده شده‌اند که برای ریخته شدن در Elasticsearch
 باید به یک Field
 تبدیل شوند که این کار را به طور دستی و یا با نوشتن یک کد به زبان دلخواه می‌توانید انجام دهید.
-
-راهنمایی 2:
+:::
+:::tip ‌
 داده‌های از جنس تاریخ و زمان ممکن است در فرمت‌های مختلفی باشند لذا در هنگام تعریف Mapping
 علاوه بر تعریف type،
 فرمت متناسب با داده‌های نمونه را منظور کنید.
+:::
 
-## آشنایی با Bulk API
+### آشنایی با Bulk API
 
 اگر بخواهید تعداد زیادی سند در Elasticsearch
 بارگذاری کنید این که برای هر کدام یک بار Query
@@ -794,11 +797,12 @@ PUT people-simple3
 را به طور یک‌جا در Elasticsearch
 بریزید.
 
-راهنمایی:
+:::tip ‌
 برای ساختن Bulk Query
 نیاز دارید تا تغییراتی را در فایل داده شده اعمال کنید که به دلیل تعداد زیاد سندها به طور دستی امکان‌پذیر نیست که می‌توانید برای آن به زبان دلخواه کد بزنید.
+:::
 
-## Aggregations
+### Aggregations
 
 از هر کدام از شاعرها چند بیت در داده‌های بارگذاری شده در قسمت قبل وجود دارد؟
 
@@ -820,11 +824,13 @@ GET poems/_search
 }
 ```
 
+:::tip ‌
 Queryهای
 Aggregation
 در Elasticsearch
-خود دنیایی دارد که بیان همه‌ی انواع آن در این مقال نمی‌گنجد. برای آشنایی می‌توانید به [Aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)
+خود دنیایی دارد که بیان همه‌ی انواع آن در این مستند نمی‌گنجد. برای آشنایی می‌توانید به [Aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)
 مراجعه کنید.
+:::
 
 ## پینوشت
 
