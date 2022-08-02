@@ -240,6 +240,11 @@ ADS
 داده‌ها را مانند شکل زیر به صورت جدول در
 Results Tab
 نمایش می‌دهد.
+
+
+در هر دو صورت خروجی به شکل زیر خواهد بود:
+![ADSSelect](./images/phase07-ADS-select.png)
+
 با استفاده از
 Operatorها در عبارتی که با
 Where
@@ -261,8 +266,6 @@ FROM Student
 WHERE IsMale = true AND Grade BETWEEN 10 AND 15;
 ```
 
-در هر دو صورت خروجی به شکل زیر خواهد بود:
-![ADSSelect](./images/phase07-ADS-select.png)
 
 در جدول زیر
 Operatorهای موجود را مشاهده می‌کنید. همچنین مانند مثال بالا می‌توانید تعدادی از
