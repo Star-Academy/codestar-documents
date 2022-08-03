@@ -66,7 +66,7 @@ Logstash
 با افزودن تعداد سرورها می‌توانید مقادیر بیش‌تری داده در Elasticsearch
 بریزید و کماکان سرعت بالای index
 کردن و جستجو حفظ شود.
- 
+
 :::tip ‌
 توضیحات بیش‌تر را در [Scalability and resilience: clusters, nodes, and shards](https://www.elastic.co/guide/en/elasticsearch/reference/current/scalability.html)
 مطالعه کنید.
