@@ -266,6 +266,9 @@ FROM Student
 WHERE IsMale = true AND Grade BETWEEN 10 AND 15;
 ```
 
+در هر دو صورت داریم:
+
+![ADSWhere](./images/phase07-SQL-where.png)
 
 در جدول زیر
 Operatorهای موجود را مشاهده می‌کنید. همچنین مانند مثال بالا می‌توانید تعدادی از
