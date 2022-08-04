@@ -49,7 +49,7 @@ ORM
 
 بجای پکیج  Microsoft.EntityFrameworkCore.Sqlite  پکیج Npgsql.EntityFrameworkCore.PostgreSQL نصب شود.
 
-همچنین برای آشنایی با connction string، [Standard Connection String](https://www.connectionstrings.com/npgsql/standard) را مطالعه کنید.
+همچنین برای آشنایی با connction string لینک [Standard Connection String](https://www.connectionstrings.com/npgsql/standard) را مطالعه کنید.
 
 ### Linq
 
