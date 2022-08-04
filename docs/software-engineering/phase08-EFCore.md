@@ -49,7 +49,8 @@ ORM
 
 بجای پکیج  Microsoft.EntityFrameworkCore.Sqlite  پکیج Npgsql.EntityFrameworkCore.PostgreSQL نصب کنید
 
-همچنین برای ایجاد connction string از لینک [Standard Connection String](https://www.connectionstrings.com/npgsql/standard)  استفاده کنید.
+همچنین برای ایجاد connction string از لینک [Standard Connection String](https://www.connectionstrings.com/npgsql/standard)
+استفاده کنید.
 
 ### Linq
 
