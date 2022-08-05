@@ -369,15 +369,41 @@ npm install -D stylelint stylelint-config-standard-scss stylelint-config-prettie
                     "aspect-ratio",
                     "resize",
                     "object-fit",
-                    "object-position",
-                    "scroll-behavior"
+                    "object-position"
                 ]
             },
             {
                 "groupName": "scroll",
                 "emptyLineBefore": "always",
                 "noEmptyLineBetween": true,
-                "properties": ["scroll-behavior"]
+                "properties": [
+                   "scroll-behavior",
+                   "scroll-snap-align",
+                   "scroll-snap-type",
+                   "scroll-snap-stop",
+                   "scroll-padding",
+                   "scroll-padding-top",
+                   "scroll-padding-right",
+                   "scroll-padding-bottom",
+                   "scroll-padding-left",
+                   "scroll-padding-inline",
+                   "scroll-padding-inline-start",
+                   "scroll-padding-inline-end",
+                   "scroll-padding-block",
+                   "scroll-padding-block-start",
+                   "scroll-padding-block-end",
+                   "scroll-margin",
+                   "scroll-margin-top",
+                   "scroll-margin-right",
+                   "scroll-margin-bottom",
+                   "scroll-margin-left",
+                   "scroll-margin-inline",
+                   "scroll-margin-inline-start",
+                   "scroll-margin-inline-end",
+                   "scroll-margin-block",
+                   "scroll-margin-block-start",
+                   "scroll-margin-block-end"
+                ]
             },
             {
                 "groupName": "box-model",
