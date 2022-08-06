@@ -31,7 +31,7 @@ ORM
 وجود دارد یکی با استفاده از Code first
 و دیگری Database first.
 
-![](./images/phase08-ef-core-dev-approaces.png)
+![EFCore Dev Approaces](./images/phase08-ef-core-dev-approaces.png)
 
 ### Database first
 
