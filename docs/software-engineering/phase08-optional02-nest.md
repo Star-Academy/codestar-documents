@@ -22,7 +22,7 @@ description: ''
 با استفاده از کلاس [HttpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=netcore-3.1)
 به Elasticsearch
 متصل شوید و ضمن ساخت یک index
-[این اشخاص](/datasets/Phase09-Elasticsearch/people.json)
+[این اشخاص](/datasets/people.json)
 را به صورت یکی یکی (بدون استفاده از Bulk API)
 در آن بارگذاری کنید.
 
