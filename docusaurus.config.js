@@ -88,6 +88,11 @@ const config = {
                         label: 'عمومی',
                     },
                     {
+                        href: 'https://www.aparat.com/Code_star/',
+                        label: 'Aparat',
+                        position: 'right',
+                    },
+                    {
                         href: 'https://github.com/Star-Academy/',
                         label: 'GitHub',
                         position: 'right',
@@ -124,6 +129,10 @@ const config = {
                             {
                                 label: 'GitHub',
                                 href: 'https://github.com/Star-Academy/',
+                            },
+                            {
+                                label: 'Aparat',
+                                href: 'https://www.aparat.com/Code_star/',
                             },
                         ],
                     },

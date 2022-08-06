@@ -37,6 +37,13 @@
     min-height: 100vh !important;
 }
 
+.navbar__item.navbar__link {
+    display: flex;
+    align-items: baseline;
+
+    line-height: 1;
+}
+
 section[class^="row list_"] {
     direction: rtl;
 }
