@@ -261,7 +261,7 @@ Postman
 بنویسید که نتایج جستجو را در جواب API
 برگرداند.
 
-## پینوشت
+## پی‌نوشت
 
 جهت آشنایی با ASP.NET Core Web API
 می‌توانید از ویدئوهای آموزشی [Web APIs for Beginners](https://www.youtube.com/watch?list=PLdo4fOcmZ0oVjOKgzsWqdFVvzGL2_d72v&v=h0KG8OKKgKs)
