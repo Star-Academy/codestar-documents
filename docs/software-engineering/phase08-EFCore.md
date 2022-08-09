@@ -43,8 +43,14 @@ ORM
 در این روش بر خلاف روش قبلی ابتدا مدل‌ها که همان کلاس‌های اشیاء ما هستند ایجاد می‌شوند. خوبی این روش این است که اگر نیاز به تغییر دیتابیس باشد تنها با تغییری جزئی کانفیگ می‌توان پایگاه‌داده را تغییر داد.
 
 برای درک بهتر Code first
-بهتر است در ابتدا یک پروژه ساده را پیاده‌سازی کنید. از این رو سعی کنید پروژه [First EF Core Console Application](https://www.entityframeworktutorial.net/efcore/entity-framework-core-console-application.aspx)
+بهتر است در ابتدا یک پروژه ساده را پیاده‌سازی کنید. از این رو سعی کنید پروژه [First EF Core Console Application](https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli)
 را اجرا کنید.
+
+
+بجای پکیج  Microsoft.EntityFrameworkCore.Sqlite  پکیج Npgsql.EntityFrameworkCore.PostgreSQL نصب کنید.
+
+همچنین برای ایجاد connction string از لینک [Standard Connection String](https://www.connectionstrings.com/npgsql/standard)
+استفاده کنید.
 
 ### Linq
 
