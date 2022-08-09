@@ -21,7 +21,7 @@ EntityFrameworkwork Core
 ## ORM
 
 ORM
-مخفف Object Reletional Mapping
+مخفف Object Relational Mapping
 است که مترجم میان زبان‌های برنامه‌نویسی و پایگاه‌داده است و می‌تواند یک کد را به زبان‌های مختلف تبدیل کند. برای مطالعه بیشتر درباره این موضوع [What is ORM? Object-Relational Mapping Explained](https://www.ictshore.com/software-design/what-is-orm/)
 را مطالعه کنید.
 
