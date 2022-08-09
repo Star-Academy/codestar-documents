@@ -46,11 +46,15 @@ ORM
 بهتر است در ابتدا یک پروژه ساده را پیاده‌سازی کنید. از این رو سعی کنید پروژه [First EF Core Console Application](https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli)
 را اجرا کنید.
 
-
-بجای پکیج  Microsoft.EntityFrameworkCore.Sqlite  پکیج Npgsql.EntityFrameworkCore.PostgreSQL نصب کنید.
-
-همچنین برای ایجاد connction string از لینک [Standard Connection String](https://www.connectionstrings.com/npgsql/standard)
+:::note ‌ 
+بجای پکیج Microsoft.EntityFrameworkCore.Sqlite
+پکیج Npgsql.EntityFrameworkCore.PostgreSQL نصب کنید.
+:::
+:::tip ‌
+برای ایجاد connction string
+می‌توانید از [Standard Connection String](https://www.connectionstrings.com/npgsql/standard)
 استفاده کنید.
+:::
 
 ### Linq
 
