@@ -13,7 +13,7 @@ description: ''
 
 ## EFCore چیست؟
 
-EntityFrameworkwork Core
+EntityFramework Core
 یک ORM
 چند سکویی است که به ما این فرصت را می‌دهد با یک بار نوشتن یک کد آن را بر روی پایگاه‌داده‌های مختلف اجرا کنیم. EFCore
 کاملا متن‌باز و در حال گسترش نیز می‌باشد.
