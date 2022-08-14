@@ -21,7 +21,7 @@ DBMS
 آن‌ها،
 DBMS
 های رابطه‌ای یا همان
-RDBMS (Relaional Database Management System)ها هستند. در این
+RDBMS (Relational Database Management System)ها هستند. در این
 DBMSها داده‌ها به صورت سازمانمند در جداول ذخیره می‌شوند و مقادیر موجود در هر جدول با یکدیگر ارتباط دارند. به همین خاطر به آن رابطه‌ای با
 relational
 گفته می‌شود.
