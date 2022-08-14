@@ -291,7 +291,7 @@ OR
 پس از ساختن جدول، با دستورات زیر می‌توانیم ستون‌های آن را ویرایش کنیم.
 
 ```sql
-ALTER TABLE tableName ADD column1 datatype, column2datatype, ...;
+ALTER TABLE tableName ADD column1 datatype, column2 datatype, ...;
 ALTER TABLE tableName DROP COLUMN column1, column2, ...;
 ALTER TABLE tableName ALTER COLUMN column1 datatype,column2 datatype, ...;
 ```
