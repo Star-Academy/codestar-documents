@@ -49,7 +49,7 @@ name: build
 1. مشخص می‌کنیم که Pipeline
    در هنگام push
    و pull request
-   روی(یا به طور مشابه main) master
+   روی (main)master
    اجرا شود:
 
 ```yml
