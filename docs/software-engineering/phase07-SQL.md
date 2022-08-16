@@ -21,7 +21,7 @@ DBMS
 آن‌ها،
 DBMS
 های رابطه‌ای یا همان
-RDBMS (Relaional Database Management System)ها هستند. در این
+RDBMS (Relational Database Management System)ها هستند. در این
 DBMSها داده‌ها به صورت سازمانمند در جداول ذخیره می‌شوند و مقادیر موجود در هر جدول با یکدیگر ارتباط دارند. به همین خاطر به آن رابطه‌ای با
 relational
 گفته می‌شود.
@@ -208,7 +208,7 @@ INSERT into Student values
     'علی',
     'احمدی',
     true,
-    '1/22/2001',
+    to_date('1/22/2001','MM/DD/YYYY'),
     92
 );
 ```
@@ -291,7 +291,7 @@ OR
 پس از ساختن جدول، با دستورات زیر می‌توانیم ستون‌های آن را ویرایش کنیم.
 
 ```sql
-ALTER TABLE tableName ADD column1 datatype, column2datatype, ...;
+ALTER TABLE tableName ADD column1 datatype, column2 datatype, ...;
 ALTER TABLE tableName DROP COLUMN column1, column2, ...;
 ALTER TABLE tableName ALTER COLUMN column1 datatype,column2 datatype, ...;
 ```
@@ -326,7 +326,7 @@ Primary Key
 
 ```sql
 ALTER TABLE tableName
-ADD CONSTRAINT constraintName PRIMARY KEY (columncolumn_2, ..., column_n);
+ADD CONSTRAINT constraintName PRIMARY KEY (column_1, column_2, ..., column_n);
 ```
 
 برای مثال جدول Student موجود را به این صورت تغییر می‌دهیم :
