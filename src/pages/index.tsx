@@ -28,6 +28,9 @@ export default function Home(): JSX.Element {
                         <Link className="button button--secondary button--lg" to="/docs/general">
                             عمومی
                         </Link>
+                        <Link className="button button--secondary button--lg" to="/docs/project">
+                            پروژه
+                        </Link>
                     </div>
                 </div>
             </header>

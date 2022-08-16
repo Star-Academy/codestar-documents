@@ -88,6 +88,12 @@ const config = {
                         label: 'عمومی',
                     },
                     {
+                        type: 'doc',
+                        docId: 'project',
+                        position: 'left',
+                        label: 'پروژه',
+                    },
+                    {
                         href: 'https://www.aparat.com/Code_star/',
                         label: 'Aparat',
                         position: 'right',
@@ -120,6 +126,10 @@ const config = {
                             {
                                 label: 'عمومی',
                                 to: '/docs/general',
+                            },
+                            {
+                                label: 'پروژه',
+                                to: '/docs/project',
                             },
                         ],
                     },
