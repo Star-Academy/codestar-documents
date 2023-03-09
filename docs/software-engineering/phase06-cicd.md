@@ -174,7 +174,7 @@ description: ''
     با اکانت GitHub
     خود در سایت [codecov.io](https://codecov.io)
     وارد شوید. سپس به آدرس `https://codecov.io/gh/Star-Academy/<your-repository-name>`
-    بروید.
+    بروید. سپس مراحل ذکر شده در این صفحه که راهنمای اضافه کردن coverage به صفحه گیتهاب است را به ترتیب طی کنید. سپس از وضعیت code coverage خود یک خروجی Xml بگیرید.(اگر از rider استفاده میکنید، به تب Unit Test Coverage بروید و Export Test Coverage و سپس Export to Detailed Xml را انتخاب کنید و آدرس مد نظرتان برای ذخیره فایل را مشخص کنید. دقت کنید برخی فرمت های دیگر موجود برای استخراج فایل مثل Export to Xml توسط سایت codecov شناسایی نشده و درصد coverage آن 0 نمایش داده میشود.)  
 
     1. بخش زیر را به فایل `buildPipeline.yml`
       اضافه کنید:
@@ -184,7 +184,8 @@ description: ''
           uses: codecov/codecov-action@v1
           with:
               token: ${{ secrets.CODECOV_TOKEN }}
-              files: ./**/coverage.cobertura.xml
+              files: <path to coverage file that you've specified at the previous part>
+              #note that /home/runner/work/<your repository name>/<your repository name> is the root of your project
               fail_ci_if_error: true
         ```
 
