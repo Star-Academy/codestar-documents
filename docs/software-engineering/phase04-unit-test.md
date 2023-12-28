@@ -75,7 +75,7 @@ Visual Studio
 
 :::tip ‌
 پیشنهاد می‌کنیم برای مطالعه بیشتر درباره تست‌نویسی در #C
-مقالۀ [Writing Unit Tests with xUnit, NSubstitute and FluentAssertions](https://www.daniildoronkin.net/writing-unit-tests-with-xunit-nsubstitute-and-fluentassertions)
+مقالۀ [Writing Unit Tests with xUnit, NSubstitute and FluentAssertions](https://devofthings.hashnode.dev/writing-unit-tests-with-xunit-nsubstitute-and-fluentassertions)
 را مطالعه کنید.
 :::
 
