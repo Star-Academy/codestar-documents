@@ -31,6 +31,9 @@ export default function Home(): JSX.Element {
                         <Link className="button button--secondary button--lg" to="/docs/project">
                             پروژه
                         </Link>
+                        <Link className="button button--secondary button--lg" to="/docs/roadmaps">
+                            مسیرهای یادگیری
+                        </Link>
                     </div>
                 </div>
             </header>

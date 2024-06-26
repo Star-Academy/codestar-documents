@@ -94,6 +94,12 @@ const config = {
                         label: 'پروژه',
                     },
                     {
+                        type: 'doc',
+                        docId: 'Roadmaps',
+                        position: 'left',
+                        label: 'مسیرهای یادگیری',
+                    },
+                    {
                         href: 'https://www.aparat.com/Code_star/',
                         label: 'Aparat',
                         position: 'right',
@@ -130,6 +136,10 @@ const config = {
                             {
                                 label: 'پروژه',
                                 to: '/docs/project',
+                            },
+                            {
+                                label: 'مسیرهای یادگیری',
+                                to: '/docs/roadmaps',
                             },
                         ],
                     },
