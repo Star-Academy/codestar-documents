@@ -60,6 +60,14 @@ description: ''
 برای مطالعه بیشتر می‌توانید[A Solid Guide to SOLID Principles](https://www.baeldung.com/solid-principles)
 را مطالعه کنید.
 :::
+:::tip‌
+برای آشنایی بهتر می‌توانید این ارائه از
+Uncle Bob
+را نیز تماشا کنید:
+[SOLID Principles of Object Oriented & Agile Design](https://youtu.be/QHnLmvDxGTY?si=HhVmcWG-5uoj_wLP)
+:::
+
+
 
 ## Refactoring Techniques
 
