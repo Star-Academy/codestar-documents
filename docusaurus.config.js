@@ -83,6 +83,12 @@ const config = {
                     },
                     {
                         type: 'doc',
+                        docId: 'devops',
+                        position: 'left',
+                        label: 'دوآپس',
+                    },
+                    {
+                        type: 'doc',
                         docId: 'general',
                         position: 'left',
                         label: 'عمومی',
