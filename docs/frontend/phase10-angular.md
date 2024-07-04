@@ -45,7 +45,7 @@ Angular از مفاهیم و ابزارهای متعددی تشکیل شده ک�
 
 ###  پیش‌نیازها
 -  [نصب node.js](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs) 
-- [Everything you need to know about node.js](https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/)
+- [همه چیز درباره node.js](https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/)
 - [پکیچ منیجر های دیگر](https://romanglushach.medium.com/comparing-npm-yarn-and-pnpm-package-managers-which-one-is-right-for-your-distributed-project-to-4d7de2f0db8e)
 - [نصب و راه اندازی Angular](https://v17.angular.io/guide/setup-local)
 - [ساختار پروژه](https://dev.to/tomwebwalker/angular-starting-files-explanation-for-beginners-15cp)
