@@ -8,7 +8,11 @@ description: No! Half of the taste is in the smell! You're sucking up all the ta
 TypeScript یک زبان برنامه‌نویسی است که بر روی جاوااسکریپت بنا شده
 و ویژگی‌های تایپ‌دهی ایستا (Static Typing) و تایپ‌های صریح (Explicit Types) را به آن اضافه می‌کند. این قابلیت‌ها به برنامه‌نویسان کمک می‌کند تا کدهای خود را خواناتر و قابل‌اعتمادتر بنویسند.
   
--   انواع تایپ‌ها در TypeScript  چیست؟
+-   انواع تایپ‌ها در TypeScript  کدام‌اند؟
+-   interface در TypeScript  چه فایده‌ای دارند؟
+-   Type Aliases در TypeScript  چه مزیتی دارند؟
+-   Generics در TypeScript  چیست؟
+-   Decorator در TypeScript چه کاری برای ما انجام می‌دهند؟
 
 ---
 
