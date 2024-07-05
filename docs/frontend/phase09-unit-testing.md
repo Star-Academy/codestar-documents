@@ -1,5 +1,5 @@
 ---
-title: Unit Testing
+title: Test
 description: No! Half of the taste is in the smell! You're sucking up all the taste units!
 ---
 
@@ -45,15 +45,87 @@ description: No! Half of the taste is in the smell! You're sucking up all the ta
 به‌عنوان مثال ممکن است شما قسمت فرانت‌اند یک پروژه را توسعه دهید و برنامه‌نویس دیگری قسمت بک‌اند آن را نوشته باشد.
 برای اطمینان از یکپارچگی قسمت‌های مختلف و تعامل مناسب آن‌ها با یکدیگر از Integration Testing استفاده می‌کنیم.
 
+Integration Testing نه تنها به ادغام قسمت‌های فرانت‌اند و بک‌اند از یک پروژه اشاره دارد، بلکه به ادغام اجزای مختلفی که توسط تیم‌های مختلف توسعه داده شده‌اند،
+اشاره می‌کند. به عنوان مثال، ممکن است یک برنامه‌نویس قسمت احراز هویت را توسعه دهد، در حالی که برنامه‌نویس دیگری قسمت پرداخت را توسعه می‌دهد
+و این تست به اطمینان از اینکه هر دو قسمت با یکدیگر درست کار می‌کنند، می‌پردازد.
+
 #### Unit Testing
 
 همان‌طور که از اسم آن مشخص است، در Unit Testing به تست‌کردن کوچک‌ترین اجزاء یک برنامه یعنی توابع، کلاس‌ها و متغیرها می‌پردازیم.
 در این روش معمولاً به ظاهر سایت یا تجربۀ کاربر توجه نمی‌کنیم و صرفاً کارکرد صحیح Unitها را مورد بررسی قرار می‌دهیم.
-در ادامه به نحوۀ نوشتن Unit Test در Angular می‌پردازیم.
+
+#### Performance Testing
+
+تست کارایی (Performance Testing) نوعی از تست نرم‌افزار است که با هدف ارزیابی سرعت، پاسخ‌دهی و پایداری یک سیستم تحت بار مشخص انجام می‌شود.
+این تست به شناسایی گلوگاه‌ها و مشکلات کارایی سیستم کمک می‌کند. در تست کارایی، معیارهایی مانند زمان پاسخ‌دهی، توان عملیاتی، و استفاده از منابع بررسی می‌شوند
+تا اطمینان حاصل شود که سیستم تحت بارهای مختلف به خوبی عمل می‌کند و کارایی مورد انتظار را دارد.
+
+#### User Acceptance Testing (UAT)
+
+تست پذیرش کاربر آخرین مرحله از فرآیند تست نرم‌افزار است که توسط خود کاربران یا نهادهای مشتری انجام می‌شود.
+هدف اصلی این تست، اطمینان حاصل کردن از اینکه سیستم یا نرم‌افزار، نیازهای کاربران را به درستی برآورده می‌کند و به صورت مطلوب برای آن‌ها کار می‌کند. تست پذیرش کاربر بر اساس معیارهای مشخصی که از سوی کاربران یا مشتریان تعیین شده‌اند، انجام می‌شود.
+این تست شامل اجرای سناریوهای واقعی که کاربران در استفاده روزمره از سیستم دارند، می‌شود تا اطمینان حاصل شود که نرم‌افزار طراحی شده به درستی کار می‌کند و تمامی نیازهای کاربران پاسخ داده می‌شود.
 
 ---
 
-### Unit Testing in Angular
+### Testing in Angular
+
+#### End-to-End Testing in Angular
+
+ما برای پیاده‌سازی تست‌های E2E از ابزار Cypress استفاده می‌کنیم. با استفاده از این ابزار به راحتی می‌توان رفتار کاربر واقعی را با استفاده از کد شبیه سازی کرد و آن را با اجرای تست‌ها به صورت دستی جایگزین کرد.
+
+برای نصب و راه‌اندازی Cypress در  Angular، ابتدا Cypress را به عنوان dev dependency به پروژه Angular خود اضافه کنید. برای این کار، از دستور زیر در ترمینال استفاده کنید:
+
+```shell
+npm install cypress --save-dev
+```
+
+بعد از نصب، Cypress را به پروژه اضافه کنید. برای این کار، به فایل angular.json پروژه Angular خود رفته و به بخش architect > e2e > options یک ورودی به نام cypress اضافه کنید:
+
+```shell
+{
+  "architect": {
+    "e2e": {
+      "builder": "@angular-builders/custom-webpack:browser",
+      "options": {
+        "cypress": {
+          "project": "./cypress/e2e"
+        },
+      }
+    }
+  }
+}
+```
+
+برای آسانی در اجرای تست‌ها، دستور اجرای Cypress را به فایل package.json پروژه اضافه کنید. از دستور زیر در ترمینال استفاده کنید:
+
+```shell
+"scripts": {
+  "cypress": "cypress open"
+}
+```
+
+حالا می‌توانید Cypress را با اجرای دستور زیر از طریق ترمینال باز کنید:
+
+```shell
+npm run cypress
+```
+
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
+
+- [Cypress - Cypress Docs](https://docs.cypress.io/)
+- [Testing Angular - Principles of Testing with Cypress](https://testing-angular.com/introduction/)
+
+#### Integration Testing in Angular
+
+Integration Testing در Angular به شما امکان می‌دهد تا صحت و تعامل بین اجزا و ماژول‌های مختلف برنامه‌ را ارزیابی کنید. یکی از ابزارهای محبوب مورد استفاده برای این کار Testing library است که برای تست‌هایی که اجزا و تعاملات آن‌ها با یکدیگر مهم هستند، بسیار مناسب است. با استفاده از Testing Library می‌توانید عملکرد درست ادغام اجزا را تأیید کنید و مطمئن شوید که برنامه‌ی شما به درستی کار می‌کند.
+
+برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
+
+- [Testing Library - Testing Library Docs](https://testing-library.com/docs/angular-testing-library/intro/)
+- [Tim Deschryver - Get Started with Testing Library](https://timdeschryver.dev/blog/good-testing-practices-with-angular-testing-library)
+
+#### Unit Testing in Angular
 
 خوشبختانه Angular به‌صورت پیش‌فرض از Unit Testing پشتیبانی می‌کند.
 در Angular می‌توانید با استفاده از ابزارهای Karma و Jasmine به نوشتن تست بپردازید.
@@ -96,9 +168,23 @@ ng test
 در چنین مواقعی از Mocking استفاده می‌کنیم؛
 به‌طوری که یک کلاس یا شیء غیرواقعی می‌سازیم و آن را جای کلاس یا شیء اصلی جا می‌زنیم.
 
+در تست نویسی بیشترین حجم از Mocking در Unit Testing انجام می‌شود و هر چه به سمت تست‌های بزرگتر مانند Integration Testing می‌رویم از حجم Mocking کاسته می‌شود و  از پیاده‌سازی‌های واقعی استفاده می‌شود تا اینکه در E2E Testing فرایند Mocking کاملا حذف می‌شود.
+
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک زیر استفاده کنید:
 
 -   [Medium - TIL: Mocking localStorage and sessionStorage in Angular Unit Tests](https://armno.medium.com/til-mocking-localstorage-and-sessionstorage-in-angular-unit-tests-a765abdc9d87)
+
+#### Mocking in Angular
+
+در Angular فزایند Moking شامل component، service، directive و ... می‌شود که برای اطلاعات بیشتر درباره آن می‌توانید از لینک‌های زیر استفاده کنید:
+
+-   [Jasmine - Spies](https://jasmine.github.io/api/5.1/Spy)
+-   [ngMock - Mocking Services](https://ng-mocks.sudo.eu/api/MockService)
+-   [ngMock - Mocking Directives](https://ng-mocks.sudo.eu/api/MockDirective)
+-   [ngMock - Mocking Components](https://ng-mocks.sudo.eu/api/MockComponent)
+-   [Daniel Cornock -Component Stub](https://www.danielcornock.co.uk/articles/angular-testing-3-stubbing-child-components)
+-   [Testing Angular - Faking Dependencies](https://testing-angular.com/faking-dependencies/#faking-dependencies)
+-   [Testing Angular - Testing Component With Children](https://testing-angular.com/testing-components-with-children/)
 
 ---
 
