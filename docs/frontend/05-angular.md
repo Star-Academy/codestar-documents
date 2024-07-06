@@ -237,3 +237,7 @@ decoratorهای اصلی Angular عبارتند از:
 ```
 
 در این مثال، وقتی کاربر بر روی دکمه کلیک می‌کند، متد `handleClick()` کامپوننت فراخوانی می‌شود.
+
+### Two way binding
+
+- [Demystifying Angular Two Way Binding](https://www.youtube.com/watch?v=vkmwbZV-ob8)
