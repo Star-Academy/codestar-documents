@@ -181,6 +181,57 @@ export class UserComponent implements OnInit {
 3. **تزریق سرویس در کامپوننت**: در کلاس `UserComponent` سرویس `UserService` در constructor تزریق می‌شود.
 4. **استفاده از سرویس**: در متد `ngOnInit`، متد `getUsers` سرویس فراخوانی می‌شود تا لیست کاربران دریافت شود. همچنین، متد `addUser` برای افزودن کاربر جدید به لیست استفاده می‌شود.
 
+## pipe
+پایپ (Pipe) در Angular یک ویژگی است که برای تبدیل داده‌ها قبل از نمایش در قالب نهایی استفاده می‌شود. این کاربرد اصلی آن است که اطلاعات را به یک فرمت مشخص یا به صورتی خاصی نمایش دهد، مثلا تبدیل یک تاریخ به فرمت خاص، نمایش مقادیر اعشاری به تعداد معین اعشار، تبدیل متن به حروف بزرگ یا کوچک و غیره.
+
+برای استفاده از پایپ در Angular، ابتدا باید پایپ مورد نظر را ایجاد کنید یا از پایپ‌های تعریف شده پیش فرض استفاده کنید. سپس آن را در قالب مورد نظرتان به صورت خاصی اعمال می‌کنید.
+
+**مثال:**
+
+اگر بخواهیم یک تاریخ را به فرمت تاریخ شمسی تبدیل کنیم، از پایپ `DatePipe` استفاده می‌کنیم:
+
+```html
+<p>تاریخ امروز: {{ today | date:'hh:mm:ss' }}</p>
+```
+
+در این مثال، `today` یک متغیر در کامپوننت Angular است که تاریخ فعلی را نگهداری می‌کند. `date` یک پایپ است که تاریخ را به فرمت "hh:mm:ss" تبدیل می‌کند و نمایش می‌دهد.
+
+پایپ‌ها در Angular به طور گسترده‌ای برای فراهم کردن قابلیت‌های فرمت‌بندی و تغییر شکل داده‌ها استفاده می‌شوند و می‌توانند به آسانی سفارشی‌سازی شوند یا از پایپ‌های پیش‌فرض Angular استفاده شود.
+
+```ts
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'timeFormat'
+})
+export class TimeFormatPipe implements PipeTransform {
+
+  transform(value: Date,format: string): string {
+    if (!value) return '';
+    
+      // Extract hours, minutes, and seconds
+      const hours = this.pad(value.getHours());
+      const minutes = this.pad(value.getMinutes());
+      const seconds = this.pad(value.getSeconds());
+
+    if (format === "hh:mm:ss") {
+      // Return formatted time
+      return `${hours}:${minutes}:${seconds}`;
+    }
+    else if (format === "ss:mm:hh") {
+      return `${seconds}:${minutes}:${hours}`;
+    }
+  }
+
+  private pad(value: number): string {
+    return value.toString().padStart(2, '0');
+  }
+
+}
+
+```
+در این پایپ،‌ متد transform تاریخ را به عنوان ورودی دریافت کرده و به فرمت دریافتی تبدیل کرده و آن را برمی‌گرداند.
+
 ## Decorators
 پیش از آنکه به توضیح بخش‌های اصلی Angular بپردازیم، بهتر است با مفهوم اساسی decorator که به طور گسترده از آن در تعاریف مختلف Angular استفاده می‌شود، آشنا شویم.
 
@@ -241,3 +292,9 @@ decoratorهای اصلی Angular عبارتند از:
 ### Two way binding
 
 - [Demystifying Angular Two Way Binding](https://www.youtube.com/watch?v=vkmwbZV-ob8)
+
+
+### angular routing 
+‌ابزار قدرتمند انگولار برای جابه‌جایی بین صفحات مختلف استفاده می‌شود.
+
+- [مستندات روتینگ انگولار](https://angular.dev/guide/routing/common-router-tasks)
