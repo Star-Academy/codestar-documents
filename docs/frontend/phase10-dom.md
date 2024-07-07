@@ -1,6 +1,6 @@
 ---
 title: DOM
-description: Oh, no wait; I'm sorry; That's "pretty dumb".
+description:  گشتی در پشت پرده وب با DOM! ️ 
 ---
 
 ![UI vs UX](./images/DOM.png)
@@ -19,7 +19,7 @@ description: Oh, no wait; I'm sorry; That's "pretty dumb".
 
 ### آشنایی با DOM
 
-**DOM** یا **Document Object Model** یک **رابط برنامه‌نویسی** (API) است که اجازه دسترسی و تغییر ساختار اسناد HTML را به کاربر می‌دهد. این API توسط مرورگرها و به واسطه یک زبان برنامه‌نویسی مانند جاوااسکریپت در دسترس کاربر قرار می‌گیرد.
+**DOM** یا **Document Object Model** یک **رابط ** است که اجازه دسترسی و تغییر ساختار اسناد HTML را به کاربر می‌دهد. این رابط توسط مرورگرها و به واسطه یک زبان برنامه‌نویسی مانند جاوااسکریپت در دسترس کاربر قرار می‌گیرد.
 
 **ساختار DOM:**
 
