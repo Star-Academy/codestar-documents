@@ -105,8 +105,9 @@ export class HelloWorldComponent {}
 
 ## Dependency injection
 
-// TODO : Poya
+dependency injection یا تزریق وابستگی‌ها یک تکنیک است که یک شئ وابستگی‌های شئ دیگر را تامین (تزریق) می‌کند. که این فرآیند توسط انگولار انجام می‌شود 
 
+- [آشنایی با تزریق وابستگی در انگولار](https://www.youtube.com/watch?v=G8zXugcYd7o&list=PLX7eV3JL9sfmJ6AaZj9eDlAKrJrEul4Vz)
 
 ## Services
 
