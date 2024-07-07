@@ -36,6 +36,7 @@ Http مخفف عبارت Hyper Text Transfer Protocol است
 برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:
 
 -   [?Wiki - What is HTTP](https://en.wikipedia.org/wiki/HTTP)
+
 ---
 
 ### منظور از Hyper Text یا ابرمتن چیست؟
