@@ -158,3 +158,5 @@ export class AppComponent implements OnInit {
 -   [Angular - What is RxJs](https://v17.angular.io/guide/rx-library)
 -   [RxJs - RxJs document](https://v17.angular.io/guide/rx-library)
 -   [RxJs Marbles - RxJs pipes](https://rxmarbles.com/#filter)
+-   [Angular documents - Understanding communicating with backend services using HTTP](https://v17.angular.io/guide/understanding-communicating-with-http)
+-   [Youtube - Angular HTTP Client Quick Start Tutorial](https://www.youtube.com/watch?v=_05v0mrNLh0)
