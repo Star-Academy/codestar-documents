@@ -38,13 +38,13 @@ Angular از مفاهیم و ابزارهای متعددی تشکیل شده ک�
 
 - **تزریق وابستگی (Dependency Injection)**
   تزریغ وابستگی یک design pattern است که در Angular برای مدیریت وابستگی‌ها استفاده می‌شود.
-  
+
 - **روتر (Router)**
   روتر به شما امکان می‌دهد تا بین نماهای مختلف در برنامه جابه‌جا شوید.
 
 
 ###  پیش‌نیازها
--  [نصب node.js](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs) 
+-  [نصب node.js](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
 - [همه چیز درباره node.js](https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/)
 - [پکیچ منیجر های دیگر](https://romanglushach.medium.com/comparing-npm-yarn-and-pnpm-package-managers-which-one-is-right-for-your-distributed-project-to-4d7de2f0db8e)
 - [نصب و راه اندازی Angular](https://v17.angular.io/guide/setup-local)
@@ -81,9 +81,9 @@ ng g c hello-world
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-hello-world',
-  template: '<h1>Hello, World!</h1>',
-  styles: ['h1 { color: blue; }']
+    selector: 'app-hello-world',
+    template: '<h1>Hello, World!</h1>',
+    styles: ['h1 { color: blue; }']
 })
 export class HelloWorldComponent {}
 ```
@@ -105,7 +105,7 @@ export class HelloWorldComponent {}
 
 ## Dependency injection
 
-dependency injection یا تزریق وابستگی‌ها یک تکنیک است که یک شئ وابستگی‌های شئ دیگر را تامین (تزریق) می‌کند. که این فرآیند توسط انگولار انجام می‌شود 
+dependency injection یا تزریق وابستگی‌ها یک تکنیک است که یک شئ وابستگی‌های شئ دیگر را تامین (تزریق) می‌کند. که این فرآیند توسط انگولار انجام می‌شود
 
 - [آشنایی با تزریق وابستگی در انگولار](https://www.youtube.com/watch?v=G8zXugcYd7o&list=PLX7eV3JL9sfmJ6AaZj9eDlAKrJrEul4Vz)
 
@@ -121,20 +121,20 @@ dependency injection یا تزریق وابستگی‌ها یک تکنیک اس�
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class UserService {
-  private users = ['Alice', 'Bob', 'Charlie'];
+    private users = ['Alice', 'Bob', 'Charlie'];
 
-  constructor() {}
+    constructor() {}
 
-  getUsers() {
-    return this.users;
-  }
+    getUsers() {
+        return this.users;
+    }
 
-  addUser(user: string) {
-    this.users.push(user);
-  }
+    addUser(user: string) {
+        this.users.push(user);
+    }
 }
 ```
 
@@ -147,8 +147,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from './user.service';
 
 @Component({
-  selector: 'app-user',
-  template: `
+    selector: 'app-user',
+    template: `
     <div>
       <ul>
         <li *ngFor="let user of users">{{ user }}</li>
@@ -159,19 +159,19 @@ import { UserService } from './user.service';
   `,
 })
 export class UserComponent implements OnInit {
-  users: string[] = [];
-  newUser: string = '';
+    users: string[] = [];
+    newUser: string = '';
 
-  constructor(private userService: UserService) {}
+    constructor(private userService: UserService) {}
 
-  ngOnInit() {
-    this.users = this.userService.getUsers();
-  }
+    ngOnInit() {
+        this.users = this.userService.getUsers();
+    }
 
-  addUser() {
-    this.userService.addUser(this.newUser);
-    this.newUser = '';
-  }
+    addUser() {
+        this.userService.addUser(this.newUser);
+        this.newUser = '';
+    }
 }
 ```
 
@@ -203,30 +203,30 @@ export class UserComponent implements OnInit {
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'timeFormat'
+    name: 'timeFormat'
 })
 export class TimeFormatPipe implements PipeTransform {
 
-  transform(value: Date,format: string): string {
-    if (!value) return '';
-    
-      // Extract hours, minutes, and seconds
-      const hours = this.pad(value.getHours());
-      const minutes = this.pad(value.getMinutes());
-      const seconds = this.pad(value.getSeconds());
+    transform(value: Date,format: string): string {
+        if (!value) return '';
 
-    if (format === "hh:mm:ss") {
-      // Return formatted time
-      return `${hours}:${minutes}:${seconds}`;
-    }
-    else if (format === "ss:mm:hh") {
-      return `${seconds}:${minutes}:${hours}`;
-    }
-  }
+        // Extract hours, minutes, and seconds
+        const hours = this.pad(value.getHours());
+        const minutes = this.pad(value.getMinutes());
+        const seconds = this.pad(value.getSeconds());
 
-  private pad(value: number): string {
-    return value.toString().padStart(2, '0');
-  }
+        if (format === "hh:mm:ss") {
+            // Return formatted time
+            return `${hours}:${minutes}:${seconds}`;
+        }
+        else if (format === "ss:mm:hh") {
+            return `${seconds}:${minutes}:${hours}`;
+        }
+    }
+
+    private pad(value: number): string {
+        return value.toString().padStart(2, '0');
+    }
 
 }
 
@@ -295,7 +295,7 @@ decoratorهای اصلی Angular عبارتند از:
 - [Demystifying Angular Two Way Binding](https://www.youtube.com/watch?v=vkmwbZV-ob8)
 
 
-### angular routing 
+### angular routing
 ‌ابزار قدرتمند انگولار برای جابه‌جایی بین صفحات مختلف استفاده می‌شود.
 
 - [مستندات روتینگ انگولار](https://angular.dev/guide/routing/common-router-tasks)
