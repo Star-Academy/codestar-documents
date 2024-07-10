@@ -117,3 +117,15 @@ export class AppModule { }
 
 -   [?Angular - What is angular routing](https://v17.angular.io/guide/routing-overview)
 -   [Youtube - Implementing Routing in Angular](https://youtu.be/N5DWQGebIlA?si=AtQMk0RfTDB3sW4m)
+
+---
+
+### تمرین
+
+-   تمرین اول:   
+    ایجاد کامپوننت‌های جدید: دو کامپوننت جدید به نام‌های AboutComponent و ContactComponent ایجاد کنید.
+    مسیرهای /about و /contact را به آرایه appRoutes اضافه کنید و این مسیرها را به AboutComponent و ContactComponent متصل کنید.
+    مسیرهای /about و /contact را در مرورگر تست کنید تا مطمئن شوید که کامپوننت‌های مربوطه به درستی نمایش داده می‌شوند.
+-    تمرین دوم: استفاده از routerLink و routerLinkActive
+    بروزرسانی منو: لینک‌های منوی نوبار را در فایل app.component.html به روز کنید تا از routerLink برای مسیردهی استفاده کنند.
+    فعال‌سازی لینک‌ها: از دستور routerLinkActive استفاده کنید تا لینک‌های فعال با کلاس CSS مشخص شوند.
