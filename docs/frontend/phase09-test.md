@@ -19,7 +19,7 @@ description: مبارزه با غول‌های باگ با تست‌نویسی
 
 ---
 
-## یادگیری
+## آشنایی با تست
 
 تست نرم افزار بخش جدایی ناپذیر فرآیند توسعه نرم افزار است که به منظور **شناسایی و رفع ایرادات** و **تضمین کیفیت نهایی محصول** انجام می شود. این فرآیند شامل روش های مختلفی از جمله **تست دستی** و **تست اتوماتیک** می باشد.
 
@@ -50,7 +50,7 @@ description: مبارزه با غول‌های باگ با تست‌نویسی
 ### تست دستی:
 
 درست است که تست اتوماتیک مزایای زیادی دارد، اما هنوز هم به تست دستی به عنوان
-an integral part of the software development process
+An Integral Part Of The Software Development Process
 نیاز داریم.
 
 **مزایای تست دستی:**
@@ -62,9 +62,9 @@ an integral part of the software development process
 
 ---
 
-### Testing in Angular
+### تست‌نویسی در Angular
 
-#### Unit Testing in Angular
+#### Unit Testing در Angular
 
 خوشبختانه
 Angular
@@ -107,13 +107,13 @@ Angular
 
 ---
 
-#### Integration Testing in Angular
+#### Integration Testing در Angular
 
 Integration Testing
 در
 Angular
 به شما امکان می‌دهد تا صحت و تعامل بین اجزا و ماژول‌های مختلف برنامه‌ را ارزیابی کنید. یکی از ابزارهای محبوب مورد استفاده برای این کار
-Testing library
+Testing Library
 است که برای تست‌هایی که اجزا و تعاملات آن‌ها با یکدیگر مهم هستند، بسیار مناسب است. با استفاده از
 Testing Library
 می‌توانید عملکرد درست ادغام اجزا را تأیید کنید و مطمئن شوید که برنامه‌ی شما به درستی کار می‌کند.
@@ -123,7 +123,7 @@ Testing Library
 -   [Testing Library - Testing Library Docs](https://testing-library.com/docs/angular-testing-library/intro/)
 -   [Tim Deschryver - Get Started with Testing Library](https://timdeschryver.dev/blog/good-testing-practices-with-angular-testing-library)
 
-#### End-to-End Testing in Angular
+#### End-to-End Testing در Angular
 
 ما برای پیاده‌سازی تست‌های
 E2E
@@ -137,7 +137,7 @@ Angular
 ، ابتدا
 Cypress
 را به عنوان
-dev dependency
+Dev Dependency
 به پروژه
 Angular
 خود اضافه کنید. برای این کار، از دستور زیر در ترمینال استفاده کنید:
@@ -149,9 +149,9 @@ ng add @cypress/schematic
 بعد از اجرای دستور بالا
 Cypress
 به پروژه اضافه خواهد شد و
-config
+Config
 ها و
-script
+Script
 های مورد نیاز جهت کار با
 Cypress
 در پروژه ایجاد خواهد شد.
@@ -212,7 +212,7 @@ Angular
 فرایند
 Mocking
 شامل
-component، service، directive
+Component، Service، Directive
 و ... می‌شود که برای اطلاعات بیشتر درباره آن می‌توانید از لینک‌های زیر استفاده کنید:
 
 -   [Jasmine - Spies](https://jasmine.github.io/api/5.1/Spy)
@@ -227,24 +227,10 @@ component، service، directive
 
 ## پروژه
 
-برای تمام کامپوننت‌ها و سرویس‌های پروژۀ خود
-Unit Test
-بنویسید
-و مطمئن شوید حداقل 80درصد کدها تست شده باشند.
-
-از هر دو عضوِ یکی از تیم‌ها درخواست کنید تا کد شما را جداگانه
-Review
-کنند؛
-بعد از اینکه
-Approve
-کردند، به منتور عادی مراجعه کنید
-و پس از
-Approve
-او، به منتور سنیور بگویید تا کد شما را ببیند.
-
-همچنین لازم است شما هم حداقل کد یک تیم دیگر را
-Review
-کنید.
-سعی کنید تمام مواردی که در این فاز یاد گرفتید را هنگام
-Review
-مورد بررسی قرار دهید.
+برای کامپوننت‌هایی که در قسمت
+Angular
+توسعه دادید به ترتیب برای هرکدام 2 عدد
+Unit, Integration
+و
+E2E
+تست بنوسید، پس از نوشتن به منتور خود تست‌های خود را نمایش دهید.
