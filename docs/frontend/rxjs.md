@@ -160,3 +160,23 @@ export class AppComponent implements OnInit {
 -   [RxJs Marbles - RxJs pipes](https://rxmarbles.com/#filter)
 -   [Angular documents - Understanding communicating with backend services using HTTP](https://v17.angular.io/guide/understanding-communicating-with-http)
 -   [Youtube - Angular HTTP Client Quick Start Tutorial](https://www.youtube.com/watch?v=_05v0mrNLh0)
+
+---
+
+### تمرین
+
+-   تمرین اول: ایجاد و استفاده از یک Observable
+    یک Observable ایجاد کنید که اعداد 1 تا 5 را ارسال کند.
+    یک Observer تعریف کنید که این اعداد را در کنسول نمایش دهد.
+    با استفاده از متد subscribe، Observer را به Observable متصل کنید.
+-   تمرین دوم: یک Observable از اعداد 1 تا 10 ایجاد کنید.
+    از عملگرهای filter و map استفاده کنید تا فقط اعداد زوج را گرفته و هرکدام را به توان 2 برسانید.
+    نتیجه نهایی را در کنسول نمایش دهید.
+-   تمرین سوم: کار با HttpClient
+    یک سرویس جدید در انگولار ایجاد کنید که از HttpClient برای فراخوانی یک API استفاده می‌کند.
+    یک Observable برای داده‌های دریافتی از API ایجاد کنید.
+    در یک کامپوننت، سرویس را وارد کرده و داده‌های دریافت شده از API را در قالب HTML نمایش دهید.
+-   تمرین چهارم: اشتراک‌دهی داده‌ها بین کامپوننت‌ها
+    یک سرویس جدید ایجاد کنید که دارای یک Subject باشد.
+    دو کامپوننت ایجاد کنید، یکی برای ارسال داده به Subject و دیگری برای دریافت داده از Subject.
+    داده‌های ارسال شده توسط یک کامپوننت را در کامپوننت دیگر نمایش دهید.
