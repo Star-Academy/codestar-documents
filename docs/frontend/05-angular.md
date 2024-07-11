@@ -1,6 +1,6 @@
 ---
 title: Angular
-description: When I was a kid, my mom used to just throw me into a pile of broken glass!
+description: آنگولار، جایی که بایندینگ‌ها بیشتر از ستاره‌های آسمون می‌درخشن
 tags: [ Angular,NodeJs ]
 ---
 
@@ -87,10 +87,20 @@ Angular
 
 ### پیش‌نیازها
 
+پیش از هر چیزی برای یادگیری انگولار شما باید با ابزار
+npm
+(Node Package Manager)
+آشنا شوید.
+این ابزار، برای مدیریت بسته‌های پروژه شماست،
+ شما می‌توانید از ابزار‌های دیگری همچون
+yarn،pnpm
+برای مدیریت بسته‌ها استفاده کنید.
 - [نصب node.js](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
 - [همه چیز درباره node.js](https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/)
 - [پکیچ منیجر های دیگر](https://romanglushach.medium.com/comparing-npm-yarn-and-pnpm-package-managers-which-one-is-right-for-your-distributed-project-to-4d7de2f0db8e)
-- [نصب و راه اندازی Angular](https://v17.angular.io/guide/setup-local)
+
+بعد از آشنایی با پکیج منیجرها نیاز است شما با نحوه ساخت و راه‌اندازی یک پروژه انگولار و سپس ساختار آن آشنا شوید.
+- [نصب و راه‌اندازی Angular](https://v17.angular.io/guide/setup-local)
 - [ساختار پروژه](https://dev.to/tomwebwalker/angular-starting-files-explanation-for-beginners-15cp)
 - [فایل angular.json](https://dev.to/tomwebwalker/angularjson-structure-for-beginners-what-we-can-set-27f3)
 
@@ -179,7 +189,7 @@ export class HelloWorldComponent {
   `<app-hello-world>`
   در HTML استفاده خواهد شد.
 - `template`
-  چقالب HTML کامپوننت را تعریف می‌کند.
+  قالب HTML کامپوننت را تعریف می‌کند.
 - `styles`
   استایل‌های CSS مربوط به کامپوننت را تعریف می‌کند.
 
@@ -336,7 +346,7 @@ Angular،
 
 **مثال:**
 
-اگر بخواهیم یک زمان را به فرمت  داده شده تبدیل کنیم، از پایپ
+اگر بخواهیم یک زمان را به فرمت داده شده تبدیل کنیم، از پایپ
 `DatePipe`
 استفاده می‌کنیم:
 
@@ -515,12 +525,16 @@ Propertyهای
 در این مثال، `imageUrl` یک property از کامپوننت است که به ویژگی `src` عنصر `<img>` متصل می‌شود.
 
 ### Event Binding
+#### مفهوم Event
+در جاوااسکریپت، مفهوم "رویداد"
+(Event)
+به هر اتفاق یا کنشی که در مرورگر رخ می‌دهد اطلاق می‌شود. این رویدادها می‌توانند توسط کاربر (مثل کلیک کردن، فشردن کلید، حرکت ماوس) یا توسط مرورگر (مثل بارگذاری صفحه، تغییر اندازه صفحه) رخ دهند.
 
 در
 Angular،
 می‌توانید
 eventها
-را در قالب مدیریت کنید و به متدهای کامپوننت متصل کنید. این کار با استفاده از
+را در template مدیریت کنید و به متدهارا به event ها متصل کنید. این کار با استفاده از
 `( )`
 انجام
 می‌شود.
