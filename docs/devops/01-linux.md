@@ -1,7 +1,8 @@
 ---
 title: Linux
-description: سیستم‌عاملی برای تمام فصل‌ها
 ---
+
+![Tux - Linux mascot](./images/01-Tux.svg)
 
 لینوکس سیستم‌عاملی متن‌باز
 (Open Source)
