@@ -1,0 +1,8 @@
+{
+    "label": "مستندات غیرفنی",
+    "position": 1,
+    "link": {
+        "type": "generated-index",
+        "slug": "non-technical-documents"
+    }
+}

@@ -65,39 +65,9 @@ const config = {
                 items: [
                     {
                         type: 'doc',
-                        docId: 'intro',
+                        docId: 'non-technical-documents',
                         position: 'left',
-                        label: 'مقدمات',
-                    },
-                    {
-                        type: 'doc',
-                        docId: 'frontend',
-                        position: 'left',
-                        label: 'فرانت‌اند',
-                    },
-                    {
-                        type: 'doc',
-                        docId: 'software-engineering',
-                        position: 'left',
-                        label: 'مهندسی نرم‌افزار',
-                    },
-                    {
-                        type: 'doc',
-                        docId: 'general',
-                        position: 'left',
-                        label: 'عمومی',
-                    },
-                    {
-                        type: 'doc',
-                        docId: 'project',
-                        position: 'left',
-                        label: 'پروژه',
-                    },
-                    {
-                        type: 'doc',
-                        docId: 'Roadmaps',
-                        position: 'left',
-                        label: 'مسیرهای یادگیری',
+                        label: 'مستندات غیرفنی',
                     },
                     {
                         href: 'https://www.aparat.com/Code_star/',
@@ -118,28 +88,8 @@ const config = {
                         title: 'مستندات',
                         items: [
                             {
-                                label: 'مقدمات',
-                                to: '/docs/intro',
-                            },
-                            {
-                                label: 'فرانت‌اند',
-                                to: '/docs/frontend',
-                            },
-                            {
-                                label: 'مهندسی نرم‌افزار',
-                                to: '/docs/software-engineering',
-                            },
-                            {
-                                label: 'عمومی',
-                                to: '/docs/general',
-                            },
-                            {
-                                label: 'پروژه',
-                                to: '/docs/project',
-                            },
-                            {
-                                label: 'مسیرهای یادگیری',
-                                to: '/docs/roadmaps',
+                                label: 'مستندات غیرفنی',
+                                to: '/docs/non-technical-documents',
                             },
                         ],
                     },
