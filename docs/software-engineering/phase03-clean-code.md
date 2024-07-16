@@ -53,11 +53,12 @@ description: ''
 
 برای آشنایی با اصول SOLID لینک‌های زیر را مطالعه کنید:
 
--   [SOLID Principles in Java Application Development](https://www.jrebel.com/blog/solid-principles-in-java)
--   [S.O.L.I.D principles in Java](https://medium.com/@karthikcsridhar/s-o-l-i-d-principles-in-java-1aaff453d7ea)
+-   [SOLID With .Net Core](https://www.c-sharpcorner.com/article/solid-with-net-core/)
+-   [C# Best Practices : Dangers of Violating SOLID Principles in C#](https://learn.microsoft.com/en-us/archive/msdn-magazine/2014/may/csharp-best-practices-dangers-of-violating-solid-principles-in-csharp)
 
 :::tip‌
-برای مطالعه بیشتر می‌توانید[A Solid Guide to SOLID Principles](https://www.baeldung.com/solid-principles)
+برای مطالعه بیشتر می‌توانید
+[Mastering SOLID Principles in C#: A Practical Guide](https://www.syncfusion.com/blogs/post/mastering-solid-principles-csharp)
 را مطالعه کنید.
 :::
 :::tip‌

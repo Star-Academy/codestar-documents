@@ -255,7 +255,8 @@ var i = s.WordCount();
 برای کار با زبان #C
 می‌توانید IDEهای
 [Visual Studio](https://visualstudio.microsoft.com/downloads/)
-یا Rider
+یا 
+[Rider](https://soft98.ir/software/programming/1016-rider.html)
 را نصب کنید و از امکاناتشان بهره‌مند شوید.
 
 **برای کار روی پروژه‌ها از IDE استفاده ‌‌‌‌کنید.**

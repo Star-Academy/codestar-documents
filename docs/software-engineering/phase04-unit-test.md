@@ -29,6 +29,16 @@ description: ''
 -   [5 Reasons You Should Care about Code Coverage](https://eldarion.com/blog/2017/07/13/5-reasons-you-should-care-about-code-coverage/)
 -   [The Importance of Code Coverage](https://blog.cloudboost.io/the-importance-of-code-coverage-9b4d513f39b4)
 
+:::tip ‌
+بعد از مطالعه مطالب بالا می‌توانید این مقاله که نگاه دقیقی به
+Test Coverage
+از زبان
+Martin Fowler
+است را مطالعه کنید
+   
+[Test Coverage](https://martinfowler.com/bliki/TestCoverage.html)
+:::
+
 ## نوشتن Unit Test در #C با استفاده از xUnit
 
 برای شروع کار با xUnit، پیشنهاد می‌شود [Using xUnit to Test your C# Code](https://auth0.com/blog/xunit-to-test-csharp-code/)
@@ -75,14 +85,23 @@ Visual Studio
 
 :::tip ‌
 پیشنهاد می‌کنیم برای مطالعه بیشتر درباره تست‌نویسی در #C
-مقالۀ [Writing Unit Tests with xUnit, NSubstitute and FluentAssertions](https://devofthings.hashnode.dev/writing-unit-tests-with-xunit-nsubstitute-and-fluentassertions)
+مقالۀ 
+[Writing Unit Tests with xUnit, NSubstitute and FluentAssertions](https://devofthings.hashnode.dev/writing-unit-tests-with-xunit-nsubstitute-and-fluentassertions)
 را مطالعه کنید.
 :::
 
-## نوشتن تست برای ماشین حساب ساده
+## نوشتن تست برای Full Text Search
 
-در این مرحله، با استفاده از دانشی که در این فاز به دست آورده‌اید، برای قسمت business
-پروژه [ماشین حساب ساده](https://github.com/Star-Academy/SimpleCalculator)
+در این مرحله، با استفاده از دانشی که در این فاز به دست آورده‌اید، برای پروژه
+Full Text Search
 تست بنویسید.
 سعی کنید code coverage
 تست های خود را به 100% نزدیک کنید.
+
+:::info ‌
+از اعضای دیگر تیم‌ها بخواهید تست‌های شما را 
+Review
+کنند و همچنین شما نیز نگاهی به تست بقیه گروه‌ها داشته باشید.
+آیا با دید یکسانی تست نوشته‌اید؟ 
+برای چه بخشی تست ننوشته بودید و دلیل آن چه چیزی بوده؟
+:::

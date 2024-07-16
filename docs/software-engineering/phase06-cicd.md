@@ -89,14 +89,14 @@ description: ''
       آن بزنید.
       :::
 
-    1. در قدم بعد مشخص می‌کنیم که .Net 6.0
+    1. در قدم بعد مشخص می‌کنیم که .Net 8.0
        نصب شود:
 
         ```yml
         - name: Setup .NET
           uses: actions/setup-dotnet@v2
           with:
-              dotnet-version: 6.0.x
+              dotnet-version: 8.0.x
         ```
 
     1. سپس dependencyهای
@@ -222,7 +222,7 @@ jobs:
             - name: Setup .NET
               uses: actions/setup-dotnet@v2
               with:
-                  dotnet-version: 6.0.x
+                  dotnet-version: 8.0.x
 
             - name: Install dependencies
               run: dotnet restore
@@ -260,7 +260,7 @@ jobs:
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-      <TargetFramework>net6.0</TargetFramework>
+      <TargetFramework>net8.0</TargetFramework>
       <PackageId>StarAcademy.CodeStar[Year].Team[TeamNumber].[LibraryName]</PackageId>
       <Authors>[TeamMembers]</Authors>
       <Company>Star Academy</Company>
@@ -310,7 +310,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v2
         with:
-            dotnet-version: 6.0.x
+            dotnet-version: 8.0.x
   ```
 
 1. گرفتن ورژن release
