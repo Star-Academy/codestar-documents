@@ -82,7 +82,7 @@ description: ''
 - [What Is a REST API?](https://www.sitepoint.com/developers-rest-api/)
 
 
-## پروتکل‌های مهم دیگر
+## سایر پروتکل‌ها (اختیاری)
 
 ### TCP/IP
 
@@ -141,6 +141,11 @@ Wireshark
 داده‌ها را جمع‌آوری کرده 
 و به شکل قابل خواندن توسط انسان ارائه می‌دهد.
 
+لینک‌های مربوط:
+
+- [Wireshark Tutorial for Beginners](https://www.youtube.com/watch?v=qTaOZrDnMzQ&ab_channel=AnsonAlexander)
+
+
 ### Postman
 
 Postman
@@ -157,3 +162,5 @@ Postman
 برای آشنایی بیشتر با این نرم‌افزار می‌توانید [Postman Tutorial for Beginners with API Testing Example](https://www.guru99.com/postman-tutorial.html)
 را مطالعه کنید.
 :::
+
+## تمرین
