@@ -395,41 +395,27 @@ Angular
 Angular
 استفاده شود.
 
+برای مثال پایپ زیر با توجه به ژانر ورودی لیست کتاب هارا فیلتر می‌کند.
 ```ts
 import {Pipe, PipeTransform} from '@angular/core';
+import {Book} from './book.model';
 
 @Pipe({
-    name: 'timeFormat'
+    name: 'genreFilter',
 })
-export class TimeFormatPipe implements PipeTransform {
-
-    transform(value: Date, format: string): string {
-        if (!value) return '';
-
-        // Extract hours, minutes, and seconds
-        const hours = this.pad(value.getHours());
-        const minutes = this.pad(value.getMinutes());
-        const seconds = this.pad(value.getSeconds());
-
-        if (format === "hh:mm:ss") {
-            // Return formatted time
-            return `${hours}:${minutes}:${seconds}`;
-        } else if (format === "ss:mm:hh") {
-            return `${seconds}:${minutes}:${hours}`;
+export class GenreFilterPipe implements PipeTransform {
+    transform(books: Book[], genre: string): Book[] {
+        if (!genre) {
+            return books;
         }
+        return books.filter(book => book.genre === genre);
     }
-
-    private pad(value: number): string {
-        return value.toString().padStart(2, '0');
-    }
-
 }
-
 ```
 
 در این پایپ،‌ متد
 transform
-تاریخ را به عنوان ورودی دریافت کرده و به فرمت دریافتی تبدیل کرده و آن را برمی‌گرداند.
+لیست کتاب ها و ژانر را به عنوان ورودی دریافت کرده و لیست فیلتر شده شامل کتاب هایی که تنها در ژانر ورودی هستند برمی‌گرداند.
 
 ## Decorators
 
