@@ -5,7 +5,10 @@ description: ''
 
 ## مقدمه
 
-در این فاز با مفاهیم و تکنیک‌های مختلفی برای افزایش کیفیت کد آشنا می‌شوید و کد فاز قبل را به یک کد بسیار با کیفیت تبدیل می‌کنید. سپس کد خود را با سایر کارآموزان به اشتراک می‌گذارید و از آن‌ها می‌خواهید کدتان را Review کنند.
+در این فاز با مفاهیم و تکنیک‌های مختلفی برای افزایش کیفیت کد آشنا می‌شوید و کد فاز قبل را به یک کد بسیار با کیفیت تبدیل
+می‌کنید. سپس کد خود را با سایر کارآموزان به اشتراک می‌گذارید و از آن‌ها می‌خواهید کدتان را
+Review
+کنند.
 
 ## اهمیت Clean Code
 
@@ -22,15 +25,21 @@ description: ''
 لطفا قبل از فکر کردن به این سوالات به سراغ مراحل بعدی و خواندن مقالات نروید!
 :::
 
-حال برای فهم دلایل اهمیت کد تمیز در صنعت، [The Importance of Clean Code](https://www.arcanys.com/blog/the-importance-of-clean-code)
-را در جواب سوال اول و [Why software maintainability is crucial - TechHQ](https://techhq.com/2019/06/why-software-maintainability-is-crucial/)
+حال برای فهم دلایل اهمیت کد تمیز در صنعت،
+[The Importance of Clean Code](https://www.arcanys.com/blog/the-importance-of-clean-code)
+را در جواب سوال اول و
+[Why software maintainability is crucial - TechHQ](https://techhq.com/2019/06/why-software-maintainability-is-crucial/)
 را در جواب سوال دوم مطالعه کنید.
 
 ## Code Smell
 
-یکی از راه‌های افزایش کیفیت کد، پیدا کردن نشانه‌های کد کثیف در برنامه و سپس Refactor
-کردن آن است، به صورتی که نشانه‌های کد کثیف از بین بروند. به این نشانه‌ها [Code Smell](https://en.wikipedia.org/wiki/Code_smell)
-می‌گوییم. در این مرحله در مورد Code Smellهای
+یکی از راه‌های افزایش کیفیت کد، پیدا کردن نشانه‌های کد کثیف در برنامه و سپس
+Refactor
+کردن آن است، به صورتی که نشانه‌های کد کثیف از بین بروند. به این
+نشانه‌ها
+[Code Smell](https://en.wikipedia.org/wiki/Code_smell)
+می‌گوییم. در این مرحله در مورد
+Code Smellهای
 زیر مطالعه کنید و مشخص کنید کدام یک از موارد زیر در کدی که برای پروژه جستجو به وجود آمده است؟
 
 -   [Long Method](https://refactoring.guru/smells/long-method)
@@ -42,7 +51,8 @@ description: ''
 
 ## اصول S.O.L.I.D
 
-یکی از **مهم‌ترین** مجموعه اصول در مهندسی نرم‌افزار، اصول پنج‌گانهٔ SOLID
+یکی از **مهم‌ترین** مجموعه اصول در مهندسی نرم‌افزار، اصول پنج‌گانهٔ
+SOLID
 می‌باشد.این اصول عبارت‌اند از:
 
 1. **S**ingle Responsibility
@@ -51,7 +61,9 @@ description: ''
 1. **I**nterface Segregation
 1. **D**ependency Inversion
 
-برای آشنایی با اصول SOLID لینک‌های زیر را مطالعه کنید:
+برای آشنایی با اصول
+SOLID
+لینک‌های زیر را مطالعه کنید:
 
 -   [SOLID With .Net Core](https://www.c-sharpcorner.com/article/solid-with-net-core/)
 -   [C# Best Practices : Dangers of Violating SOLID Principles in C#](https://learn.microsoft.com/en-us/archive/msdn-magazine/2014/may/csharp-best-practices-dangers-of-violating-solid-principles-in-csharp)
@@ -65,16 +77,17 @@ description: ''
 برای آشنایی بهتر می‌توانید این ارائه از
 Uncle Bob
 را نیز تماشا کنید:
-[SOLID Principles of Object Oriented & Agile Design](https://youtu.be/QHnLmvDxGTY?si=HhVmcWG-5uoj_wLP)
+[SOLID Principles of Object Oriented & Agile Design](https://www.youtube.com/watch?v=zHiWqnTWsn4)
 :::
-
-
 
 ## Refactoring Techniques
 
-برای Refactor
-کردن بخش‌های مختلف کدتان و رفع Code Smellها
-خلاقیت به خرج دهید یا به مجموعۀ [Refactoring Techniques](https://refactoring.guru/refactoring/techniques)
+برای
+Refactor
+کردن بخش‌های مختلف کدتان و رفع
+Code Smellها
+خلاقیت به خرج دهید یا به مجموعۀ
+[Refactoring Techniques](https://refactoring.guru/refactoring/techniques)
 مراجعه کنید.
 
 :::note ‌
@@ -83,19 +96,38 @@ Uncle Bob
 
 ## Code Review
 
-از یک تیم دیگر بخواهید Pull Request
-شما که در مرحله‌ی Refactor
-ساخته‌اید را Review
-کنند و بر اساس لیست Code Smellها
-به شما بازخورد بدهند (روی Pull Request
-کامنت بگذارند)، در این مرحله حتما از تیم‌های دیگر هم سراغ شما می‌آیند و می‌خواهند کدشان را Review
-کنید، قبل از Review
-کد دیگران، راهنماهای زیر را مطالعه کنید و Review
+از یک تیم دیگر بخواهید
+Pull Request
+شما که در مرحله‌ی
+Refactor
+ساخته‌اید را
+Review
+کنند و بر اساس لیست
+Code Smellها
+به شما بازخورد بدهند (روی
+Pull Request
+کامنت بگذارند)، در این مرحله حتما از تیم‌های دیگر هم سراغ شما می‌آیند و می‌خواهند کدشان را
+Review
+کنید، قبل از
+Review
+کد دیگران، راهنماهای زیر را مطالعه کنید و
+Review
 خود را بر اساس این راهنماها انجام دهید:
 
 -   [What to look for in a code review](https://google.github.io/eng-practices/review/reviewer/looking-for.html)
 -   [Effective Code Reviews: Code Review Checklist](https://github.com/nyu-cds/effective-code-reviews/blob/master/_episodes/03-checklist.md)
 
 :::note ‌
-با توجه به این که در این فاز صحبتی در مورد انواع تست به خصوص Unit Test نکردیم قسمت‌هایی از لینک‌های بالا که در مورد تست است را نادیده بگیرید.
+با توجه به این که در این فاز صحبتی در مورد انواع تست به خصوص
+Unit Test
+نکردیم قسمت‌هایی از لینک‌های بالا که در مورد تست
+است را نادیده بگیرید.
+:::
+
+:::tip ‌
+برای آشنایی بیشتر با موضوع
+Code Review
+می‌توانید ویدئوی زیر را مشاهده کنید:
+
+[How to Do Code Reviews Like a Human](https://www.youtube.com/watch?v=0t4_MfHgb_A&t=37s)
 :::
