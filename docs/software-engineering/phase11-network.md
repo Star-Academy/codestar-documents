@@ -122,6 +122,10 @@ TCP
 یا `File Transfer Protocol`
 برای انتقال فایل‌ها بین دستگاه‌ها در یک شبکه استفاده می‌شود. این پروتکل امکان ارسال و دریافت فایل‌ها را به صورت کارآمد و امن فراهم می‌کند.
 
+لینک‌های مربوط:
+
+- [File Transfer Protocol (FTP) Meaning and Uses](https://www.investopedia.com/terms/f/ftp-file-transfer-protocol.asp)
+- [FTP (File Transfer Protocol), SFTP, TFTP Explained.](https://www.youtube.com/watch?v=tOj8MSEIbfA&ab_channel=PowerCertAnimatedVideos)
 
 ## ابزارهای تست و توسعه شبکه
 
