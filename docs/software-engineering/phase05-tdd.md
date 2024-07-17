@@ -5,22 +5,35 @@ description: ''
 
 ## مقدمه
 
-در این فاز با مفاهیم Test-driven development
+در این فاز با مفاهیم 
+Test-driven development
 آشنا می‌شوید و پروژه جستجو را با این الگو بازنویسی می‌کنید.
 
 ## آشنایی با مبانی TDD
 
-برای درک مفهوم TDD
+برای درک مفهوم 
+TDD
 و مراحل آن لینک‌های زیر را مطالعه کنید:
 
 -   [Testing Software: What is TDD?](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
 -   [Test Driven Development (TDD): The Advantages and Disadvantages](https://medium.com/@stevenpcurtis.sc/test-driven-development-tdd-the-advantages-and-disadvantages-5347899ead90)
 -   [Introduction to Test Driven Development (TDD)](https://medium.com/hackernoon/introduction-to-test-driven-development-tdd-61a13bc92d92)
 
+:::tip ‌
+این دو ویدویو مربوط به
+TDD
+را نیز ببنید.
+-   [Test Driven Development - What? Why? And How?](https://www.youtube.com/watch?v=llaUBH5oayw)
+-   [TDD Isn't Hard, It's Something Else](https://www.youtube.com/watch?v=WDFN_u5FTyM)
+
+:::
+
 ## آشنایی بیشتر با اصول SOLID و تاثیر آن بر TDD
 
-در این مرحله، فکر کنید که هر یک از اصول SOLID،
-چگونه می‌تواند بر ساده‌تر شدن روند TDD
+در این مرحله، فکر کنید که هر یک از اصول 
+SOLID،
+چگونه می‌تواند بر ساده‌تر شدن روند 
+TDD
 تاثیر بگذارد. با هم‌تیمی خود در این مورد بحث کنید.
 
 در ادامه برای درک این موضوع لینک‌های زیر را مطالعه کنید:
