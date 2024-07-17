@@ -247,3 +247,4 @@ console.log(rand(4, 42));
 
 -   [The event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop)
 -   [What is an event loop in JavaScript](https://www.geeksforgeeks.org/what-is-an-event-loop-in-javascript/)
+-   [In The Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
