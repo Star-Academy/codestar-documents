@@ -35,7 +35,7 @@ description: ''
 
 ## پروتکل‌های شبکه
 
-### Http چیست؟
+### Http
 
 پروتکل HTTP
 مخفف عبارت `Hyper Text Transfer Protocol`
@@ -55,12 +55,13 @@ description: ''
 
 :::tip ‌
 برای آشنایی بهتر با Http
-می‌توانید از لینک‌های زیر کمک بگیرید:
+می‌توانید از لینک‌های زیر کمک بگیرید
 
 - [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 - [Hypertext Transfer Protocol (HTTP)](https://www.extrahop.com/resources/protocols/http/)
 :::
 
+- تفاوت بین httpو https چیست؟
 ### RESTful Api
 
 `API`
@@ -95,6 +96,26 @@ TCP/IP
 `IP (Internet Protocol)`
 آدرس‌دهی و مسیریابی داده‌ها را بر عهده دارد.
 
+لینک‌های مطالعه: 
+
+- [TCP/IP](https://www.techtarget.com/searchnetworking/definition/TCP-IP#:~:text=TCP%2FIP%20stands%20for%20Transmission,%2D%2D%20an%20intranet%20or%20extranet.)
+- [TCP IP Protocol](https://www.youtube.com/watch?v=2QGgEk20RXM&ab_channel=TechTerms)
+
+### UDP/IP
+
+یا
+User Datagram Protocol
+یک پروتکل ارتباطی جایگزین برای پروتکل 
+TCP
+است که در درجه اول برای برقراری اتصالات کم‌زمان که از دست رفتن بسته‌ها می‌تواند اهمیتی نداشته باشد، در بستر اینترنت استفاده می‌شود. سربار حاصل در این پروتکل بسیار کمتر از 
+TCP
+بوده سرعت بالاتری نیز دارد. 
+
+لینک‌های مربوط:
+- [What is the User Datagram Protocol (UDP/IP)?](https://www.cloudflare.com/learning/ddos/glossary/user-datagram-protocol-udp/)
+- [TCP vs UDP](https://www.youtube.com/watch?v=jE_FcgpQ7Co&ab_channel=PracticalNetworking)
+
+  
 ### FTP
 
 `FTP`
