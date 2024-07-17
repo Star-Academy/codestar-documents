@@ -1,6 +1,6 @@
 ---
 title: DOM
-description: گشتی در پشت پرده وب با DOM! ️
+description: DOM گشتی در پشت پرده وب با  ️
 ---
 
 ![DOM Structure](./images/DOM.png)
@@ -12,11 +12,11 @@ HTML
 به صورت سلسله مراتبی سازماندهی شده‌اند. این ساختار به برنامه‌نویسان و مرورگرها اجازه می‌دهد تا به راحتی عناصر مختلف سند را پیدا و دستکاری کنند. در این ساختار، هر عنصر
 HTML
 یک گره
-**(Node)**
+(Node)
 است و گره‌ها می‌توانند شامل گره‌های فرزند
-**(Child Nodes)**
+(Child Nodes)
 باشند. این روابط سلسله مراتبی به صورت یک درخت
-**(Tree)**
+(Tree)
 نمایش داده می‌شود.
 
 **انواع گره‌ها:**
@@ -92,7 +92,9 @@ DOM
 DOM
 هستند. آنها به برنامه‌نویسان اجازه می‌دهند تا به طور دقیق و کارآمد عناصر مورد نظر خود را در صفحات وب شناسایی و انتخاب کنند. سلکتورها می‌توانند بر اساس نام عنصر، شناسه، کلاس، ویژگی‌ها و روابط بین عناصر عمل کنند.
 
-فرض کنید ما یک صفحه HTML با ساختار زیر داریم:
+فرض کنید ما یک صفحه
+HTML
+با ساختار زیر داریم:
 
 ```html
 <div id="container">
@@ -107,7 +109,9 @@ DOM
 </div>
 ```
 
-حالا، بیایید چند نمونه از سلکتورها را با استفاده از JavaScript ببینیم:
+حالا، بیایید چند نمونه از سلکتورها را با استفاده از
+JavaScript
+ببینیم:
 
 1. انتخاب با ID:
 
@@ -262,17 +266,25 @@ replacementDiv.addEventListener('click', function () {
 });
 ```
 
-این مثال‌ها نشان می‌دهند که چگونه می‌توان با استفاده از JavaScript، عناصر DOM را به روش‌های مختلف دستکاری کرد و تغییر داد.
+این مثال‌ها نشان می‌دهند که چگونه می‌توان با استفاده از
+JavaScript
+، عناصر
+DOM
+را به روش‌های مختلف دستکاری کرد و تغییر داد.
 
 #### Style Manipulation در DOM
 
-فرض کنید ما یک عنصر HTML به شکل زیر داریم:
+فرض کنید ما یک عنصر
+HTML
+به شکل زیر داریم:
 
 ```html
 <div id="myDiv" class="box">Hello, World!</div>
 ```
 
-حالا، بیایید با استفاده از JavaScript، استایل این عنصر را تغییر دهیم:
+حالا، بیایید با استفاده از
+JavaScript،
+استایل این عنصر را تغییر دهیم:
 
 ###### تغییر استایل با استفاده از خاصیت `style`
 
@@ -320,9 +332,11 @@ myDiv.style.cssText = `
 myDiv.setAttribute('style', 'background-color: pink; color: blue; font-weight: bold;');
 ```
 
-ما می‌توانیم این کلاس‌ها را به عناصر HTML اضافه کنیم یا حذف کنیم تا استایل‌های آنها را تغییر دهیم.
+ما می‌توانیم این کلاس‌ها را به عناصر
+HTML
+اضافه کنیم یا حذف کنیم تا استایل‌های آنها را تغییر دهیم.
 
--   [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+-   [Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 -   [HTML attributes](https://javascript.info/dom-attributes-and-properties#html-attributes)
 -   [Manipulating documents](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
 

@@ -1,6 +1,6 @@
 ---
 title: CSS & Sass
-description: He paints quite a picture, doesn't he?
+description: فرمانروای ظاهر و استایل در دنیای وب
 ---
 
 ## مقدمه
