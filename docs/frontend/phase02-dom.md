@@ -5,7 +5,7 @@ description: گشتی در پشت پرده وب با DOM! ️
 
 ![DOM Structure](./images/DOM.png)
 
-### ساختار سلسله مراتبی سندهای HTML
+### مقدمه
 
 سندهای
 HTML
