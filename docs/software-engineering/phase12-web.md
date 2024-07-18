@@ -11,58 +11,6 @@ description: ''
 مقاله [From History of Web Application Development](https://www.devsaran.com/blog/history-web-application-development)
 را مطالعه کنید.
 
-## مفاهیم اولیه
-
-قبل از آنکه به سراغ ASP.NET Core
-برویم بهتر است به مفاهیم `Http`
-و `Rest`
-پرداخته شود.
-
-### Http چیست؟
-
-پروتکل HTTP
-مخفف عبارت `Hyper Text Transfer Protocol`
-است و به ارتباط میان سرویس‌دهنده (server)
-و سرویس‌گیرنده (client)
-در وب می‌پردازد.
-
-ارتباط بین clientها
-و serverها
-از طریق ارسال درخواست‌های http
-و دریافت پاسخ‌های http
-انجام می‌شود.
-به زبان ساده‌تر، http
-یک نوع قانون است که ارسال و دریافت اطلاعات بین client
-و server
-بر اساس آن انجام می‌شود.
-
-:::tip ‌
-برای آشنایی بهتر با Http
-می‌توانید از لینک‌های زیر کمک بگیرید:
-
-- [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-- [Hypertext Transfer Protocol (HTTP)](https://www.extrahop.com/resources/protocols/http/)
-:::
-
-### RESTful Api
-
-`API`
-یا `Application Programming Interface`
-(که به رابط برنامه‌نویسی کاربردی ترجمه می‌شود) مجموعه‌ای از قواعد و مکانیزم‌ها است که از طریق آن نرم‌افزارها و یا کامپوننت‌های مختلف یک برنامه با همدیگر ارتباط برقرار می‌کنند. منظور از رابط چیزی‌ است که دو شئ یا دو موجودیت مختلف را به همدیگر ربط می‌دهد. API
-می‌تواند داده‌هایی که شما برای نرم‌افزارتان نیاز دارید را از طریق یک فرمت مناسب به خروجی بفرستد و یا آن‌ را برگشت دهد. فرمت JSON
-و XML
-از این دست فرمت‌ها هستند. در این مطلب ما قصد داریم روی JSON
-تمرکز کنیم.
-
-![api schema](./images/phase09-api-schema.png)
-
-برای آشنایی بیشتر با `RESTful api`
-لینک‌های زیر را مطالعه کنید.
-
-- [Learn REST: A RESTful Tutorial](https://www.restapitutorial.com/)
-- [RESTful API به زبان ساده چیست؟](https://roocket.ir/articles/a-beginners-tutorial-for-understanding-restful-api)
-- [What Is a REST API?](https://www.sitepoint.com/developers-rest-api/)
-
 ## سلام به دنیای ASP.NET Core
 
 ASP.NET Core
@@ -226,34 +174,6 @@ namespace Example.Controllers
 نیاز نیست.
 :::
 
-## Postman
-
-Postman
-یک افزونه گوگل کروم است که با استفاده از آن می‌شود به راحتی متدهای یک Web API
-را اجرا، تست یا بررسی کرد.
-
-این ابزار به ما کمک می‌کند تا به سرعت یک درخواست HTTP
-ایجاد و ارسال کنیم.
-
-ذخیره درخواست‌ها برای استفاده‌های بعدی، تجزیه و تحلیل پاسخ‌ها، تغییر سریع محتوای یک درخواست، احراز هویت کاربر با ارسال اطلاعات، سفارشی کردن و... از امکانات خوب این افزونه است که باعث می‌شود در هنگام توسعه یک API
-زمان بسیار زیادی را صرفه جویی کنید.
-
-Postman
-ابزاری بسیار سبک بر مبنای وب است که از آن برای تست کردن سایر API ها
-استفاده می شود. کاربرد این ابزار زمانی مشهود است که برنامه نویس قبل از استفاده از یک مدل API
-آن را با Postman
-بررسی کند. درخواست‌های API
-(حتی درخواست‌های پیچیده) را می‌توان با Postman
-به راحتی ایجاد کرد و جواب آن‌ها را به شکل‌ها و فرمت‌های مختلف در مرورگر دریافت نمود. همین کارایی باعث می‌شود که برنامه‌نویس بداند API
-مورد نظرش چگونه رفتار می کند و در تصمیم‌گیری برای استفاده از آن راحت‌تر باشد.
-:::note ‌
-برای نصب این نرم‌افزار می‌توانید آن را از سایت رسمی [Postman](https://www.postman.com/downloads/)
-دانلود کنید.
-:::
-:::tip ‌
-برای آشنایی بیشتر با این نرم‌افزار می‌توانید [Postman Tutorial for Beginners with API Testing Example](https://www.guru99.com/postman-tutorial.html)
-را مطالعه کنید.
-:::
 
 ## پروژه
 
