@@ -55,13 +55,12 @@ description: ''
 
 :::tip ‌
 برای آشنایی بهتر با Http
-می‌توانید از لینک‌های زیر کمک بگیرید
+می‌توانید از لینک‌های زیر کمک بگیرید:
 
 - [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 - [Hypertext Transfer Protocol (HTTP)](https://www.extrahop.com/resources/protocols/http/)
 :::
 
-- تفاوت بین httpو https چیست؟
 ### RESTful Api
 
 `API`
@@ -84,7 +83,7 @@ description: ''
 
 ## سایر پروتکل‌ها (اختیاری)
 
-### TCP/IP
+### TCP
 
 TCP/IP
 مجموعه‌ای از پروتکل‌ها است
@@ -101,7 +100,7 @@ TCP/IP
 - [TCP/IP](https://www.techtarget.com/searchnetworking/definition/TCP-IP#:~:text=TCP%2FIP%20stands%20for%20Transmission,%2D%2D%20an%20intranet%20or%20extranet.)
 - [TCP IP Protocol](https://www.youtube.com/watch?v=2QGgEk20RXM&ab_channel=TechTerms)
 
-### UDP/IP
+### UDP
 
 یا
 User Datagram Protocol
