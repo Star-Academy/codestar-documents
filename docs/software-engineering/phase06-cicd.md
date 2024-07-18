@@ -22,9 +22,9 @@ CI/CD
 - [The Journey to CI/CD](https://medium.com/driven-by-code/the-journey-to-ci-cd-b1872927c36b)
 
 :::tip ‌
-برای مطالعه بیشتر 
+برای آشنایی بیشتر
 [CI/CD In 5 Minutes](https://www.youtube.com/watch?v=42UP1fxi2SY)
-را مطالعه کنید.
+را مشاهده کنید.
 :::
 
 ## آشنایی با GitHub Actions و اضافه کردن CI/CD Pipeline به Repository
