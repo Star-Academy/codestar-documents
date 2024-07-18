@@ -4,7 +4,8 @@ description: محتوایی که لازم هست همه بدونن
 tags: [Sandbox]
 ---
 
-:::info این فاز، یکی از فازهای
+:::info ‌
+این فاز، یکی از فازهای
 `Sandbox`
 است.
 
@@ -21,16 +22,22 @@ tags: [Sandbox]
 که در ادامۀ کار به کمک ما خواهند آمد.
 
 -   چرا برای تعریف متغیر می‌توان از سه عبارت
-    `var` و `let` و `const`
+    `var`
+    و
+    `let`
+    و
+    `const`
     استفاده کرد؟
--   تفاوت Function با Arrow Function چیست؟
+-   تفاوت
+    Function
+    با
+    Arrow Function
+    چیست؟
 -   مفهوم و کاربرد
     `this`
     چیست؟
 -   Event Loop
-    چیست
-
----
+    چیست؟
 
 ## یادگیری
 
@@ -155,7 +162,12 @@ ReferenceError: name is not defined
 -   [Medium - Difference Between Var, Let and Const in ES6](https://medium.com/infancyit/difference-between-var-let-and-const-in-es6-16a08d74b8b2)
 -   [freeCodeCamp - Var, Let, and Const – What's the Difference?](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)
 
----
+:::tip ‌
+
+برای آشنایی بهتر با تفاوت این سه نوع متغییر می‌توانید ویدئوی زیر را مشاهده کنید:
+
+[JavaScript Let vs Var vs Constant](https://www.youtube.com/watch?v=XgSjoHgy3Rk)
+:::
 
 ### Regular Function vs Arrow Function
 
@@ -274,7 +286,13 @@ console.log('Arrow Function', arrowFunctionSum(4, 8, 15, 16, 23, 42)); // 108
 
 #### return
 
-در Arrow Function اگر بدنۀ تابع فقط شامل یک Expression باشد، می‌توان آن را بدونِ استفاده از آکلاد و return نوشت:
+در
+Arrow Function
+اگر بدنۀ تابع فقط شامل یک
+Expression
+باشد، می‌توان آن را بدونِ استفاده از آکلاد و
+return
+نوشت:
 
 ```javascript
 const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
@@ -287,11 +305,11 @@ console.log(rand(4, 42));
 -   [5 Differences Between Arrow and Regular Functions](https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/)
 -   [freeCodeCamp - When (and why) you should use ES6 arrow functions — and when you shouldn’t](https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/)
 
----
-
 ### Event Loop
 
-حلقه رویداد، جزء اصلی موتور جاوا اسکریپت است که وظایف مختلف را به ترتیب صحیح و بدون ایجاد وقفه در رابط کاربری، مدیریت می‌کند. این حلقه، نقش یک ناظر را ایفا می‌کند و صف وظایف را که شامل رویدادها، درخواست‌های شبکه و کدهای جاوا اسکریپت است، رصد می‌کند.
+حلقه رویداد، جزء اصلی موتور جاوا اسکریپت است که وظایف مختلف را به ترتیب صحیح و بدون ایجاد وقفه در رابط کاربری، مدیریت
+می‌کند. این حلقه، نقش یک ناظر را ایفا می‌کند و صف وظایف را که شامل رویدادها، درخواست‌های شبکه و کدهای جاوا اسکریپت است،
+رصد می‌کند.
 
 وظایف موجود در صف به دو دسته اصلی تقسیم می‌شوند:
 
@@ -313,10 +331,19 @@ console.log(rand(4, 42));
 -   پردازش وظایف میکرو: تا زمانی که صف ماکرو خالی شود، به پردازش وظایف میکرو می‌پردازد.
 -   تکرار فرآیند: مراحل 1 و 2 را به طور مداوم تکرار می‌کند تا زمانی که صف وظایف خالی شود.
 
-درک حلقه رویداد برای نوشتن کد جاوا اسکریپت کارآمد و بدون انسداد رابط کاربری ضروری است. با تسلط بر این مفهوم، می‌توانید برنامه‌های تعاملی و پاسخگو بسازید که تجربه‌ای کاربری قابل‌قبولی را ارائه می‌کنند.
+درک حلقه رویداد برای نوشتن کد جاوا اسکریپت کارآمد و بدون انسداد رابط کاربری ضروری است. با تسلط بر این مفهوم، می‌توانید
+برنامه‌های تعاملی و پاسخگو بسازید که تجربه‌ای کاربری قابل‌قبولی را ارائه می‌کنند.
 
 برای آشنایی بیشتر با این مفاهیم می‌توانید از لینک‌های زیر استفاده کنید:
 
 -   [The event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop)
 -   [What is an event loop in JavaScript](https://www.geeksforgeeks.org/what-is-an-event-loop-in-javascript/)
--   [In The Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
+
+:::tip ‌
+برای آشنایی بهتر با
+Event Loop
+پیشنهاد می‌کنیم ویدئوی زیر را مشاهده کنید:
+
+[In The Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
+
+:::
