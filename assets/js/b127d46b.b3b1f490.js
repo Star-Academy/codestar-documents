@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_academy=self.webpackChunkstar_academy||[]).push([[1481],{5480:a=>{a.exports=JSON.parse('{"tags":[{"label":"Js-Fundamental","permalink":"/codestar-documents/docs/tags/js-fundamental","count":1},{"label":"Readonly","permalink":"/codestar-documents/docs/tags/readonly","count":1}]}')}}]);
