@@ -6,12 +6,16 @@ description: با تایپ‌ها از خطاهای اجرا خداحافظی ک
 ## مقدمه
 
 تصور کنید در یک پروژه‌ی بزرگ جاوااسکریپت کار می‌کنید. همان‌طور که کد شما بزرگ‌تر و پیچیده‌تر می‌شود، مشکلات مختلفی پدیدار می‌شوند.
-به دلیل نبود تایپ‌دهی ایستا، بسیاری از خطاها تنها زمانی مشخص می‌شوند که کد در حال اجرا است. این می‌تواند باعث بروز مشکلات جدی و غیرمنتظره‌ای شود.
+به دلیل نبود
+Static Typing
+بسیاری از خطاها تنها زمانی مشخص می‌شوند که کد در حال اجرا است. این می‌تواند باعث بروز مشکلات جدی و غیرمنتظره‌ای شود.
 فهمیدن کدها و نگهداری آن‌ها دشوارتر می‌شود، به‌ویژه اگر تایپ‌های متغیرها و توابع مشخص نباشند.
 خطاهایی که در مراحل اولیه توسعه شناسایی نمی‌شوند، ممکن است به‌صورت ناگهانی در مراحل پایانی پروژه بروز کنند و زمان و هزینه بیشتری برای رفع آن‌ها نیاز باشد.
 
 TypeScript
-یک زبان برنامه‌نویسی است که بر روی جاوااسکریپت بنا شده
+یک
+Superset
+است که بر روی جاوااسکریپت بنا شده
 و انواع تایپ‌ها را برای مشخص کردن نوع داده در اخیار شما قرار می‌دهد.
 این قابلیت‌ها به برنامه‌نویسان کمک می‌کند تا کدهای خود را خواناتر و قابل‌اعتمادتر بنویسند.
 با مشخص کردن تایپ هر داده، کامپایلر قدرتمند
@@ -99,16 +103,6 @@ TypeScript
 -   [Tutorials Teacher - Union Types](https://www.tutorialsteacher.com/typescript/typescript-union)
 -   [TypeScript - Unions and Intersection Types](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html)
 
-#### تمرین
-
--   یک تابع بنویسید که یک آرایه از اعداد دریافت کند و مجموع آن‌ها را برگرداند.
--   یک تابع بنویسید که می‌تواند هم یک رشته و هم یک عدد را به عنوان ورودی دریافت کند و نوع ورودی را برگرداند.
--   یک
-    Enum
-    برای روزهای هفته تعریف کنید و سپس یک تابع بنویسید که نام روز را به عنوان ورودی دریافت کرده و اگر روز جمعه باشد، پیامی برگرداند که تعطیل است.
-
----
-
 ### Interfaces
 
 در
@@ -148,31 +142,6 @@ TypeScript
 -   [TypeScript - Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
 -   [Freecodecamp - How TypeScript Interfaces Work](https://www.freecodecamp.org/news/how-typescript-interfaces-work/)
 
-#### تمرین
-
--   یک اینترفیس به نام
-    Shape
-    تعریف کنید که دارای دو ویژگی
-    color
-    و
-    calculateArea
-    باشد. ویژگی
-    color
-    یک رشته است و ویژگی
-    calculateArea
-    یک تابع بدون ورودی بازگشتی عددی است.
--   یک کلاس به نام
-    Circle
-    بنویسید که ویژگی‌های
-    color
-    و
-    radius
-    را دارد و از اینترفیس
-    Shape
-    پیاده‌سازی شود.
-
----
-
 ### Type Aliases
 
 در
@@ -199,35 +168,6 @@ TypeScript
 
 -   [Freecodecamp - How Type Aliases Work in TypeScript](https://www.freecodecamp.org/news/how-typescript-type-aliases-work/)
 -   [TypeScript - Type Aliases](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases)
-
-#### تمرین
-
--   یک
-    Type Alias
-    به نام
-    Direction
-    تعریف کنید که انواع left
-    ،
-    right
-    ،
-    up
-    و
-    down
-    را به عنوان مقادیر مجاز دارد.
--   یک
-    Type Alias
-    به نام
-    BinaryOperation
-    تعریف کنید که نوع تابعی با دو ورودی عددی و یک خروجی عددی را نمایش دهد.
--   یک
-    Type Alias
-    به نام
-    Action
-    تعریف کنید که شامل یک شیء با دو ویژگی
-    type
-    به نوع رشته و
-    payload
-    به نوع عدد یا رشته باشد.
 
 ---
 
@@ -264,30 +204,6 @@ TypeScript
 
 -   [TypeScript - Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
 -   [Prismic - Understanding TypeScript Generics](https://prismic.io/blog/typescript-generics)
-
-#### تمرین
-
--   یک تابع
-    Generic
-    به نام
-    reverseArray
-    بنویسید که یک آرایه از هر نوع داده‌ای را به عنوان ورودی دریافت کرده و آن را برعکس کند.
--   یک کلاس
-    Generic
-    به نام
-    Box
-    بنویسید که یک مقدار از هر نوع داده‌ای را ذخیره کند و این مقدار را برگرداند.
--   یک
-    Interface Generic
-    به نام
-    Pair
-    تعریف کنید که دو ویژگی
-    first
-    و
-    second
-    با نوع دلخواه
-    T
-    داشته باشد.
 
 ---
 
