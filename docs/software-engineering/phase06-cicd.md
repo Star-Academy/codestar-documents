@@ -5,29 +5,53 @@ description: ''
 
 ## مقدمه
 
-در این فاز با مفهوم CI/CD
-و اهمیت استفاده از آن آشنا می‌شوید و سپس پروژهٔ خود را به CI/CD
+در این فاز با مفهوم 
+CI/CD
+و اهمیت استفاده از آن آشنا می‌شوید و سپس پروژهٔ خود را به 
+CI/CD
 مجهز می‌کنید.
 
 ## CI/CD چیست و چرا اهمیت دارد
 
-برای درک مفهوم CI/CD
+برای درک مفهوم 
+CI/CD
 و اهمیت آن لینک‌های زیر را مطالعه کنید.
 
 - [What is CI/CD?(redhat)](https://www.redhat.com/en/topics/devops/what-is-ci-cd)
 - [What’s the Point of CI Anyway?](https://medium.com/swlh/whats-the-point-of-ci-anyway-ac3f9eaa244c)
 - [The Journey to CI/CD](https://medium.com/driven-by-code/the-journey-to-ci-cd-b1872927c36b)
 
+:::tip ‌
+برای آشنایی بیشتر
+[CI/CD In 5 Minutes](https://www.youtube.com/watch?v=42UP1fxi2SY)
+را مشاهده کنید.
+:::
+
 ## آشنایی با GitHub Actions و اضافه کردن CI/CD Pipeline به Repository
 
-یکی از ابزارهای CI/CD
-معروف، GitHub Actions
-است که به کمک آن، می‌توانیم یک Pipeline
-شامل عملیات build،
-اجرای unit testها،
-انتشار package
-و دیگر عملیاتی که در دستهٔ CI/CD
-می‌گنجد را به Repository
+:::tip ‌
+در ابتدا برای آشنایی با
+Github Action
+می‌توانید ویدیو زیر را ببنید
+[Introduction to GitHub Actions](https://www.youtube.com/watch?v=jtzwGXw-FkU)
+:::
+
+یکی از ابزارهای 
+CI/CD
+معروف، 
+GitHub Actions
+است که به کمک آن، می‌توانیم یک 
+Pipeline
+شامل عملیات 
+build،
+اجرای 
+unit testها،
+انتشار 
+package
+و دیگر عملیاتی که در دستهٔ 
+CI/CD
+می‌گنجد را به 
+Repository
 خود اضافه کنیم. این بخش شامل مراحل زیر است:
 
 1. فایل `github/workflows/buildPipeline.yml.`
@@ -89,14 +113,14 @@ description: ''
       آن بزنید.
       :::
 
-    1. در قدم بعد مشخص می‌کنیم که .Net 6.0
+    1. در قدم بعد مشخص می‌کنیم که .Net 8.0
        نصب شود:
 
         ```yml
         - name: Setup .NET
           uses: actions/setup-dotnet@v2
           with:
-              dotnet-version: 6.0.x
+              dotnet-version: 8.0.x
         ```
 
     1. سپس dependencyهای
@@ -222,7 +246,7 @@ jobs:
             - name: Setup .NET
               uses: actions/setup-dotnet@v2
               with:
-                  dotnet-version: 6.0.x
+                  dotnet-version: 8.0.x
 
             - name: Install dependencies
               run: dotnet restore
@@ -260,7 +284,7 @@ jobs:
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-      <TargetFramework>net6.0</TargetFramework>
+      <TargetFramework>net8.0</TargetFramework>
       <PackageId>StarAcademy.CodeStar[Year].Team[TeamNumber].[LibraryName]</PackageId>
       <Authors>[TeamMembers]</Authors>
       <Company>Star Academy</Company>
@@ -310,7 +334,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v2
         with:
-            dotnet-version: 6.0.x
+            dotnet-version: 8.0.x
   ```
 
 1. گرفتن ورژن release
