@@ -157,6 +157,17 @@ ReferenceError: name is not defined
 [JavaScript Let vs Var vs Constant](https://www.youtube.com/watch?v=XgSjoHgy3Rk)
 :::
 
+:::tip ‌
+
+برای آشنایی با مفهوم 
+Hoisting
+لینک‌ زیر را مطالعه کنید:
+
+[JavaScript Hoisting](https://www.w3schools.com/js/js_hoisting.asp)
+:::
+
+
+
 ### Regular Function vs Arrow Function
 
 در
@@ -209,6 +220,32 @@ const arrowFunctionWrapper = {
 regularFunctionWrapper.whatIsThis();
 arrowFunctionWrapper.whatIsThis();
 ```
+
+
+:::tip ‌
+
+
+برای آشنایی بهتر با
+this 
+در
+Arrow 
+و
+Regular Function 
+لینک‌های زیر را مطالعه کنید:
+
+[Behavior of Arrow functions and regular functions for 'this' keyword](https://medium.com/@akhilanand.ak01/behavior-of-arrow-functions-and-regular-functions-for-this-keyword-fff04f6f2d60#:~:text=In%20Summary%2C,in%20which%20they%20are%20invoked.)
+
+:::
+
+:::tip ‌
+
+برای آشنایی با روش‌های
+Binding
+لینک‌های زیر را مطالعه کنید:
+
+[How to Use the Call, Apply, and Bind Functions in JavaScript – with Code Examples](https://www.freecodecamp.org/news/understand-call-apply-and-bind-in-javascript-with-examples/)
+:::
+
 
 #### Constructor
 
