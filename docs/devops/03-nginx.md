@@ -105,7 +105,7 @@ Reverse Proxy
 [این لینک](https://liara.ir/blog/%D9%BE%D8%B1%D9%88%DA%A9%D8%B3%DB%8C-%D9%85%D8%B9%DA%A9%D9%88%D8%B3-reverse-proxy-%DA%86%DB%8C%D8%B3%D8%AA%D8%9F/)
 استفاده کنید.  
 
-![Reverse Proxy Function Explained Picture](./images/03-nginx-reverse-proxy-function-explained-picture.png "Reverse Proxy Function Explained")
+![Reverse Proxy Function Explained Picture](./images/03-nginx-reverse-proxy-function-explained-picture.png)
 
 حال فرض کنید این وبسایت راه اندازی شده چندین سرویس مختلف ارائه می‌دهد و هر سرویس بار بسیار زیادی را تحمل میکند. تعداد درخواست‌ها به هر سرور بسیار زیاد شده است و یک سرور نمی‌تواند به همه درخواست‌ها بدرستی و در زمان کوتاه پاسخ دهد. حال این چالش را میتوان به روش‌های مختلفی حل کرد:  
 1. اضافه کردن منابع
@@ -118,7 +118,7 @@ Disk
 سرور که با هزینه زیادی همراه است و
 scalable
 هم نیست.  
-2. اضافه کردن چند سرور با وظایف مشابه و تقسیم بار روی چندین سرور به جای یک سرور که این حالت
+1. اضافه کردن چند سرور با وظایف مشابه و تقسیم بار روی چندین سرور به جای یک سرور که این حالت
 scalable
 است.
 
@@ -260,7 +260,7 @@ http {
 نام دامنه را برای سرور مشخص می‌کند که مقدار آن برابر با
 mywebsite.com
 خواهد بود.
-* {...}/location:
+* [...]/location:
   * root/usr/share/nginx/html/mywebiste:
     پوشه
     root
@@ -273,7 +273,7 @@ mywebsite.com
 صفحه دلخواهی را برای خطای
 404
 مشخص می‌کند.
-* {...}/location = /404.html:
+* [...]/location = /404.html:
 مکان صفحه 404 دلخواه را مشخص می‌کند.  
 
 در مرحله بعدی نوبت به ساخت دایرکتوری موردنیاز برای قرار دادن فایل‌های
