@@ -69,12 +69,17 @@ const config: Config = {
             {
               type: "doc",
               docId: "frontend",
-              label: "فرانت‌اند",
+              label: "Frontend",
             },
             {
               type: "doc",
               docId: "software-engineering",
-              label: "بک‌اند",
+              label: "Backend",
+            },
+            {
+              type: "doc",
+              docId: "devops",
+              label: "DevOps",
             },
             {
               type: "doc",
