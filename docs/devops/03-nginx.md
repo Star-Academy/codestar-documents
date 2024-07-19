@@ -350,3 +350,8 @@ sudo systemctl restart nginx
 ``` address
 http://{place your web server's IP addrss here}
 ```
+برای آشنایی بیشتر با نحوه کانفیگ
+Nginx
+می‌توانید از
+[این لینک](https://nginx.org/en/docs/beginners_guide.html)
+استفاده کنید.
