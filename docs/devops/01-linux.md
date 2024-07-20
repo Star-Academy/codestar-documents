@@ -198,6 +198,18 @@ echo "Hello, $name!"
 
 ![Shell Loop Expression Picture](./images/01-linux-shell-loop-expressions-picture.png 'Shell Loop Expression Picture')
 
+مثال:
+```shell
+for ((i = 1 ; i <= 5 ; i++ )); do
+    echo "Hello"
+done
+```
+```shell
+for i in $(seq 1 5); do
+    echo "Hello"
+done
+```
+
 برای بهتر یاد گرفتن اسکریپت‌نویسی در شل می‌توانید از منبع زیر کمک بگیرید:
 
 -   [Bash Scripting Tutorial – Linux Shell Script and Command Line for Beginners](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
