@@ -180,29 +180,39 @@ JavaScript،
 چند عملیات مختلف روی ویژگی‌های این عنصر انجام دهیم:
 
 ```javascript
+// Get a reference to the image element with ID "myImage"
 let img = document.getElementById('myImage');
 
+// Get the current image source and log it
 let imgSrc = img.getAttribute('src');
-console.log(imgSrc);
+console.log('Current image source:', imgSrc);
 
+// Update the image source to "new-image.jpg"
 img.setAttribute('src', 'new-image.jpg');
 
+// Set a new title attribute for the image
 img.setAttribute('title', 'This is a new title');
 
+// Check if the image has an "alt" attribute
 if (img.hasAttribute('alt')) {
     console.log('This image has an alt text');
 }
 
+// Remove any existing "class" attribute
 img.removeAttribute('class');
 
-console.log(img.src);
-console.log(img.alt);
+// Get and log the updated image source and alt text (if it exists)
+console.log('Updated image source:', img.src);
+console.log('Current alt text:', img.alt);  // Might be empty if no alt attribute
 
+// Set multiple class names using className property
 img.className = 'new-class another-class';
 
+// Set custom data attribute using dataset property
 img.dataset.customInfo = 'Some custom data';
-console.log(img.dataset.customInfo);
+console.log('Custom data:', img.dataset.customInfo);
 
+// Loop through all image attributes and log them
 for (let attr of img.attributes) {
     console.log(`${attr.name}: ${attr.value}`);
 }
@@ -248,36 +258,55 @@ HTML
 داریم
 
 ```javascript
+// Get the container element with the ID "container"
 let container = document.getElementById('container');
 
+// Create a new paragraph element and set its text content
 let newParagraph = document.createElement('p');
-newParagraph.textContent = 'این یک پاراگراف جدید است.';
+newParagraph.textContent = 'This is a new paragraph.';
 
+// Append the paragraph element to the container
 container.appendChild(newParagraph);
 
+// Create a new button element and set its text content
 let newButton = document.createElement('button');
-newButton.textContent = 'کلیک کنید';
+newButton.textContent = 'Click Me';
+
+// Append the button element to the container
 container.appendChild(newButton);
 
+// Remove the paragraph element from the container
 container.removeChild(newParagraph);
 
+// Create a new div element and set its text content
 let replacementDiv = document.createElement('div');
-replacementDiv.textContent = 'این جایگزین دکمه شد';
+replacementDiv.textContent = 'This replaces the button';
+
+// Replace the button element with the div element
 container.replaceChild(replacementDiv, newButton);
 
+// Clone the div element
 let clonedDiv = replacementDiv.cloneNode(true);
+
+// Append the cloned div element to the container
 container.appendChild(clonedDiv);
 
-clonedDiv.innerHTML = '<strong>این محتوا تغییر کرده است</strong>';
+// Set the inner HTML of the cloned div element to bold text
+clonedDiv.innerHTML = '<strong>This content has changed</strong>';
 
+// Create another paragraph element and set its text content
 let anotherParagraph = document.createElement('p');
-anotherParagraph.textContent = 'این پاراگراف قبل از div اضافه شد';
+anotherParagraph.textContent = 'This paragraph was added before the div';
+
+// Insert the another paragraph element before the replacement div element
 container.insertBefore(anotherParagraph, replacementDiv);
 
+// Set the class attribute of the another paragraph element to "highlight"
 anotherParagraph.setAttribute('class', 'highlight');
 
-replacementDiv.addEventListener('click', function() {
-    alert('روی div کلیک شد!');
+// Add a click event listener to the replacement div element
+replacementDiv.addEventListener('click', function () {
+    alert('The div was clicked!');
 });
 ```
 
