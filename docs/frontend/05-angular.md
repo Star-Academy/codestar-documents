@@ -231,6 +231,93 @@ export class HelloWorldComponent {
 
 برای مطالعه بیشتر به [مستندات رسمی](https://angular.dev/api/core/Component#viewProviders) انگولار مراجعه کنید.
 
+## چرخه زندگی کمپوننت‌ها
+
+در این داکیومنت به بررسی مراحل مختلف چرخه زندگی کمپوننت‌ها در Angular می‌پردازیم و نحوه استفاده از آن‌ها را بررسی خواهیم کرد.
+
+### مراحل چرخه زندگی کمپوننت‌ها 
+
+چرخه زندگی هر کمپوننت در Angular شامل مراحل زیر است:
+
+1. **ngOnChanges** 
+    - این متد هر بار که ورودی‌های کمپوننت تغییر کنند، فراخوانی می‌شود. می‌توانید تغییرات را مشاهده کرده و به آن‌ها واکنش نشان دهید.
+
+   ```typescript
+   ngOnChanges(changes: SimpleChanges) {
+     console.log('Changes detected:', changes);
+   }
+   ```
+
+2. **ngOnInit** 
+    - این متد یک بار بعد از ساخت کمپوننت و بعد از اینکه تمام ورودی‌ها مقداردهی شدند، فراخوانی می‌شود. بهترین مکان برای انجام کارهای اولیه مانند بارگذاری داده‌ها.
+
+   ```typescript
+   ngOnInit() {
+     console.log('Component initialized');
+   }
+   ```
+
+3. **ngDoCheck**
+    - این متد به شما اجازه می‌دهد تا تشخیص‌های شخصی در مورد تغییرات ورودی را انجام دهید. این متد بارها می‌تواند در طول عمر کمپوننت فراخوانی شود.
+
+   ```typescript
+   ngDoCheck() {
+     console.log('Change detection running');
+   }
+   ```
+
+4. **ngAfterContentInit** 
+    - این متد یک بار بعد از وارد کردن محتوای خارجی به کمپوننت (معمولاً از `ng-content`) فراخوانی می‌شود.
+
+   ```typescript
+   ngAfterContentInit() {
+     console.log('Content initialized');
+   }
+   ```
+
+5. **ngAfterContentChecked** 
+    - این متد بعد از اینکه محتوای خارجی بررسی شد، فراخوانی می‌شود. می‌توانید برای انجام کارهای بعد از بررسی محتوا استفاده کنید.
+
+   ```typescript
+   ngAfterContentChecked() {
+     console.log('Content checked');
+   }
+   ```
+
+6. **ngAfterViewInit** 
+    - این متد یک بار بعد از ایجاد و نمایش نمای کمپوننت فراخوانی می‌شود. می‌توانید اعمالی که نیاز به دسترسی به نمای کمپوننت دارند را اینجا انجام دهید.
+
+   ```typescript
+   ngAfterViewInit() {
+     console.log('View initialized');
+   }
+   ```
+
+7. **ngAfterViewChecked** 
+    - این متد پس از بررسی نمای کمپوننت فراخوانی می‌شود. می‌توانید برای انجام کارهایی که بعد از این بررسی نیاز است، استفاده کنید.
+
+   ```typescript
+   ngAfterViewChecked() {
+     console.log('View checked');
+   }
+   ```
+
+8. **ngOnDestroy** 
+    - این متد قبل از حذف کمپوننت از DOM فراخوانی می‌شود. می‌توانید منابعی نظیر اشتراک‌ها (subscriptions) را آزاد کنید.
+
+   ```typescript
+   ngOnDestroy() {
+     console.log('Component is about to be destroyed');
+   }
+   ```
+
+درک چرخه زندگی کمپوننت‌ها در Angular به شما این امکان را می‌دهد که به طور موثر‌تری بر روی تغییرات داده‌ها و مدیریت منابع خود کار کنید. برای یادگیری بیشتر و تسلط بر Angular، مطالعه مستندات رسمی و انجام پروژه‌های عملی پیشنهاد می‌شود.
+
+ **منابع بیشتر:**
+- [مستندات رسمی Angular](https://angular.io/docs)
+- [چرخه زندگی کمپوننت‌ها در Angular](https://angular.io/guide/lifecycle-hooks)
+
+
 ## Dependency injection
 
 Dependency Injection
