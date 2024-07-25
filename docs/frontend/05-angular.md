@@ -635,6 +635,19 @@ eventها
 
 - [Demystifying Angular Two Way Binding](https://www.youtube.com/watch?v=vkmwbZV-ob8)
 
+### Control Flow
+
+کنترل جریان 
+(Control Flow)
+در 
+Angular
+به رفتار برنامه‌های شما در پاسخ به شرایط مختلف اشاره دارد و شامل دستورات شرطی، حلقه‌ها و مدیریت نمایش کامپوننت‌ها می‌شود.
+برای آشنایی با این مفهوم می توانید به لینک های زیر مراجه کنید:
+
+- [Built-in control flow](https://angular.dev/guide/templates/control-flow)
+- [Introducing new Control Flow in Angular 17](https://medium.com/@ayushgrwl365/introducing-new-control-flow-in-angular-17-89e67903daed)
+
+
 ### angular routing
 
 ‌ابزار قدرتمند انگولار برای جابه‌جایی بین صفحات مختلف استفاده می‌شود.
