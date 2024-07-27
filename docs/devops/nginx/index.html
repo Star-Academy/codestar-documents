@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fa-IR" dir="rtl" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-devops/nginx" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">Nginx | StarAcademy</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://star-academy.github.io/codestar-documents/docs/devops/nginx"><meta data-rh="true" property="og:locale" content="fa_IR"><meta data-rh="true" name="docusaurus_locale" content="fa"><meta data-rh="true" name="docsearch:language" content="fa"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Nginx | StarAcademy"><link data-rh="true" rel="icon" href="/codestar-documents/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://star-academy.github.io/codestar-documents/docs/devops/nginx"><link data-rh="true" rel="alternate" href="https://star-academy.github.io/codestar-documents/docs/devops/nginx" hreflang="fa-IR"><link data-rh="true" rel="alternate" href="https://star-academy.github.io/codestar-documents/docs/devops/nginx" hreflang="x-default"><link rel="stylesheet" href="/codestar-documents/assets/css/styles.f74edd12.css">
+<script src="/codestar-documents/assets/js/runtime~main.3f497893.js" defer="defer"></script>
+<script src="/codestar-documents/assets/js/main.4e40a26d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="پرش به مطلب اصلی"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">پرش به مطلب اصلی</a></div><nav aria-label="صفحه اصلی" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="باز و بست منو" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/codestar-documents/"><div class="navbar__logo"><img src="/codestar-documents/img/logo.svg" alt="آکادمی ستاره" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/codestar-documents/img/logo.svg" alt="آکادمی ستاره" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">آکادمی ستاره</b></a><div class="navbar__item dropdown dropdown--hoverable"><a aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link" href="/codestar-documents/docs/devops/nginx">مستندات</a><ul class="dropdown__menu"><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/general">عمومی</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/frontend">Frontend</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/software-engineering">Backend</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/devops">DevOps</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/soft-skills">مهارت‌های نرم</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/project">پروژه</a></li></ul></div><a class="navbar__item navbar__link" href="/codestar-documents/codestar/onboarding">CodeStar</a></div><div class="navbar__items navbar__items--right"><a href="https://www.aparat.com/Code_star/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Aparat<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/Star-Academy/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="بین حالت تاریک و روشن سوئیچ کنید (الان حالت روشن)" aria-label="بین حالت تاریک و روشن سوئیچ کنید (الان حالت روشن)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="بازگشت به بالا" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="نوار کناری مستندات" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/general">عمومی</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;عمومی&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/frontend">فرانت‌اند</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;فرانت‌اند&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/software-engineering">مهندسی نرم‌افزار</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;مهندسی نرم‌افزار&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/soft-skills">مهارت‌های نرم</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;مهارت‌های نرم&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/codestar-documents/docs/devops">DevOps</a><button aria-label="بستن دسته بندی در نوار کناری &#x27;DevOps&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/linux">Linux</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/network">Computer Networks</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/codestar-documents/docs/devops/nginx">Nginx</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/ha-concept">HA Concept</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/golang">Go</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/test-concept">Test Concept</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/containerization">Containerization</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/kubernetes">Kubernetes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/everything-as-code-concept">Everything as Code Concept</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/ansible">Ansible</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/ci-cd-pipeline">CI/CD Pipeline</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/gitops-concept">GitOps Concept</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/o11y">Observability</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/devops/databases">Databases</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/project">پروژه</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;پروژه&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/Roadmaps">مسیرهای یادگیری</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;مسیرهای یادگیری&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="نشانگر صفحات"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="صفحه اصلی" class="breadcrumbs__link" href="/codestar-documents/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/codestar-documents/docs/devops"><span itemprop="name">DevOps</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Nginx</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">مطالب این صفحه</button></div><div class="theme-doc-markdown markdown"><header><h1>Nginx</h1></header><p>فرض کنید می‌خواهیم یک وب سایت راه‌اندازی کنیم تا افراد بتوانند به راحتی از طریق ارتباط با آن یک سری داده متنی، تصویری یا ویدیویی را با یکدیگر تبادل کنند. کاربران با استفاده از مرورگر خود
+Request
+های خود را به آدرس وب سایت ارسال می‌کنند؛ این
+Request
+ها باید در مقصد پردازش و مدیریت شوند. پردازش  و مدیریت درخواست‌های دریافتی در یک سرور به عهده وب سرور است.<br>
+<!-- -->وب سرور یک نرم افزار یا سخت افزار کامپیوتری است که از پروتکل
+HTTP
+و پروتکل های دیگر برای پاسخ به
+Request
+های کاربران که از طریق وب انجام می شود، استفاده می کند. وظیفه اصلی وب سرور پردازش و مدیریت
+Request
+های کاربران، نمایش محتوای وب سایت از طریق ذخیره سازی، پردازش و ارائه صفحات وب به صورت فایل
+HTML
+همراه با هر نوع داده دیگری مانند تصویر، متن، فایل‌های
+CSS
+و همچنین جاوا اسکریپت به ک اربران است. وب سرورها علاوه بر
+HTTP
+از
+SMTP
+و
+FTP
+نیز پشتیبانی می‌کنند.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="نحوه-کارکرد-وب-سرور">نحوه کارکرد وب سرور<a class="hash-link" aria-label="لینک مستقیم به نحوه کارکرد وب سرور" title="لینک مستقیم به نحوه کارکرد وب سرور" href="/codestar-documents/docs/devops/nginx#نحوه-کارکرد-وب-سرور">​</a></h2>
+<p>حال به صورت دقیق‌تر به کارکرد وب سرور می‌پردازیم.<br>
+<!-- -->فرض کنید که به اطلاعات خاصی از وب‌سایت
+example.com
+نیاز پیدا می‌کنید. به همین دلیل با وارد کردن
+URL
+خواسته شده در مرورگر خود، درخواست خود را ادر می‌کنید. در مرحله بعد مرورگر با استفاده از پروتکل
+DNS
+آدرس
+IP
+سایت
+example.com
+را پیدا می‌کند و با این کار، مرورگر به یک وب سرور منتقل می شود. سپس مرورگر با درخواست
+HTTP
+فایل خاصی را از وب سرور درخواست می کند. وب سرور پاسخ خواهد داد و مجدداً از طریق
+HTTP
+صفحه درخواستی را برای مرورگر ارسال می کند. اگر صفحه درخواستی وجود نداشته باشد یا مشکلی پیش بیاید، وب سرور با یک پیام خطا پاسخ خواهد داد. سپس مرورگر قادر به نمایش صفحه وب خواهد بود.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="استاتیک-در-مقابل-داینامیک">استاتیک در مقابل داینامیک<a class="hash-link" aria-label="لینک مستقیم به استاتیک در مقابل داینامیک" title="لینک مستقیم به استاتیک در مقابل داینامیک" href="/codestar-documents/docs/devops/nginx#استاتیک-در-مقابل-داینا میک">​</a></h2>
+<p>در این بخش به تقابل وب سرور
+Static
+در مقابل وب سرور
+Dynamic
+می‌پردازیم.<br>
+<!-- -->یک وب سرور می‌تواند برای ارائه محتوای ثابت یا پویا استفاده شود. محتوای ثابت به محتوایی اشاره دارد که همانطور که هست نشان داده می شود، در حالی که محتوای پویا را می توان به روز کرد و آن را به صورت شخصی سازی شده تغییر داد. یک وب سرور
+Static
+از یک کامپیوتر و نرم‌افزار
+HTTP
+تشکیل شده است و فایل های میزبانی شده را همانطور که هست به یک مرورگر ارسال می کند. در حالی که در وب سرور پویا از یک وب سرور و سایر نرم افزارها مانند برنامه
+Backend
+و پایگاه داده استفاده می کنیم تا داده‌ها را به صورت متغیر و شخصی سازی شده به او نشان دهیم.<br>
+<!-- -->برای کسب اطلاعات بیشتر راجع به وب سرور میتوانید به
+<a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server" target="_blank" rel="noopener noreferrer">این لینک</a>
+مراجعه کنید.<br>
+<!-- -->حال فرض کنید وب سایت خود را گسترش داده‌اید و این وب سایت چندین سرویس ارائه می دهد. پس تصمیم می گیرید تا به جای پاسخ دهی به کاربران توسط یک سرور، چندین سرور با وظایف متفاوت ایجاد کنید. از آن جایی که اضافه شدن این سرورها باعث ایجاد پیچیدگی سیستم میشود، علاقمندیم تا همه این سرورها را تا حد توان از دید کاربر پنهان نگه داریم و کاربر صرفا با یک سرور تعامل داشته باشد.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="reverse-proxy">Reverse Proxy<a class="hash-link" aria-label="لینک مستقیم به Reverse Proxy" title="لینک مستقیم به Reverse Proxy" href="/codestar-documents/docs/devops/nginx#reverse-proxy">​</a></h2>
+<p>Reverse Proxy
+ابزاری است که تحت عنوان یک سرور مستقل امکانات متعددی را در اختیار ما قرار میدهد تا بتوانیم به نیازهای بیان شده پاسخ دهیم.<br>
+<!-- -->Reverse Proxy
+یک مدل معماری شبکه است که در آن یک سرور واسط بین کلاینت و سرور اصلی قرار می‌گیرد. در این مدل، درخواست‌های کلاینت به سرور اصلی ارسال نمی‌شوند، بلکه ابتدا به ریورس پروکسی می‌رسند و سپس ریورس پروکسی مسئول ارسال درخواست به سرور اصلی و دریافت پاسخ آن است.<br>
+<!-- -->به طور خلاصه، فرایند کارکرد یک
+Reverse Proxy
+به این شکل است:<br>
+<!-- -->فرض کنید یک وب سرور به عنوان
+Reverse Proxy
+در مقابل چندین وب سرور داخلی با
+IP Address
+های
+192.168.1.02
+و
+192.168.1.03
+و
+192.168.1.04
+قرار گردفته است.</p>
+<ul>
+<li>کاربر یک درخواست به آدرس
+example.com
+ارسال می‌کند.</li>
+<li>درخواست به
+Reverse Proxy
+می‌رسد.</li>
+<li>Reverse Proxy
+بر اساس قوانین تعریف شده، آدرس درخواست را با یکی از آدرس‌های سرورهای داخلی مثل
+192.168.1.03
+جایگزین می‌کند.</li>
+<li>درخواست را به سرور مقصد ارسال می‌کند.</li>
+<li>پاسخ از سرور داخلی دریافت و برای کاربر اراسل می‌شود.</li>
+</ul>
+<p>برای کسب اطلاعات بیشتر راجع به
+Reverse Proxy
+می‌توانید از
+<a href="https://liara.ir/blog/%D9%BE%D8%B1%D9%88%DA%A9%D8%B3%DB%8C-%D9%85%D8%B9%DA%A9%D9%88%D8%B3-reverse-proxy-%DA%86%DB%8C%D8%B3%D8%AA%D8%9F/" target="_blank" rel="noopener noreferrer">این لینک</a>
+استفاده کنید.</p>
+<p><img decoding="async" loading="lazy" alt="Reverse Proxy Function Explained Picture" src="/codestar-documents/assets/images/03-nginx-reverse-proxy-function-explained-picture-d6e1c29e416f4587c36c0ac96873ebb8.png" width="757" height="380" class="img_ev3q"></p>
+<p>حال فرض کنید این وبسایت راه اندازی شده چندین سرویس مختلف ارائه می‌دهد و هر سرویس بار بسیار زیادی را تحمل میکند. تعداد درخواست‌ها به هر سرور بسیار زیاد شده است و یک سرور نمی‌تواند به همه درخواست‌ها بدرستی و در زمان کوتاه پاسخ دهد. حال این چالش را میتوان به روش‌های مختلفی حل کرد:</p>
+<ol>
+<li>اضافه کردن منابع
+(CPU
+و
+RAM
+و
+Disk
+و ...)
+سرور که با هزینه زیادی همراه است و
+scalable
+هم نیست.</li>
+<li>اضافه کردن چند سرور با وظایف مشابه و تقسیم بار روی چندین سرور به جای یک سرور که این حالت
+scalable
+است.</li>
+</ol>
+<p>برای انجام روش دوم، با مفهومی به نام
+Load balancing
+آشنا می شویم.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="load-balancing">Load Balancing<a class="hash-link" aria-label="لینک مستقیم به Load Balancing" title="لینک مستقیم به Load Balancing" href="/codestar-documents/docs/devops/nginx#load-balancing">​</a></h2>
+<p>لود بالانسینگ
+یا متعادل‌کردن بار به معنای توزیع یکسان بار یا ترافیک ورودی به یک شبکه، میان گروهی از سرورهای بک‌اند می‌باشد. این عمل توسط یک لود بالانسر
+(Load Balancer)
+انجام شده و باعث می‌شود تا سرور در ساعات اوج ترافیک دچار کندی و یا اختلال نشود. لود بالانسر میان کلاینت‌ها و سرورها قرار گرفته و به گونه‌ای ترافیک را توزیع می‌کند که بر هیچ‌یک از سرورها فشاری وارد نشود. برای درک بهتر لود بالانسینگ به این مثال توجه کنید. فرض کنید فروشگاهی دارای ۱۰ صندوق است که تنها یکی از آن‌ها کار می‌کند و در چنین شرایطی تمام مشتریان مجبورند در صفی طولانی بایستند و فرد صندوق‌دار نیز باید کار تمام آن‌ها راه بیندازد که این عمل باعث خستگی و کاهش بهره‌وری آن فرد در حین کار می‌شود. حال فرض کنید به‌یکباره تمام صندوق‌ها شروع به کار کرده و تمام مشتریان به صورت مساوی میان آن‌ها تقسیم شوند. در این حالت مشتریان زودتر از فروشگاه خارج شده و صندوق‌دار‌ها نیز دچار خستگی نمی‌شوند. لودبالانسینگ هم دقیقا به همین صورت عمل می‌کند.<br>
+<!-- -->حال شما میتوانید بر اساس نیاز و نوع استفاده از تکنیک‌های متفاوتی برای
+Load Balancing
+استفاده کنید.</p>
+<ul>
+<li>Round Robin:
+در این نوع الگوریتم، ترافیک ورودی به شبکه به صورت زنجیره‌ای و پشت‌سرهم میان سرورها تقسیم می‌شود. این متد اغلب زمانی مورد استفاده قرار می‌گیرد که تمام سرورها دارای مشخصات یکسان باشند.</li>
+<li>Weighted Round Robin:
+نوعی الگوریتم لود بالانسینگ است که در آن شما با توجه به ظرفیت و عملکرد سرورها می‌توانید ترافیک ورودی را میان آن‌ها تقسیم می‌کند. به عنوان مثال می‌توانید بیشتر ترافیک وب‌سایت خود را به سمت سروری که منابع قوی‌تری دارد، ارسال کنید.</li>
+<li>IP Hash:
+در این متد، لود بالانسرها محاسبات ریاضی به نام
+Hashing
+را بر روی آدرس‌های
+IP
+انجام داده و بر اساس عدد بدست آمده، ترافیک آن‌ها را به سمت سرورهای مناسب هدایت می‌کنند. با استفاده از این روش می‌توانید مطمئن شوید که درخواست‌های یک
+IP
+هر بار تنها به سمت یک سرور خاص می‌روند.</li>
+<li>Weighted Least Connection:
+در این الگوریتم، تعداد درخواست‌های ارسالی به هر سرور بر اساس میزان عملکرد و ظرفیت مشخص می‌شود و بنابراین سرورهای قدرتمندتر نسبت به سایر سرورها باید تعداد اتصالات بیشتری داشته باشند.</li>
+</ul>
+<p>برای آشنایی بیشتر با مفهوم لود بالانسینگ می‌توانید به
+<a href="https://samwho.dev/load-balancing/" target="_blank" rel="noopener noreferrer">این لینک</a>
+مراجعه کنید.</p>
+<p>حال پس از آشنا شدن با کلیدواژه‌های
+Web Server
+،
+Reverse Proxy
+و همچنین
+Load Balancing
+به سراغ ابزاری می‌رویم که همه این امکانات را برای ما فراهم می‌کند.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="nginx">Nginx<a class="hash-link" aria-label="لینک مستقیم به Nginx" title="لینک مستقیم به Nginx" href="/codestar-documents/docs/devops/nginx#nginx">​</a></h2>
+<p>Nginx
+یک وب سرور با عملکرد بالا است که علاوه بر این، به عنوان یک پروکسی معکوس، پروکسی ایمیل، لود بالانسر و پروکسی عمومی
+TCP/UDP
+این سیستم برای اولین بار توسط ایگور سیسوئف توسعه یافت و در سال ۲۰۰۴ به صورت عمومی منتشر شد.
+Nginx
+به خاطر ثبات، مجموعه ویژگی‌های غنی، پیکربندی ساده و مصرف کم منابع شناخته شده است.<br>
+<!-- -->در اینجا به تفصیل به ویژگی‌ها و قابلیت‌های کلیدی آن می‌پردازیم:</p>
+<ol>
+<li>وب سرور:
+Nginx
+برای ارائه محتوای استاتیک به صورت سریع و کارآمد استفاده می‌شود. همچنین می‌توان از آن به عنوان وب سرور برای محتوای داینامیک نیز استفاده کرد، اگرچه این قابلیت معمولاً شامل واگذاری جنبه‌های داینامیک به یک سرور برنامه پشت
+Nginx
+است که به عنوان یک پروکسی معکوس استفاده می‌شود.</li>
+<li>Reverse Proxy: Nginx،
+می‌تواند ترافیک ورودی را بین چندین سرور پشتی توزیع کند، پاسخ‌ها را کش کند، و بهبود امنیت و عملکرد را فراهم کند. این برای تعادل بار بین چندین سرور برنامه یا برای کش کردن سایت‌های کند مبتنی بر پایگاه داده مورد استفاده قرار می‌گیرد.</li>
+<li>توزیع بار:
+سیستم توزیع بار
+Nginx
+می‌تواند درخواست مشتریان را بر اساس
+IP،
+URL
+و دیگر خصوصیات توزیع کند و از هر دو خصوصیت
+Active/Passive Healh Check
+پشتیبانی می‌کند تا اطمینان حاصل شود ترافیک فقط به سرورهای سالم هدایت می‌شود.</li>
+<li>کش
+Nginx:
+HTTP
+می‌تواند پاسخ‌ها را در کش ذخیره و بازیابی کند تا بار روی سرورهای برنامه را کاهش دهد و زمان پاسخ را سرعت ببخشد.</li>
+<li>فشرده‌سازی محتوا:
+Nginx،
+از فشرده‌سازی محتوا با استفاده از
+gzip
+پشتیبانی می‌کند تا مقدار داده‌هایی که باید از طریق شبکه ارسال شود را کاهش دهد.</li>
+<li>انعطاف‌پذیری در پیکربندی: فایل پیکربندی
+Nginx
+هم ساده و هم قدرتمند است، که امکان تغییر مسیر آسان، بازنویسی
+URL
+ها و بسیاری موارد دیگر را فراهم می‌کند.</li>
+<li>همزمانی
+(Concurrency):
+ابزار
+Nginx
+با معماری رویداد محور
+(event-driven architecture)
+خود، تعداد زیادی اتصال همزمان را بسیار کارآمد مدیریت می‌کند. این امر باعث سهولت هرچه بیشتر پاسخ دهی به درخواست کاربران می‌شود.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="تمرین">تمرین<a class="hash-link" aria-label="لینک مستقیم به تمرین" title="لینک مستقیم به تمرین" href="/codestar-documents/docs/devops/nginx#تمرین">​</a></h2>
+<p>با کمک
+<a href="https://nginx.org/en/docs/beginners_guide.html" target="_blank" rel="noopener noreferrer">Nginx Beginner’s Guide</a>
+ابتدا این وب‌سرور را بر روی دستگاه خود نصب کنید.
+سپس با مطالعه این لینک و جست‌وجو در اینترنت کانفیگی ایجاد کنید که به نیازمندی‌های زیر پاسخ دهد:</p>
+<ul>
+<li>با ارسال درخواست به آدرس
+<code>/static</code>
+فایل‌های درون دایرکتوری
+<code>/usr/share/static</code>
+نمایش داده شود. برای مثال هنگامی که کاربر آدرس
+<code>http://localhost/static/style.css</code>
+را درخواست می‌کند، فایل
+<code>/usr/share/static/style.css</code>
+به او نشان داده شود.</li>
+<li>با ارسال درخواست به
+<code>/api</code>
+درخواست‌ها بین
+3
+آدرس
+<code>google.com</code>, <code>yahoo.com</code> و <code>bing.com</code>
+پخش شود.</li>
+<li>درخواست‌های به آدرس
+<code>/API</code>
+به آدرس
+<code>/api</code>
+منتقل شود.</li>
+<li>درخواست‌هایی از طرف
+<code>curl</code> و <code>wget</code>
+ارسال می‌شود با خطای
+<code>403</code>
+مواجه شود.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Star-Academy/codestar-documents/tree/master/docs/devops/03-nginx.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>ویرایش مطالب این صفحه</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="صفحات مستندات"><a class="pagination-nav__link pagination-nav__link--prev" href="/codestar-documents/docs/devops/network"><div class="pagination-nav__sublabel">قبلی</div><div class="pagination-nav__label">Computer Networks</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/codestar-documents/docs/devops/ha-concept"><div class="pagination-nav__sublabel">بعدی</div><div class="pagination-nav__label">HA Concept</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/codestar-documents/docs/devops/nginx#نحوه-کارکرد-وب-سرور">نحوه کارکرد وب سرور</a></li><li><a class="table-of-contents__link toc-highlight" href="/codestar-documents/docs/devops/nginx#استاتیک-در-مقابل-داینامیک">استاتیک در مقابل داینامیک</a></li><li><a class="table-of-contents__link toc-highlight" href="/codestar-documents/docs/devops/nginx#reverse-proxy">Reverse Proxy</a></li><li><a class="table-of-contents__link toc-highlight" href="/codestar-documents/docs/devops/nginx#load-balancing">Load Balancing</a></li><li><a class="table-of-contents__link toc-highlight" href="/codestar-documents/docs/devops/nginx#nginx">Nginx</a></li><li><a class="table-of-contents__link toc-highlight" href="/codestar-documents/docs/devops/nginx#تمرین">تمرین</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">آکادمی ستاره - شرکت فناوری اطلاعات و ارتباطات مهیمن © ۱۴۰۳ </div></div></div></footer></div>
+</body>
+</html>
