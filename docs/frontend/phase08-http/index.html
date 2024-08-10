@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="fa-IR" dir="rtl" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-frontend/phase08-http" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">HTTP | StarAcademy</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://star-academy.github.io/codestar-documents/docs/frontend/phase08-http"><meta data-rh="true" property="og:locale" content="fa_IR"><meta data-rh="true" name="docusaurus_locale" content="fa"><meta data-rh="true" name="docsearch:language" content="fa"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="HTTP | StarAcademy"><meta data-rh="true" name="description" content="How much do you like long text?"><meta data-rh="true" property="og:description" content="How much do you like long text?"><link data-rh="true" rel="icon" href="/codestar-documents/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://star-academy.github.io/codestar-documents/docs/frontend/phase08-http"><link data-rh="true" rel="alternate" href="https://star-academy.github.io/codestar-documents/docs/frontend/phase08-http" hreflang="fa-IR"><link data-rh="true" rel="alternate" href="https://star-academy.github.io/codestar-documents/docs/frontend/phase08-http" hreflang="x-default"><link rel="stylesheet" href="/codestar-documents/assets/css/styles.f74edd12.css">
+<script src="/codestar-documents/assets/js/runtime~main.afdf180e.js" defer="defer"></script>
+<script src="/codestar-documents/assets/js/main.b904d366.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="پرش به مطلب اصلی"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">پرش به مطلب اصلی</a></div><nav aria-label="صفحه اصلی" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="باز و بست منو" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/codestar-documents/"><div class="navbar__logo"><img src="/codestar-documents/img/logo.svg" alt="آکادمی ستاره" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/codestar-documents/img/logo.svg" alt="آکادمی ستاره" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">آکادمی ستاره</b></a><div class="navbar__item dropdown dropdown--hoverable"><a aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link" href="/codestar-documents/docs/frontend/phase08-http">مستندات</a><ul class="dropdown__menu"><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/general">عمومی</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/frontend">Frontend</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/software-engineering">Backend</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/devops">DevOps</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/soft-skills">مهارت‌های نرم</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/codestar-documents/docs/project">پروژه</a></li></ul></div><a class="navbar__item navbar__link" href="/codestar-documents/codestar/onboarding">CodeStar</a></div><div class="navbar__items navbar__items--right"><a href="https://www.aparat.com/Code_star/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Aparat<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/Star-Academy/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="بین حالت تاریک و روشن سوئیچ کنید (الان حالت روشن)" aria-label="بین حالت تاریک و روشن سوئیچ کنید (الان حالت روشن)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="بازگشت به بالا" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="نوار کناری مستندات" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/general">عمومی</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;عمومی&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/codestar-documents/docs/frontend">فرانت‌اند</a><button aria-label="بستن دسته بندی در نوار کناری &#x27;فرانت‌اند&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase01-js-fundamental">Js Fundamental</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase02-dom">DOM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase03-ui-ux">UI/UX</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase04-css-and-sass">CSS &amp; Sass</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase05-typescript">TypeScript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase06-angular">Angular</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase07-rxjs">RxJs</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/codestar-documents/docs/frontend/phase08-http">HTTP</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase09-angular-routing">Angular Routing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase10-clean-code">Clean Code</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase11-authentication">Authentication</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/codestar-documents/docs/frontend/phase12-test">Test</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/software-engineering">مهندسی نرم‌افزار</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;مهندسی نرم‌افزار&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/soft-skills">مهارت‌های نرم</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;مهارت‌های نرم&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/devops">DevOps</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;DevOps&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/project">پروژه</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;پروژه&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/codestar-documents/docs/Roadmaps">مسیرهای یادگیری</a><button aria-label="باز کردن دسته بندی در نوار کناری &#x27;مسیرهای یادگیری&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="نشانگر صفحات"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="صفحه اصلی" class="breadcrumbs__link" href="/codestar-documents/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/codestar-documents/docs/frontend"><span itemprop="name">فرانت‌اند</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">HTTP</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">مطالب این صفحه</button></div><div class="theme-doc-markdown markdown"><header><h1>HTTP</h1></header><div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>این فاز، یکی از فازهای <code>Readonly</code> است.</div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="مقدمه">مقدمه<a class="hash-link" aria-label="لینک مستقیم به مقدمه" title="لینک مستقیم به مقدمه" href="/codestar-documents/docs/frontend/phase08-http#مقدمه">​</a></h3>
+<p>در این فاز قصد داریم با پروتکل
+HTTP
+آشنا شویم.</p>
+<ul>
+<li>پروتکل
+HTTP
+چیست؟</li>
+<li>منظور از
+Hyper Text
+یا ابرمتن چیست؟</li>
+<li>روش‌های درخواست در پروتکل
+HTTP
+؟</li>
+<li>HTTP
+چه چیزهایی را می‌تواند کنترل کند؟</li>
+<li>DNS
+چیست؟</li>
+<li>چطور
+DNS
+کار می‌کند؟</li>
+<li>اجزای اصلی DNS</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="یادگیری">یادگیری<a class="hash-link" aria-label="لینک مستقیم به یادگیری" title="لینک مستقیم به یادگیری" href="/codestar-documents/docs/frontend/phase08-http#یادگیری">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="پروتکل-http-چیست">پروتکل HTTP چیست؟<a class="hash-link" aria-label="لینک مستقیم به پروتکل HTTP چیست؟" title="لینک مستقیم به پروتکل HTTP چیست؟" href="/codestar-documents/docs/frontend/phase08-http#پروتکل-http-چیست">​</a></h4>
+<p>پروتکل‌های اینترنتی به عنوان مهم‌‌ترین و پرکاربردترین استاندارد برای تبادل اطلاعات در شبکه‌‌های اینترنتی شناخته می‌شوند.
+پروتکل
+HTTP
+یا
+Hyper Text Transfer Protocol
+یکی از استانداردهای پرکاربرد تعریف شده برای شبکه‌های اینترنتی است
+که مدتی بعد از ساخت اولین سایت‌ها ایجاد شد.
+این استاندارد به تدریج توسعه پیدا کرد و کنسرسیوم جهانی وب
+(W3C)
+وظیفه توسعه و نظارت این پروتکل را بر عهده گرفت.</p>
+<br>
+<p>Http
+مخفف عبارت
+Hyper Text Transfer Protocol
+است
+که به معنی پروتکلی برای انتقال ابرمتن‌ها می‌باشد.
+بر اساس این پروتکل، امکان ایجاد صفحات وب و سایت‌های اینترنتی فراهم شد.
+این پروتکل وظیفه برقراری ارتباط میان سرور و کلاینت را در یک شبکه کامپیوتری برعهده دارد.
+به عبارتی دیگر این پروتکل مسئولیت برقراری ارتباط بین سرویس دهندگان و سرویس گیرندگان وب را برعهده دارد.</p>
+<p>برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/HTTP" target="_blank" rel="noopener noreferrer">?Wiki - What is HTTP</a></li>
+</ul>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="منظور-از-hyper-text-یا-ابرمتن-چیست">منظور از Hyper Text یا ابرمتن چیست؟<a class="hash-link" aria-label="لینک مستقیم به منظور از Hyper Text یا ابرمتن چیست؟" title="لینک مستقیم به منظور از Hyper Text یا ابرمتن چیست؟" href="/codestar-documents/docs/frontend/phase08-http#منظور-از-hyper-text-یا-ابرمتن-چیست">​</a></h4>
+<p>شاید برای شما سوال شود، که منظور از کلمه
+Hypertext
+چیست؟
+منظور از
+Hypertext
+یا ابر متن، متن‌های بزرگ و طولانی است که به صورت
+HTML
+نوشته می‌شوند.
+البته برخلاف اینکه کدهای نوشته شده فقط به صورت متنی هستند،
+بعد از پردازش توسط مرورگر کاربر الزاما به صورت متنی نخواهند بود.
+یک سند
+HTML
+می‌تواند دارای تصویر، ویدئو، جدول ، لینک و... باشد.</p>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="روشهای-درخواست-در-پروتکل-http">روش‌های درخواست در پروتکل HTTP<a class="hash-link" aria-label="لینک مستقیم به روش‌های درخواست در پروتکل HTTP" title="لینک مستقیم به روش‌های درخواست در پروتکل HTTP" href="/codestar-documents/docs/frontend/phase08-http#روشهای-درخواست-در-پروتکل-http">​</a></h4>
+<p>پروتکل
+Http
+روش‌‌های مختلفی را برای درخواست اطلاعات در شبکه وب تعریف کرده‌ است.
+هر کدام از این روش‌ها با هدف خاصی در وب سرورها استفاده می‌شوند.
+در ادامه به توضیح هر کدام از این روش‌ها می‌پردازیم:</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="get">GET<a class="hash-link" aria-label="لینک مستقیم به GET" title="لینک مستقیم به GET" href="/codestar-documents/docs/frontend/phase08-http#get">​</a></h5>
+<p>پیام هایی که در این روش ارسال می‌شوند تنها شامل یک
+URL
+هستند.
+ البته در این پیام‌ها می‌توان تعدادی پارامتر دلخواه در انتهای
+URL
+اضافه کرد.
+پارامترهای دلخواه در این پیام ها، در
+URL
+ارسال شده، به راحتی قابل مشاهده هستند.
+این نوع پیام‌ها پس از ارسال توسط سرور پردازش می‌شوند و در نهایت نتیجه آن به درخواست کننده یا همان مرورگر بر می‌گردد.</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="post">POST<a class="hash-link" aria-label="لینک مستقیم به POST" title="لینک مستقیم به POST" href="/codestar-documents/docs/frontend/phase08-http#post">​</a></h5>
+<p>در این نوع پیام ها، پارامترهای دلخواهی که اضافه می‌شود، قابل مشاهده نمی‌باشند.
+زیرا در این روش به جای اضافه کردن پارامترها در انتهای
+URL
+، آن‌ها در درون پیام درخواست شده قرار داده می‌شوند.</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="put">PUT<a class="hash-link" aria-label="لینک مستقیم به PUT" title="لینک مستقیم به PUT" href="/codestar-documents/docs/frontend/phase08-http#put">​</a></h5>
+<p>در این روش داده هایی به همراه پیام درخواست به سرور ارسال می‌شود.
+سپس از سرور تقاضا می‌ شود که این داده‌ها را در آدرس مشخص شده ذخیره کند.
+اگر در محلِ درخواست شده از قبل داده‌های دیگری ذخیره شده باشند، داده‌های جدید جایگزین خواهند شد.</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="patch">PATCH<a class="hash-link" aria-label="لینک مستقیم به PATCH" title="لینک مستقیم به PATCH" href="/codestar-documents/docs/frontend/phase08-http#patch">​</a></h5>
+<p>این روش در سال ۲۰۱۰ به پروتکل
+http
+اضافه شد.
+این روش برای ایجاد تغییرات جزیی بر روی داده‌ها مورد نظر در سرور استفاده می‌ شود.</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="delete">DELETE<a class="hash-link" aria-label="لینک مستقیم به DELETE" title="لینک مستقیم به DELETE" href="/codestar-documents/docs/frontend/phase08-http#delete">​</a></h5>
+<p>از این روش برای حذف یک آدرس در سرور استفاده می‌شود.</p>
+<p>برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="_blank" rel="noopener noreferrer">MDN - HTTP request methods</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank" rel="noopener noreferrer">MDN - HTTP status code</a></li>
+<li><a href="https://kodekloud.com/blog/put-and-patch-in-rest-api/" target="_blank" rel="noopener noreferrer">Kode Kloud - PATCH vs PUT</a></li>
+</ul>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="http-چه-چیزهایی-را-میتواند-کنترل-کند">HTTP چه چیزهایی را می‌تواند کنترل کند؟<a class="hash-link" aria-label="لینک مستقیم به HTTP چه چیزهایی را می‌تواند کنترل کند؟" title="لینک مستقیم به HTTP چه چیزهایی را می‌تواند کنترل کند؟" href="/codestar-documents/docs/frontend/phase08-http#http-چه-چیزهایی-را-میتواند-کنترل-کند">​</a></h4>
+<p>ماهیت بسط‌پذیر پروتکل
+HTTP
+در طی زمان به ما این امکان را داده است که کنترل و کارکردهای بیشتری روی وب داشته باشیم.
+در ادامه فهرستی از قابلیت‌های متداولی را مشاهده می‌کنید که از سوی
+HTTP
+کنترل می‌شوند.</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="کش-کردن">کش کردن<a class="hash-link" aria-label="لینک مستقیم به کش کردن" title="لینک مستقیم به کش کردن" href="/codestar-documents/docs/frontend/phase08-http#کش-کردن">​</a></h5>
+<p>شیوه کش شدن سندها را می‌توان با استفاده از پروتکل
+HTTP
+کنترل کرد.
+سرور می‌تواند به واسطه‌ها و کلاینت‌ها در مورد این که کش کردن چطور و برای چه مدتی انجام شود، دستورالعمل بدهد.
+کلاینت می‌تواند به واسطه‌های بی‌د‌رنگ کش دستور دهد که سند ذخیره شده را نادیده بگیرند.</p>
+<p>برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control" target="_blank" rel="noopener noreferrer">MDN - Cache-Control</a></li>
+</ul>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="origin">Origin<a class="hash-link" aria-label="لینک مستقیم به Origin" title="لینک مستقیم به Origin" href="/codestar-documents/docs/frontend/phase08-http#origin">​</a></h5>
+<p>مرورگرهای وب برای جلوگیری از سرقت اطلاعات و دیگر مداخلات در حریم خصوصی کاربران، یک جداسازی الزامی بین وب‌سایت‌ها ایجاد می‌کنند،
+به این ترتیب تنها صفحه‌هایی با منشأ
+(Origin)
+یکسان می‌توانند به همه اطلاعات صفحه وب دسترسی داشته باشند.
+با این که چنین قیدی یک مزاحمت برای سرور محسوب می‌شود، اما هدرهای
+HTTP
+می‌توانند این جداسازی صریح را در سمت سرور آزاد سازند
+و به سند امکان دهند که مجموعه ای از اطلاعات باشد که از دامنه‌های مختلف تأمین می‌شوند.
+حتی ممکن است برخی دلایل امنیتی برای انجام این کار وجود داشته باشد.</p>
+<p>برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin" target="_blank" rel="noopener noreferrer">MDN - Origin</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy" target="_blank" rel="noopener noreferrer">MDN - Same-origin policy</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank" rel="noopener noreferrer">MDN - Cross-Origin Resource Sharing (CORS)</a></li>
+</ul>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="احراز-هویت-authentication">احراز هویت (Authentication)<a class="hash-link" aria-label="لینک مستقیم به احراز هویت (Authentication)" title="لینک مستقیم به احراز هویت (Authentication)" href="/codestar-documents/docs/frontend/phase08-http#احراز-هویت-authentication">​</a></h5>
+<p>برخی صفحه‌های وب را می‌توان محافظت کرد، به طوری که تنها کاربران خاصی بتوانند به آن‌ها دسترسی داشته باشند.
+فرایند ابتدایی احراز هویت می‌تواند از سوی
+HTTP
+ارائه شود،
+که این کار یا از طریق
+WWW-Authenticate
+و هدرهای مشابه یا با تعیین یک نشست خاص با استفاده از کوکی‌های
+HTTP
+انجام می‌یابد.</p>
+<p>برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication" target="_blank" rel="noopener noreferrer">MDN - HTTP authentication</a></li>
+</ul>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="نشستها-sessions">نشست‌ها (Sessions)<a class="hash-link" aria-label="لینک مستقیم به نشست‌ها (Sessions)" title="لینک مستقیم به نشست‌ها (Sessions)" href="/codestar-documents/docs/frontend/phase08-http#نشستها-sessions">​</a></h5>
+<p>استفاده از کوکی‌های
+HTTP
+به شما امکان می‌دهد که درخواست‌های
+HTTP
+را به state سرور پیوند دهید.
+با این کار نشست‌ها ایجاد می‌شوند، هر چند که
+HTTP
+ابتدایی یک پروتکل
+stateless
+است.
+این وضعیت نه تنها برای مدیریت سبد خرید فروشگاه‌های آنلاین مفید است،
+بلکه برای هر سایتی که امکان پیکربندی خروجی خود را به کاربر می‌دهد، مفید خواهد بود.</p>
+<p>برای آشنایی بیشتر با این مفهوم می‌توانید از لینک‌های زیر استفاده کنید:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Session" target="_blank" rel="noopener noreferrer">MDN - A typical HTTP session</a></li>
+</ul>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="dns-چیست">DNS چیست؟<a class="hash-link" aria-label="لینک مستقیم به DNS چیست؟" title="لینک مستقیم به DNS چیست؟" href="/codestar-documents/docs/frontend/phase08-http#dns-چیست">​</a></h4>
+<p>DNS (Domain Name System) یک سیستم است که نام دامنه‌های قابل خواندن توسط انسان (مثل <code>www.example.com</code>) را به آدرس‌های IP قابل فهم برای کامپیوترها (مثل <code>192.0.2.1</code>) تبدیل می‌کند. این فرآیند شبیه به دفترچه تلفن است که در آن نام افراد به شماره تلفن‌هایشان تبدیل می‌شود.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="چرا-dns-مهم-است">چرا DNS مهم است؟<a class="hash-link" aria-label="لینک مستقیم به چرا DNS مهم است؟" title="لینک مستقیم به چرا DNS مهم است؟" href="/codestar-documents/docs/frontend/phase08-http#چرا-dns-مهم-است">​</a></h4>
+<p>DNS
+به شما اجازه می‌دهد که به جای وارد کردن یک رشته عددی پیچیده (آدرس
+IP
+)، با وارد کردن یک نام دامنه به وبسایت‌ها دسترسی پیدا کنید. این سیستم استفاده از اینترنت را بسیار ساده‌تر و کاربرپسندتر می‌کند.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="چطور-dns-کار-میکند">چطور DNS کار می‌کند؟<a class="hash-link" aria-label="لینک مستقیم به چطور DNS کار می‌کند؟" title="لینک مستقیم به چطور DNS کار می‌کند؟" href="/codestar-documents/docs/frontend/phase08-http#چطور-dns-کار-میکند">​</a></h4>
+<ol>
+<li>
+<p><strong>درخواست کاربر:</strong> وقتی شما نام دامنه‌ای را در مرورگر وب خود وارد می‌کنید (مثل <code>www.example.com</code>)، مرورگر شما درخواست خود را به یک سرور
+DNS
+ارسال می‌کند.</p>
+</li>
+<li>
+<p><strong>جستجوی سرور DNS:</strong> سرور
+DNS
+به دنبال آدرس
+IP
+مرتبط با آن نام دامنه می‌گردد. اگر این اطلاعات را در حافظه خود داشته باشد، سریعاً آدرس
+IP
+را برمی‌گرداند. اگر نه، درخواست را به سرور
+DNS
+دیگری ارسال می‌کند.</p>
+</li>
+<li>
+<p><strong>برگرداندن آدرس IP:</strong> وقتی که آدرس
+IP
+پیدا شد، به مرورگر شما بازگردانده می‌شود.</p>
+</li>
+<li>
+<p><strong>اتصال به وبسایت:</strong> مرورگر شما با استفاده از آدرس
+IP
+دریافتی، به سرور وبسایت متصل می‌شود و صفحه وب مورد نظر را بارگذاری می‌کند.</p>
+</li>
+</ol>
+<p>با این توضیحات، حالا باید بهتر بفهمید که
+DNS
+چیست و چگونه کار می‌کند.
+اگر سوالات بیشتری دارید، منابع آنلاین زیادی برای یادگیری عمیق‌تر موجود است که چندتا از آنها را در لینک های زیر برایتان قرار داده ایم:</p>
+<ul>
+<li><a href="https://www.cloudflare.com/learning/dns/what-is-dns/" target="_blank" rel="noopener noreferrer">?Cloudflare - What is DNS</a></li>
+<li><a href="https://aws.amazon.com/route53/what-is-dns/" target="_blank" rel="noopener noreferrer">AWS - Introduction to DNS</a></li>
+<li><a href="https://youtu.be/UVR9lhUGAyU?si=1O521uCkTLqSF9i_" target="_blank" rel="noopener noreferrer">Youtube - DNS explained in 100 seconds</a></li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>برچسب‌ها:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/codestar-documents/docs/tags/readonly">Readonly</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Star-Academy/codestar-documents/tree/master/docs/frontend/phase08-http.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>ویرایش مطالب این صفحه</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="صفحات مستندات"><a class="pagination-nav__link pagination-nav__link--prev" href="/codestar-documents/docs/frontend/phase07-rxjs"><div class="pagination-nav__sublabel">قبلی</div><div class="pagination-nav__label">RxJs</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/codestar-documents/docs/frontend/phase09-angular-routing"><div class="pagination-nav__sublabel">بعدی</div><div class="pagination-nav__label">Angular Routing</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/codestar-documents/docs/frontend/phase08-http#مقدمه">مقدمه</a></li><li><a class="table-of-contents__link toc-highlight" href="/codestar-documents/docs/frontend/phase08-http#یادگیری">یادگیری</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">آکادمی ستاره - شرکت فناوری اطلاعات و ارتباطات مهیمن © ۱۴۰۳ </div></div></div></footer></div>
+</body>
+</html>
