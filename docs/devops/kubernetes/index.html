@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">Kubernetes | StarAcademy</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://star-academy.github.io/codestar-documents/docs/devops/kubernetes"><meta data-rh="true" property="og:locale" content="fa_IR"><meta data-rh="true" name="docusaurus_locale" content="fa"><meta data-rh="true" name="docsearch:language" content="fa"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Kubernetes | StarAcademy"><link data-rh="true" rel="icon" href="/codestar-documents/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://star-academy.github.io/codestar-documents/docs/devops/kubernetes"><link data-rh="true" rel="alternate" href="https://star-academy.github.io/codestar-documents/docs/devops/kubernetes" hreflang="fa-IR"><link data-rh="true" rel="alternate" href="https://star-academy.github.io/codestar-documents/docs/devops/kubernetes" hreflang="x-default"><link rel="stylesheet" href="/codestar-documents/assets/css/styles.f74edd12.css">
-<script src="/codestar-documents/assets/js/runtime~main.e3a0aa1c.js" defer="defer"></script>
+<script src="/codestar-documents/assets/js/runtime~main.1380a016.js" defer="defer"></script>
 <script src="/codestar-documents/assets/js/main.019281bc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -129,7 +129,7 @@ Kind
 <p>پیش از اینکه به سراغ استفاده از کوبرنیتیز برویم، نیاز به ابزاری برای مدیریت کلاستر داریم. این ابزار
 Kubectl
 است که به ما اجازه می‌دهد از طریق محیط خط فرمان کلاستر خود را کنترل کنیم. ابتدا
-<a href="https://kind.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">Kubectl</a>
+<a href="https://kubernetes.io/docs/tasks/tools/" target="_blank" rel="noopener noreferrer">Kubectl</a>
 و سپس
 <a href="https://kind.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">Kind</a>
 را نصب کرده و سعی کنید یک کلاستر با یک نود
@@ -141,7 +141,7 @@ Worker
 <h1>اجرای نرم‌افزار بر روی کوبرنیتیز</h1>
 <p>کوچک‌ترین شیء در دنیای کوبرنیتیز
 Pod
-یا پاد است. هر پاد متشکل از یک یا چند کانتینر است که برخی از منابع را ب ه صورت اشتراکی و برخی دیگر را به صورت جدا استفاده
+یا پاد است. هر پاد متشکل از یک یا چند کانتینر است که برخی از من ابع را به صورت اشتراکی و برخی دیگر را به صورت جدا استفاده
 می‌کنند. در اینجا برای سادگی می‌توانیم فرض کنیم که پاد در دنیای کوبرنیتیز با کانتینرهای داکری تناظر یک به یک داشته و هر
 پاد معادل یک کانتینر است.</p>
 <p>اشیا در کوبرنیتیز بوسیله ساختاری به نام منیفست توصیف می‌شوند. منیفست‌ها قطعات کدی مانند فایل‌های
@@ -160,7 +160,7 @@ kubectl
 <code>yaml</code>
 ذخیره کرده و با استفاده از دستور</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">kubectl apply -f pod.yaml</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="کپی به کلیپ‌بورد" title="کپی" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p>آن را برای اجرا به کلاستر خ ود ارسال کنید.</p>
+<p>آن را برای اجرا به کلاستر خود ارسال کنید.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="deployment">Deployment<a class="hash-link" aria-label="لینک مستقیم به Deployment" title="لینک مستقیم به Deployment" href="/codestar-documents/docs/devops/kubernetes#deployment">​</a></h2>
 <p>همانطور که گفتیم یکی از مشکلاتی که با استفاده از کوبرنیتیز سعی در رفع آن‌ها داریم، مسئله خودترمیمی نرم‌افزارها است. با
 توجه به این نیازمندی، می‌توان دید که اگر ما یک پاد را به صورت مستقل بر روی کوبرنیتیز اجرا کنیم، با پاک شدن آن پاد
@@ -180,7 +180,7 @@ Deamonset
 نیز برای اجرای کانتینرها بر روی کوبرنیتیز وجود دارد. درباره
 آن‌ها تحقیق کنید و تفاوت‌ها و شباهت‌های آن‌ها را مشخص کنید.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="service">Service<a class="hash-link" aria-label="لینک مستقیم به Service" title="لینک مستقیم به Service" href="/codestar-documents/docs/devops/kubernetes#service">​</a></h2>
-<p>پس از اجرای دیپلویمنت بر روی کوبرنیتیز، نیاز به راهی برای ارتباط با پاد‌های مستقر شده داریم. کوبرنیتیز به صورت خودکار به
+<p>پس از اجرای دیپلویمنت بر روی کوبرنیتیز، نیاز به راهی برای ارتباط با پاد‌ها ی مستقر شده داریم. کوبرنیتیز به صورت خودکار به
 هر پاد یک آدرس
 IP
 منحصر به فرد اختصاص می‌دهد اما با توجه به اینکه ممکن است یک
