@@ -16,8 +16,8 @@ TDD
 و مراحل آن لینک‌های زیر را مطالعه کنید:
 
 -   [Testing Software: What is TDD?](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
--   [Test Driven Development (TDD): The Advantages and Disadvantages](https://medium.com/@stevenpcurtis.sc/test-driven-development-tdd-the-advantages-and-disadvantages-5347899ead90)
--   [Introduction to Test Driven Development (TDD)](https://medium.com/hackernoon/introduction-to-test-driven-development-tdd-61a13bc92d92)
+-   [Test Driven Development (TDD): The Advantages and Disadvantages](https://www.freedium.cfd/https://stevenpcurtis.medium.com/test-driven-development-tdd-the-advantages-and-disadvantages-5347899ead90)
+-   [Introduction to Test Driven Development (TDD)](https://www.developers-books.com/introduction-to-test-driven-development-tdd/)
 
 :::tip ‌
 این دو ویدویو مربوط به
