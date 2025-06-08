@@ -42,13 +42,10 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: deploy_dist
-            
-            - name: downloaded files
-              run: ls -R
-            
+
             - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@releases/v3
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   BRANCH: gh-pages
-                  FOLDER: deploy_dist
+                  FOLDER: .
