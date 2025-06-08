@@ -1,0 +1,31 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+ .mainContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 50%));
+    place-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 996px) {
+    .mainContainer {
+        padding: 2rem;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12px;
+}

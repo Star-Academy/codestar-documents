@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_academy=self.webpackChunkstar_academy||[]).push([[4564],{4564:(a,e,s)=>{s.d(e,{createRadarServices:()=>c.f});var c=s(655);s(3579)}}]);
