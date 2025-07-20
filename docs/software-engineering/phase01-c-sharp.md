@@ -89,7 +89,8 @@ dotnet run
 ```shell
 Hello World
 ```
-
+برای اطلاعات بیشتر می‌تواند به لینک زیر مراجعه نمایید.
+-   [Create a simple C# console app in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-console)
 ## NuGet
 
 توسعه‌دهندگان برای اشتراک گذاشتن و دریافت کدهای به اشتراک گذاشته شده از ابزارهایی تحت عنوان
