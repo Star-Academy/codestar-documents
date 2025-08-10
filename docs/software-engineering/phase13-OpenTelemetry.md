@@ -10,24 +10,8 @@ description: ''
 Observability
 است.
 
-## اهداف این فاز
+در این مستند، پیاده‌سازی Observability روی پروژه ASP.NET Core با استفاده از OpenTelemetry توضیح داده شده است؛ شامل جمع‌آوری داده‌های Logs، Metrics و Traces و مشاهده و تحلیل آن‌ها در ابزارهای Jaeger، Prometheus و Grafana.
 
-* آشنایی با مفهوم
-  Observability
-  و اجزای آن
-* یادگیری استفاده از
-  OpenTelemetry
-  در پروژه‌های
-  ASP.NET Core
-* جمع‌آوری و مشاهده داده‌های
-  Logs، Metrics
-  و
-  Traces
-* آشنایی با ابزارهای
-  Jaeger، Prometheus
-  و
-  Grafana
-  برای مشاهده و تحلیل داده‌ها
 
 ## Observability چیست؟
 
@@ -63,7 +47,7 @@ OpenTelemetry یک استاندارد و مجموعه ابزاری متن‌با
 - [OpenTelemetry .NET – Instrumentation](https://opentelemetry.io/docs/languages/dotnet/instrumentation/)
 - [OpenTelemetry .NET – Example: Use OpenTelemetry with Prometheus, Grafana, and Jaeger](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/observability-prgrja-example)
 
-## 4. راه‌اندازی ابزارهای Observability با Docker
+##  راه‌اندازی ابزارهای Observability با Docker
 
 ### فایل `docker-compose.yml`
 
@@ -101,7 +85,7 @@ scrape_configs:
       - targets: [ 'host.docker.internal:9184' ]
 ```
 
-## 5. تحلیل داده‌ها
+##  تحلیل داده‌ها
 
 ### بررسی Traces در Jaeger:
 
