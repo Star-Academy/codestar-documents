@@ -206,7 +206,9 @@ export class AuthStore extends ComponentStore<AuthState> {
 
 حالا هر کامپوننت یا سرویسی در برنامه می‌تواند
 `AuthStore`
-را تزریق کرده و از آن استفاده کند.
+را 
+inject
+ کرده و از آن استفاده کند.
 
 -----
 
