@@ -10,9 +10,9 @@ description: Where every whisper finds an echo in the state
 با اکشن‌ها، ردیوسرها و افکت‌های جداگانه نیست. کتابخانه 
 `@ngrx/component-store`
 به تنهایی آنقدر قدرتمند است که می‌تواند هم نیازهای 
-**استیت محلی (Local State)**
+*Local State**
  و هم 
- **استیت سراسری (Global State)**
+ **Global State**
   را به شیوه‌ای بسیار ساده‌تر و بهینه‌تر مدیریت کند.
 
 این مستند، راهنمای شما برای پیاده‌سازی این معماری یکپارچه است.
@@ -21,7 +21,7 @@ description: Where every whisper finds an echo in the state
 
 -----
 
-### **۱. قلب تپنده معماری: `ComponentStore`**
+### **۱. قلب تپنده : `ComponentStore`**
 
 `ComponentStore`
 یک سرویس مستقل و سبک است که برای مدیریت استیت به صورت واکنشی
