@@ -92,7 +92,7 @@ workflow
 workflow
 خود نام مشخص کنید و
 سپس فایل
-[دریافت دادگان](https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv)
+[owid-covid-data.csv](https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv)
 را برای مرحله بعد دانلود کنید.
 
 ### استفاده از جعبه ابزار
@@ -175,7 +175,7 @@ Row Filter،
 
 ### Join
 
-[دادگان موقعیت جغرافیایی کشورها](./datasets/world_country_latitude_and_longitude_values.csv)
+[دادگان موقعیت جغرافیایی کشورها](/datasets/world_country_latitude_and_longitude_values.csv)
 را آپلود نمایید. سپس با استفاده از
 Join
 به دادگان آمار مبتلایان ستون‌های طول و عرض جغرافیایی را اضافه نمایید.
