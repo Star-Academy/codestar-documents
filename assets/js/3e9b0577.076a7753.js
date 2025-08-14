@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_academy=self.webpackChunkstar_academy||[]).push([[6773],{12825:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"codestar"}')}}]);
