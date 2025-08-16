@@ -214,6 +214,29 @@ NuGet
 -   [C# Coding Standards and Naming Conventions](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
 -   [C# Naming conventions](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions#naming-conventions)
 
+### تعیین نوع متغیرها در #C
+یکی از اصول مهم در برنامه‌نویسی با زبان سی‌شارپ، تعیین نوع متغیرها است. این کار باعث می‌شود کد شما خواناتر، بهینه‌تر و ایمن‌تر باشد.   
+در سی‌شارپ دو روش برای تعیین نوع متغیرها وجود دارد:
+
+1. Explicit type declaration
+```csharp
+string name = "Ali";
+int age = 10;
+```
+2. Type declaration using `var` syntax
+```csharp
+var name = "Ali"
+var age = 10
+```
+
+آشنا به نظر می‌رسد نه؟ قانون شماره 10 [C# Coding Standards and Naming Conventions](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md) که در قسمت قبلی آورده شده بود، اشاره کوچکی به یک دیدگاه در رابطه با این موضوع داشت.
+
+دیدگاه دیگری که وجود دارد این است که استفاده از var می‌تواند کد را کوتاه‌تر کند، اما باید از آن به‌صورت معقول و در شرایطی که نوع متغیر واضح است، استفاده شود که به‌صورت مفصل‌تر در لینک زیر بررسی شده است.
+
+- [Why Do C# Developers Hate The var Keyword?](https://www.youtube.com/watch?v=Sa184usBTXk)
+
+توجه داشته باشید که شما با دو دیدگاه کاملاً متفاوت در این ویدیو و آن لینک گفته‌شده روبه‌رو هستید. تصمیم اینکه از کدام‌یک از این روش‌ها پیروی می‌کنید به سلیقه خودتان است، اما حتماً برای انتخاب خود دلیل داشته باشید.
+
 ### C# Interactive
 
 گاهی نیاز داریم در محیطی تعاملی مانند زبان‌های مفسری (مثل
