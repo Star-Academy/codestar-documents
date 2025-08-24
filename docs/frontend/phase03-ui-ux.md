@@ -248,9 +248,3 @@ UI و UX
 -   [False Simplicity in UI Design: Simple is not always better](https://tomkenny.design/articles/false-simplicity)
 
 ---
-
-## پروژه
-
-سایتی که تا اینجا طراحی کرده‌اید را از منظر
-UI و UX
-بررسی کنید. در صورتی که جایی از سایت مشکلی مشاهده می‌کنید، آن را برطرف کنید.
