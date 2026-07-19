@@ -1,4 +1,4 @@
----
+﻿---
 title: Network
 description: ''
 ---
@@ -71,7 +71,7 @@ description: ''
 از این دست فرمت‌ها هستند. در این مطلب ما قصد داریم روی JSON
 تمرکز کنیم.
 
-![api schema](./images/phase09-api-schema.png)
+<img src={require('@site/docs/software-engineering/images/phase09-api-schema.png').default} alt="api schema" />
 
 برای آشنایی بیشتر با `RESTful api`
 لینک‌های زیر را مطالعه کنید.

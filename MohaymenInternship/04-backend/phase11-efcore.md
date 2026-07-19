@@ -1,4 +1,4 @@
----
+﻿---
 title: EFCore
 description: ''
 ---
@@ -33,7 +33,7 @@ ORM
 وجود دارد یکی با استفاده از Code first
 و دیگری Database first.
 
-![EFCore Dev Approaces](./images/phase08-ef-core-dev-approaces.png)
+<img src={require('@site/docs/software-engineering/images/phase08-ef-core-dev-approaces.png').default} alt="EFCore Dev Approaces" />
 
 ### Database first
 

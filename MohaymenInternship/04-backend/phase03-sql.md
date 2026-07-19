@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL
 description: ''
 ---
@@ -117,13 +117,13 @@ New Query
 SQL
 را اجرا کنید. سعی کنید از اینجا به بعد هر دستوری که در داک می‌بینید را خودتان اجرا کنید.
 
-![ADS Status](./images/phase07-ADS-status.png)
+<img src={require('@site/docs/software-engineering/images/phase07-ADS-status.png').default} alt="ADS Status" />
 
 پس از نوشتن query با فشردن کلید
 F5
 یا کلیک بر روی دکمه Run، آن را اجرا کنید.
 
-![ADS Query](./images/phase07-ADS-query.png)
+<img src={require('@site/docs/software-engineering/images/phase07-ADS-query.png').default} alt="ADS Query" />
 
 :::note ‌
 مفاهیم اصلی این فاز را اول روی
@@ -183,7 +183,7 @@ ADS
 Query
 اجرا شده چاپ می‌کند. در صورت مواجه شدن با خطا، پیغام مربوط به خطا نیز چاپ می‌شود که به رفع خطا کمک می‌کند.
 
-![ADS Message](./images/phase07-ADS-message.png)
+<img src={require('@site/docs/software-engineering/images/phase07-ADS-message.png').default} alt="ADS Message" />
 
 برای حذف یک Database نیز از دستور زیر استفاده می‌شود.
 
@@ -296,7 +296,7 @@ Results Tab
 
 
 در هر دو صورت خروجی به شکل زیر خواهد بود:
-![ADSSelect](./images/phase07-ADS-select.png)
+<img src={require('@site/docs/software-engineering/images/phase07-ADS-select.png').default} alt="ADSSelect" />
 
 با استفاده از
 Operatorها در عبارتی که با
@@ -321,7 +321,7 @@ WHERE IsMale = true AND Grade BETWEEN 10 AND 15;
 
 در هر دو صورت داریم:
 
-![ADSWhere](./images/phase07-SQL-where.png)
+<img src={require('@site/docs/software-engineering/images/phase07-SQL-where.png').default} alt="ADSWhere" />
 
 در جدول زیر
 Operatorهای موجود را مشاهده می‌کنید. همچنین مانند مثال بالا می‌توانید تعدادی از
@@ -467,7 +467,7 @@ INSERT INTO Enrollment VALUES
 ('Advance Programming', '97100200');
 ```
 
-![ADS Foreign Key Error](./images/phase07-ADS-foreign-key-error.png)
+<img src={require('@site/docs/software-engineering/images/phase07-ADS-foreign-key-error.png').default} alt="ADS Foreign Key Error" />
 همانطور که در تصویر مشاهده می‌کنید، دستور اول که مقدار
 Foreign Key
 آن در جدول
@@ -496,7 +496,7 @@ Join
 وجود دارد که مشاهده عملکرد هر یک از آن‌ها در نمودار
 Venn
 راحت‌تر است. پس شکل زیر را به دقت بررسی کنید.
-![SQLJoins](./images/phase07-SQL-joins.png)
+<img src={require('@site/docs/software-engineering/images/phase07-SQL-joins.png').default} alt="SQLJoins" />
 
 حال نمونه‌ی هر
 Join
@@ -506,11 +506,11 @@ Enrollment (Child)
 Student (Parent)
 نیز در ابتدا نشان داده شده است.
 
-![SQLJoin Primary Tables](./images/phase07-join-example-primary-tables.png)
-![Inner Join](./images/phase07-inner-join.png)
-![Left Join](./images/phase07-left-join.png)
-![Right Join](./images/phase07-right-join.png)
-![Full OuterJoin](./images/phase07-full-outer-join.png)
+<img src={require('@site/docs/software-engineering/images/phase07-join-example-primary-tables.png').default} alt="SQLJoin Primary Tables" />
+<img src={require('@site/docs/software-engineering/images/phase07-inner-join.png').default} alt="Inner Join" />
+<img src={require('@site/docs/software-engineering/images/phase07-left-join.png').default} alt="Left Join" />
+<img src={require('@site/docs/software-engineering/images/phase07-right-join.png').default} alt="Right Join" />
+<img src={require('@site/docs/software-engineering/images/phase07-full-outer-join.png').default} alt="Full OuterJoin" />
 
 ## تابع‌ها
 

@@ -326,22 +326,101 @@ LINQ
 
 ## پروژه
 
-برای ورود به دوره یک آزمون داده‌اید.
-در این فاز، **سؤال ۴ همان آزمون** را دوباره — این‌بار با
-#C
-— حل کنید.
+برای گرم شدن دست با
+#C،
+یک برنامهٔ کنسول کوچک بنویسید: **تاریخچهٔ جستجو** (شبیه دکمه‌های Back / Forward مرورگر)، با چند داده ساختار.
 
-متن سؤال را از لینک زیر بخوانید:
+### رفتار مورد انتظار
 
--   [سؤال ۴ آزمون ورودی](https://......)
+برنامه از ورودی، دستور می‌گیرد تا وقتی کاربر
+`EXIT`
+بزند. دستورها:
+
+| دستور | کار |
+| --- | --- |
+| `SEARCH <متن>` | یک جستجوی جدید ثبت شود؛ بعد از جستجوی جدید، مسیر Forward پاک شود |
+| `BACK` | به جستجوی قبلی برگردید (اگر وجود دارد) |
+| `FORWARD` | اگر قبلاً Back زده‌اید، یک قدم جلو بروید |
+| `CURRENT` | جستجوی فعلی را چاپ کند (یا بگوید خالی است) |
+| `STATS` | ۳ جستجوی پرتکرار را چاپ کند |
+| `UNIQUE` | تعداد جستجوهای یکتا در کل session را چاپ کند |
+| `EXIT` | پایان برنامه |
+
+نمونهٔ کوتاه:
+
+```text
+> SEARCH cats
+current: cats
+> SEARCH dogs
+current: dogs
+> BACK
+current: cats
+> FORWARD
+current: dogs
+> SEARCH cats
+current: cats
+> STATS
+cats: 2
+dogs: 1
+> UNIQUE
+2
+> EXIT
+```
+
+### داده ساختارهایی که باید به کار ببرید
+
+حداقل این‌ها را در راه‌حل‌تان داشته باشید:
+
+1. دو
+   `Stack`
+   (یا معادلش) برای مسیر
+   Back
+   و
+   Forward
+1. یک
+   `Dictionary`
+   برای شمارش تکرار هر متن جستجو
+1. یک
+   `HashSet`
+   برای مجموعهٔ جستجوهای یکتا
+1. در
+   `STATS`
+   از
+   LINQ
+   استفاده کنید (مثلاً مرتب‌سازی و گرفتن ۳ تای اول)
+
+:::note ‌
+لازم نیست
+UI
+یا فایل داشته باشید؛ ورودی از
+Console
+کافی است.
+هدف، تمرین کلاس‌ها / متدها، داده ساختار، و کمی
+LINQ
+است — نه یک محصول کامل.
+:::
+
+### لینک‌های کمکی
+
+قبل یا حین پیاده‌سازی، این‌ها را ببینید:
+
+-   [Stack\<T\>](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.stack-1)
+-   [Dictionary\<TKey,TValue\>](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)
+-   [HashSet\<T\>](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1)
+-   [LINQ (Language Integrated Query)](https://learn.microsoft.com/en-us/dotnet/csharp/linq/)
+-   [Enumerable.OrderByDescending](https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.orderbydescending)
+-   [Console.ReadLine](https://learn.microsoft.com/en-us/dotnet/api/system.console.readline)
+-   [Classes (C# Programming Guide)](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes)
 
 :::caution ‌
 کل راه‌حل را با
 AI
 ننویسید.
-اگر جایی گیر کردید، فقط برای سینتکس‌های خیلی کوچک (مثلاً نحوۀ نوشتن یک حلقه یا خواندن فایل) از
+اگر جایی گیر کردید، فقط برای سینتکس خیلی کوچک از
 AI
-کمک بگیرید؛ منطق و پیاده‌سازی اصلی باید مال خودتان باشد.
+کمک بگیرید؛ منطق
+Back / Forward
+و انتخاب داده ساختارها باید مال خودتان باشد.
 :::
 
 :::tip ‌

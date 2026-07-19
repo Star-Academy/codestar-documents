@@ -1,4 +1,4 @@
----
+﻿---
 title: CI/CD (اختیاری)
 description: ''
 ---
@@ -178,12 +178,12 @@ Repository
   شوید؛ همانطور که مشاهده می‌کنید، Pipeline
   شما در حال اجرا است:
 
-  ![actions](./images/phase06-actions.png)
+  <img src={require('@site/docs/software-engineering/images/phase06-actions.png').default} alt="actions" />
 
   آن را باز کرده و وارد بخش build
   شوید:
 
-  ![ci](./images/phase06-ci.png)
+  <img src={require('@site/docs/software-engineering/images/phase06-ci.png').default} alt="ci" />
 
 1. افزودن badge
    وضعیت CI
@@ -194,12 +194,12 @@ Repository
   در Repository
   خود اضافه کنید.
 
-  ![get build badge](./images/phase06-get-build-badge.png)
+  <img src={require('@site/docs/software-engineering/images/phase06-get-build-badge.png').default} alt="get build badge" />
 
   می‌توانید وضعیت Pipeline
   را در هر لحظه مشاهده کنید:
 
-  ![build badge](./images/phase06-build-badge.png)
+  <img src={require('@site/docs/software-engineering/images/phase06-build-badge.png').default} alt="build badge" />
 
 1. افزودن مشاهده وضعیت code coverage:
 
@@ -230,7 +230,7 @@ Repository
     خود اضافه کنید. اکنون مشاهده خواهید کرد که در هر لحظه، وضعیت code coverage
     شما نیز نمایش داده می‌شود:
 
-    ![code cov badge](./images/phase06-codcov-badge.png)
+    <img src={require('@site/docs/software-engineering/images/phase06-codcov-badge.png').default} alt="code cov badge" />
 
 تا به اینجای کار، کل فایل `buildPipeline.yml`
 باید بصورت زیر باشد:
