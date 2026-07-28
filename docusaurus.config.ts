@@ -47,6 +47,15 @@ const config: Config = {
                 sidebarPath: './sidebarsCodeStar.ts',
             },
         ],
+        [
+            '@docusaurus/plugin-content-docs',
+            {
+                id: 'mohaymen-internship',
+                path: 'MohaymenInternship',
+                routeBasePath: 'mohaymen-internship',
+                sidebarPath: './sidebarsMohaymenInternship.ts',
+            },
+        ],
     ],
     themeConfig: {
         navbar: {
@@ -109,6 +118,31 @@ const config: Config = {
                             docsPluginId: 'codestar',
                             docId: "for-interns",
                             label: "مستندات کاراموزان",
+                        }
+                    ],
+                },
+                {
+                    type: "dropdown",
+                    label: "کارآموزی مهیمن",
+                    position: 'left',
+                    items: [
+                        {
+                            type: "doc",
+                            docsPluginId: 'mohaymen-internship',
+                            docId: "for-mentors",
+                            label: "مستندات برگزاری دوره",
+                        },
+                        {
+                            type: "doc",
+                            docsPluginId: 'mohaymen-internship',
+                            docId: "for-interns",
+                            label: "مستندات کاراموزان",
+                        },
+                        {
+                            type: "doc",
+                            docsPluginId: 'mohaymen-internship',
+                            docId: "backend",
+                            label: "مهندسی نرم‌افزار",
                         }
                     ],
                 },
