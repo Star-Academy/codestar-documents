@@ -108,7 +108,7 @@ Database
 | خروجی ذهنی شما | `Sql` + `Bindings` | موجودیت‌ها مثل `Student`، `Enrollment` |
 | تغییر داده | خودتان `Insert`/`Update`/`Delete` را به صورت query می‌نویسید | معمولاً object را عوض می‌کنید و `SaveChanges` می‌زنید |
 | کنترل روی SQL | بالا و صریح | کمتر؛ بخش زیادی را EF می‌سازد |
-| مناسب برای | گزارش، فیلتر پویا، SQL پیچیده، چند dialect | CRUD روزمره، مدل دامنه، Relation بین entityها |
+| مناسب برای | گزارش، فیلتر پویا، SQL پیچیده، چند Database | CRUD روزمره، مدل دامنه، Relation بین entityها |
 
 ### یک مثال ذهنی از یک کار یکسان
 

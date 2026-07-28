@@ -6,7 +6,7 @@ description: ''
 ## مقدمه
 
 در این فاز با مفاهیم و تکنیک‌های مختلفی برای افزایش کیفیت کد آشنا می‌شوید و کد فاز قبل
-(مینی Query Builder)
+(Mini Query Builder)
 را به یک کد بسیار با کیفیت تبدیل
 می‌کنید. سپس کد خود را با سایر کارآموزان به اشتراک می‌گذارید و از آن‌ها می‌خواهید کدتان را
 Review
@@ -42,7 +42,7 @@ Refactor
 [Code Smell](https://en.wikipedia.org/wiki/Code_smell)
 می‌گوییم. در این مرحله در مورد
 Code Smellهای
-زیر مطالعه کنید و مشخص کنید کدام یک از موارد زیر در کدی که برای مینی Query Builder به وجود آمده است؟
+زیر مطالعه کنید و مشخص کنید کدام یک از موارد زیر در کدی که برای Mini Query Builder به وجود آمده است؟
 
 -   [Long Method](https://refactoring.guru/smells/long-method)
 -   [Primitive Obsession](https://refactoring.guru/smells/primitive-obsession)

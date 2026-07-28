@@ -25,7 +25,9 @@ SQL
 **Query Builder**
 مینیمال.
 یک‌بار منطق query را تعریف می‌کنید و با
-Compilerهای جدا، آن را به dialect مربوط به
+Compilerهای جدا، آن را به
+SQL
+مربوط به
 PostgreSQL
 یا
 SQL Server
@@ -83,7 +85,7 @@ Query Builder
    SQL
    و لیست
    bindings
-   برای یک dialect مشخص تبدیل می‌کند.
+   برای یک Database مشخص تبدیل می‌کند.
 
 با این جداسازی، منطق query یک‌بار نوشته می‌شود و فقط Compiler عوض می‌شود.
 
@@ -92,7 +94,7 @@ Query Builder
 -   [Query Object Pattern](https://martinfowler.com/eaaCatalog/queryObject.html)
 -   [Builder Pattern](https://refactoring.guru/design-patterns/builder)
 
-## تمرین اول: اسکلت Fluent
+## تمرین اول: ساخت کلاس Query با Fluent API
 
 یک
 Class Library
@@ -116,14 +118,6 @@ var query = new Query()
     .Where("IsMale", true)
     .Where("Age", 20);
 ```
-
-:::tip ‌
-
-```shell
-dotnet new classlib -n MiniQueryBuilder
-```
-
-:::
 
 ## تمرین دوم: دو Compiler
 
@@ -158,7 +152,7 @@ SQL
 لازم نیست.
 :::
 
-### خروجی مورد انتظار (تقریبی)
+### خروجی مورد انتظار
 
 همان
 `Query`
@@ -169,8 +163,7 @@ SQL
 SQL
 نهایی بین دو شرط کلمهٔ
 `AND`
-دیده می‌شود — این فقط نحوهٔ چسباندن شرط‌هاست، نه تمرین پیاده‌سازی
-`AND`.
+دیده می‌شود.
 
 برای
 PostgreSQL
@@ -197,21 +190,19 @@ SELECT [Id], [Name] FROM [Students] WHERE [IsMale] = @p0 AND [Age] = @p1
 و
 bindings
 برابر
-`[true, 20]`
-(یا معادل مناسب برای
-BIT
-اگر لازم دیدید).
+`[1, 20]`
+؛ یعنی `@p0 = 1` و `@p1 = 20`.
 
 :::note ‌
-مهم این است که **یک Query model** داشته باشید و فقط با عوض کردن Compiler، dialect عوض شود.
+مهم این است که **یک Query model** داشته باشید و فقط با عوض کردن Compiler، SQL مربوط به هر Database عوض شود.
 دقیقاً همان راه‌حلی که برای سوال «اگر ۱۰ تا Database دیگر اضافه شد» لازم دارید.
 :::
 
 :::tip ‌
-نام Column/Table را با quoting مناسب هر dialect escape کنید.
+نام Column/Table را مطابق هر Database درست بنویسید (مثلاً `"Name"` در PostgreSQL و `[Name]` در SQL Server).
 :::
 
-## تمرین سوم: اجرای واقعی (توصیه‌شده)
+## تمرین سوم: اجرای واقعی
 
 همان query را یک‌بار با
 `Npgsql`
@@ -236,20 +227,14 @@ Compiler
 اجرای واقعی کمک می‌کند ببینید راه‌حل‌تان روی هر دو Database جواب می‌دهد.
 :::
 
-## محدودهٔ عمداً کوچک
+## یادگیری بیشتر
 
-در این فاز **لازم نیست** این‌ها را کامل پیاده کنید مگر برای یادگیری بیشتر:
+برای یادگیری بیشتر می‌توانید این‌ها را کامل پیاده کنید:
 
 -   `JOIN`
--   `OR` پیچیده / گروه‌بندی شرط‌ها
+-   `OR` / گروه‌بندی شرط‌ها
 -   `ORDER BY` / `GROUP BY` / `LIMIT`/`TOP`
--   Compiler برای Database سوم
-
-این قابلیت‌ها اگر لازم باشد در فازهای بعد (مثلاً اختیاری با
-TDD
-یا با خود
-SqlKata
-) اضافه می‌شوند.
+-   Compiler برای MySQL
 
 ## در ادامه...
 
@@ -263,7 +248,7 @@ SqlKata
     PostgreSQL
     و
     SQL Server
-    (seed داده، اجرای واقعی query و assert نتیجه)
+    (اجرای واقعی query و assert نتیجه)
 -   سپس در صورت تمایل
     TDD
     و
@@ -271,12 +256,3 @@ SqlKata
     (هر دو اختیاری)
 -   بعد آشنایی با
     SqlKata
-    به‌عنوان نسخهٔ واقعی و بالغ همین ایده
-
-:::note ‌
-فازهای
-TDD
-و
-CI/CD
-اختیاری‌اند و برای ادامهٔ مسیر لازم نیستند.
-:::

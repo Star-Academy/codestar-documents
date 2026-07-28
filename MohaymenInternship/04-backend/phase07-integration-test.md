@@ -17,13 +17,11 @@ Database
 query
 را روی
 Database
-واقعی اجرا می‌کنید، داده
-seed
-می‌کنید، و
+واقعی اجرا می‌کنید، دادهٔ نمونه وارد می‌کنید، و
 assert
 می‌کنید نتیجه همان چیزی باشد که انتظار دارید.
 
-و چون دو dialect دارید، این مسیر باید برای
+و چون دو Database دارید، این مسیر باید برای
 **هر دو**
 PostgreSQL
 و
@@ -32,11 +30,12 @@ SQL Server
 
 :::note ‌
 پیش‌نیاز:
-containerهای فاز
-Docker
-بالا باشند و schema / Tableهای فاز
-SQL
-آماده باشند.
+Docker روی سیستم نصب باشد.
+برای Database تست دو راه دارید: containerهای دستی فاز
+Docker،
+یا بالا آوردن خودکار container با
+Testcontainers
+(در ادامه همین فاز).
 :::
 
 ## Unit Test در برابر Integration Test
@@ -74,11 +73,13 @@ Database
 SQL
 و
 Mini Query Builder
-دیدید dialectها فرق دارند:
-placeholder، بعضی تابع‌ها، و جزئیات syntax.
+دیدید
+SQL
+دو Database فرق دارد:
+placeholder، بعضی تابع‌ها، و جزئیات نوشتن query.
 اگر فقط روی یکی
 Integration Test
-بنویسید، باگهای مخصوص dialect دیگر را دیر می‌بینید.
+بنویسید، باگهای مخصوص Database دیگر را دیر می‌بینید.
 
 هدف این فاز: یک سناریوی رفتاری یکسان، دو مسیر اجرا، دو بار پاس.
 
@@ -116,6 +117,93 @@ port
 -   [Npgsql Documentation](https://www.npgsql.org/doc/index.html)
 -   [Microsoft.Data.SqlClient](https://learn.microsoft.com/en-us/sql/connect/ado-net/microsoft-ado-net-sql-server)
 
+## Testcontainers
+
+تا اینجا فرض این بود container را خودتان (مثلاً با
+`docker compose`
+فاز
+Docker)
+بالا نگه دارید و تست فقط به آن وصل شود.
+
+راه دیگر این است که **خود تست** موقع اجرا container را بسازد، صبر کند آماده شود،
+connection string
+بگیرد، تست را اجرا کند و در پایان container را پایین بیاورد.
+برای همین کار در اکوسیستم
+.NET
+از
+[Testcontainers](https://dotnet.testcontainers.org/)
+استفاده می‌شود.
+
+### چرا مهم است؟
+
+-   تست کمتر به «وضعیت دستی ماشین» وابسته می‌شود (آیا DB بالا است؟ دادهٔ دیروز مانده؟).
+-   برای
+    CI
+    مناسب‌تر است: هر بار محیط تمیزتر و قابل‌تکرار دارید.
+-   Setup و Teardown محیط Database بخشی از خود تست می‌شود، نه کار جداگانهٔ آدم.
+
+:::tip ‌
+در این فاز می‌توانید با همان containerهای فاز
+Docker
+شروع کنید؛ ولی حتماً با
+Testcontainers
+آشنا شوید و حداقل روی یکی از دو Database آن را امتحان کنید.
+:::
+
+### شروع کار
+
+پکیج‌های ماژول:
+
+```shell
+dotnet add package Testcontainers.PostgreSql
+dotnet add package Testcontainers.MsSql
+```
+
+ایدهٔ کلی برای
+PostgreSQL:
+
+```csharp
+var postgres = new PostgreSqlBuilder()
+    .WithImage("postgres:16-alpine")
+    .Build();
+
+await postgres.StartAsync();
+
+var connectionString = postgres.GetConnectionString();
+// اینجا schema بسازید، دادهٔ نمونه وارد کنید، query را اجرا و assert کنید
+
+await postgres.DisposeAsync();
+```
+
+برای
+SQL Server
+همین الگو با
+`MsSqlBuilder`
+و پکیج
+`Testcontainers.MsSql`
+است.
+
+:::note ‌
+`GetConnectionString()`
+را جایگزین
+connection string
+دستی کنید؛ port و رمز را خود
+Testcontainers
+مدیریت می‌کند.
+Schema و Tableها را مثل قبل در
+Setup
+تست بسازید (یا با یک اسکریپت
+SQL
+اعمال کنید).
+:::
+
+برای مطالعه:
+
+-   [Testcontainers for .NET](https://dotnet.testcontainers.org/)
+-   [PostgreSQL module](https://dotnet.testcontainers.org/modules/postgres/)
+-   [Microsoft SQL Server module](https://dotnet.testcontainers.org/modules/mssql/)
+-   [Docker guide: Testcontainers .NET getting started](https://docs.docker.com/guides/testcontainers-dotnet-getting-started/)
+
 ## Setup و Teardown
 
 Integration Test
@@ -130,15 +218,13 @@ Integration Test
    با
    Mini Query Builder،
    Compile
-   با compiler همان dialect، اجرا روی
+   با compiler همان Database، اجرا روی
    Database
 1. **Assert**: ردیف‌ها / مقدارها همان انتظار منطقی باشند
 1. **Teardown** (در صورت نیاز): پاک کردن دادهٔ تست تا تست بعدی آلوده نشود
 
 :::tip ‌
-دادهٔ
-seed
-را کوچک و قابل‌پیش‌بینی نگه دارید؛ مثلاً ۳ تا ۵ ردیف با مقدارهای واضح.
+دادهٔ نمونه را کوچک و قابل‌پیش‌بینی نگه دارید؛ مثلاً ۳ تا ۵ ردیف با مقدارهای واضح.
 هرچه داده مبهم‌تر باشد،
 assert
 سخت‌تر می‌شود.
@@ -151,18 +237,18 @@ Database
 همین مسیر را پیاده کنید:
 
 ```text
-Arrange  →  seed چند ردیف مشخص
-Act      →  Query + Compiler همان dialect + Execute
+Arrange  →  وارد کردن چند ردیف مشخص
+Act      →  Query + Compiler همان Database + Execute
 Assert   →  نتیجه با انتظار یکی باشد
 ```
 
 متن
 SQL
-دو dialect می‌تواند فرق کند؛ مهم **رفتار و خروجی** است.
+دو Database می‌تواند فرق کند؛ مهم **رفتار و خروجی** است.
 
 ## تمرین اصلی
 
-### ۱) Seed داده
+### ۱) وارد کردن دادهٔ نمونه
 
 روی Tableی که در فاز
 SQL
@@ -220,9 +306,7 @@ Review
 آیا برای هر دو
 provider
 سناریوی یکسانی پوشش داده شده؟
-آیا
-seed
-قابل‌تکرار است؟
+آیا دادهٔ نمونه قابل‌تکرار است؟
 :::
 
 ## چک‌لیست پایان فاز
@@ -235,11 +319,12 @@ seed
 1. همان سناریو روی
    SQL Server
    سبز است.
-1. تست‌ها داده
-   seed
-   می‌کنند؛ فقط به دادهٔ دستی قبلی وابسته نیستند.
+1. تست‌ها دادهٔ نمونه وارد می‌کنند؛ فقط به دادهٔ دستی قبلی وابسته نیستند.
 1. Assert روی نتیجهٔ واقعی است، نه فقط روی رشتهٔ
    SQL.
+1. با مفهوم
+   Testcontainers
+   آشنا شده‌اید و حداقل روی یکی از دو Database آن را امتحان کرده‌اید.
 
 ## در ادامه...
 

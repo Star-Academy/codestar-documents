@@ -157,16 +157,12 @@ Review
 :::note ‌
 در این فاز لازم نیست به
 Database
-واقعی وصل شوید یا داده
-seed
-کنید.
+واقعی وصل شوید یا دادهٔ نمونه وارد کنید.
 اجرای واقعی query روی
 PostgreSQL
 و
 SQL Server
-موضوع فاز بعد (
-Integration Test
-) است.
+موضوع فاز بعد (Integration Test) است.
 :::
 
 ## در ادامه...
@@ -178,4 +174,4 @@ Integration Test
 روی هر دو
 Database
 می‌سنجید:
-seed داده، اجرای query، و assert نتیجه.
+وارد کردن دادهٔ نمونه، اجرای query، و assert نتیجه.

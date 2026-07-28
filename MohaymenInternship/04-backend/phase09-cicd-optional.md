@@ -15,7 +15,7 @@ CI/CD
 
 در این فاز با مفهوم 
 CI/CD
-و اهمیت استفاده از آن آشنا می‌شوید و در صورت تمایل می‌توانید پروژهٔ مینی Query Builder خود را به 
+و اهمیت استفاده از آن آشنا می‌شوید و در صورت تمایل می‌توانید پروژهٔ Mini Query Builder خود را به 
 CI/CD
 مجهز کنید.
 
@@ -407,13 +407,13 @@ jobs:
 را مطالعه کنید.
 :::
 
-## ساخت یک Console App برای مینی Query Builder
+## ساخت یک Console App برای Mini Query Builder
 
 در این بخش، یک solution
 دیگر بسازید، و در آن با Net Cli.
 یک console app
 بسازید. در پوشه پروژه کنسول، command
-زیر را اجرا کنید تا پکیج مینی Query Builder شما به پروژه کنسول اضافه شود:
+زیر را اجرا کنید تا پکیج Mini Query Builder شما به پروژه کنسول اضافه شود:
 
 ```shell
 dotnet add package [packageId]

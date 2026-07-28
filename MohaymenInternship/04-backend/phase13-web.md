@@ -177,7 +177,7 @@ namespace Example.Controllers
 
 ## پروژه
 
-برای مینی Query Builder یا SqlKata که تا اینجا ساخته‌اید یک API
+برای Mini Query Builder یا SqlKata که تا اینجا ساخته‌اید یک API
 بنویسید که یک درخواست ساده بگیرد، query را بسازد و نتیجه را در جواب API
 برگرداند.
 می‌توانید از جدول‌های فاز

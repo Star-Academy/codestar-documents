@@ -44,9 +44,7 @@ SQL Query Builder
 .NET
 است. شما query را با یک
 API
-روان (
-Fluent
-) تعریف می‌کنید و یک
+روان (Fluent) تعریف می‌کنید و یک
 Compiler
 آن را به
 SQL
@@ -67,16 +65,6 @@ Firebird
 -   [sqlkata/querybuilder روی GitHub](https://github.com/sqlkata/querybuilder)
 -   [NuGet: SqlKata](https://www.nuget.org/packages/SqlKata)
 
-:::tip ‌
-اگر بستهٔ اجرای مستقیم query را هم می‌خواهید،
-[SqlKata.Execution](https://www.nuget.org/packages/SqlKata.Execution)
-را ببینید که روی
-Dapper
-سوار شده است. برای این فاز، فهم
-Compile
-اولویت دارد.
-:::
-
 ## چرا SqlKata؟
 
 با تجربهٔ Mini Query Builder خودتان، این مزایا را بهتر حس می‌کنید:
@@ -89,7 +77,7 @@ Compile
    هستید.
 1. **چند Database** — یک تعریف query، چند
    Compiler
-   برای dialectهای مختلف.
+   برای Databaseهای مختلف.
 1. **ترکیب پویا** — اضافه کردن شرط‌های اختیاری بدون در هم ریختن رشتهٔ
    SQL.
 
@@ -159,7 +147,7 @@ foreach (var binding in result.Bindings)
 `PostgresCompiler`
 با
 Compile
-بگیرید و تفاوت placeholderها و quoting را مقایسه کنید.
+بگیرید و تفاوت placeholderها و نوشتن نام‌ها را مقایسه کنید.
 :::
 
 ## تمرین اول: بازنویسی Mini Query Builder با SqlKata
@@ -185,7 +173,7 @@ Compiler
    `Bindings`
 
 :::info ‌
-هدف مقایسهٔ دقیق با خروجی خودتان نیست؛ هدف دیدن این است که ایده یکی است و کتابخانه جزئیات dialect و binding را مدیریت می‌کند.
+هدف مقایسهٔ دقیق با خروجی خودتان نیست؛ هدف دیدن این است که ایده یکی است و کتابخانه جزئیات SQL هر Database و binding را مدیریت می‌کند.
 :::
 
 ## تمرین دوم: کمی فراتر از Mini Query Builder
@@ -221,7 +209,7 @@ SQL
 
 بعد از این فاز باید بتوانید در یک جمله بگویید:
 
-> SqlKata یک Query Builder است که تعریف query را از dialect مربوط به SQL جدا می‌کند و با Compiler مناسب، SQL امن و قابل‌حمل می‌سازد.
+> SqlKata یک Query Builder است که تعریف query را از SQL نهایی جدا می‌کند و با Compiler مناسب، برای هر Database یک SQL امن می‌سازد.
 
 در فاز بعد با
 EF Core

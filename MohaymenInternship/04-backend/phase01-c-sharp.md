@@ -9,6 +9,21 @@ description: ''
 #C
 آشنا ‌می‌شوید. همچنین چند برنامۀ ساده با این زبان می‌نویسید.
 
+:::tip ‌
+برای کار با زبان
+#C
+می‌توانید
+IDEهای
+[Visual Studio](https://visualstudio.microsoft.com/downloads/)
+یا
+[Rider](https://soft98.ir/software/programming/1016-rider.html)
+را نصب کنید و از امکاناتشان بهره‌مند شوید.
+
+**برای کار روی پروژه‌ها از
+IDE
+استفاده ‌کنید.**
+:::
+
 ## نصب پیش‌نیازها
 
 در قدم اول برای کار با زبان
@@ -251,12 +266,6 @@ System.IO.Directory.GetCurrentDirectory()
 -   [Lambda Expressions in C# (GeeksforGeeks)](https://www.geeksforgeeks.org/lambda-expressions-in-c-sharp/)
 -   [Lambda Expressions in C# (C# Corner)](https://www.c-sharpcorner.com/UploadFile/bd6c67/lambda-expressions-in-C-Sharp/)
 
-:::info ‌
-این امکان یک
-[Syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)
-می‌باشد.
-:::
-
 ### Extension Method
 
 برای اضافه کردن متد به کلاس‌های موجود بدون تغییر کلاس اصلی، تعریف کلاس فرزند یا کامپایل مجدد کتابخانه، از
@@ -324,11 +333,21 @@ LINQ
 -   [LINQ Operators and Lambda Expressions](https://www.c-sharpcorner.com/UploadFile/babu_2082/linq-operators-and-lambda-expression-syntax-examples/)
 -   [LINQ Lambda Expressions](https://www.tutlane.com/tutorial/linq/linq-lambda-expressions)
 
+:::tip ‌
+برای آشنایی با امکانات جدید زبان
+#C
+می‌توانید ویدئوهای زیر را مشاهده کنید.
+
+-   [What's new in C#? Exciting new features in C# 9, 10 and 11!](https://www.youtube.com/watch?v=FkY-cbkzPMU)
+-   [Every New Feature Added in C# 12](https://www.youtube.com/watch?v=Gv2uBJzBAms)
+
+:::
+
 ## پروژه
 
-برای گرم شدن دست با
+برای دست گرمی با
 #C،
-یک برنامهٔ کنسول کوچک بنویسید: **تاریخچهٔ جستجو** (شبیه دکمه‌های Back / Forward مرورگر)، با چند داده ساختار.
+یک برنامهٔ کنسول کوچک بنویسید: **تاریخچهٔ جستجو** (شبیه دکمه‌های Back / Forward مرورگر).
 
 ### رفتار مورد انتظار
 
@@ -367,50 +386,16 @@ dogs: 1
 > EXIT
 ```
 
-### داده ساختارهایی که باید به کار ببرید
-
-حداقل این‌ها را در راه‌حل‌تان داشته باشید:
-
-1. دو
-   `Stack`
-   (یا معادلش) برای مسیر
-   Back
-   و
-   Forward
-1. یک
-   `Dictionary`
-   برای شمارش تکرار هر متن جستجو
-1. یک
-   `HashSet`
-   برای مجموعهٔ جستجوهای یکتا
-1. در
-   `STATS`
-   از
-   LINQ
-   استفاده کنید (مثلاً مرتب‌سازی و گرفتن ۳ تای اول)
-
 :::note ‌
 لازم نیست
 UI
 یا فایل داشته باشید؛ ورودی از
 Console
 کافی است.
-هدف، تمرین کلاس‌ها / متدها، داده ساختار، و کمی
+هدف، تمرین کلاس‌ها / متدها و کمی
 LINQ
 است — نه یک محصول کامل.
 :::
-
-### لینک‌های کمکی
-
-قبل یا حین پیاده‌سازی، این‌ها را ببینید:
-
--   [Stack\<T\>](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.stack-1)
--   [Dictionary\<TKey,TValue\>](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)
--   [HashSet\<T\>](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1)
--   [LINQ (Language Integrated Query)](https://learn.microsoft.com/en-us/dotnet/csharp/linq/)
--   [Enumerable.OrderByDescending](https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.orderbydescending)
--   [Console.ReadLine](https://learn.microsoft.com/en-us/dotnet/api/system.console.readline)
--   [Classes (C# Programming Guide)](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes)
 
 :::caution ‌
 کل راه‌حل را با
@@ -420,32 +405,7 @@ AI
 AI
 کمک بگیرید؛ منطق
 Back / Forward
-و انتخاب داده ساختارها باید مال خودتان باشد.
-:::
-
-:::tip ‌
-برای کار با زبان
-#C
-می‌توانید
-IDEهای
-[Visual Studio](https://visualstudio.microsoft.com/downloads/)
-یا
-[Rider](https://soft98.ir/software/programming/1016-rider.html)
-را نصب کنید و از امکاناتشان بهره‌مند شوید.
-
-**برای کار روی پروژه‌ها از
-IDE
-استفاده ‌کنید.**
-:::
-
-:::tip ‌
-برای آشنایی با امکانات جدید زبان
-#C
-می‌توانید ویدئوهای زیر را مشاهده کنید.
-
--   [What's new in C#? Exciting new features in C# 9, 10 and 11!](https://www.youtube.com/watch?v=FkY-cbkzPMU)
--   [Every New Feature Added in C# 12](https://www.youtube.com/watch?v=Gv2uBJzBAms)
-
+باید مال خودتان باشد.
 :::
 
 ## در ادامه...
@@ -463,6 +423,4 @@ container
 SQL
 یاد می‌گیرید و قدم‌به‌قدم یک
 Query Builder
-مینیمال می‌سازید؛ در ادامه با کتابخانه‌ای مثل
-SqlKata
-کار می‌کنید.
+مینیمال می‌سازید.

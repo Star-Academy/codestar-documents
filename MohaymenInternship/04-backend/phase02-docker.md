@@ -21,11 +21,14 @@ Compose
 Database
 با
 `docker compose up`
-بالا باشند و بتوانید با یک
+بالا باشند.
+اتصال با
 client
-(مثل
-Azure Data Studio)
-به آن‌ها وصل شوید.
+و زدن
+query
+در فاز
+SQL
+است.
 :::
 
 ## Docker چیست و چرا به درد می‌خورد؟
@@ -176,6 +179,20 @@ WSL2 / virtualization
 
 ## تمرین: ساخت Compose و بالا آوردن هر دو Database
 
+اینجا دو
+Database
+را بالا می‌آورید:
+PostgreSQL
+و
+SQL Server.
+لازم نیست الان عمیق بدانید Database چیست یا چطور query بزنید —
+فقط محیط را آماده می‌کنید.
+با خود
+Database
+و
+SQL
+در فاز بعد آشنا می‌شوید؛ همان‌جایی که به این دو سرویس وصل می‌شوید و با آن‌ها کار می‌کنید.
+
 :::note ‌
 Docker Hub
 و
@@ -275,9 +292,7 @@ docker compose up -d
 ```
 
 -   `up` یعنی سرویس‌های فایل را بساز و اجرا کن
--   `-d` یعنی در پس‌زمینه (
-    detached
-    ) اجرا شود تا ترمینال آزاد بماند
+-   `-d` یعنی در پس‌زمینه (detached) اجرا شود تا ترمینال آزاد بماند
 
 وضعیت و لاگ:
 
@@ -308,47 +323,6 @@ docker compose start
 docker compose down
 ```
 
-### ۴) اتصال با client
-
-صبر کنید تا هر دو سرویس آماده شوند، بعد با
-Azure Data Studio
-(یا
-client
-دلخواه) وصل شوید:
-
-**PostgreSQL**
-
--   Host: `localhost`
--   Port: `5432`
--   User: `postgres`
--   Password: `postgres`
--   Database: `mohaymen`
-
-**SQL Server**
-
--   Host: `localhost` (یا `localhost,1433`)
--   Port: `1433`
--   User: `sa`
--   Password: همان `MSSQL_SA_PASSWORD` داخل فایل Compose
-
-روی هر دو این‌ها را بزنید:
-
-```sql
-SELECT 1;
-```
-
-PostgreSQL:
-
-```sql
-SELECT version();
-```
-
-SQL Server:
-
-```sql
-SELECT @@VERSION;
-```
-
 :::info ‌
 اگر یکی بالا نیامد، `docker compose logs` را بخوانید.
 رایج‌ترین علت‌ها: روشن نبودن
@@ -359,28 +333,6 @@ port،
 SQL Server.
 :::
 
-## چک‌لیست پایان فاز
-
-1. فایل
-   `docker-compose.yml`
-   دارید و می‌دانید هر بخشش برای چیست.
-1. با
-   `docker compose up -d`
-   هر دو سرویس
-   `Up`
-   هستند.
-1. به
-   PostgreSQL
-   از
-   localhost
-   وصل می‌شوید.
-1. به
-   SQL Server
-   از
-   localhost
-   وصل می‌شوید.
-1. روی هر دو `SELECT 1` موفق است.
-
 ## در ادامه...
 
 در فاز بعد روی همین دو
@@ -390,6 +342,6 @@ Compose
 بالا آوردید،
 SQL
 را یاد می‌گیرید.
-نصب native مسیر اصلی نیست؛ کار روی همین
+کار روی همین
 containerها
 است.
