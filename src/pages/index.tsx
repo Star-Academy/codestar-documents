@@ -22,6 +22,12 @@ export default function HomepageHeader() {
                         >
                             CodeStar
                         </Link>
+                        <Link
+                            className="button button--secondary button--lg"
+                            to="mohaymen-internship/about"
+                        >
+                            کارآموزی مهیمن
+                        </Link>
                     </div>
                 </div>
                 <Lottie
