@@ -161,5 +161,3 @@ Postman
 برای آشنایی بیشتر با این نرم‌افزار می‌توانید [Postman Tutorial for Beginners with API Testing Example](https://www.guru99.com/postman-tutorial.html)
 را مطالعه کنید.
 :::
-
-## تمرین

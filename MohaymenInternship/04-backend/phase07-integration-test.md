@@ -8,7 +8,7 @@ description: ''
 در فاز
 Unit Test
 خروجی
-Compile
+کامپایل کوئری
 را بدون
 Database
 واقعی سنجیدید.
@@ -28,14 +28,20 @@ PostgreSQL
 SQL Server
 پاس شود.
 
+در این فاز محیط Database را از قبل و جدا از تست بالا نگه نمی‌دارید.
+خود تست با
+[Testcontainers](https://dotnet.testcontainers.org/)
+container را می‌سازد، صبر می‌کند آماده شود،
+connection string
+می‌گیرد، تست را اجرا می‌کند و در پایان container را پایین می‌آورد.
+
 :::note ‌
 پیش‌نیاز:
-Docker روی سیستم نصب باشد.
-برای Database تست دو راه دارید: containerهای دستی فاز
-Docker،
-یا بالا آوردن خودکار container با
+Docker روی سیستم نصب و در حال اجرا باشد.
 Testcontainers
-(در ادامه همین فاز).
+برای بالا آوردن Database به
+Docker
+نیاز دارد؛ بدون آن تست‌ها بالا نمی‌آیند.
 :::
 
 ## Unit Test در برابر Integration Test
@@ -45,7 +51,7 @@ Testcontainers
 | تمرکز | یک واحد کوچک ایزوله | چند جزء واقعی با هم |
 | Database | معمولاً ندارد (یا Mock) | Database واقعی |
 | سرعت | خیلی سریع | کندتر |
-| چه چیزی را ثابت می‌کند | منطق و خروجی Compile | رفتار واقعی روی داده |
+| چه چیزی را ثابت می‌کند | منطق واحد درست کار می‌کند | اجزا در کنار هم رفتار درست دارند |
 
 قبل از کدنویسی این‌ها را بخوانید:
 
@@ -79,87 +85,65 @@ SQL
 placeholder، بعضی تابع‌ها، و جزئیات نوشتن query.
 اگر فقط روی یکی
 Integration Test
-بنویسید، باگهای مخصوص Database دیگر را دیر می‌بینید.
+بنویسید، روی Database دیگر باگ می‌خورید؛ باگ‌هایی که فقط روی آن Database ظاهر می‌شوند و تا وقتی رویش تست ننویسید دیده نمی‌شوند.
 
-هدف این فاز: یک سناریوی رفتاری یکسان، دو مسیر اجرا، دو بار پاس.
-
-## اتصال به containerها
-
-از همان
-connection stringهایی
-استفاده کنید که به
-containerهای فاز
-Docker
-می‌رسند؛ مثلاً:
-
-PostgreSQL (نمونه):
-
-```text
-Host=localhost;Port=5432;Database=mohaymen;Username=postgres;Password=postgres
-```
-
-SQL Server (نمونه):
-
-```text
-Server=localhost,1433;Database=master;User Id=sa;Password=Your_strong_Password123;TrustServerCertificate=True
-```
-
-:::caution ‌
-اگر در فاز
-Docker
-port
-یا رمز را عوض کرده‌اید، اینجا همان مقادیر را بگذارید.
-:::
-
-کلاینت‌های
-.NET:
-
--   [Npgsql Documentation](https://www.npgsql.org/doc/index.html)
--   [Microsoft.Data.SqlClient](https://learn.microsoft.com/en-us/sql/connect/ado-net/microsoft-ado-net-sql-server)
+هدف این فاز: یک سناریوی رفتاری یکسان، دو مسیر اجرا، دو بار پاس —
+هر دو با
+Testcontainers.
 
 ## Testcontainers
 
-تا اینجا فرض این بود container را خودتان (مثلاً با
-`docker compose`
-فاز
-Docker)
-بالا نگه دارید و تست فقط به آن وصل شود.
-
-راه دیگر این است که **خود تست** موقع اجرا container را بسازد، صبر کند آماده شود،
+یکی از practiceهای رایج این است که **خود تست** موقع اجرا container را بسازد، صبر کند آماده شود،
 connection string
 بگیرد، تست را اجرا کند و در پایان container را پایین بیاورد.
 برای همین کار در اکوسیستم
 .NET
 از
 [Testcontainers](https://dotnet.testcontainers.org/)
-استفاده می‌شود.
+استفاده می‌کنید.
 
-### چرا مهم است؟
+### چرا Testcontainers؟
 
--   تست کمتر به «وضعیت دستی ماشین» وابسته می‌شود (آیا DB بالا است؟ دادهٔ دیروز مانده؟).
+-   تست کمتر به وضعیت فعلی سیستم شما وابسته می‌شود (مثلاً آیا Database از قبل بالا است؟ دادهٔ دیروز مانده؟).
 -   برای
     CI
     مناسب‌تر است: هر بار محیط تمیزتر و قابل‌تکرار دارید.
 -   Setup و Teardown محیط Database بخشی از خود تست می‌شود، نه کار جداگانهٔ آدم.
+-   port و رمز را خود
+    Testcontainers
+    مدیریت می‌کند؛ نیازی به
+    connection string
+    ثابت و ازپیش‌تعریف‌شده نیست.
 
-:::tip ‌
-در این فاز می‌توانید با همان containerهای فاز
+:::caution ‌
+در این فاز **نباید** به containerهایی که در فاز
 Docker
-شروع کنید؛ ولی حتماً با
+یا با
+`docker compose`
+جداگانه بالا آورده‌اید وابسته باشید.
+Integration Testها
+باید Database را از طریق
 Testcontainers
-آشنا شوید و حداقل روی یکی از دو Database آن را امتحان کنید.
+دریافت کنند —
+هم برای
+PostgreSQL
+و هم برای
+SQL Server.
+لازم نیست هر تست جداگانه container خودش را بالا بیاورد؛ می‌توانید یک container را با
+fixture
+بین چند تست یک کلاس به اشتراک بگذارید.
 :::
 
-### شروع کار
+### پکیج‌ها
 
-پکیج‌های ماژول:
+پکیج‌های مورد نیاز پروژهٔ تست:
 
 ```shell
 dotnet add package Testcontainers.PostgreSql
 dotnet add package Testcontainers.MsSql
 ```
 
-ایدهٔ کلی برای
+الگوی کلی برای
 PostgreSQL:
 
 ```csharp
@@ -170,7 +154,7 @@ var postgres = new PostgreSqlBuilder()
 await postgres.StartAsync();
 
 var connectionString = postgres.GetConnectionString();
-// اینجا schema بسازید، دادهٔ نمونه وارد کنید، query را اجرا و assert کنید
+// Create schema, insert sample data, run query, assert
 
 await postgres.DisposeAsync();
 ```
@@ -187,17 +171,25 @@ SQL Server
 `GetConnectionString()`
 را جایگزین
 connection string
-دستی کنید؛ port و رمز را خود
+ثابت کنید؛ port و رمز را خود
 Testcontainers
 مدیریت می‌کند.
-Schema و Tableها را مثل قبل در
+Schema و Tableها را در
 Setup
-تست بسازید (یا با یک اسکریپت
+تست بسازید؛ مثلاً با دستورهای
 SQL
-اعمال کنید).
+در ابتدای تست، یا با اجرای یک فایل اسکریپت
+SQL.
 :::
 
-برای مطالعه:
+کلاینت‌های
+.NET
+برای اجرای query:
+
+-   [Npgsql Documentation](https://www.npgsql.org/doc/index.html)
+-   [Microsoft.Data.SqlClient](https://learn.microsoft.com/en-us/sql/connect/ado-net/microsoft-ado-net-sql-server)
+
+برای مطالعهٔ بیشتر:
 
 -   [Testcontainers for .NET](https://dotnet.testcontainers.org/)
 -   [PostgreSQL module](https://dotnet.testcontainers.org/modules/postgres/)
@@ -206,135 +198,61 @@ SQL
 
 ## Setup و Teardown
 
-Integration Test
-بدون نظم در داده زود شکننده می‌شود.
-برای هر تست (یا حداقل هر کلاس تست) مشخص کنید:
+اتصال، آماده شدن Database، و پاک شدن محیط را خود
+Testcontainers
+مدیریت می‌کند:
+`StartAsync`
+container را بالا می‌آورد،
+`GetConnectionString()`
+اتصال می‌دهد، و با
+`DisposeAsync`
+container (و همهٔ داده‌اش) از بین می‌رود —
+نیازی به پاک‌سازی جداگانهٔ داده نیست.
 
-1. **Setup / Arrange**: اتصال، ساخت یا پاک‌سازی Table در صورت نیاز،
+کار شما در هر تست این است:
+
+1. **Arrange**: ساخت Table در صورت نیاز و
    insert
    دادهٔ مشخص
 1. **Act**: ساخت
    query
    با
    Mini Query Builder،
-   Compile
+   کامپایل کوئری
    با compiler همان Database، اجرا روی
    Database
 1. **Assert**: ردیف‌ها / مقدارها همان انتظار منطقی باشند
-1. **Teardown** (در صورت نیاز): پاک کردن دادهٔ تست تا تست بعدی آلوده نشود
 
 :::tip ‌
 دادهٔ نمونه را کوچک و قابل‌پیش‌بینی نگه دارید؛ مثلاً ۳ تا ۵ ردیف با مقدارهای واضح.
-هرچه داده مبهم‌تر باشد،
-assert
-سخت‌تر می‌شود.
+برای اشتراک یک container بین چند تست یک کلاس، از
+fixture
+(مثلاً
+`IAsyncLifetime`
+در
+xUnit)
+استفاده کنید تا برای هر تست دوباره container بالا نیاید.
 :::
 
-## الگوی تمرین
+## تمرین
 
-برای **هر دو**
-Database
-همین مسیر را پیاده کنید:
-
-```text
-Arrange  →  وارد کردن چند ردیف مشخص
-Act      →  Query + Compiler همان Database + Execute
-Assert   →  نتیجه با انتظار یکی باشد
-```
-
-متن
-SQL
-دو Database می‌تواند فرق کند؛ مهم **رفتار و خروجی** است.
-
-## تمرین اصلی
-
-### ۱) وارد کردن دادهٔ نمونه
-
-روی Tableی که در فاز
-SQL
-ساختید (یا یک Table تست جدا)، چند ردیف مشخص
-insert
-کنید؛ مثلاً دانشجو با سن و وضعیت مشخص.
-
-### ۲) اجرای query روی PostgreSQL
-
-1. با
-   Mini Query Builder
-   یک
-   query
-   فیلتردار بسازید (مثلاً `Where` روی یک شرط واضح).
-1. با
-   `PostgresCompiler`
-   آن را
-   Compile
-   کنید.
-1. با
-   `Npgsql`
-   اجرا کنید.
-1. روی نتیجه
-   assert
-   بزنید (تعداد ردیف، مقدار یک ستون، یا هر دو).
-
-### ۳) همان سناریو روی SQL Server
-
-1. همان منطق
-   query
-   را نگه دارید.
-1. با
-   `SqlServerCompiler`
-   Compile
-   کنید.
-1. با
-   `Microsoft.Data.SqlClient`
-   اجرا کنید.
-1. همان انتظار رفتاری را
-   assert
-   کنید.
-
-### ۴) یک سناریوی فیلتر اضافه
-
-حداقل یک شرط دیگر (مثلاً بازهٔ عددی یا ترکیب دو شرط) اضافه کنید و دوباره روی **هر دو**
-Database
-پاس بگیرید.
+با آنچه در این فاز خواندید، برای
+Mini Query Builder
+روی **هر دو**
+PostgreSQL
+و
+SQL Server
+Integration Test
+بنویسید.
+همهٔ حالت‌های فیلتری که پشتیبانی می‌کنید را پوشش دهید؛
+assert
+روی نتیجهٔ واقعی query باشد، نه فقط روی رشتهٔ
+SQL.
 
 :::info ‌
-Integration Testهای دو
-Database
-را بین تیم‌ها
+Integration Testها را بین تیم‌ها
 Review
 کنید:
-آیا برای هر دو
-provider
-سناریوی یکسانی پوشش داده شده؟
+آیا هر دو provider پوشش داده شده؟
 آیا دادهٔ نمونه قابل‌تکرار است؟
 :::
-
-## چک‌لیست پایان فاز
-
-1. حداقل یک
-   Integration Test
-   روی
-   PostgreSQL
-   سبز است.
-1. همان سناریو روی
-   SQL Server
-   سبز است.
-1. تست‌ها دادهٔ نمونه وارد می‌کنند؛ فقط به دادهٔ دستی قبلی وابسته نیستند.
-1. Assert روی نتیجهٔ واقعی است، نه فقط روی رشتهٔ
-   SQL.
-1. با مفهوم
-   Testcontainers
-   آشنا شده‌اید و حداقل روی یکی از دو Database آن را امتحان کرده‌اید.
-
-## در ادامه...
-
-بعد از این فاز می‌توانید اختیاری با
-TDD
-و سپس
-CI/CD
-آشنا شوید؛ برای ادامهٔ مسیر اصلی لازم نیستند.
-سپس با
-SqlKata
-به‌عنوان نسخهٔ واقعی و بالغ همان ایدهٔ
-Query Builder
-کار می‌کنید.
