@@ -171,7 +171,9 @@ SQL Server
 Mini Query Builder
 را با
 Integration Test
+(و
+Testcontainers)
 روی هر دو
 Database
 می‌سنجید:
-وارد کردن دادهٔ نمونه، اجرای query، و assert نتیجه.
+بالا آوردن خودکار container، وارد کردن دادهٔ نمونه، اجرای query، و assert نتیجه.
